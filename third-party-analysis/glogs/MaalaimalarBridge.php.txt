@@ -1,0 +1,27 @@
+commit 6aba9fdf541c7fecea56bc6fc6496372f1679314
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Wed Oct 16 22:05:06 2024 +0530
+
+    [MaalaimalarBridge] fix url (#4295)
+
+commit 320afc3f324ded84f56169dce70bc7721201ea0a
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Mon Aug 19 22:47:42 2024 +0530
+
+    [MaalaimalarBridge] fix image (#4222)
+    
+    * [NvidiaDriverBridge] Added Windows support
+    
+    * Update NvidiaDriverBridge.php
+    
+    * Update NvidiaDriverBridge.php
+    
+    * [MaalaimalarBridge] fix image
+    
+    * [MaalaimalarBridge] fix lint
+
+commit 79699131e87e831fc5fa4fb785c210f5396e2bbd
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Fri Mar 8 17:16:32 2024 +0530
+
+    [MaalaimalarBridge] New Bridge (#4001)

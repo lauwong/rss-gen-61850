@@ -1,0 +1,60 @@
+commit e07a94d480d87710115101ae51147ed4895dfeb8
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Sat Jul 9 08:13:07 2022 +0200
+
+    Normalize some method calls (#2911)
+    
+    The methods were called as static even though they were not.
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 6c4098d6558c33a5fcb2a8bc9fb29e915d56fc6c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 2 13:03:26 2019 +0200
+
+    Revert "all: Use ->remove() instead of ->outertext = ''"
+    
+    This reverts commit 052844f5e13c71ceefd743136a71f71226a0eefb.
+    
+    There is a bug in ->remove() that causes the parser to incorrectly
+    identify elements in the DOM tree that shouldn't exist anymore.
+    
+    References #1151
+
+commit 052844f5e13c71ceefd743136a71f71226a0eefb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 1 21:15:30 2019 +0200
+
+    all: Use ->remove() instead of ->outertext = ''
+    
+    simplehtmldom 1.9 introduced new functions to recursively remove
+    nodes from the DOM. This allows removing elements without the need
+    to re-load the document by using $html->load($html->save()), which
+    is very inefficient.
+    
+    Find more information about remove() at
+    https://simplehtmldom.sourceforge.io/docs/1.9/api/simple_html_dom_node/remove/
+
+commit 8f5151b222d554f58a314d7261c74b9b1f88567d
+Author: somini <somini@users.noreply.github.com>
+Date:   Tue Apr 16 08:58:22 2019 +0100
+
+    [SIMARBridge]: Add new bridge (#1055)
+    
+    * [SIMARBridge]: Add new bridge

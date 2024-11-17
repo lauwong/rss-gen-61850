@@ -1,0 +1,59 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 8717c33646e8552cc5a804f05e00252ca99fa4b9
+Author: dag <me@dvikan.no>
+Date:   Thu Mar 31 17:00:14 2022 +0200
+
+    [Glassdoor] fix: repair broken bridge (#2577)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit ea08445946d2fed1fa6bde89a570643bfcdf8442
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 9 19:32:22 2019 +0200
+
+    [GlassdoorBridge] Fix broken bridge
+
+commit 37d882a8d5e3c26ba4502330cd9e50f0247da25b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jan 13 22:04:21 2019 +0100
+
+    [GlassdoorBridge] Fix incorrect CSS selector
+
+commit 81ee15a161f9a3a5129097f4a6c6879b2b086f8f
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Fri Dec 28 15:13:03 2018 +0000
+
+    general: Fix PHP 7.3 deprecation warnings (#982)
+    
+    Fix PHP 7.3 deprecation warnings. FILTER_VALIDATE_URL implies FILTER_FLAG_SCHEME_REQUIRED and FILTER_FLAG_HOST_REQUIRED since PHP 5.2.1
+    
+    https://bugs.php.net/bug.php?id=75442
+
+commit 6e9c188a7243c5777c8ddfea44785ce1920a3466
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 26 18:31:20 2018 +0100
+
+    [GlassdoorBridge] Fix bridge is marked as executable
+    
+    References #938
+
+commit c06a09fe99346a789a6f379410f149d0abc25f40
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Oct 1 18:00:50 2018 +0200
+
+    [GlassdoorBridge] Add new bridge

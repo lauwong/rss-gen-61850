@@ -1,0 +1,9 @@
+commit d0f7f5e2d89f96081a0e054959d26f446d086abc
+Author: mrnoname1000 <mrnoname1000@riseup.net>
+Date:   Thu May 11 14:24:12 2023 -0500
+
+    [New Bridge] FiderBridge (#3378)
+    
+    * [core] Add config parameter to markdownToHtml
+    
+    * [FiderBridge] New bridge

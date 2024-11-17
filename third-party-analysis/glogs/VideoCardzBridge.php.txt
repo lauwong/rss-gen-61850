@@ -1,0 +1,43 @@
+commit a4ed52ca3017c9e3320e1538cbff2ee73082b4c6
+Author: rmscoelho <50850007+rmscoelho@users.noreply.github.com>
+Date:   Thu Jun 22 06:27:30 2023 +0100
+
+    [VideoCardzBridge] cache timeout fix + getName fixes (#3454)
+    
+    * [VideoCardzBridge] cache timeout fix
+    
+    * [VideoCardzBridge] getName() + title fix
+
+commit 1d3888f22a0ab61d68c1297b5d166c2134f6fe90
+Author: rmscoelho <50850007+rmscoelho@users.noreply.github.com>
+Date:   Tue Jun 20 14:01:41 2023 +0100
+
+    [VideoCardzBridge] category name and url fixes (#3447)
+    
+    * [VideoCardzBridge] category name and url fixes
+    
+    * [VideoCardzBridge] error fixes
+    
+    * [VideoCardzBridge] formatting fix
+    
+    * [VideoCardzBridge] cache timeout removal
+
+commit 5a0bacbd8a173480fe65223e0aa89b5d36c4b887
+Author: rmscoelho <50850007+rmscoelho@users.noreply.github.com>
+Date:   Tue Jun 20 11:45:50 2023 +0100
+
+    [New Bridge] Videocardz.com bridge (#3442)
+    
+    * [New Bridge] Videocardz.com Bridge
+    
+    * [New Bridge] Videocardz.com Bridge
+    
+    * [Videocardz.com] cache timeout increase
+    
+    * [VideoCardzBridge] cache timeout change
+    
+    * [VideoCardzBridge] formatting
+    
+    * [VideoCardBridge] formatting fixes
+    
+    * [VideoCardzBridge] formatting fixes

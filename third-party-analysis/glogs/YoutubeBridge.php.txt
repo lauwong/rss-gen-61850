@@ -1,0 +1,937 @@
+commit 9973f731dfb0b34ae4c1d3d86143eee346ff5641
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 02:13:04 2024 +0200
+
+    feat: introduce RateLimitException (#4199)
+
+commit f48020982530ff08636a5233021014c16fc67c36
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon May 6 02:30:23 2024 +0500
+
+    [YoutubeBridge] Fix empty result in search feed (#4098)
+
+commit f40f99740588b09033917fd38132a99875495540
+Author: Dag <me@dvikan.no>
+Date:   Thu Dec 21 09:24:22 2023 +0100
+
+    fix: various small fixes (#3853)
+
+commit 563c2a345b632a0245f888a925151e4d23b1a776
+Author: Dag <me@dvikan.no>
+Date:   Mon Oct 16 03:43:18 2023 +0200
+
+    refactor (#3763)
+
+commit 611fabe46c6118339e8e6f5a119b2dc5850266a7
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 15 03:15:47 2023 +0200
+
+    fix(youtube): reduce excessive network calls (#3757)
+
+commit 2aa52aa99ae8866aa7cd320a88aa1b9a1ca49c5b
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 15 01:13:17 2023 +0200
+
+    fix(youtube): bug in prior refactor (#3756)
+
+commit cf9558648efc86dce7a10136c53bd93688198755
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 15 00:08:18 2023 +0200
+
+    refactor: YoutubeBridge (#3755)
+
+commit cb6c931b1f62b80634b73af63ace9693bc3cbe76
+Author: Dag <me@dvikan.no>
+Date:   Sat Sep 23 17:50:41 2023 +0200
+
+    fix(duckduckgo): order by date (#3689)
+
+commit 7a9bfa1087106d8f759f3fbcd8b1856caa8a6f74
+Author: User123698745 <User123698745@users.noreply.github.com>
+Date:   Fri Sep 22 05:40:13 2023 +0200
+
+    [YoutubeBridge] handle new youtube description system / fix missing description (#3682)
+    
+    * [YoutubeBridge] handle new youtube description system
+    
+    * [YoutubeBridge] fix unrelated warnings
+    
+    * [YoutubeBridge] discard everything when one link can not be matched & add more boundary chars
+    
+    * [YoutubeBridge] rebase on master & minor fixes
+
+commit 7329b83cc0fe1a5f707f864b1f3d62efd4be2172
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 21 22:05:55 2023 +0200
+
+    refactor: logger (#3678)
+
+commit 409236e48e4cf8bc2e2ce6e6f73942feee6a8469
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 14 03:26:01 2023 +0200
+
+    fix: logic bug in 429 caching logic (#3669)
+
+commit 4b9f6f7e53e0b2e9aae59df2bbffc0bdd6805aea
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 21:50:15 2023 +0200
+
+    fix: rewrite and improve caching (#3594)
+
+commit dfe78fb379fa45587ff89835bbd963a601c5ff16
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 9 10:08:30 2023 +0200
+
+    fix: various small fixes (#3519)
+
+commit ec1a3f4fe3011ecab603316dddf00588cef74ba0
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sat Jun 10 21:27:49 2023 +0500
+
+    [YoutubeBridge] Unassign maintainer (#3431)
+
+commit c5cd2294456c6a118885003f7beb6f32bb98bc68
+Author: Ryan Stafford <ryan@nanorex.net>
+Date:   Thu Jun 1 15:26:47 2023 -0400
+
+    [YoutubeBridge] Set icon (#3416)
+
+commit 2c94791bcda06a3bd82a30ca024a03696686c1d2
+Author: Dag <me@dvikan.no>
+Date:   Sat Mar 11 20:06:01 2023 +0100
+
+    fix: skip yt json if absent, fix #3301 (#3302)
+
+commit 2a69c585b8a1b55892dd798d87116dc0662a023d
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Sun Dec 18 14:23:18 2022 +0700
+
+    [YoutubeBridge] fix blank page when duration limit used (#3192)
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit a26408594b9b880382a6f71cbe95e2c168fe6dd5
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Sat Sep 11 15:20:14 2021 +0700
+
+    [YoutubeBridge] New features, fixes and refactors (#2208)
+    
+    New features:
+    - Add support for custom channel name.
+    
+    Fixes:
+    - In playlist mode last uploaded videos were not in feed
+    - Search mode returned empty feed
+    
+    And a lot of refactoring
+
+commit a4bd04310f11edb1b57f0e0b77e8c84f58d4f0cf
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon May 17 01:02:45 2021 +0500
+
+    [YoutubeBridge] Several fixes and switch maintainer (#2115)
+    
+    - Fix incorrectly working method for querying video info
+    - Partially fix playlist mode.
+    At least it works, if playlist has more than 15 videos. But maximum 100 video items are parsed from playlist.
+    
+    Reason of switching maintainer: https://github.com/RSS-Bridge/rss-bridge/issues/2113#issuecomment-841156902
+
+commit f76a23f0a5d10093b46dfa1545dd91eaee3f2a8d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Jun 10 18:31:35 2019 +0500
+
+    [YoutubeBridge] Add playlist caching (#1162)
+
+commit b764204c3a1a222c83b1c695435b24f255841969
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed May 8 22:17:48 2019 +0200
+
+    [YoutubeBridge] Playlist bug fix (#1117)
+    
+    This commit allow the bridge to parse an infinite number of items of a
+    Youtube playlist.
+    
+    It should fix #647 !
+
+commit 87d218296e513c08a1a3ff71062b46a9bdcb1d1a
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sat Oct 20 15:43:48 2018 +0500
+
+    [YoutubeBridge] Fix playlist mode (#876)
+    
+    * Corrected duration text selector
+    * Request YouTube page with English localization
+    * Filter video items in the beginning of the loop
+
+commit 6bd76af326f88119415212f8fd85bb41598575f4
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 21 14:22:53 2018 +0200
+
+    [YoutubeBridge] Add duration limits for all modes
+    
+    Adds duration limits (minimum duration, maximum duration) for all
+    modes (user/id/playlist/search). Duration limits are optional, so
+    existing subscriptions don't break.
+    
+    The limits are specified by two separate parameters, each of which
+    is optional:
+    
+    - `&duration_min=` (minimum duration in minutes, default: -1)
+    - `&duration_max=` (maximum duration in minutes, default: INF)
+    
+    If duration limits are specified in either user, id or playlist mode,
+    the bridge defaults to fetching data from HTML intead of XML feeds,
+    which requires more bandwidth and takes longer, because each video is
+    loaded individually!
+    
+    References #670
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit 01a27467156a79e1254761c26f64d095a1634eea
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 23 21:28:27 2018 +0200
+
+    [YoutubeBridge] Fix sniff violation
+    
+    This is a fix for a sniff violation not detected by newer versions
+    of phpcs (not sure why though, it's detected in version 2.7.1).
+
+commit 644d13686c573e0b05fc6cf65e46d715b37a88a8
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Thu Apr 19 09:03:29 2018 +0500
+
+    [YoutubeBridge] Removed duration in titles on search mode
+
+commit 4b3efed7ec8304b842ba65acc6538a40c71fe71a
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Mar 25 16:13:00 2018 +0200
+
+    [YoutubeBridge] Fix too many parameters when using HTML mode
+
+commit 6caca4946bf4593e4c6d254e871d2783286eeb37
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Mar 25 14:01:35 2018 +0200
+
+    bridges: Fix bridges with custom headers and options
+    
+    This commit fixes bridges which called getContents, getSimpleHTMLDOM
+    or getSimpleHTMLDOMCached with custom settings.
+
+commit 41b7984a4ea4127d2a916406912c1be9b8055e87
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Mar 19 17:41:53 2018 +0500
+
+    [YoutubeBridge] Playlist mode: faster feed generating if item count is less or equal to 15 (#648)
+    
+    * [YoutubeBridge] Playlist mode: faster feed generating if item count is less or equal to 15
+
+commit cacbe9010284cea0c06e51dfb95555afb5c8132b
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Tue Mar 13 16:24:40 2018 +0500
+
+    [YoutubeBridge] Sort playlist items by publication date (#643)
+
+commit 4805b52d4263d54daf6e80e697fec8495d0cf276
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Feb 16 22:35:00 2018 +0100
+
+    [YoutubeBridge] Fix typo
+
+commit 962617086ebe2868a40f16592ac3dd3ba4748bf1
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Feb 16 22:26:18 2018 +0100
+
+    [YoutubeBridge] Remove superfluous div selectors
+
+commit 4f6277b6b508c9389c8bb6730f503ae27f7f2134
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Feb 16 22:12:24 2018 +0100
+
+    [YoutubeBridge] Fix parsing author name breaks the bridge
+    
+    The author name is parsed by searching a string within the entire
+    HTML document:
+    
+    $author = $html->innertext;
+    $author = substr($author, strpos($author, '"author=') + 8);
+    $author = substr($author, 0, strpos($author, '\u0026'));
+    
+    This solution will return big portions of the HTML document if
+    the strpos function returns zero (not found).
+    
+    This commit replaces the previous implementation by searching for
+    a specific script tag and making use of the JSON data inside it.
+    
+    References #580
+
+commit 5aaab9eb8ccac18f5d8358e6d35bf0348bc06bc6
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Feb 16 22:11:03 2018 +0100
+
+    [YoutubeBridge] Skip unavailable videos
+
+commit c14b2c6905a392e0663070413c0e45db0ecdb7ff
+Author: Matt DeMoss <demoss.matt@gmail.com>
+Date:   Thu Dec 28 20:19:35 2017 -0500
+
+    address phpcs style errors
+
+commit 08713769225cfad9e7eed89ebaba174b6a308a1c
+Author: Matt DeMoss <demoss.matt@gmail.com>
+Date:   Thu Dec 28 20:14:11 2017 -0500
+
+    store feed name in new variable, switch getName on queriedContext, remove 'bridge' from name for feeds, fixes #609
+
+commit c5fe9a6dc07e1377a261b4b35ef0f77b38f8cf01
+Author: Matt DeMoss <demoss.matt@gmail.com>
+Date:   Thu Dec 28 19:52:46 2017 -0500
+
+    mark places where a new variable is needed
+
+commit 3059b1ea805e8c3424eb8e9afa0e13a9ea07fc7e
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Sep 24 17:23:00 2017 +0200
+
+    [YoutubeBridge] Skip Ads
+    
+    The search might return unrelated videos (Ads) that are inserted
+    between regular search results. This adds a check to skip Ads.
+    
+    Closes #571
+
+commit 9a9ce30b16b5fa9c29e632048f1562c17232ff9f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Aug 19 18:51:27 2017 +0200
+
+    [YoutubeBridge] Fix issues loading playlists
+    
+    Videos that are part of a playlist have the playlist ID encoded in
+    the URI. When loading the video info the page contents change unex-
+    pectedly due to the playlist being part of the page.
+    
+    This removes any trailing parameters from the video ID in order to
+    ensure only pure videos are loaded at all times.
+
+commit 0e2b80d5d7a1794edc81270e722374eb9c615e8b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Aug 17 19:26:01 2017 +0200
+
+    [YoutubeBridge] Fix error on certain keywords
+    
+    References #569
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 627038e2fad2082cf8ce5685787adbe188a05bd1
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue May 2 22:03:38 2017 +0200
+
+    [YoutubeBridge] Improve URL handling in video descriptions
+    
+    This improves the translation of regular text to anchors by adding
+    support for additional characters '?&=-_' to fix common URLs.
+    
+    Notice: The regex pattern is by no means complete. That means it is
+    likely to break in the future. More sophistiated solutions however
+    are insanely complex. See: http://stackoverflow.com/a/190405
+    
+    References #520
+
+commit 120e74c1b403f34995c1c6e6fe1436bf4bcbc508
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Apr 27 21:40:20 2017 +0200
+
+    [YoutubeBridge] Improve readability of feed contents
+    
+    Previously feed contents were rendered as one block of text with
+    no structure. This brings back the structure of original video
+    descriptions and makes links in the description work again.
+    
+    References #520
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit 970e216c1fc7a10550cf4288fd2197255557324f
+Merge: 9020b09f a1ef589f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Oct 2 16:05:58 2016 +0200
+
+    Merge branch 'methods2functions' of https://framagit.org/peetah/rss-bridge
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 235c9859012887bda40c0f024c72975223256610
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 17:04:28 2016 +0200
+
+    [BridgeAbstract] replace getCacheDuration method by CACHE_TIMEOUT class constant
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 4f7fbae861e2f7f4e879fcba7d7b1ccb51dd2a08
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 28 20:38:01 2016 +0200
+
+    [bridges] Fix conditional checks on getInput
+    
+    isset($this->getInput('')) does not work
+
+commit 1b3c8a8aeba5641f3bec9a6a720939df537bfa83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 01:25:33 2016 +0200
+
+    [core + bridges] add BridgeAbstract::$inputs and BridgeAbstract::getInput()
+    
+    Inputs are not stored in BridgeAbstract::$parameters anymore to separate
+    static data from dynamic data.
+    The getInput method allows for more readable code.
+    
+    Also fix an "undefined index 'global'" notice
+    
+    Probability of breaking bridges: high !
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3c0d13c1bb72a87f0d671692e205f45f04d94eba
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 19:06:35 2016 +0200
+
+    bridges: use BridgeAbstract::getSimpleHTMLDOM
+    
+    instead of BridgeAbstract::file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 74f0572d914617b4e47fe0fd2fabfe356710d609
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Aug 17 14:45:08 2016 +0200
+
+    bridges: Replace returnError function with more specific
+    
+    Replacements depend on original error code:
+    400: returnClientError
+    404: returnServerError
+    500: returnServerError
+    501: returnServerError
+
+commit fa59a25229a11d9a8fbb93494713984f7d26fe06
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 15 01:19:16 2016 +0200
+
+    bridges: Update bridges with 'required' attributes
+
+commit eeb6c9681d944a2501e43724ecb3801e0a96fe90
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Thu Aug 11 21:42:49 2016 +0200
+
+    [YoutubeBridge] Fix typo
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit 42b6c82753127407e7c5ccd5f39ffa4e78040e9e
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 15:50:25 2016 +0200
+
+    bridges: Cleanup occurrences of $item->thumbnailUri
+    
+    This is a subsequent change to f3eefab
+
+commit 66c79e4b673b205dd15c18e4692ccd5bf495f721
+Merge: f6cbb5c7 06f8b61f
+Author: Mitsu <mitsukarenai@users.noreply.github.com>
+Date:   Sun Jun 26 16:31:06 2016 +0200
+
+    Merge pull request #283 from teromene/pmaziere-YoutubeBridgeFix
+    
+    Pull request from pmaziere - Fix encoding in YoutubeBridge.
+
+commit 06f8b61f623eadd9e62987c96d8a8580128d8a87
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Jun 25 10:08:06 2016 +0200
+
+    fix encoding issues
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 955eecc299e67a1062a9e75149b6c098fb9d2cbc
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Jun 25 23:17:42 2016 +0200
+
+    use BridgeAbstract::file_get_html in all bridges
+    
+    instead of simple_html_dom function file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 24a312a158e2d32bba0f8b6cc1ac28952dcc3883
+Author: Frans de Jonge <fransdejonge@gmail.com>
+Date:   Sat May 21 11:45:09 2016 +0200
+
+    YoutubeBridge: fix playlist mode and titles
+
+commit ca04246eb04debf0a7a0ac59f9a68c5847067855
+Author: ORelio <oreliogitantispam.l0gin@spamgourmet.com>
+Date:   Tue May 3 23:45:32 2016 +0200
+
+    [YouTube] Code refactoring, add XML API support
+    
+     - Factorize common code into functions
+     - Add support for XML API for user an channel
+     - HTML parser is kept as fallback when XML does not work
+     - XML API works even if IP is blocked, partially fixes #193
+
+commit cd5d8b89537d89f89b3a637484e51e55cf3b69d5
+Author: Teromene <teromene@teromene.fr>
+Date:   Sun May 1 17:26:43 2016 +0100
+
+    Another HTTPS in double removed.
+
+commit 382ef28abe1443ea88bc2c6b856fc1a42daee0a1
+Author: Teromene <teromene@teromene.fr>
+Date:   Sun May 1 17:24:24 2016 +0100
+
+    Fix the doubled HTTPS.
+
+commit d0defc62833c1b41999d2f8791c44bf6dd2f2940
+Author: Alexis Degrugillier <github@ainw.org>
+Date:   Sat Feb 27 08:36:14 2016 +0100
+
+    Update youtube bridge
+    
+    Before, the channel id was supposed to be a number. But Youtube changed how they store a
+    channel id. It's no longer a number, it's a string.
+    Now, user can enter a text string instead of a number.
+    
+    See the example with this channel id: UC9fGq2-6FaftcegcIadLf6A
+
+commit e582c887fbd590f16a2871d6440521ab0ce658a9
+Author: Teromene <teromene@teromene.fr>
+Date:   Wed Nov 11 21:45:24 2015 +0000
+
+    Ajout du paramètre pattern pour les entrées de type texte, ajout du required côté HTML.
+    Correction de la page d'accueuil pour qu'elle soit conforme aux standards du W3C.
+    Correction de la regex de listage des fichiers pour qu'elle ignore les sauvegardes.
+    Ajout d'un nettoyeur HTML, par défaut.
+
+commit 2deef45867dd1cc735dd0e2b8f0a0e5977a030c1
+Author: teromene <teromene@teromene.fr>
+Date:   Sun Nov 1 11:17:36 2015 +0000
+
+    Première version du nouveau système de méta-données.
+    Voir exemple dans YoutubeBridge.
+
+commit 6456d145a00be27b8fc7306d289f54c89f2d1ba7
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Wed Jul 8 15:34:06 2015 +0200
+
+    [Youtube] fix search (issue #137)
+
+commit 54c5e9f5ead3be7cd345dc9e5f039312e5653405
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Sun May 31 00:16:42 2015 +0200
+
+    [Youtube] Use metatag for publishdate (fix issue #132)
+
+commit 67338051e7b4d2af3c3a4053119a7e64dee7b815
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Tue Aug 19 21:35:56 2014 +0200
+
+    [Youtube] Add channel support (issue #90)
+
+commit aab11fbd94ee67b876b3b0b4bd092abbe76f43d1
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Wed Jul 16 16:32:44 2014 +0200
+
+    Youtube: fix issue #71
+
+commit 29aa605c44d36096b3d563980c2773fae588b700
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Fri Jun 20 17:04:27 2014 +0200
+
+    missing bracket 😭
+
+commit dcf554d8d86ecd842a57e1d1d7c6d7bc692eeb72
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Fri Jun 20 17:00:36 2014 +0200
+
+    Youtube: fix, indent, limits
+
+commit 2f4b325a7d8abcd20ce7cd42bd1bc3d0e0ef3eaa
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Fri Jun 20 16:41:51 2014 +0200
+
+    [beta] extract timestamp from Youtube API
+
+commit 8d476a06443d2f8897784b9184a773102bc6560b
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Sun May 25 23:27:14 2014 +0200
+
+    add homepage + date to main bridges
+
+commit 7d24be9653bb58110d7343116a6f0fa55295b7d7
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Wed May 21 19:15:52 2014 +0200
+
+    update bridges with maintainer
+
+commit 1e40d6f492486658748dc12b7824d750525b780c
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Wed May 14 14:34:06 2014 +0200
+
+    [pull] Fix Youtube, Twitter
+
+commit e9902e2391a2dfe644e15ff9be6c6d0e3b329c56
+Author: Sébastien SAUVAGE <sebsauvage@sebsauvage.net>
+Date:   Wed May 14 12:39:12 2014 +0200
+
+    Updated from Mitsukarenai
+
+commit bea563dab933f82d1b68f8983ae69d846adf222b
+Author: ArthurHoaro <arthur@hoa.ro>
+Date:   Thu Aug 15 13:58:58 2013 +0200
+
+    Bridge titles more accurate (and YoutubeBridge secured)
+
+commit dfd2110776c0ea036bf15e0b59a11beab293ab42
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Thu Aug 15 12:05:58 2013 +0200
+
+    Add: Youtube Bridge

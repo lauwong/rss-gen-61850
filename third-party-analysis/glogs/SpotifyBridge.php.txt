@@ -1,0 +1,169 @@
+commit 293d04f296c33f7c524b84b7a0ae0d2625ca2729
+Author: Dag <me@dvikan.no>
+Date:   Tue Sep 3 07:02:37 2024 +0200
+
+    fix(spotify): detect rate limiting (#4253)
+
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit 4973aaadf6716550d36606b3b31f3c3f587e5cf9
+Author: Dag <me@dvikan.no>
+Date:   Tue Jan 23 21:45:22 2024 +0100
+
+    fix(spotify): deprecation notice (#3914)
+    
+    8192: explode(): Passing null to parameter #2 ($string) of type string is deprecated in bridges/SpotifyBridge.php line 322
+
+commit 7329b83cc0fe1a5f707f864b1f3d62efd4be2172
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 21 22:05:55 2023 +0200
+
+    refactor: logger (#3678)
+
+commit 4b9f6f7e53e0b2e9aae59df2bbffc0bdd6805aea
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 21:50:15 2023 +0200
+
+    fix: rewrite and improve caching (#3594)
+
+commit 6254b8593e2f7636db65db23c1228482e38be44f
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 19 05:05:49 2023 +0200
+
+    refactor(cache): extract and encapsulate cache expiration logic (#3547)
+    
+    * refactor(cache): extract and encapsulate cache expiration logic
+    
+    * fix: logic bug in getSimpleHTMLDOMCached
+    
+    * fix: silly me, index should of course be on the key column
+    
+    * silly me again, PRIMARY keys get index by default lol
+    
+    * comment out the delete portion in loadData
+    
+    * remove a few log statements
+    
+    * tweak twitter cache timeout
+
+commit a1bae7a9a823d5d54074c70596ec59528cf2ed15
+Author: Paroleen <matteoparolin99@gmail.com>
+Date:   Tue Jul 18 00:43:08 2023 +0200
+
+    [SpotifyBridge] Add search API support (#3548)
+
+commit 7b46b97abd4d1d53dea51175ddfe97113058a4e8
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 16 21:50:44 2023 +0200
+
+    refactor(spotify): replace manual curl with getContents (#3544)
+
+commit c1c8304fc05ffa2a2966434ec8251975100bf85b
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 17:03:12 2023 +0200
+
+    refactor: dont create multiple instances of the cache (#3504)
+
+commit caac7f572cf335e96ee99f8a3af7395df471baf8
+Author: Dag <me@dvikan.no>
+Date:   Thu Jul 6 15:10:30 2023 +0200
+
+    refacor: improve cache interface (#3492)
+    
+    * fix: proper typehint on setScope
+    
+    * refactor: type hint setKey()
+    
+    * typehint
+
+commit a9fd3b9e61a7934c6b94fb5584c6668966a98cb9
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 5 17:37:21 2023 +0200
+
+    fix(CacheInterface): logic bug in getTime (#3491)
+    
+    * fix(CacheInterface): logic bug in getTime
+    
+    * test
+
+commit 1636a84c253fb8b3cd307c3f079be6424e600154
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 2 20:22:28 2023 +0200
+
+    fix(spotify): use non-predictable cache key (#3330)
+    
+    * refactor
+    
+    * fix(spotify): use non-predictable cache key
+
+commit 8486c0f8cae04fb40dc4d705eacee5041c789dc1
+Author: Paroleen <48787191+Paroleen@users.noreply.github.com>
+Date:   Fri Mar 24 20:34:51 2023 +0100
+
+    [SpotifyBridge] Add podcasts feed (#3329)
+    
+    Co-authored-by: Matteo Parolin <matteoparolin99@gmail.com>
+
+commit bef6fc5cbd85e945d7c63ece6c9d54a5cb5f5c9f
+Author: joaomqc <joaomqc@hotmail.com>
+Date:   Thu Oct 27 19:02:01 2022 +0100
+
+    [SpotifyBridge] Add playlists feed (#3116)
+    
+    * [SpotifyBridge] Add playlists feed
+    
+    * fix formatting
+    
+    * remove whitespace
+    
+    * merge artist and playlist feeds
+    
+    * fix lint errors
+
+commit ecb486794b622a9ea9f563abdf8a7fa41038d4e9
+Author: Dag <me@dvikan.no>
+Date:   Tue Aug 2 15:03:54 2022 +0200
+
+    refactor: use static values for cache scope
+    
+    This fixes a future problem when code is placed under a namespace because `get_class($bridge)` will then return e.g. `RssBridge\Bridge\TwitterBridge` instead of the the current value `TwitterBridge`.
+    
+    Also a bit refactoring of `Configuration.php`.
+
+commit d107f8ed3030c416ea3056f34b4ca242ff26af30
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Wed Jul 6 12:14:04 2022 +0200
+
+    Improve Factory variable names (#2895)
+
+commit 321ec7c8c16211192ca6ef7515c8880832adbd22
+Author: Dag <me@dvikan.no>
+Date:   Tue Jul 5 13:20:01 2022 +0200
+
+    refactor: move cache logic into the factory (#2884)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 07927008ebafacebfd97411600e21777ff752518
+Author: Dag <me@dvikan.no>
+Date:   Wed Jun 22 18:29:28 2022 +0200
+
+    refactor: CacheFactory (#2834)
+
+commit 3d570761e55008cb7ed544a31b7ef73b1c4a918c
+Author: Paroleen <48787191+Paroleen@users.noreply.github.com>
+Date:   Thu Mar 24 21:58:53 2022 +0100
+
+    [SpotifyBridge] Add new bridge (#1535)

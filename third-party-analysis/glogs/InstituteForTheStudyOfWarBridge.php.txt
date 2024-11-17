@@ -1,0 +1,11 @@
+commit 1ca4dd69f754d44154b4c8d2a9ab24cc7395aa74
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Thu Aug 25 20:48:16 2022 +0300
+
+    [InstituteForTheStudyOfWarBridge] Do not put HTML tags into title (#2985)
+
+commit c079dbb521cc5ec72ff2f3e9c9513e3240cb7093
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Thu Aug 25 20:22:19 2022 +0300
+
+    [InstituteForTheStudyOfWarBridge] Add bridge (#2984)

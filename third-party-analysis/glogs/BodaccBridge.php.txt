@@ -1,0 +1,17 @@
+commit 8c4385e61d2a8c0f23c120e082a6b832415f22fa
+Author: Quentin B. <quent1-fr@users.noreply.github.com>
+Date:   Thu Aug 8 01:09:13 2024 +0200
+
+    [BodaccBridge] Add bridge (#4190)
+    
+    * [BodaccBridge] Add bridge
+    
+    * [BodaccBridge] Fix bridge
+    
+    * [BodaccBridge] Fix API url
+    
+    * fix
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>

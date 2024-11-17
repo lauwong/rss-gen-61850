@@ -1,0 +1,5 @@
+commit 80c43f10d83dcf4c0b9ff2707c6fe08fff8869ed
+Author: osvfj <osvfj@duck.com>
+Date:   Thu Sep 12 09:07:22 2024 +0000
+
+    [TCBScansBridge] Add bridge (#4263)

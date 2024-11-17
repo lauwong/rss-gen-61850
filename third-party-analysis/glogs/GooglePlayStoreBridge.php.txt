@@ -1,0 +1,31 @@
+commit 7273a05f02a1be053c5c5ecfc10cbea0da06cf18
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 1 18:53:50 2023 +0200
+
+    fix: google play and tiktok (#3722)
+    
+    * fix(googleplay)
+    
+    * fix(tiktok)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit abb4c17a0df6fb76255ba5b42cc84a820ba31f81
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Wed Jun 22 13:07:54 2022 -0400
+
+    bridges: Update maintainer (#2856)
+
+commit 8723647513145153ae8db29709f312a41638cd91
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Fri Feb 11 23:17:12 2022 -0500
+
+    [GooglePlayStoreBridge] Add bridge (#2110)

@@ -1,0 +1,51 @@
+commit f7f3ca0126ed42ded38c9d299a12cb6c8dfccba0
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 15 03:37:50 2023 +0200
+
+    fix(tapas): bug in prior refactor (#3758)
+
+commit 49d9dafaecdb1e63ba1fe966f0e73c7f228fa5c3
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 02:31:09 2023 +0200
+
+    refactor: more feed parsing tweaks (#3748)
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit e379019db27eb7e6c48a9e8c6ae7d3b379dcce16
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:02:19 2023 +0200
+
+    refactor (#3746)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit 7d5698a75fcc5b4a7c201e5bbb5b81787516ac78
+Author: Ololbu <bukachyov.oleg@gmail.com>
+Date:   Fri Dec 9 15:05:08 2022 +0500
+
+    [TapasBridge] New bridge (#3184)
+    
+    * [TapasBridge] New bridge
+    
+    * [TapasBridge] Delete comment
+    
+    * [TapasBridge] Delete context
+    
+    * [TapasBridge] Delete context again
+    
+    * [TapasBridge] Convert double quotes do single quotes
+    
+    * [TapasBridge] Fix some lint errors
+    
+    * [TapasBridge] Fix indentation style
+    
+    * [TapasBridge] Fix some lint errors

@@ -1,0 +1,109 @@
+commit f0e5ef0fc58f3796bb4c03caa2c5e7ca78de119e
+Author: Bocki <henning@bocklage.com>
+Date:   Mon Mar 6 20:01:51 2023 +0100
+
+    [Various] getKey replacements and docu (#3283)
+    
+    * [Various] getKey replacements and docu
+    
+    * more bridges and fix to the abstract
+    
+    * linting
+    
+    * revert bandcampdaily. doing more than i thought
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5a733b3d821ec857711a65bc451f303a846b5faa
+Author: dag <me@dvikan.no>
+Date:   Sun Apr 10 18:56:24 2022 +0200
+
+    feat: add limit options to the slowest bridges
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit cb3c055df9cb3ad7092f5c943212f7c642ab4a04
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sun Aug 15 18:36:38 2021 +0000
+
+    [InternetArchiveBridge] Add detectParameters (#2142)
+
+commit f904353fd2b5136e660da5f4ea015c147adfd883
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Tue Mar 16 13:07:04 2021 +0000
+
+    [InternetArchiveBridge] Fix collection links (#1551)
+
+commit be27bc9250a784fa0b374cb92d1fee69a87cfd84
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Fri Jul 26 08:43:18 2019 +0000
+
+    Fix malformed URLs (#1222)
+    
+    Removes 'self::URI' from processUpload() which was creating malformed URLs. Relative URLs are handled by defaultLinkTo() making 'self::URI' unnecessary.
+
+commit e2460ead189deda3271347e74fe8c40c7840d9b8
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Fri Jun 28 13:45:27 2019 +0000
+
+    [InternetArchiveBridge] Add new bridge (#1186)

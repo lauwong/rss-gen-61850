@@ -1,0 +1,21 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit b037d1b4d1f0b0f422e21125ddef00a58e185ed1
+Author: Matt DeMoss <demoss.matt@gmail.com>
+Date:   Tue Nov 21 11:00:02 2023 -0500
+
+    [Threads] add bridge (#3805)
+    
+    * initial working Threads bridge
+    
+    * properly specify a default limit
+    
+    * phpcs formatted

@@ -1,0 +1,5 @@
+commit c06e471ae93f40481bb9fdbe93c9f6c6aba2380b
+Author: Dag <me@dvikan.no>
+Date:   Fri Jan 20 22:48:06 2023 +0100
+
+    feat: add new bridge for picarto.tv (#3220)

@@ -1,0 +1,39 @@
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 123fce43942e1e36ced9ff40a1a8503f6ef9bc86
+Author: Quentin Delmas <teromene@teromene.fr>
+Date:   Sun Sep 9 17:34:36 2018 +0100
+
+    [ForGifsBridge] Fix permissions of ForGifsBridge
+
+commit 09c9d015b4fc8b92dc1250cde6c9ea9b3ca541ed
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Aug 4 23:42:58 2018 +0200
+
+    [ForGifsBridge] Add new bridge

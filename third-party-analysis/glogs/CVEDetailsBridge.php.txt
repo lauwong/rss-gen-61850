@@ -1,0 +1,63 @@
+commit 486191b419d545fcc2feec54378917b634812730
+Author: Dag <me@dvikan.no>
+Date:   Mon Sep 2 21:43:40 2024 +0200
+
+    fix(cve_details) (#4251)
+
+commit 44fb2c98bcc49d5d83186abc2dc05bf9b6eba60c
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:26:11 2023 +0200
+
+    fix: various fixes (#3745)
+
+commit b6a9baff9494d4f7820b640848afa02492a6f865
+Author: Dag <me@dvikan.no>
+Date:   Tue Oct 10 21:41:57 2023 +0200
+
+    fix(cvedetails,tldrtech) (#3735)
+
+commit 11ce8b5dcd6f9b84249c974f1403a45b5b99d8f5
+Author: Aaron F <mail@aaron-fischer.net>
+Date:   Thu Jul 27 23:54:17 2023 +0200
+
+    CVEDetails got a new HTML layout. (#3577)
+    
+    This fixes the parser for CVEDetails.
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit e1290aa42ccf5997df5eb22c1f8ed00ab560fbc6
+Author: Aaron F <mail@aaron-fischer.net>
+Date:   Sat Dec 18 05:44:05 2021 +0100
+
+    [CVEDetailsBridge] Add bridge (#2332)
+    
+    CVE Details is a collection of CVEs, taken from the National Vulnerability
+    Database (NVD) and other sources like the Exploit DB and Metasploit. The
+    website categorizes it by vendor and product and attach the CWE category.
+    There is an Atom feed available, but only logged in users can use it,
+    it is not reliable and contain no useful information. This bridge create a
+    sane feed with additional information like tags and a link to the CWE
+    a description of the vulnerability.

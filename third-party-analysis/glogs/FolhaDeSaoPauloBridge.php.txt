@@ -1,0 +1,71 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5a733b3d821ec857711a65bc451f303a846b5faa
+Author: dag <me@dvikan.no>
+Date:   Sun Apr 10 18:56:24 2022 +0200
+
+    feat: add limit options to the slowest bridges
+
+commit bb0682668084a9444a65170d6c746e23f521c12a
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Thu Mar 24 18:36:23 2022 -0400
+
+    [FolhaDeSaoPauloBridge] Fix Linting Issue (#2528)
+
+commit cb4bc57c72af4e90ca85eba0e1850f672d63fb9b
+Author: somini <somini@users.noreply.github.com>
+Date:   Thu Mar 24 22:16:02 2022 +0000
+
+    [FolhaDeSaoPauloBridge]: Small improvements (#1724)
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 223337d62d76946789b48f8c6424dd59e1f0b9f2
+Author: somini <somini@users.noreply.github.com>
+Date:   Tue Mar 31 02:34:38 2020 +0100
+
+    [FolhaDeSaoPauloBridge]: Improve URL
+    
+    Remove the redirection.
+
+commit 066e42e99acb475158c148a91c3a2e2ad4fe49e4
+Author: somini <somini@users.noreply.github.com>
+Date:   Tue Mar 31 02:32:15 2020 +0100
+
+    [FolhaDeSaoPauloBridge]: Improve HTML
+
+commit 275662b8d455399e33b651d9d77115ab8f0edf55
+Author: somini <somini@users.noreply.github.com>
+Date:   Tue Feb 4 16:19:39 2020 +0000
+
+    [FolhaDeSaoPaulo]: Add new Bridge (#1426)
+    
+    * [FolhaDeSaoPaulo]: Add new Bridge

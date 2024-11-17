@@ -1,0 +1,83 @@
+commit eef45d4e8d5b69b76b5f3924d17a957748cf498e
+Author: Dag <me@dvikan.no>
+Date:   Sat Aug 6 22:46:49 2022 +0200
+
+    fix: TypeError (0): setlocale(): Argument #1 ($category) must be of type int, string given (#2951)
+    
+    This was upgraded from a warning to an error in php 8.
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 18d5ef192c0d1cb20dad01bd3fcb9719ca886b38
+Author: Xurxo Fresco <xurxof@gmail.com>
+Date:   Fri Mar 22 21:33:46 2019 +0100
+
+    [IvooxBridge] Add new bridge (#597)

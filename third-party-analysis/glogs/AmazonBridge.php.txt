@@ -1,0 +1,152 @@
+commit 499d5c2b77def0b9761cf3be68f5981edd4fbe9b
+Author: Dawid Wróbel <me@dawidwrobel.com>
+Date:   Thu Jul 21 20:41:15 2022 +0200
+
+    [Amazon & AmazonPriceTracker] Add Poland (#2930)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 8172d10bb56fbec2a6303a40c6c9db763c93b777
+Author: Austin Huang <im@austinhuang.me>
+Date:   Sat Jun 4 19:59:52 2022 +0000
+
+    [Amazon & AmazonPriceTracker] Add Turkey, close #2665 (#2758)
+    
+    * [AmazonPriceTracker] Add Turkey, close #2665
+    
+    * [Amazon] Add Sweden & Turkey
+    
+    consistent with price tracker
+
+commit 9e2e32a19dde52f650faba05e2b5639669c789fb
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:34:40 2022 +0200
+
+    [Amazon] fix: broken css selectors (#2638)
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit ef4923ae5c8cbb130b496667d4e4a97ecc330791
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Sun Jan 6 18:38:53 2019 +0100
+
+    [AmazonBridge] Fix parsing of list item (#998)
+    
+    Closes #993
+    Closes #769
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit c4169f1579701342f7f462f0103f68c5382946ad
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 22:20:55 2017 +0100
+
+    bridges: Return parent::getName by default
+
+commit a5b0e2a24fb0b0709629869f63c4fe3a38b5a426
+Author: Alexis CHEMEL <chemel@users.noreply.github.com>
+Date:   Tue Dec 13 00:43:38 2016 +0100
+
+    [AmazonBridge] Adding country list box #447
+
+commit f09e8e11394a362d119a750002577cb0adc295e6
+Author: Thomas Dalichow <2012-02-05.github.com@thomasdalichow.de>
+Date:   Mon Dec 12 22:28:05 2016 +0100
+
+    Translate amazon bridge to english
+    
+    Until now, it was my understanding to keep rss-bridge english, not french. Despite it's french roots.
+
+commit 877465d50854588b890e57e0b872093c20fb18ff
+Author: Alexis CHEMEL <chemel@users.noreply.github.com>
+Date:   Tue Dec 6 17:44:56 2016 +0100
+
+    AmazonBridge

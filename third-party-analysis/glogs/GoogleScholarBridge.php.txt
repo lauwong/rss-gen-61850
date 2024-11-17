@@ -1,0 +1,48 @@
+commit 206edaedf5397aee35848002b3274417007a86c1
+Author: Nick McCarthy <nicholas.mccarthy@gmail.com>
+Date:   Fri Dec 1 21:36:26 2023 +0000
+
+    [GoogleScholarBridge] Minor patch  (#3814)
+    
+    
+    * Do not add RSS entry if Check for updates is found in the article title - avoids repeat entries
+
+commit d9490c65181a090dfc743cd181caef2cc53ae8ef
+Author: Nick McCarthy <nicholas.mccarthy@gmail.com>
+Date:   Sat Jun 10 17:35:04 2023 +0100
+
+    GoogleScholarV2Bridge (#3415)
+    
+    * Added google scholar v2 bridge with more functionality
+    
+    * Corrected Sort By interpretation (this is weird on Googles part)
+    
+    * Remove some debug statements
+    
+    * Merged GoogleScholarBridge and GoogleScholarV2Bridge into GoogleScholarBridge with two contexts.
+    
+    * Left V2 in Bridge Name
+    
+    * Lint
+    
+    * Update GoogleScholarBridge.php
+    
+    * Update GoogleScholarBridge.php
+    
+    * Lint.
+    
+    * ;
+
+commit 1ffd9ee61ae2b5411928ffd56c3077b486249acc
+Author: Tobias Alexander Franke <thefranke@users.noreply.github.com>
+Date:   Sun Sep 25 22:22:49 2022 +0200
+
+    [GoogleScholarBridge] Follow authors of scientific publications. (#3066)
+    
+    * [GoogleScholarBridge] Follow authors of scientific publications.
+    
+    * [GoogleScholarBridge] Fix linting.
+    
+    * [GoogleScholarBridge] Fix more linting issues.
+    
+    * [GoogleScholarBridge] Use author field in extracted page and drop publisher

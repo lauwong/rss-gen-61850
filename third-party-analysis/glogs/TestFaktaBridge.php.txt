@@ -1,0 +1,9 @@
+commit 082542dabcfd0ac1b68923a438c218023353d4f9
+Author: Arnav Jain <ajain-93@users.noreply.github.com>
+Date:   Sun Nov 3 18:22:44 2024 +0100
+
+    [TestFaktaBridge] new bridge (#4307)
+    
+    * [TestFaktaBridge] new bridge
+    
+    * [TestFaktaBridge] fix linting errors

@@ -1,0 +1,53 @@
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit ae53adefadea4b05a419afff1f2ae447bf555132
+Author: Dag <me@dvikan.no>
+Date:   Tue Sep 26 00:27:45 2023 +0200
+
+    refactor: FeedItem::setTimestamp() (#3711)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit 2eee535171683845f31b6e05b19e04bfdbbebcff
+Author: Léo Maradan <3043485+Leomaradan@users.noreply.github.com>
+Date:   Fri Jul 26 10:53:09 2019 +0200
+
+    CNET France Bridge (#1214)
+    
+    CNET France News but with filters on title or url

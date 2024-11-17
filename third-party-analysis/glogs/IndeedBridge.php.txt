@@ -1,0 +1,47 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit f766193106d589f266b7e5847a933f55683dc010
+Author: Dag <me@dvikan.no>
+Date:   Thu Mar 24 03:07:17 2022 +0100
+
+    [IndeedBridge] fix: broken bridge
+    
+    The html was reworked.
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 89e3da0b6f64bb72929f0107e896432f4f83d4dc
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Sat Jun 22 18:50:06 2019 +0200
+
+    [IndeedBridge] Add new bridge (#1166)
+    
+    Implements a bridge for
+    https://www.indeed.com/ (or any of the local variants)
+    
+    Features:
+    - Takes a company name and returns a list of reviews and comments
+    - Limit the maximum number of items to return (default: 20)
+    - No upper limit on the number of items to return
+    - Search by language code (45 options)
+    - Supports detectParameters for any supported URL

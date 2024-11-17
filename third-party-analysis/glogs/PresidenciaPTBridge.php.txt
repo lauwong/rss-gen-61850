@@ -1,0 +1,103 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 206bebc7bdf90b00b2457a5693fe07079b3df40a
+Author: Dag <me@dvikan.no>
+Date:   Tue Jun 18 20:22:46 2024 +0200
+
+    ci: disallow the sizeof function in linter (#4134)
+
+commit 9574c17ddc4c55ab191878164627c4501a565221
+Author: Dag <me@dvikan.no>
+Date:   Thu Jan 25 13:03:00 2024 +0100
+
+    refactor/fix (#3924)
+
+commit bd6f56383c101292873aa0d43c8742b885479bb0
+Author: António Pereira <toni_to_1993@hotmail.com>
+Date:   Mon Jun 26 16:52:32 2023 +0100
+
+    [PresidenciaPTBridge]: Fix timestamp search (#3459)
+
+commit 1e470ef341c5046bb60238f9fada0f5e170ea585
+Author: somini <somini@users.noreply.github.com>
+Date:   Sat Jun 17 05:13:09 2023 +0100
+
+    [PresidenciaPTBridge]: Fix title search (#3438)
+    
+    This was changed on the site itself, in the last few days.
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit e79a02ac2eb55a91e88f2d11921f66fb90d147e1
+Author: somini <somini@users.noreply.github.com>
+Date:   Sun May 9 20:22:10 2021 +0100
+
+    [PresidenciaPTBridge]: Support multiple sections (#2082)
+
+commit 9e6f063cfd727d8b5f62efe5fdb511e884267626
+Author: somini <somini@users.noreply.github.com>
+Date:   Wed Mar 17 16:30:47 2021 +0000
+
+    [PresidenciaPT]: New Bridge (#2016)

@@ -1,0 +1,103 @@
+commit d51cc8f1a7e17cc07cecc1979beae9618902997f
+Author: Petr Kolář <kolarcz@gmail.com>
+Date:   Wed Aug 28 19:43:40 2024 +0200
+
+    Fixed path in CeskaTelevizeBridge (#4236)
+
+commit 0f6fa8034b04e1e007158ef0c5cc784bf8d7ef45
+Author: Petr Kolář <kolarcz@gmail.com>
+Date:   Tue Jan 2 16:23:13 2024 +0100
+
+    Fixed selector in CeskaTelevizeBridge (#3872)
+    
+    * Fixed selector in CeskaTelevizeBridge
+    
+    * Fixed also description selector
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 084a1bcf19c5dbf67710f1ac5825a27e056eb883
+Author: Štěpán Škorpil <stepan@skorpil.cz>
+Date:   Sun Jan 16 03:54:20 2022 +0100
+
+    [CeskaTelevizeBridge] Follow website changes (#2420)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 07551815554d506f662b56386284d4cef6ddbd1e
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Thu Nov 19 16:19:46 2020 +0500
+
+    [CeskaTelevizeBridge] Remove executable flag from bridge file
+
+commit 645a8f62c69b5c23a19fa3ac96a2c96078475843
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Oct 15 12:53:19 2020 +0500
+
+    [.travis] Fix several phpcs and phpunit errors (#1799)
+
+commit 7b6ff786232bbb8d97abc6c7099cf495fef452a2
+Author: Petr Kolář <kolarcz@gmail.com>
+Date:   Mon Oct 12 08:35:06 2020 +0200
+
+    [CeskaTelevizeBridge] Add New bridge (#1784)

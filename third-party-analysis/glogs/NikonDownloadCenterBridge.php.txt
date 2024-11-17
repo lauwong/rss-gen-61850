@@ -1,0 +1,15 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit b5d9742a2176506a459137d54fdd28f26e3a62ca
+Author: sal0max <msal.coding@gmail.com>
+Date:   Tue Jul 6 15:00:19 2021 +0200
+
+    [NikonDownloadCenterBridge] Add bridge (#2195)

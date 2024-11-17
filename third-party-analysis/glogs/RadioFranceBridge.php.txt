@@ -1,0 +1,14 @@
+commit ec1b9a110d33502baa64d8b55b0b877c1324ca30
+Author: Dag <me@dvikan.no>
+Date:   Thu Dec 8 21:36:28 2022 +0100
+
+    fix: radiofrance, #3077 (#3186)
+
+commit 1232de5744081bd9d12fbd175239218299651f98
+Author: Nicolas Delsaux <nicolas.delsaux@zenika.com>
+Date:   Mon Oct 3 06:55:24 2022 +0200
+
+    Add new bridge RadioFranceBridge, fix #3077 (#3082)
+    
+    As far as I understand, this supports all radio france sub-pages listing podcast and/or shows (tested with my two favorites shows, so not a very professionnal test).
+    We use here the data model provided by Radio France, which includes all data in an easily usable format.

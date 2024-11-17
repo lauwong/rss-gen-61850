@@ -1,0 +1,282 @@
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit 9bda9e246a21a44daeeb08dd1f41665e5a9f16e3
+Author: Dag <me@dvikan.no>
+Date:   Thu Oct 12 22:14:04 2023 +0200
+
+    refactor: FeedExpander (#3740)
+    
+    * refactor: FeedExpander
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit 288d4de218dec81035ffa06d2326ca15d9598e4e
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Sat Jan 5 12:29:26 2019 +0100
+
+    bridges: Fix bridges to pass unit test (#984)
+    
+    * [DealabsBridge] fixed parameters
+    * [DemonoidBridge] added parameter context names
+    * [DevToBridge] fixed parameters
+    * [ExtremeDownloadBridge] fixed parameters
+    * [GithubIssueBridge] fixed parameters
+    * [InstagramBridge] added parameter context names
+    * [MydealsBridge] fixed parameters
+    * [OnVaSortirBridge] fixed parameters
+    * [ThingyverseBridge] fixed parameters
+    * [HotUKDealsBridge] fixed parameters
+    * [FeedExpanderExample] added proper URI
+    * [GQMagazineBridge] fixed parameters and getDomain()
+    * [MozillaSecurityBridge] fixed filename
+    
+    References #980
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 88f52196b8dcc4c42f01500de3fe6d9fda4652e0
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Sep 4 13:28:55 2016 +0200
+
+    [bridges] Fix bridges extending RssExpander to FeedExpander
+
+commit 878db6f96ea61441f419be59ea05ed303722570f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Sep 4 13:26:40 2016 +0200
+
+    [bridges] Rename 'parseRSSItem' to 'parseItem'
+
+commit 0770ca1ad110c8ac006880f963f4bc04a8e0a39a
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Sep 4 13:16:34 2016 +0200
+
+    [FeedExpanderExample] Add bridge to test behavior

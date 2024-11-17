@@ -1,0 +1,5 @@
+commit 7d941c289844522a999e61191b63bf2ed6a4144c
+Author: sal0max <msal.coding@gmail.com>
+Date:   Mon Jul 4 07:29:22 2022 +0200
+
+    [Flaschenpost] Add bridge (#2808)

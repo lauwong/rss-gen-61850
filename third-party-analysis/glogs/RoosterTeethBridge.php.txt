@@ -1,0 +1,43 @@
+commit 683c968d646dbaf9719a1ef7b59797240fec7617
+Author: D5k H3h <85834680+dhuschde@users.noreply.github.com>
+Date:   Fri Mar 1 20:24:14 2024 +0100
+
+    [Rooster Teeth] Add Camp Camp channel (#3992)
+
+commit 6b83bf25fdd4f66b6be1528634ee037f4f00451f
+Author: John S Long <john@128.io>
+Date:   Sun Oct 2 12:38:33 2022 -0500
+
+    [RoosterTeethBridge] Add episode description, optional episode image (#3080)
+
+commit 8dcc21a871fd1d4589fc836c31b01dc34f558081
+Author: John S Long <john@128.io>
+Date:   Sat Oct 1 23:48:07 2022 -0500
+
+    [RoosterTeethBridge] Add new channels (#3076)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 8697e1e1a26c5b8c1dca284bd3b46b517063a9f2
+Author: Tyler Kenney <contact@tgkenney.dev>
+Date:   Mon Feb 10 10:57:08 2020 -0500
+
+    [RoosterTeethBridge] Add a new bridge (#1450)
+    
+    * Added RoosterTeethBridge

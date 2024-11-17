@@ -1,0 +1,170 @@
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit 7329b83cc0fe1a5f707f864b1f3d62efd4be2172
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 21 22:05:55 2023 +0200
+
+    refactor: logger (#3678)
+
+commit 4b9f6f7e53e0b2e9aae59df2bbffc0bdd6805aea
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 21:50:15 2023 +0200
+
+    fix: rewrite and improve caching (#3594)
+
+commit c1c8304fc05ffa2a2966434ec8251975100bf85b
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 17:03:12 2023 +0200
+
+    refactor: dont create multiple instances of the cache (#3504)
+
+commit ecb486794b622a9ea9f563abdf8a7fa41038d4e9
+Author: Dag <me@dvikan.no>
+Date:   Tue Aug 2 15:03:54 2022 +0200
+
+    refactor: use static values for cache scope
+    
+    This fixes a future problem when code is placed under a namespace because `get_class($bridge)` will then return e.g. `RssBridge\Bridge\TwitterBridge` instead of the the current value `TwitterBridge`.
+    
+    Also a bit refactoring of `Configuration.php`.
+
+commit d107f8ed3030c416ea3056f34b4ca242ff26af30
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Wed Jul 6 12:14:04 2022 +0200
+
+    Improve Factory variable names (#2895)
+
+commit 321ec7c8c16211192ca6ef7515c8880832adbd22
+Author: Dag <me@dvikan.no>
+Date:   Tue Jul 5 13:20:01 2022 +0200
+
+    refactor: move cache logic into the factory (#2884)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 07927008ebafacebfd97411600e21777ff752518
+Author: Dag <me@dvikan.no>
+Date:   Wed Jun 22 18:29:28 2022 +0200
+
+    refactor: CacheFactory (#2834)
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit 2460b678869415fff08238afdd61e05eba501dc5
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jun 18 19:04:19 2019 +0200
+
+    cache: Refactor cache factory to non-static class
+    
+    The cache factory can be based on the abstract factory class if it
+    wasn't static. This allows for higher abstraction and makes future
+    extensions possible. Also, not all parts of RSS-Bridge need to work
+    on the same instance of the factory.
+    
+    References #1001
+
+commit 21d3bf3b60bcf0e88165ef79c718b2efb1f5364c
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Mon Apr 29 20:12:43 2019 +0200
+
+    caches: Refactor the API (#1060)
+    
+    - For consistency, functions should always return null on non-existing data.
+    
+    - WordPressPluginUpdateBridge appears to have used its own cache instance in the past. Obviously not used anymore.
+    
+    - Since $key can be anything, the cache implementation must ensure to assign the related data reliably; most commonly by serializing and hashing the key in an appropriate way.
+    
+    - Even though the default path for storage is perfectly fine, some people may want to use a different location. This is an example how a cache implementation is responsible for its requirements.
+
+commit 556a417dd6bf39b1a4892bc2c935f32b0d710f28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Feb 6 18:52:44 2019 +0100
+
+    core: Add support for custom cache types via config.ini.php
+    
+    This commit adds support for a new parameter which specifies the type
+    of cache to use for caching. It is specified in config.ini.php:
+    
+     [cache]
+    
+     type = "..."
+    
+    Currently only one type of cache is supported (see /caches). All uses
+    of 'FileCache' were replaced by this configuration option.
+    
+    Note: Caching currently depends on files and folders (due to FileCache).
+    Experience may vary depending on the selected cache type. For now always
+    check if FileCache is working before testing alternative types.
+    
+    References #1000
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 2126db84accbc303e0420cac2bda19b199b2d76b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Nov 6 18:35:40 2018 +0100
+
+    core: Replace CACHE_DIR by PATH_CACHE
+    
+    Move CACHE_DIR from index.php to /lib/RssBridge.php and change name
+    to PATH_CACHE.
+    
+    PATH_CACHE is one of the core paths of RSS-Bridge and should therefore
+    be defined in the core file RssBridge.php.
+
+commit 5fea9fc1f5014485818d0331666cb58675f89378
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 5 15:53:45 2018 +0200
+
+    bridges: Fix bridges failing unit test
+
+commit c4d489f018b11927dba07699da0b27ee376b6949
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Jul 19 17:07:54 2018 +0200
+
+    Add URI to ElloBridge elements.
+
+commit 2d8f4dc3c5c27f5fd169cd48c1d9f9c6bc49a70c
+Author: teromene <teromene@teromene.fr>
+Date:   Sat May 5 18:10:19 2018 +0100
+
+    Fix space in URL resulting in API errors.
+
+commit 779b638fb4ba3be6244491412140782e53b92273
+Author: teromene <teromene@teromene.fr>
+Date:   Sat May 5 18:06:27 2018 +0100
+
+    Added ElloBridge. Closes #683

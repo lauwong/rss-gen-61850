@@ -1,0 +1,5 @@
+commit 51cdb66f9c65c41fd1c5b0564001ec5724be1575
+Author: Tuğhan Belbek <destructer9@gmail.com>
+Date:   Thu Oct 17 14:17:48 2024 +0200
+
+    [HarvardBusinessReviewBridge] Add bridge (#4293)

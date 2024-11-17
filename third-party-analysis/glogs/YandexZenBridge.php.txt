@@ -1,0 +1,61 @@
+commit 957a820931dc45e9aadd996751cfb7321f4ba47e
+Author: llamasblade <69692580+llamasblade@users.noreply.github.com>
+Date:   Sun Apr 14 17:14:52 2024 +0000
+
+    [YandexZenBridge] Fix broken bridge for some channels (#4078)
+    
+    Fixes #4071.
+    
+    Major changes:
+    - the bridge's URI changed from zen.yandex.com to dzen.ru, as the former
+      redirects to the latter (perhaps the bridge's name should be changed
+      as well);
+    - the channel's URL is now required instead of the channel's username;
+    - two kinds of URLs are supported, one for channels with usernames and
+      one for channels with IDs in their URL;
+    - the channel's real name, as shown in the webpage, is now used as the
+      feed title.
+
+commit cb6c931b1f62b80634b73af63ace9693bc3cbe76
+Author: Dag <me@dvikan.no>
+Date:   Sat Sep 23 17:50:41 2023 +0200
+
+    fix(duckduckgo): order by date (#3689)
+
+commit 0f14a0f6ee55cfd5809a420f8bf5357982874586
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Jul 3 01:56:45 2023 +0500
+
+    [YandexZenBridge] Add image to post (#3478)
+
+commit 748fc9fd65fe775f66580e9929c11c3a2d5c4c3a
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 2 06:40:25 2023 +0200
+
+    fix: various small notice fixes (#3474)
+    
+    * fix(patreon): php notice
+    
+    * fix(pepperbridge): php notice
+    
+    * fix(ebay): php notice
+    
+    * fix(tiktok): php notice
+    
+    * fix(yandex): fix notice
+    
+    * fix(justwatch): notice
+    
+    * lint
+
+commit 9b0f8095c2949b7dc0456f69b6048267f938a62c
+Author: llamasblade <69692580+llamasblade@users.noreply.github.com>
+Date:   Wed Jul 13 12:08:11 2022 +0200
+
+    [YandexZenBridge] Fix feed title if username not specified (#2922)
+
+commit 1294d3b953027bab8c7f816f23ddf0af269eb7b9
+Author: llamasblade <69692580+llamasblade@users.noreply.github.com>
+Date:   Wed Jul 13 01:08:05 2022 +0200
+
+    [YandexZenBridge] Add bridge (#2921)

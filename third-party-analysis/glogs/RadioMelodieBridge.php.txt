@@ -1,0 +1,173 @@
+commit 57e79e7f1b05f08419723c52ab04f4e53404aba5
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sun Jan 29 19:45:55 2023 +0100
+
+    [RadioMelodieBridge] Fix article content (#3230)
+    
+    - remove the social network share section ath the beginning and and the
+      end of the article
+    - removte the HTML formated article tilthe from the content
+    - limite the author picture size to 60 px
+
+commit eb94107c153b9413e3e83f290d087a5110a4037f
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Tue Jan 3 19:26:56 2023 +0100
+
+    [RadioMelodie] Fix bridge (#3204)
+    
+    This fix follows the change in the CSS of the website.
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37843e8777cafd6f7ce16dd233f078d6525bc1f2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sun May 8 04:19:06 2022 +0200
+
+    [RadioMelodieBridge] Fix date parsing (#2701)
+    
+    The date is now correctly parsed for every month in the year (There are months mane in french that are 3 letters long
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit a0bbbd69789c140debb087b8f5a6a40d373d2dc5
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sat Dec 18 11:19:58 2021 +0100
+
+    [RadioMelodieBridge] Fix to use the new website layout (#2330)
+
+commit f5f0b77805452918314112b3fb3fc6022c342d56
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 4 06:04:45 2021 +0200
+
+    [RadioMelodieBridge] Replace JS Audio Player (#2233)
+    
+    The Javascript Audio Player is replaced by the plain <audio> HTML tag
+
+commit 9399ebb2c65b468a2e9c585a0c61a5034d4537f7
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Jun 25 22:12:33 2021 +0200
+
+    [RadioMelodieBridge] Add timestamp support and content fix (#2105)
+
+commit ee5d190391afffd037e09c04418a240f7ac67ecd
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Feb 17 06:07:35 2021 +0100
+
+    [RadioMelodieBridge] Fix header image (#1985)
+    
+    Header Image is now using a direct link to the image, but without the
+    website base URL : the bridge now sends the right URL.
+
+commit 6c4098d6558c33a5fcb2a8bc9fb29e915d56fc6c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 2 13:03:26 2019 +0200
+
+    Revert "all: Use ->remove() instead of ->outertext = ''"
+    
+    This reverts commit 052844f5e13c71ceefd743136a71f71226a0eefb.
+    
+    There is a bug in ->remove() that causes the parser to incorrectly
+    identify elements in the DOM tree that shouldn't exist anymore.
+    
+    References #1151
+
+commit 052844f5e13c71ceefd743136a71f71226a0eefb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 1 21:15:30 2019 +0200
+
+    all: Use ->remove() instead of ->outertext = ''
+    
+    simplehtmldom 1.9 introduced new functions to recursively remove
+    nodes from the DOM. This allows removing elements without the need
+    to re-load the document by using $html->load($html->save()), which
+    is very inefficient.
+    
+    Find more information about remove() at
+    https://simplehtmldom.sourceforge.io/docs/1.9/api/simple_html_dom_node/remove/
+
+commit b519d350bf81faf81d53a63035a37ed9a32e9fb6
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sat Jun 1 12:12:17 2019 +0200
+
+    [RadioMelodieBridge] Fix bridge after website update (#1145)
+    
+    - The bridge has been adapted to the new website layout
+    - The content now shows the header picture below the date
+
+commit f9c4a84c2579bb3687c0e7e9bb1932db10ecefa6
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sat Apr 20 22:19:22 2019 +0200
+
+    [RadioMelodieBridge] Update to support new Website (#1101)
+    
+    * [RadioMelodieBridge] Update to support new Website
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit 7621784598b8a5e46e281e866d844ab13be947fd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Oct 26 18:07:34 2018 +0200
+
+    bridges: Add favicon to bridges missing it
+    
+    Adds favicon to bridges that support it. Some sites prevent downloading
+    favicons, those bridges are left untouched.
+    
+    Affected bridges:
+    
+    - AutoJMBridge
+    - BandcampBridge
+    - BlaguesDeMerdeBridge
+    - BloombergBridge
+    - BundesbankBridge
+    - ChristianDailyReporterBridge
+    - ContainerLinuxReleasesBridge
+    - DailymotionBridge
+    - DiceBridge
+    - DribbbleBridge
+    - EliteDangerousGalnetBridge
+    - ElsevierBridge
+    - FacebookBridge
+    - FB2Bridge
+    - FDroidBridge
+    - FierPandaBridge
+    - GooglePlusPostBridge
+    - JapanExpoBridge
+    - KATBridge
+    - KernelBugTrackerBridge
+    - LegifranceJOBridge
+    - NotAlwaysBridge
+    - NyaaTorrentsBridge
+    - PinterestBridge
+    - RadioMelodieBridge
+    - RainbowSixSiegeBridge
+    - SupInfoBridge
+    - TagBoardBridge
+    - TebeoBridge
+    - TheTVDBBridge
+    - WhydBridge
+    - ZoneTelechargementBridge
+
+commit 52dfa3fe76784b71f029387b095536e58c53bfe4
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sun Mar 11 15:38:07 2018 +0100
+
+    [RadioMelodieBridge] Add new bridge (#640)

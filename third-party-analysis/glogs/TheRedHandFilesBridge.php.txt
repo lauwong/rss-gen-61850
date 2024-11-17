@@ -1,0 +1,8 @@
+commit b21806a0b3563546ce418aa276afbaa24ebabad8
+Author: somini <somini@users.noreply.github.com>
+Date:   Sat Jan 28 06:39:59 2023 +0000
+
+    [TheRedHandFiles]: New Bridge (#3229)
+    
+    This blog had a feed, is updated irregularly, and someone disabled the
+    feed on the Wordpress config on purpose for some reason. :(

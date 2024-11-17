@@ -1,0 +1,71 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 7621784598b8a5e46e281e866d844ab13be947fd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Oct 26 18:07:34 2018 +0200
+
+    bridges: Add favicon to bridges missing it
+    
+    Adds favicon to bridges that support it. Some sites prevent downloading
+    favicons, those bridges are left untouched.
+    
+    Affected bridges:
+    
+    - AutoJMBridge
+    - BandcampBridge
+    - BlaguesDeMerdeBridge
+    - BloombergBridge
+    - BundesbankBridge
+    - ChristianDailyReporterBridge
+    - ContainerLinuxReleasesBridge
+    - DailymotionBridge
+    - DiceBridge
+    - DribbbleBridge
+    - EliteDangerousGalnetBridge
+    - ElsevierBridge
+    - FacebookBridge
+    - FB2Bridge
+    - FDroidBridge
+    - FierPandaBridge
+    - GooglePlusPostBridge
+    - JapanExpoBridge
+    - KATBridge
+    - KernelBugTrackerBridge
+    - LegifranceJOBridge
+    - NotAlwaysBridge
+    - NyaaTorrentsBridge
+    - PinterestBridge
+    - RadioMelodieBridge
+    - RainbowSixSiegeBridge
+    - SupInfoBridge
+    - TagBoardBridge
+    - TebeoBridge
+    - TheTVDBBridge
+    - WhydBridge
+    - ZoneTelechargementBridge
+
+commit a4ef42c2e9b899d31da575b0af1c2168c560fe20
+Author: rogerdc <roger@rogerdcook.com>
+Date:   Sun Apr 23 19:19:50 2017 -0500
+
+    Adding DiceBridge.php
+    
+    Dice.com is a technology-oriented job search site. This bridge allows you to create RSS feeds for the jobs listed there.
+    
+    Happy job hunting!

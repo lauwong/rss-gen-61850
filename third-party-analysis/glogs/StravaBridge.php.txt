@@ -1,0 +1,9 @@
+commit 73d88dda46b0f6748bfaa795b177aae2a4cbf900
+Author: Ryan Stafford <ryan@nanorex.net>
+Date:   Sat Jul 15 00:11:00 2023 -0400
+
+    [New Bridge] Strava bridge (#3533)
+    
+    * [StravaBridge] new bridge
+    
+    * [StravaBridge] gpx link, detect parameters

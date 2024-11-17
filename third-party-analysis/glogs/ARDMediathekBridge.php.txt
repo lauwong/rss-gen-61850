@@ -1,0 +1,43 @@
+commit cb91afbd71d545013b6c59f6841fbc4f64311a58
+Author: MarKoeh <75181140+Mar-Koeh@users.noreply.github.com>
+Date:   Tue Jul 30 22:08:18 2024 +0200
+
+    [ARDMediathekBridge] fixing API URL, start using show title (#4170) (#4172)
+    
+    The bridge stopped working after the API server stopped accepting a trailing slash after the ID in the URL. This is being fixed. Also, the show title in the JSON was ignored. This is being fixed as well
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit cd5c59b84c263375a5990768dfe66adbb2965a63
+Author: dag <me@dvikan.no>
+Date:   Tue Mar 22 20:42:54 2022 +0100
+
+    [ARDMediathekBridge] remove timezone modification (#2507)
+
+commit f259fa7f9f601431c9e2481d1bd546db46e945ef
+Author: MarKoeh <75181140+Mar-Koeh@users.noreply.github.com>
+Date:   Mon Jan 10 11:47:49 2022 +0100
+
+    [ARDMediathekBridge] Switch to JSON-API (#2380)
+    
+    * Switch ARDMediathekBridge to JSON-API
+    
+    The html screen scraping approach of ARDMediathekBridge did not work reliably. I could not find one show for which the item list was not empty using the html screen scraping approach.
+    
+    The proposed change uses the JSON-API of the WebApp. Although there is still room for improvement (feed title, better understanding of the API, more accurate mimic of the webapp's behavior, de-pagination …), it does work with this change.
+    
+    Indicate that now full URLs as well as just the ID are accepted.
+
+commit 3050f0ae706dd850af6496448c4f1678b6251f0d
+Author: 岳东辰 <38829129+yue-dongchen@users.noreply.github.com>
+Date:   Tue Jul 20 17:58:50 2021 +1000
+
+    [ARDMediathekBridge] New bridge (#2158)

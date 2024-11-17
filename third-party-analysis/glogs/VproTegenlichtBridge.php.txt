@@ -1,0 +1,17 @@
+commit ca667d731ce5b8b9e1b4768b4af1b11f97f90bf8
+Author: Juan Jose Pablos <juanjo@apertus.es>
+Date:   Tue Nov 29 15:19:16 2022 +0100
+
+    Update VproTegenlichtBridge.php (#3168)
+    
+    Fix lint error
+
+commit 9863204fa38d387326a0a22b5980a1010c59e8f5
+Author: vincentvd1 <github.wavza@aleeas.com>
+Date:   Fri Nov 25 20:39:56 2022 +0100
+
+    Feat: Add bridge for Vpro tegenlicht (#3162)
+    
+    * [VproTegenlichtBridge.php] Created bridge
+    
+    * [VproTegenlichtBridge.php] Added fetch exception

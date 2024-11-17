@@ -1,0 +1,15 @@
+commit 5ab1924c4f96937885e12bcbd16b7bfb83a3c15b
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Thu Dec 28 18:20:34 2023 +0530
+
+    Add WorldbankBridge and OglafBridge (#3862)
+    
+    * Add WorldbankBridge and OglafBridge
+    
+    * Update OglafBridge.php
+    
+    Remove redundant parent call to parseItem and rename formal argument to improve code clarity.
+    
+    * Update WorldbankBridge.php
+    
+    fix lint

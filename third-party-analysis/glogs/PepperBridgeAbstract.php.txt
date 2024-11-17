@@ -1,0 +1,255 @@
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit 8c3e973b9f508f3ea928a720a616d4d95d71d22b
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Thu Apr 18 01:43:53 2024 +0200
+
+    [PepperBridgeAbstract] Fix the "no result" detection (#4082)
+    
+    The "no result" test did not work, it is fixed now.
+
+commit 82606a479a75cd4eff4740ba49715b3135c89c49
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Thu Apr 4 04:08:29 2024 +0200
+
+    [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] Fix search URL, No results handling fixed, Thread title and Message URL handling (#4053)
+    
+    * [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] Fix search URL, No results handling fixed, Thread title and Message URL handling
+    
+    Search URL has been updated according to the website.
+    
+    If a search doesn't return any results, the HTML won't contain any
+    specific text now : the HTML structure is slightly different, so the
+    bridge has been updated.
+    
+    The unnneded 'no-results' text is now removed from the specific bridges.
+    
+    The board thread title has been removed from the content, so now we use
+    the page <title> element.
+    
+    In case a board message is empty, there was an exception during the
+    filtering of message without URL.
+    
+    * [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] Fix search URL, No results handling fixed, Thread title and Message URL handling
+    
+    Coding policy fixes
+
+commit be445759b631ea1ec954d70e8e1f30cfb9271f2b
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Thu Mar 28 19:44:27 2024 +0100
+
+    [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] Move as much as possible to JSON (#4032)
+    
+    As the website use more and more JSON, and JSON is a machine readable
+    format, I migrated as much as possible to the JSON.
+    
+    This simplifies the Abstract class a lot, and the Bridge classes need
+    less language specifi strings.
+
+commit 4d15ffd2cf44807210cb5d2783ce3bc5c8476275
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Feb 16 03:58:15 2024 +0100
+
+    [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] (#3982)
+    
+    Exclude thread results
+    
+    Some categories showed some thread in the middle of the deals : now only
+    the deals are handled
+    
+    Updated the "no results" text to follow the sites changes
+
+commit 64f95b4990c5b890eb526af1990205cbef5ac77a
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Tue Feb 6 02:23:12 2024 +0100
+
+    [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] Fix missing price, discount and ships from information (#3956)
+    
+    - DealabsBridge
+    - HotUKDealsBridge
+    - MydealsBridge
+    Add the currency in the i8n data of the bridges
+    
+    - PepperBridgeAbstract
+    The Price, discount data ans Ships from information are in the HTML
+    content anymore, so switched to the js-vue2 attributes
+
+commit 7931f37a835b3fd39093fd7de15f1b2a0263747d
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Mon Feb 5 23:30:18 2024 +0100
+
+    [PepperBridgeAbstract] Fix deal image scraping (#3953)
+    
+    Deal Image was moved to a vuejs element, the deal image scraping was
+    fixed.
+
+commit 55ffac5bae8d84ff1b42339d1114117cf32a6854
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Jan 5 07:23:40 2024 +0100
+
+    [PepperBridgeAbstract, DealabsBridge, HotUKDealsBridge, MydealsBridge] (#3876)
+    
+    Fix the Deal source link
+    
+    The HTML does not contain the link to the "Deal source anymore", now only an
+    attribute does contain the information about the Deal Source.
+    
+    The JSON data is now extraced for each Deal, and used to get the
+    Temperature and Deal Source.
+
+commit 0b67544f86e887d0bf4544b452fef816ec262928
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Dec 13 21:09:48 2023 +0100
+
+    [PepperBridgeAbstract] Fix temperature handling (#3828)
+    
+    Website has changed how the temperature is renderd : the bridge does
+    follow the new website structure
+
+commit 3ef0226a087fadfa565b70b0868fc988f927cfac
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Dec 8 06:25:39 2023 +0100
+
+    [PepperBridgeAbstract] Fix Detection of "no deals found" and more (#3821)
+    
+    - CSS styles showing there were no deals found has changed : CSS class
+      was updated
+    - Relative Date handling : the minimum granularity of a relative date is
+      the minute on the site. Seconds are therefore meaningless, and are now deleted.
+    
+    MydealsBridge was missing one relateve date prefix : now every date is
+    parsed (I hope so !)
+
+commit 84b5ffcc7c6ee42d323bb897f61e523127eb7595
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Tue Nov 7 05:02:34 2023 +0100
+
+    [PepperBridgeAbstract] Fix Deal Origin and Shipping cost (#3790)
+    
+    - Deal Origin was changed by the website : fixed the CSS class to get it
+    - Shipping cost had an extra SVG image in the content : removed the
+      whole HTML tags from the content
+
+commit 1cbe1a6f98ec536be7f894ebcc255d7417c0060b
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Tue Oct 3 23:15:10 2023 +0200
+
+    [PepperBridge] Fix date parsing (#3727)
+    
+    Website changed the date display.
+    This fix adapt the date parsing to the new website date display
+
+commit 69da0dd5830e1e8a48e4b22066ae645e790a5a9e
+Author: User123698745 <User123698745@users.noreply.github.com>
+Date:   Sun Oct 1 20:46:51 2023 +0200
+
+    [refactoring] replace direct use of curl with getContents (#3723)
+    
+    + some fixed warnings
+
+commit 2172df9fa2de2752396a55260f49594606466ec1
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 29 19:17:03 2023 +0200
+
+    fix: various notice fixes (#3718)
+
+commit 1fcf67f14a8f738f22395d453cb39aeed573af78
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 17:36:02 2023 +0200
+
+    [PepperBridgeAbstract] Fix deal origin (#3605)
+    
+    Origin display has chenged : this commit follow the websites changes.
+    
+    Fixes #3521
+
+commit 748fc9fd65fe775f66580e9929c11c3a2d5c4c3a
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 2 06:40:25 2023 +0200
+
+    fix: various small notice fixes (#3474)
+    
+    * fix(patreon): php notice
+    
+    * fix(pepperbridge): php notice
+    
+    * fix(ebay): php notice
+    
+    * fix(tiktok): php notice
+    
+    * fix(yandex): fix notice
+    
+    * fix(justwatch): notice
+    
+    * lint
+
+commit 00e716d84d270c4f96063e8e7150d51e80a150f8
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Thu Apr 20 11:22:53 2023 +0200
+
+    [PepperBridgeAbstract] Fix "no results" check (#3357)
+    
+    CSS class for "no results" text has changed, so the bridge has been
+    updated accordingly.
+
+commit f0e5ef0fc58f3796bb4c03caa2c5e7ca78de119e
+Author: Bocki <henning@bocklage.com>
+Date:   Mon Mar 6 20:01:51 2023 +0100
+
+    [Various] getKey replacements and docu (#3283)
+    
+    * [Various] getKey replacements and docu
+    
+    * more bridges and fix to the abstract
+    
+    * linting
+    
+    * revert bandcampdaily. doing more than i thought
+
+commit 06a4bc4b4524bcdbe4bb79a3c91bef988fc7394b
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Feb 10 06:16:01 2023 +0100
+
+    [DealabsBridge-HotUKDealsBridge-MydealsBridge] (#3253)
+    
+    Fix CSS class for the deal temperature
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit a4785370fa5ed3c3987fa42010d0fd6db405fbf2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Tue Jun 7 23:55:15 2022 +0200
+
+    [DealabsBridge-HotUKDealsBridge-MydealsBridge-PepperBridgeAbstract] Fix (#2789)
+    
+    the date handling
+    
+    The deal posting date logic was wrong, and leaded to warnings and
+    notice. Now, only the feed with the deal sorted by date contains date
+    (the feed sorted by hottest deal does not contain a date anymore,
+    because there are no deal date in this case).
+
+commit 4007afdcf5ba37bd693276a7a4d1311323e4ec8b
+Merge: 7d00b0c5 4d069fcf
+Author: Dag <me@dvikan.no>
+Date:   Tue May 17 23:59:18 2022 +0200
+
+    Merge branch 'autoloading' into master
+
+commit f00f90328d4e03558a917b421f7d2b8ead582507
+Author: Dag <me@dvikan.no>
+Date:   Fri May 13 09:29:56 2022 +0200
+
+    refactor: extract class PepperBridgeAbstract

@@ -1,0 +1,43 @@
+commit 376e711f0350698107a88d268c5f825ada593b41
+Author: Dmitry R. <me@mazy.wtf>
+Date:   Sun Jul 28 22:02:47 2024 +0200
+
+    [NovayaGazetaEuropeBridge]: fix warnings (#4154)
+
+commit 23f8c81646b288e8b8410e8e135bdbf592ab38bb
+Author: Dag <me@dvikan.no>
+Date:   Sat Oct 29 10:46:37 2022 +0200
+
+    refactor/fix: css organization and error rendering (#3117)
+    
+    * fix: php notice
+    
+    * refactor/feat: merge HtmlFormat.css into style.css
+    
+    Also improve ux of error rendering.
+    
+    * fix: center-align footer text
+
+commit e07a94d480d87710115101ae51147ed4895dfeb8
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Sat Jul 9 08:13:07 2022 +0200
+
+    Normalize some method calls (#2911)
+    
+    The methods were called as static even though they were not.
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit c78c1254a85c14ec44c77ac1da983d4b07efcaf4
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Sun Jun 19 04:57:40 2022 +0300
+
+    [NovayaGazetaEuropeBridge] Add bridge (#2827)

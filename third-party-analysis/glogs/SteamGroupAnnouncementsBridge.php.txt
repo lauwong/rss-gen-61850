@@ -1,0 +1,17 @@
+commit b9102d7e87726ca42659ff70e62ed6320b2657fb
+Author: Jisagi <Jisagi@users.noreply.github.com>
+Date:   Thu Jul 13 17:23:12 2023 +0200
+
+    Add Steam Group Announcements Bridge (#3527)
+    
+    * Create SteamGroupAnnouncementsBridge.php
+    
+    * Shorten implementation
+    
+    Maybe this fixes the tests
+    
+    * test
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>

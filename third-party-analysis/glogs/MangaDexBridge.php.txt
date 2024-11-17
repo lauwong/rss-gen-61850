@@ -1,0 +1,49 @@
+commit 845a8f793698e64a65e0bbc6c47a77904866d240
+Author: July <phantop@tuta.io>
+Date:   Sun May 28 12:23:01 2023 -0400
+
+    [MangaDexBridge] Add option to add chapter images to entries (#3412)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 2c7a9d7c45d3bc4dc955bb8fd5701a0df47ab3d5
+Author: Patrick Collins <Patricol@users.noreply.github.com>
+Date:   Sun Jun 26 00:50:51 2022 -0600
+
+    [MangaDex] improve date handling (#2864)
+    
+    prioritize new chapters rather than just edited ones.
+    should avoid batch-renaming drowning out new chapters, and existing items being re-sorted in the feed when they're edited.
+    documentation here: https://api.mangadex.org/docs/dates/
+
+commit abb4c17a0df6fb76255ba5b42cc84a820ba31f81
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Wed Jun 22 13:07:54 2022 -0400
+
+    bridges: Update maintainer (#2856)
+
+commit a8632344744793079b3c8fe3f4f29508ec9aeb9c
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Sun Jun 5 14:28:05 2022 -0400
+
+    [MangaDexBridge] add chapter search context (#2783)
+
+commit 3476b06ee01bc6becd36a84a64f44b5499d75e12
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Sat May 7 22:22:33 2022 -0400
+
+    [MangaDexBridge] Exclude external chapters (#2703)
+
+commit 73cc791ce14e74bb7c169ed53c0e0df10fd09273
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Fri Apr 1 14:15:47 2022 -0400
+
+    [MangaDexBridge] Add new bridge (#2583)

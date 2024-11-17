@@ -1,0 +1,153 @@
+commit fece9ed344a229a43f20b5288959241e64f31871
+Author: Arnav Jain <ajain-93@users.noreply.github.com>
+Date:   Fri Jun 30 15:50:54 2023 +0200
+
+    [NotAlwaysBridge] Add new categories, remove duplicate header, and social meta (#3463)
+    
+    * [NotAlwaysBridge] add new tags
+    
+    * [NotAlwaysBridge] Remove duplicate header and social meta
+    
+    * [NotAlwaysBridge] Add space to fix lint issues
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 92d813fbea3966eea841952834e6a4e969528f72
+Author: Dag <me@dvikan.no>
+Date:   Sun Jun 5 02:56:51 2022 +0200
+
+    [NotAlways] fix: broken url (#2773)
+    
+    The /all url now actually points to a specific item.
+    I think we want the frontpage for this.
+    
+    Fixes:
+    Fatal error: Uncaught Error: Call to a member function find() on null in NotAlwaysBridge.php:37
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit 7621784598b8a5e46e281e866d844ab13be947fd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Oct 26 18:07:34 2018 +0200
+
+    bridges: Add favicon to bridges missing it
+    
+    Adds favicon to bridges that support it. Some sites prevent downloading
+    favicons, those bridges are left untouched.
+    
+    Affected bridges:
+    
+    - AutoJMBridge
+    - BandcampBridge
+    - BlaguesDeMerdeBridge
+    - BloombergBridge
+    - BundesbankBridge
+    - ChristianDailyReporterBridge
+    - ContainerLinuxReleasesBridge
+    - DailymotionBridge
+    - DiceBridge
+    - DribbbleBridge
+    - EliteDangerousGalnetBridge
+    - ElsevierBridge
+    - FacebookBridge
+    - FB2Bridge
+    - FDroidBridge
+    - FierPandaBridge
+    - GooglePlusPostBridge
+    - JapanExpoBridge
+    - KATBridge
+    - KernelBugTrackerBridge
+    - LegifranceJOBridge
+    - NotAlwaysBridge
+    - NyaaTorrentsBridge
+    - PinterestBridge
+    - RadioMelodieBridge
+    - RainbowSixSiegeBridge
+    - SupInfoBridge
+    - TagBoardBridge
+    - TebeoBridge
+    - TheTVDBBridge
+    - WhydBridge
+    - ZoneTelechargementBridge
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit a16ec196c5f81bf132b0b16b19cca8f2041ab159
+Author: Adam Tygart <mozes@ksu.edu>
+Date:   Sun Apr 15 06:02:37 2018 -0500
+
+    [NotAlways] Add a bridge for the NotAlways family of sites (#537)
+    
+    NotAlways right found it necessary to remove their RSS feeds recently. This is a *simple* bridge to grab the ones on the front page. It allows you to filter the articles based on their classification (right, working, romantic, related, learning, friendly, hopeless, unfiltered, or all).

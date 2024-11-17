@@ -1,0 +1,55 @@
+commit 7881c87bed8ccade2d49c7eab758fb4c80a4a0c5
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 23:21:55 2023 +0200
+
+    fix: various small fixes (#3517)
+    
+    * fix(asrocknews): Trying to get property src of non-object
+    
+    Trying to get property 'src' of non-object at bridges/ASRockNewsBridge.php line 37
+    
+    * refactor(http): tweak max redirs config
+    
+    * fix(tiktok)
+    
+    * fix(gizmodo)
+    
+    * fix(craig)
+    
+    * fix(nationalg)
+    
+    * fix(roadandtrack)
+    
+    * fix(etsy)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 2ee091665a2425628f5a989c282545566259c2bd
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sat Dec 18 10:17:16 2021 +0000
+
+    [ASRockNewsBridge] Fix bridge (#2373)
+
+commit f48909b84ed1210d8f30c5b8ca0927327700c1b8
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sun May 17 18:00:52 2020 +0000
+
+    [ASRockNewsBridge] Add Bridge (#1526)
+    
+    * [ASRockNewsBridge] Add Bridge

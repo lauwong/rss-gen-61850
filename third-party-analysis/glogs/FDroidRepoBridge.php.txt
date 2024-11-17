@@ -1,0 +1,72 @@
+commit b3ac1d176ce9f4778986190702216f0f25918a70
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Fri Apr 5 17:39:38 2024 +0200
+
+    [FDroidRepoBridge] Simplify json retrieval (#4063)
+    
+    * [FDroidRepoBridge] Simplify json retrieval
+    
+    I looked into avoiding the writing-to-file and then reading-from-file altogether. Using a special file path that leaves the data in memory probably wouldn't work. But I'm unsure why we use the `index-v1.jar` file altogether.
+    The main F-Droid repo [lists](https://f-droid.org/en/docs/All_our_APIs/#the-repo-index) not only `index-v1.jar` (which only makes sense if we were to use the contained signature, which we don't), but also `index-v1.json` and `index-v2.json`. These json files can be fetched with `getContents`, optionally cached, and directly fed into `Json::decode` without using a temporary file. The HTTP transfer encoding can compress the file to a similar degree the jar (=zip) can. That's exactly what this commit uses.
+    
+    Now the question is whether all the F-Droid repositories out there have this file. I went through the whole [list of known repositories](https://forum.f-droid.org/t/known-repositories/721) and only one repo misses the `index-v1.json` file: [Bromite](https://fdroid.bromite.org/fdroid/repo/index-v1.json). Under these circumstances we can depend on the availability of the `index-v1.json` file.
+    
+    Closes #4062
+    
+    * [FDroidRepoBridge] Cleanup not requiring Zip
+    
+    With the last commit 1152386678151aeafd984061d34248023378bf64, the zip
+    extension is not required anymore. Don't fail if it's not available.
+
+commit d5aa3aef699b400d5b40d61ee45c4476f0fcb38e
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Fri Apr 5 11:31:30 2024 +0200
+
+    [FDroidRepoBridge] Fix example repo
+    
+    The ttrss example/placeholder repo is offline, which fails CI jobs.
+    Replace it with a healthy repo and package to get working CI tests and comparisons.
+
+commit 3cba984d22d6b1e045781f208211c4fb336c2bf0
+Author: Dag <me@dvikan.no>
+Date:   Thu Apr 4 17:43:07 2024 +0200
+
+    fix(FDroidRepoBridge): unlink when json file is absent from archive (#4056)
+
+commit 2bbce8ebef8cf4f88392431aabe84a15482dc933
+Author: Dag <me@dvikan.no>
+Date:   Sat Aug 6 22:46:28 2022 +0200
+
+    refactor: general code base refactor (#2950)
+    
+    * refactor
+    
+    * fix: bug in previous refactor
+    
+    * chore: exclude phpcompat sniff due to bug in phpcompat
+    
+    * fix: do not leak absolute paths
+    
+    * refactor/fix: batch extensions checking, fix DOS issue
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit abb4c17a0df6fb76255ba5b42cc84a820ba31f81
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Wed Jun 22 13:07:54 2022 -0400
+
+    bridges: Update maintainer (#2856)
+
+commit 73b1a6a7aadfc774c5ecfd6653b74b949b0c93fc
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Wed May 11 20:22:16 2022 -0400
+
+    [FDroidRepoBridge] Add F-Droid Repo Bridge

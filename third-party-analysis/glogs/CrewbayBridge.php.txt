@@ -1,0 +1,23 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit b29ba5b973694637642659e2bee80e0e4383b58a
+Author: Thibault Couraud <1036233+couraudt@users.noreply.github.com>
+Date:   Sun Nov 18 08:16:24 2018 +0000
+
+    [CrewbayBridge] Update bridge according to new crewbay.com website (#930)
+
+commit 3babd026581fc91c2764348174ca395875b41ad1
+Author: Thibault Couraud <1036233+couraudt@users.noreply.github.com>
+Date:   Tue Nov 6 13:56:23 2018 +0000
+
+    [CrewbayBridge] Implement bridge for crewbay.com (#902)
+    
+    * [CrewbayBridge] Implement bridge for crewbay.com - sailing boats offers

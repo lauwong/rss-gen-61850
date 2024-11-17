@@ -1,0 +1,13 @@
+commit 360f953be82b7340bd153991bdc87f699db598a4
+Author: Julien Papasian <papjul@users.noreply.github.com>
+Date:   Thu Sep 21 18:55:53 2023 +0200
+
+    Fix #3674 - [Nautiljon] Remove requirement of cURL NSS (#3679)
+    
+    Looks like it works with OpenSSL now.
+
+commit 59d3011c866499f6c43af133fc225afd0e627191
+Author: Julien Papasian <papjul@users.noreply.github.com>
+Date:   Thu Dec 8 20:48:10 2022 +0100
+
+    Add Nautiljon bridge (#3181)

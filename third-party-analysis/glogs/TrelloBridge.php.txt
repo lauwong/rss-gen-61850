@@ -1,0 +1,61 @@
+commit 4602f4f475d938202de6c65214b321d41d0a93e8
+Author: Dag <me@dvikan.no>
+Date:   Sat Apr 6 18:07:45 2024 +0200
+
+    tweaks (#4065)
+
+commit f40f99740588b09033917fd38132a99875495540
+Author: Dag <me@dvikan.no>
+Date:   Thu Dec 21 09:24:22 2023 +0100
+
+    fix: various small fixes (#3853)
+
+commit 52d3cce59dae1b5b8adb5497450e396473ebf6b2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 22:40:24 2023 +0200
+
+    bridges: add context to detectParameters (#3607)
+    
+    * bridges: add context to detectParameters
+    
+    Some bridges did not return the context parameter but they used it in
+    the parameters
+    
+    * bridges: add context to detectParameters
+    
+    Fix test for InstagramBridge
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit f81d1b084657907275ba9c0f03407f6abab7ba6e
+Author: Roliga <roliga.here@gmail.com>
+Date:   Sat Jan 5 13:27:12 2019 +0100
+
+    [TrelloBridge] Fix actions with missing image urls (#987)
+    
+    When an action is added then removed the image url properties of that
+    action are missing
+
+commit cb6ad7c0778a68cde071a01c31588c0808f3797b
+Author: Roliga <roliga.here@gmail.com>
+Date:   Wed Dec 26 20:44:53 2018 +0100
+
+    [TrelloBridge] Add new bridge (#971)
+    
+    Adds a new bridge for activity on boards and cards on the trello.com task management site.

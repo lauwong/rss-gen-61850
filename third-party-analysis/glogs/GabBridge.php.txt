@@ -1,0 +1,5 @@
+commit 0a060b2ad6c4befe5d30bec80a9a7649c5077e2c
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 31 03:52:27 2022 +0200
+
+    [Gab] feat: add new bridge GabBridge (#2920)

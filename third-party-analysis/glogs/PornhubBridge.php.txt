@@ -1,0 +1,73 @@
+commit 0dc6c66840a0dfd13b4ccb7408196c810b02ce46
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 24 00:03:21 2023 +0200
+
+    fix: add duration (#3699)
+
+commit d33808ea9eddfb5fd7371e2ad0ba5c8d232a9b1f
+Author: Dag <me@dvikan.no>
+Date:   Sat Sep 23 23:49:01 2023 +0200
+
+    fix: image (#3698)
+
+commit 18e15973610dc1ac1f04d35a74004011e9c1bdc0
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 5 17:06:23 2023 +0200
+
+    fix(ph): consent cookie (#3490)
+
+commit 37f1ab726b14f04070d26ebf65e591882ffb165e
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 16 20:26:33 2022 +0200
+
+    fix: various bug fixes (#3102)
+    
+    * fix: Undefined offset: 4
+    
+    * fix: Trying to access array offset on value of type bool
+    
+    * fix: Undefined variable: photo at bridges/TelegramBridge.php line 287
+    
+    * fix: Trying to get property innertext of non-object at bridges/ZDNetBridge.php line 186
+    
+    * fix: Undefined index: Category at bridges/UnraidCommunityApplicationsBridge.php line 42
+    
+    * fix: Undefined index: fullUrl at bridges/EuronewsBridge.php line 61
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit fe83d763a37afdb55a1bc64b937b558b44ccd916
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Wed Feb 26 20:34:46 2020 +0000
+
+    [PornhubBridge] Fix travis issues (#1471)
+    
+    * [PornhubBridge] Fix travis issues
+
+commit 480694e819e8a14178da00c355b5fbff75879879
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Sat Feb 15 00:03:29 2020 +0100
+
+    [PornhubBridge] Add bridge

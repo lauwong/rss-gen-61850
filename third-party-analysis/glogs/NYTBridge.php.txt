@@ -1,0 +1,41 @@
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit 6ac347d5ac36733d3199f1769626924613d4daa3
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 8 19:54:09 2022 +0200
+
+    fix: add workaround for NYTBridge antibot (#3022)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 0de2db853f139e6f7c11dcd4cf402e72660d20ef
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Wed Jun 30 12:14:25 2021 +0200
+
+    [NYTBridge] Fix article parsing (#2106)
+    
+    Co-authored-by: podiki <podiki@users.noreply.github.com>
+
+commit f9f511a8494aad2300045a82270c057b20a852ab
+Author: Anchit Bajaj <ab@abifog.com>
+Date:   Mon Jul 29 15:45:08 2019 +0530
+
+    [NYTBridge] : New bridge for the new york times (#1235)

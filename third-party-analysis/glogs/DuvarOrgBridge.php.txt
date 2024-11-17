@@ -1,0 +1,15 @@
+commit 8d6d0fa10c64c2ae6617d72793f45f7865c7c010
+Author: Tuğhan Belbek <destructer9@gmail.com>
+Date:   Sun Nov 3 20:30:28 2024 +0300
+
+    [DuvarOrgBridge] Add Duvar.org bridge for scraping news articles (#4315)
+    
+    * Add Duvar.org bridge for scraping news articles
+    
+    * PR Fixes
+    
+    * Update DuvarOrgBridge.php to set a default value for the URL suffix
+    
+    ---------
+    
+    Co-authored-by: Tughan Belbek <Tughan.Belbek@t-hive.io>

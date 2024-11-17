@@ -1,0 +1,39 @@
+commit 358bebbb890fce7a9636acfe9f21412dd1790fdb
+Author: Pavel Korytov <thexcloud@gmail.com>
+Date:   Sat Sep 7 08:02:27 2024 +0500
+
+    [EconomistWorldInBriefBridge] Fix bridge (#4258)
+
+commit f773878459c3c12ee01b09ef2a805c57760656ea
+Author: Pavel Korytov <thexcloud@gmail.com>
+Date:   Sun Jul 28 23:41:08 2024 +0300
+
+    [EconomistWorldInBriefBridge] Add cookie to options (#4165)
+    
+    * [EconomistWorldInBriefBridge] Add cookie
+    
+    * [EconomistWorldInBriefBridge] Add docs
+    
+    * [EconomistWorldInBriefBridge] Best-effort to work without cookie
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 4260be26a234ab0d7d1724d1853ee29a9bf9a7be
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Sun Jun 5 19:40:48 2022 +0300
+
+    [EconomistWorldInBriefBridge] indent with tabs instead of spaces (#2781)
+
+commit 7256d1138beee59ae28afb2f22706a898ad2acc3
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Sun Jun 5 18:16:11 2022 +0300
+
+    [EconomistWorldInBriefBridge] Add bridge (#2765)

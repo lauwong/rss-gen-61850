@@ -1,0 +1,41 @@
+commit 2d5d2f5017e9ba75f562683ee84cff392b700d43
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Tue Aug 20 21:02:15 2024 +0530
+
+    [NvidiaDriverBridge] fix typo (#4224)
+
+commit 320afc3f324ded84f56169dce70bc7721201ea0a
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Mon Aug 19 22:47:42 2024 +0530
+
+    [MaalaimalarBridge] fix image (#4222)
+    
+    * [NvidiaDriverBridge] Added Windows support
+    
+    * Update NvidiaDriverBridge.php
+    
+    * Update NvidiaDriverBridge.php
+    
+    * [MaalaimalarBridge] fix image
+    
+    * [MaalaimalarBridge] fix lint
+
+commit 7073bb2f4674578b396d13b926ce585c9638a305
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Thu Aug 8 05:05:48 2024 +0530
+
+    [NVIDIADriverBridge] Initial Commit (#4198)
+    
+    * [NVIDIADriverBridge] Initial Commit
+    
+    Fetch the latest NVIDIA Linux driver updates
+    
+    * Update NVIDIADriverBridge.php
+    
+    * refactor
+    
+    * rename
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>

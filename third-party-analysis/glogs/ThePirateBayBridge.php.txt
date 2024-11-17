@@ -1,0 +1,582 @@
+commit 64582a64f13ba4d7ba160ad6f57199d7ea010f42
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 1 21:19:27 2023 +0200
+
+    fix(tpb): add category (#3725)
+
+commit 2172df9fa2de2752396a55260f49594606466ec1
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 29 19:17:03 2023 +0200
+
+    fix: various notice fixes (#3718)
+
+commit 0bf38e5c56a795301d540f4b0ce6e9bd9935b058
+Author: Dag <me@dvikan.no>
+Date:   Wed Sep 20 03:15:15 2023 +0200
+
+    fix: small notice errors (#3677)
+    
+    * fix notice
+    
+    * fix notice
+    
+    * tweak
+    
+    * tweaks
+
+commit 54045be951cf7deab15535fccd93dc89998150d8
+Author: Dag <me@dvikan.no>
+Date:   Tue Aug 22 20:06:16 2023 +0200
+
+    fix(tpb): add missing cat (#3631)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit f54c996e0fae023bae5293aecce5bd0b81351782
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 30 14:20:47 2022 +0500
+
+    [CI] Add check, if php files are marked as non-executable (#2439)
+
+commit 418f951dd19d205acef1845d2ac7f4b642d149c7
+Author: Dag <me@dvikan.no>
+Date:   Sat Jan 15 11:15:39 2022 +0500
+
+    [ThePirateBayBridge] Repair broken bridge
+    
+    This is more like a refactor because they dont serve data in plain
+    html anymore. Instead, the data is available from a json api
+    at apibay.org
+    
+    Could possibly expand this bridge because their api has more to give.
+    
+    I learned about this api by grokking https://thepiratebay.org/static/main.js
+    and by looking at browser ajax requests.
+    
+    For some unknown reason they host some static assets at
+    https://torrindex.net/ which is used by the bridge to render
+    magnet image and user status image.
+    
+    Signed-off-by: Dag <me@dvikan.no>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 548e28249b931f4875f77c44595d1e586daa3bb7
+Author: Lyra <teromene@teromene.fr>
+Date:   Thu Oct 3 21:46:24 2019 +0200
+
+    [ThePirateBayBridge] Remove nested function
+
+commit 38960df180ff55453add4146ea8240c249ba3935
+Author: Lyra <teromene@teromene.fr>
+Date:   Fri Sep 6 10:55:15 2019 +0200
+
+    [ThePirateBayBridge] Fix PHPCS code violations
+
+commit 8bff63d9c65683ecde68a66fcf40594eda2e6faa
+Author: Mitsu <mitsukarenai@users.noreply.github.com>
+Date:   Tue Aug 27 01:18:43 2019 +0200
+
+    [ThePirateBay] URI fix, add magnet link
+
+commit 2b4a0301587fa809683eedec6c290f73f0d62bb0
+Author: Mitsu <mitsukarenai@users.noreply.github.com>
+Date:   Tue Aug 27 00:55:36 2019 +0200
+
+    [ThePirateBay] switch back TLD to .org
+    
+    And the "whack-a-mole" game continues
+
+commit 7d474e53610633ae805deb77b4f4ba9a8db56df2
+Author: Albirew <Albirew@users.noreply.github.com>
+Date:   Mon Nov 5 18:17:46 2018 +0100
+
+    [ThePirateBayBridge] Fix TLD from .org to .wf (#907)
+
+commit 585379d47a405c0d5aa62c6148410a72ac79441e
+Author: metaMMA <metaMMAproject@gmail.com>
+Date:   Sat Aug 26 12:28:52 2017 -0500
+
+    [ThePirateBayBridge] Add instructions
+    
+    Added additional instructions for: 'username search' and 'category
+    search' next to instructions for 'keyword search'.
+    
+    Changed variable name from underscore to camelCase.
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit ff834105345b9c2120ce9ed8f3292e7e00a3c6fe
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 17:28:07 2017 +0100
+
+    style: Fix coding styles
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit 8b52b3858eed04d9bacb3bfb7e49c1772e56bf74
+Author: niawag <niawag.flexget@gmail.com>
+Date:   Fri Dec 16 10:41:40 2016 +0100
+
+    Filter results by user status (VIP/Trusted/None)
+    
+    Took into account LogMANOriginal comment and tested it, everything's working.
+
+commit 8bb002c7b6b6a76f760f90c1264ff34b334b0527
+Author: niawag <niawag.flexget@gmail.com>
+Date:   Sun Dec 11 12:11:03 2016 +0100
+
+    Filter results by user status (VIP/Trusted/None)
+
+commit 970e216c1fc7a10550cf4288fd2197255557324f
+Merge: 9020b09f a1ef589f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Oct 2 16:05:58 2016 +0200
+
+    Merge branch 'methods2functions' of https://framagit.org/peetah/rss-bridge
+
+commit a4db8dc4959ee5e6ebcf08f052dc15d85bebf6f0
+Author: niawag <niawag.flexget@gmail.com>
+Date:   Sun Oct 2 15:09:51 2016 +0200
+
+    Add user feed, category feed and search in category feed
+    
+    I tested it and everything is working, I incorporated the changes suggested by mitsukarenai, thank a lot!
+
+commit b50652e6ac2772450fdedbe66f60ae2ea4c5ecec
+Author: niawag <niawag.flexget@gmail.com>
+Date:   Fri Sep 30 11:07:43 2016 +0200
+
+    Add category and uploader feed
+    
+    I made some changes to returne category and uploader feed. I also changed the URI to the magnet link to be able to use the feed in a torrent client. As discussed here (https://github.com/RSS-Bridge/rss-bridge/issues/412), I'd rather use the <torrent:magnetURI> item but it's not possible with RSS-Bridge ATM.
+    
+    If I find time to work on it I'll try to add combination possibilities: search term in a certain category or for a specific uploader
+    
+    Hope my changes will be appreciated!
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit f79d699a59b0432c5fb9746541a9fec839deaa4f
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 29 23:28:16 2016 +0200
+
+    [ThePirateBayBridge] code simplification
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 4f7fbae861e2f7f4e879fcba7d7b1ccb51dd2a08
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 28 20:38:01 2016 +0200
+
+    [bridges] Fix conditional checks on getInput
+    
+    isset($this->getInput('')) does not work
+
+commit 1b3c8a8aeba5641f3bec9a6a720939df537bfa83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 01:25:33 2016 +0200
+
+    [core + bridges] add BridgeAbstract::$inputs and BridgeAbstract::getInput()
+    
+    Inputs are not stored in BridgeAbstract::$parameters anymore to separate
+    static data from dynamic data.
+    The getInput method allows for more readable code.
+    
+    Also fix an "undefined index 'global'" notice
+    
+    Probability of breaking bridges: high !
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3c0d13c1bb72a87f0d671692e205f45f04d94eba
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 19:06:35 2016 +0200
+
+    bridges: use BridgeAbstract::getSimpleHTMLDOM
+    
+    instead of BridgeAbstract::file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 74f0572d914617b4e47fe0fd2fabfe356710d609
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Aug 17 14:45:08 2016 +0200
+
+    bridges: Replace returnError function with more specific
+    
+    Replacements depend on original error code:
+    400: returnClientError
+    404: returnServerError
+    500: returnServerError
+    501: returnServerError
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit 5ad157d2fddc23e447dfb0792911f40dc28ee8a0
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Sat Aug 6 16:17:58 2016 +0200
+
+    bridges: Remove getCacheDuration if default
+    
+    BridgeAbstract will return 3600 seconds by default, so the function
+    can be removed from any bridge implementing getCacheDuration
+    returning the same value.
+    
+    Documentation updated accordingly.
+
+commit 955eecc299e67a1062a9e75149b6c098fb9d2cbc
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Jun 25 23:17:42 2016 +0200
+
+    use BridgeAbstract::file_get_html in all bridges
+    
+    instead of simple_html_dom function file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit a6e403f48dd4e8b745d44ea053d8464daf8052ed
+Author: Albirew <Albirew@users.noreply.github.com>
+Date:   Mon May 16 15:53:54 2016 +0200
+
+    changed TLD .se -> .org
+    
+    http://betanews.com/2016/05/15/pirate-bay-domains-seized/
+    And the game of the cat and the mouse continue...
+
+commit 6deebb56a5a3cd20fe4dde1f2439318560e48816
+Author: Albirew <Albirew@users.noreply.github.com>
+Date:   Fri Jan 15 18:20:30 2016 +0100
+
+    changed TLD .ms -> .se
+    
+    On continue le jeu du chat et de la souris =)
+
+commit 7e91186c6ce3209b13475e5d30158df3039aa546
+Author: Albirew <Albirew@users.noreply.github.com>
+Date:   Sat Jan 9 10:23:19 2016 +0100
+
+    TPB changed domain (again)
+    
+    TPB added .ms TLD and on the fly, .vg got down.
+    PS: .se TLD still exist.
+
+commit 78c9dcc705682cb3e71912fae19365d71ee7bf22
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Nov 5 15:50:18 2015 +0000
+
+    Last batch of bridges, all implemented !
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit c16747757d8a48dfbe29dd3de72e0224a19240d6
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Thu Jun 4 17:06:14 2015 +0200
+
+    (some cleanup)
+
+commit ab3582e2b4323b4f8c4856c2f8aa0af5fe838473
+Author: Alexandre Aubin <alexandre.aubin@cern.ch>
+Date:   Mon Dec 8 19:39:57 2014 +0100
+
+    Adding possibility to have several list separated by ';', + code to parse date correctly.
+
+commit 529c1817f5ca732812294346a30eff95d1f90b84
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Thu Dec 4 19:13:17 2014 +0100
+
+    TPB: (oops wrong td)
+
+commit f56698147029a705093be1d10d6b85b6f0c932a5
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Thu Dec 4 19:11:14 2014 +0100
+
+    TPB: add seeders-leechers count
+
+commit c07eacfd6af5646c795e5739e8d39964002fa87f
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Mon May 26 19:45:10 2014 +0200
+
+    Add extra bridges, second batch (TPB inside)

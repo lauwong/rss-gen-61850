@@ -1,0 +1,25 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 3b04e318ae2e4e1e9df3315fe0e74ba425ac9b5a
+Author: quickwick <2566133+quickwick@users.noreply.github.com>
+Date:   Sat Jun 4 11:10:07 2022 -0700
+
+    [SlusheBridge] New bridge (#2700)

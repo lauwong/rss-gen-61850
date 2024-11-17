@@ -1,0 +1,13 @@
+commit 1262cc982ce4242b7bfcf14865d312381ddfe0bb
+Author: hleskien <34342248+hleskien@users.noreply.github.com>
+Date:   Wed Jan 24 19:12:38 2024 +0100
+
+    added new bridges (#3920)
+    
+    * added new bridges
+    
+    * lint
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>

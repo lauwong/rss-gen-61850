@@ -1,0 +1,316 @@
+commit 41df17bc464832118a767ceff6c9217071699783
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 1 19:23:30 2023 +0200
+
+    refactor (#3712)
+    
+    * test: refactor test suite
+    
+    * docs
+    
+    * refactor
+    
+    * yup
+    
+    * docs
+
+commit 6254b8593e2f7636db65db23c1228482e38be44f
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 19 05:05:49 2023 +0200
+
+    refactor(cache): extract and encapsulate cache expiration logic (#3547)
+    
+    * refactor(cache): extract and encapsulate cache expiration logic
+    
+    * fix: logic bug in getSimpleHTMLDOMCached
+    
+    * fix: silly me, index should of course be on the key column
+    
+    * silly me again, PRIMARY keys get index by default lol
+    
+    * comment out the delete portion in loadData
+    
+    * remove a few log statements
+    
+    * tweak twitter cache timeout
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit 235c9859012887bda40c0f024c72975223256610
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 17:04:28 2016 +0200
+
+    [BridgeAbstract] replace getCacheDuration method by CACHE_TIMEOUT class constant
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 7cfc35d20caec8a91c2b4ed4034c0aaac8e351c2
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 13:58:43 2016 +0200
+
+    [DemoBridge] fix uris
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit e329a4c1b6a6c2ae266d05bb3777f78365113a7f
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 14:54:44 2016 +0200
+
+    bridges: Change ->name to ->author
+
+commit 0663c9507f2a62a47ca46944bbcea834e6c489ba
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Mon Aug 8 22:43:28 2016 +0200
+
+    [AtomFormat] Remove enclosures
+    
+    This feature was implemented for AtomFormat only and implemented by no
+    bridge other than DemoBridge.
+
+commit 4deefdfd7d52843e7cf80d0134c1172ececa25a0
+Author: Teromene <teromene@teromene.fr>
+Date:   Tue Jan 19 12:34:38 2016 +0000
+
+    Add enclosures support, see example in DemoBridge.
+
+commit 2d526f4e0a557e9325a06658cac5421486006aaa
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Nov 3 23:05:10 2015 +0000
+
+    Correction de quelques bugs dans les bridges, qui apparaissent à cause du fait qu'ils sont tous instanciés lors du chargement de tout les bridges.
+    Ré-ajout et ré-utilisation de getName et getURI, qui permettent d'avoir des élements dynamiques.
+    Changement en public de certaines valeurs.
+    Changement du nom de certaines constantes, déja utilisés.
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 11ad75c7e6e4aca193b6ccfddb07c93c976644dc
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Nov 3 22:28:44 2015 +0000
+
+    Premier lot de bridges utilisant le premier système.
+    
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 5d2e7ac83ddc8e300336b955b654afab2f078438
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Nov 3 14:36:19 2015 +0000
+
+    Ajout d'options multiples pour les méta-données.
+    Ajout d'un bridge de démonstration, DemoBridge.
+    Ajout d'un début de documentation pour créer un bridge dans CREATE_BRIDGE.md

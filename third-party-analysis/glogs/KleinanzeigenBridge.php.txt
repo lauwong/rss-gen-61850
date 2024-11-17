@@ -1,0 +1,25 @@
+commit 72eea1bd3df302c341b00cb6aca471b8139d19c9
+Author: knrdl <35548889+knrdl@users.noreply.github.com>
+Date:   Sat Jan 20 17:58:21 2024 +0100
+
+    [KleinanzeigenBridge] remove unnecessary params
+
+commit fffe4663cbbc802263aa127428d3551998fbc0b4
+Author: knrdl <35548889+knrdl@users.noreply.github.com>
+Date:   Sat Jan 20 17:17:04 2024 +0100
+
+    [KleinanzeigenBridge] Add filter options
+
+commit ef711cb30b026b581573c5dc5f4de88b47f105b9
+Author: knrdl <35548889+knrdl@users.noreply.github.com>
+Date:   Mon Nov 13 00:12:39 2023 +0100
+
+    [KleinanzeigenBridge] add new bridge (#3798)
+    
+    * [KleinanzeigenBridge] add new bridge
+    
+    * [KleinanzeigenBridge] fix missing timestamp
+    
+    * [KleinanzeigenBridge] linting
+    
+    * [KleinanzeigenBridge] fix end of list detection

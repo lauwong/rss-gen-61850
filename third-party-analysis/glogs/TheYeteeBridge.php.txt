@@ -1,0 +1,87 @@
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 8f086169cca3472d99fb58e1a67c4c42dc0ab0ee
+Author: Shikiryu <Chouchen@users.noreply.github.com>
+Date:   Sun Feb 21 11:19:20 2021 +0100
+
+    [TheYeteeBridge] Fix HTML parsing (#1986)
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit 5722a6c1390c34886339b286927300476f24fe7f
+Author: Monsieur Poutounours <30292704+MonsieurPoutounours@users.noreply.github.com>
+Date:   Mon Sep 10 21:56:55 2018 +0200
+
+    Adding a bridge for theyetee.com (#809)
+    
+    * Adding a bridge for theyetee.com
+    
+    The bridge fetches daily shirts at theyetee.com.
+    The Yetee offers two new shirts each day, but you can buy them only for a few hours !
+    Unfortunately, the site don't provide RSS feed, so the only way to keep up to date on new shirt is their daily mailing ... until now !

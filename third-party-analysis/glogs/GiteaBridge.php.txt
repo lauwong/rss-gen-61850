@@ -1,0 +1,36 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit e01f0bcaf245281e64e9fc517d5bba11b2b524f9
+Author: Eric G <e+pgp9225@linuxw.info>
+Date:   Thu May 12 22:15:03 2022 +0200
+
+    [GiteaBridge] Rewrite to decouple from Gogs and add contexts (#2718)
+
+commit fd449be4ebb331c6b726f971231a8ec828ab6bd5
+Author: Dag <me@dvikan.no>
+Date:   Thu May 12 15:14:15 2022 +0200
+
+    refactor: remove unnecesary includes
+
+commit fa8253c8bfee581c866673c3eb9ffc3ad95807f1
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 23 09:14:16 2019 +0200
+
+    [GiteaBridge] Add new bridge
+    
+    Gitea is a fork of Gogs and therefore shares most of its features
+    except for releases.

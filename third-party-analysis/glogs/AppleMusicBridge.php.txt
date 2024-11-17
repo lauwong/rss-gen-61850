@@ -1,0 +1,65 @@
+commit 668f3a9d7e244e7969d3dd5fdac3f87c6fc88a66
+Author: Arnav Jain <ajain-93@users.noreply.github.com>
+Date:   Sat Oct 19 20:19:24 2024 +0200
+
+    [AppleMusicBridge] fix linting error (#4308)
+
+commit f9a51b676896126ea70ee73ff1027cbd43531d8f
+Author: Jonas Taedcke <1809673+jonastaedcke@users.noreply.github.com>
+Date:   Fri Oct 18 08:29:07 2024 +0200
+
+    [AppleMusicBridge] Further data request to receive artist information. (#4271)
+
+commit 7e4807530ec6199ac9754bce54f025a113edfbbe
+Author: Dag <me@dvikan.no>
+Date:   Mon Jul 31 20:43:18 2023 +0200
+
+    fix: various small fixes (#3580)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit b074abcc0d79748f8cd9e0392758453df10db170
+Author: Bockiii <henning@bocklage.com>
+Date:   Sun May 30 20:08:39 2021 +0200
+
+    [AppleMusicBridge] Complete rebuild for new site (#2134)
+
+commit 5729e069e9ccc9b12a230b6a9e06d842f6aceecc
+Author: David Pedersen <Limero@users.noreply.github.com>
+Date:   Mon Nov 16 18:15:39 2020 +0100
+
+    [AppleMusicBridge] Use title from website (#1855)
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit 29b187fc1223e8c7575b8935d7d2ca219efced40
+Author: David Pedersen <Limero@users.noreply.github.com>
+Date:   Wed Feb 6 17:43:20 2019 +0100
+
+    [AppleMusicBridge] Add new bridge (#1026)

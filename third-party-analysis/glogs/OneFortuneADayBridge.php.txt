@@ -1,0 +1,79 @@
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5ea985164ed8f52a53f12f76e529267a2904102a
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Thu Mar 14 19:44:36 2019 +0100
+
+    [OneFortuneADayBridge] use date in UTC for seed (#1059)
+
+commit 958ba815c72c3ade0401702601273cacc07e8127
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Sun Feb 24 11:49:17 2019 +0100
+
+    [OneFortuneADayBridge] Add lucky number feature (#1038)
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 6b2a45c1e8bc3f15a8bcbb9f66eacb101ddfc9b8
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Wed Dec 26 21:06:16 2018 +0100
+
+    [OneFortuneADayBridge] Add new bridge (#974)

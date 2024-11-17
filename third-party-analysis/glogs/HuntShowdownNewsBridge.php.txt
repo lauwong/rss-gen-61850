@@ -1,0 +1,9 @@
+commit dd165ea9d1d2306f96188943fc7441d55f4cc1e4
+Author: Dennis <Dennis.mellegaard@gmail.com>
+Date:   Mon Nov 4 15:16:58 2024 +0100
+
+    [HuntShowdownNewsBridge] Fetches the latest articles from Hunt Showdown (#4318)
+    
+    * feat: add Hunt Showdown News Bridge for fetching latest news articles
+    
+    * chore: clean up formatting and remove unnecessary whitespace in HuntShowdownNewsBridge.php

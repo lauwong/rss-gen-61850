@@ -1,0 +1,235 @@
+commit 133dbf87c50c70f8644cfd7916aff3daa8fac520
+Author: Dag <me@dvikan.no>
+Date:   Sun Aug 11 01:23:10 2024 +0200
+
+    fix(telegram): add note if content is omitted from preview page (#4210)
+    
+    * fix(telegram): add note if content is omitted from preview page
+    
+    * lint
+
+commit 0bf38e5c56a795301d540f4b0ce6e9bd9935b058
+Author: Dag <me@dvikan.no>
+Date:   Wed Sep 20 03:15:15 2023 +0200
+
+    fix: small notice errors (#3677)
+    
+    * fix notice
+    
+    * fix notice
+    
+    * tweak
+    
+    * tweaks
+
+commit 7e4807530ec6199ac9754bce54f025a113edfbbe
+Author: Dag <me@dvikan.no>
+Date:   Mon Jul 31 20:43:18 2023 +0200
+
+    fix: various small fixes (#3580)
+
+commit 67f72bfa5d35c25922bd759e001236fce473b095
+Author: Joseph <VerifiedJoseph@users.noreply.github.com>
+Date:   Mon Feb 13 21:19:41 2023 +0000
+
+    [TelegramBridge] Support new username URL format (#3257)
+    
+    * [TelegramBridge] Support new username URL format
+    
+    * [TelegramBridge] Fix text error
+
+commit ebb82849e9388a4a6dcfa9651d0d4102095cbbe4
+Author: Dag <me@dvikan.no>
+Date:   Thu Nov 17 18:06:56 2022 +0100
+
+    fix: notice in telegram (#3151)
+    
+    * refactor: telegram
+    
+    * fix: notice in telegram
+
+commit 37f1ab726b14f04070d26ebf65e591882ffb165e
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 16 20:26:33 2022 +0200
+
+    fix: various bug fixes (#3102)
+    
+    * fix: Undefined offset: 4
+    
+    * fix: Trying to access array offset on value of type bool
+    
+    * fix: Undefined variable: photo at bridges/TelegramBridge.php line 287
+    
+    * fix: Trying to get property innertext of non-object at bridges/ZDNetBridge.php line 186
+    
+    * fix: Undefined index: Category at bridges/UnraidCommunityApplicationsBridge.php line 42
+    
+    * fix: Undefined index: fullUrl at bridges/EuronewsBridge.php line 61
+
+commit e21394d2d32b2ce739cf4236b4e955621e4e9308
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 16 12:03:57 2022 +0200
+
+    refactor: html format (#3062)
+    
+    * refactor: html format
+    
+    Fix a few small bugs too
+    
+    * fix
+    
+    * fix
+    
+    * trigger build
+    
+    * striptags instead of encode title
+
+commit 94ae098ef5687f6cc128a0fb7bd33443e40e3e55
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 9 20:18:50 2022 +0200
+
+    fix: various fixes (#3023)
+    
+    * improve twitch error message
+    
+    * fix worldcosplay notice
+    
+    * fix: add new video image to telegram
+    
+    * fix: reuters
+    
+    * fix: formula1
+    
+    * twitter
+
+commit 0dab51e26f309d9bf92d023e6e5737d5ca83c72e
+Author: Dag <me@dvikan.no>
+Date:   Tue Sep 6 00:14:20 2022 +0200
+
+    fix: php errors (#3013)
+    
+    * fix: php error in tiktok bridge
+    
+    * fix: notice in craigslist
+    
+    * fix: php notice in wordpress bridge
+    
+    * feat: improve ux in telegram bridge
+
+commit 6c52e9bbc66e65a54bfff133e6cd1b7cd8f4e40f
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Wed Jul 6 01:48:49 2022 +0000
+
+    [TelegramBridge] Support telegram.me in detect params regex (#2891)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit bde00447f1b3c3e54090f21fa5079499c728f4d5
+Author: Dag <me@dvikan.no>
+Date:   Wed Jun 22 18:33:21 2022 +0200
+
+    [Telegram] fix: remove all enclosures except for videos (#2850)
+
+commit d98add2cacba353dd3e92b0c84d9769d826696a1
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Wed Apr 6 08:15:21 2022 +0000
+
+    [TelegramBridge] Fix issues & add support for location messages (#2133)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 973e49d93e416ab72de93603c24ab6b7d2083404
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Sat Jun 5 09:22:25 2021 +0500
+
+    [TelegramBridge] Add test cases for detectParameters
+
+commit 3aafd44079fccd09973fbd8ba75a128d0d150553
+Author: Andrea Draghetti <drego85@draghetti.it>
+Date:   Tue Mar 16 14:04:07 2021 +0100
+
+    [TelegramBridge] Display the name of the attachments (#2003)
+    
+    Sometimes attachments are posted in Telegram channels without any text.
+    
+    The script recognizes a new message but does not report any text, with this commit the file names will also be included in the RSS Feed.
+
+commit c294a652a329c15a7fb004e8b534b124225e7b8f
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sun Feb 28 13:20:44 2021 +0000
+
+    [TelegramBridge] Add detectParameters() (#1998)
+
+commit c855d5089febc8d9b72f4de12391a1f1d2d1068c
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Wed Nov 11 23:31:24 2020 +0500
+
+    Revert "[TelegramBridge] Prevent double encoding entities (#1182)"
+    
+    This reverts commit 5e2f0fb626d4d3474943307fe25eb61b329ae498.
+
+commit d3fbf0d8727e67919fb6e3ae48fbe5a89f4260b7
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sat Jul 6 09:59:55 2019 +0000
+
+    Fix bridge description (#1207)
+
+commit a31e518a07f3f098bd60d816884a1f48bdd54e16
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Sat Jul 6 10:52:56 2019 +0100
+
+    [TelegramBridge] Fix forwarded videos (#1202)
+    
+    Videos forwarded from other channels use a slightly different format, This fixes it.
+
+commit ebe463dd08678373592192b6e56927aaf555eecb
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Thu Jun 27 18:03:18 2019 +0000
+
+    [TelegramBridge] Set 'username' parameter as required (#1192)
+
+commit 3769850ba33c8707488800c01a0ec31e76fcb774
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Sun Jun 23 07:54:52 2019 +0100
+
+    [TelegramBridge] Fix entries for "media too big" (#1184)
+    
+    When a large video is posted, "Media is too big" appears in web preview. This adds code to detect this and offer a link.
+
+commit 69acc6228a36d2bc0aaa87c02843844ca28f9fba
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Sat Jun 22 17:45:15 2019 +0100
+
+    [TelegramBridge] Populate author (#1183)
+
+commit 5e2f0fb626d4d3474943307fe25eb61b329ae498
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Sat Jun 22 17:44:25 2019 +0100
+
+    [TelegramBridge] Prevent double encoding entities (#1182)
+
+commit 372461b1a3ff21275b33ffb940679a21a4449251
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Sat Jun 22 17:34:02 2019 +0100
+
+    [TelegramBridge] Fix timestamp for videos (#1181)
+
+commit 1989252608c4363d3429ebdb23c0eec3fad1a6ca
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Wed Jun 19 20:40:56 2019 +0000
+
+    [TelegramBridge] Add new bridge (#1175)

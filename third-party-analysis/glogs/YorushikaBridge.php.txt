@@ -1,0 +1,33 @@
+commit b4d397ff7064298f4ffb9afe74fa27b34d26d3c8
+Author: Miika Launiainen <miika@miicat.eu>
+Date:   Sun Apr 14 20:13:31 2024 +0300
+
+    [YorushikaBridge] Fix getting date (#4077)
+    
+    * Remove unnecessary variable
+    
+    * Fix getting date
+
+commit 58c254ad3bd3f0c9a3e01dc8b4011996dffbaf75
+Author: Miika Launiainen <miika@miicat.eu>
+Date:   Thu Apr 11 18:18:37 2024 +0300
+
+    [YorushikaBridge] Add language selection parameter (#4073)
+    
+    * Add language selection parameter
+    
+    * Fix typo
+    
+    * Fix lint errors
+
+commit 4e616c7092b0fa2ad181117817ab80ad6cf4dfef
+Author: Miika Launiainen <miika.launiainen@proton.me>
+Date:   Sun Mar 19 13:50:04 2023 +0200
+
+    [YorushikaBridge] Replace YouTube embeds with YouTube link (#3321)
+
+commit dc9530b405a0cc6f1838c02b382497241a1dd740
+Author: Miika Launiainen <miika.launiainen@proton.me>
+Date:   Thu Mar 9 19:36:51 2023 +0200
+
+    [YorushikaBridge] Created the bridge (#3299)

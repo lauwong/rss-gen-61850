@@ -1,0 +1,51 @@
+commit f89c75b4b8d7bf054fccd2905b7de6eb97f73c91
+Author: Pavel Korytov <thexcloud@gmail.com>
+Date:   Wed Oct 16 19:59:36 2024 +0300
+
+    [ArsTechnicaBridge] Fix the bridge after redesign (#4282)
+
+commit b785a4b64ee7fb295b845a59bd9d573a3e775e3e
+Author: July <phantop@tuta.io>
+Date:   Fri May 17 15:29:17 2024 -0400
+
+    ArsTechnicaBridge: restore categories lost by FeedExpander (#4030)
+
+commit ea2b4d7506f0feded2899cb0aab351fa7dca3194
+Author: July <phantop@tuta.io>
+Date:   Sat Dec 23 03:42:37 2023 -0500
+
+    [ArsTechnicaBridge] Properly handle paged content (#3855)
+    
+    * [ArsTechnicaBridge] Properly handle paged content
+    
+    * [ArsTechnicaBridge] Remove normal site ad wrapper
+
+commit f01729c86f29b61d4a50ea8f76c639cd1fc19f5a
+Author: Dag <me@dvikan.no>
+Date:   Wed Dec 13 21:40:13 2023 +0100
+
+    fix(arstechnica): plus a few unrelated tweaks (#3829)
+
+commit daef240cd2fac0473113da456e11172d7d24c7a4
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 23:14:08 2023 +0200
+
+    test: add test for FeedParser (#3754)
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit 586d707ae48b74b150eb101f2e9986d0bd18d89f
+Author: July <phantop@tuta.io>
+Date:   Sat Sep 9 03:19:09 2023 -0400
+
+    [ArsTechnicaBridge] Add new bridge (#3657)

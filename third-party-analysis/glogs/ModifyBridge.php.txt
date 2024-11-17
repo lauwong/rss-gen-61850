@@ -1,0 +1,14 @@
+commit 129b8a3a5aee04b15edf5dcdc4c44f2c062fc4a8
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sat Aug 10 23:10:37 2024 +0200
+
+    [ModifyBridge] New bridge to modify feeds (#4164)
+    
+    * [ModifyBridge] New bridge to modify feeds
+    
+    Create a general bridge that can modify the common fields of feeds
+    with regular expressions.
+    
+    * [ModifyBridge] Also modify <enclosure> element
+    
+    Additionally to the list of <enclosures>.

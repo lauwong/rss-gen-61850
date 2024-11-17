@@ -1,0 +1,9 @@
+commit bc536f392877623ce48140a72a0025415458061d
+Author: Arnav Jain <ajain-93@users.noreply.github.com>
+Date:   Sun Nov 3 18:20:48 2024 +0100
+
+    [DäcksnackBridge] New Bridge (#4309)
+    
+    * [DäcksnackBridge] new bridge
+    
+    * [DäcksnackBridge] move preamble before figure

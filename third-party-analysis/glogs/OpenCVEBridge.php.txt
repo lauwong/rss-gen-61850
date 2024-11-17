@@ -1,0 +1,17 @@
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit e65155f440b9d66771fd6096f4c13b77323a6217
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Sat Feb 17 00:24:13 2024 +0300
+
+    [OpenCVEBridge] Add bridge (#3978)
+    
+    * [OpenCVEBridge] Add bridge
+    
+    * [OpenCVEBridge] Fix tests
+    
+    * [OpenCVEBridge] Fix description of the filter parameter

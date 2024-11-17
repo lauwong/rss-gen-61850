@@ -1,0 +1,61 @@
+commit b4659786cb682096a46c0b6ca8a54505aa0ba49d
+Author: Miika Launiainen <miika@miicat.eu>
+Date:   Mon Apr 1 22:16:32 2024 +0300
+
+    [GenshinImpactBridge] Small fixes (#4046)
+    
+    * Switch json_decode to Json::decode
+    
+    * Change regex delimeter from / to #
+    
+    * Save item enclosures as list
+
+commit d23fd2522ce71877bcfc942c13250ff3ec9d71ca
+Author: Miika Launiainen <miika@miicat.eu>
+Date:   Sun Mar 31 04:46:23 2024 +0300
+
+    [GenshinImpactBridge] Fix bridge to use new API (#4011)
+    
+    * [GenshinImpactBridge] Fix bridge to use new API
+    
+    * Add category parameters back to not break existing feeds
+    
+    * Fix lint error
+    
+    * Remove whitespace
+
+commit c4d95558afee9e13bdf6182bbb9f26f01f27b2f8
+Author: Corentin Garcia <cgarcia@meilleursagents.com>
+Date:   Sat Oct 1 08:42:02 2022 +0200
+
+    [GenshinImpactBridge] fix missing articles (#3073)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit ff0c7a9013c0d2fa41cb48fd8f588be388db3c78
+Author: Harvey Christian Pacleb <kimpacleb@gmail.com>
+Date:   Sat Apr 10 16:35:34 2021 +0800
+
+    [GenshinImpactBridge] Use Asia/Shanghai time zone for article dates (#2040)
+
+commit 1edec1aa45263fe89f78483498ee37391de55292
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Wed Dec 30 19:30:02 2020 +0100
+
+    [GenshinImpactBridge] Add bridge (#1912)

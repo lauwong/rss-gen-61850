@@ -1,0 +1,183 @@
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit a6a1d553d9a5e17cd45f11f1e1c8d597e7184c77
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 22 20:59:45 2023 +0200
+
+    tweaks (#3686)
+
+commit 701fe3cfeda0d14f1f49afe2bd0f89296214459e
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 29 00:14:30 2023 +0200
+
+    fix: various small fixes (#3578)
+
+commit d8bc015efcad6e5fb456ff956d82bd4ec797e5d1
+Author: Dag <me@dvikan.no>
+Date:   Mon Jul 3 00:39:01 2023 +0200
+
+    fix: php notices (#3479)
+    
+    * fix(jornaln): A non well formed numeric value encountered
+    
+    fixes
+    
+    A non well formed numeric value encountered at bridges/JornalNBridge.php line 89
+    
+    * fix(reuters): fix notice
+
+commit 5d8ed2df51159f161e0d9328c5b5e51865b61f43
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Sat Dec 31 13:05:25 2022 +0700
+
+    [ReutersBridge] Only include main headline from Top News feed (#3199)
+
+commit 95c199c2eb9f61355397ea7ad1d93e2084e1ed8c
+Author: Dag <me@dvikan.no>
+Date:   Tue Nov 15 00:30:51 2022 +0100
+
+    fix: various php notices (#3145)
+    
+    * fix: notice
+    
+    * fix: Trying to get property content of non-object at bridges/PcGamerBridge.php line 36
+    
+    * fix: better exception message
+    
+    * fix: strpos(): Non-string needles will be interpreted as strings in the future. Use an explicit chr() call to preserve the current behavior
+
+commit 52af2ae34cab0cc945772f81e3078e3e93c4c243
+Author: Dag <me@dvikan.no>
+Date:   Wed Oct 26 00:47:45 2022 +0200
+
+    fix: php errors (notices) (#3115)
+
+commit 94ae098ef5687f6cc128a0fb7bd33443e40e3e55
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 9 20:18:50 2022 +0200
+
+    fix: various fixes (#3023)
+    
+    * improve twitch error message
+    
+    * fix worldcosplay notice
+    
+    * fix: add new video image to telegram
+    
+    * fix: reuters
+    
+    * fix: formula1
+    
+    * twitter
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit e86ce338a2e1e2c22d3ff717cf206fd9a296298c
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Tue Mar 29 01:34:41 2022 +0700
+
+    [ReutersBridge] Updated 'Top News' feed, some fix (#2488)
+
+commit 3bd4b0d6ab1e03f1849b4c0154558e7c1b70d9e8
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Wed Mar 2 11:50:02 2022 +0700
+
+    [ReutersBridge] Fix unexpected behaviour with article (#2478)
+    
+    Sometimes, there are some articles that redirected to another site,
+    cause the bridge to fail.
+    
+    Also about disable UID, Reuters frequently updated their article and my
+    feed reader don't update, I think it's maybe its UID.
+
+commit b9d92150e17bf9c511594698955bc3bb7bd18e83
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Wed Dec 8 23:16:40 2021 +0700
+
+    [ReutersBridge] Migrate to new API (#2348)
+    
+    * [ReutersBridge] Migrate to new API
+    
+    - Add new API, feeds.
+    - Old feed name are perserved for backward compatibility.
+    - Remove 'Special Report' feed.
+    - Some feed continue to use old Wire API due to not available in new one.
+    - Add some new type of content, replace iframe with blockquote for twitter.
+
+commit cabf7a748a2837285c2f184406afbe3136ce7fc5
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Tue Jul 20 14:54:07 2021 +0700
+
+    [ReutersBridge] Change timestamp, add new feed, add alt text to image (#2150)
+
+commit 2448ed41c9b6f98b140e142a1f508a3e85970a3d
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Tue Mar 9 13:15:48 2021 +0700
+
+    [ReutersBridge] Add new wireitem template type (#2006)
+    
+    and retain the list of parameters
+
+commit 43b7621f45c501626fe06dd996609630465430e1
+Author: hollowleviathan <hollowleviathan@gmail.com>
+Date:   Fri Jan 29 17:57:40 2021 +0000
+
+    [ReutersBridge] Add bridge (#1653)

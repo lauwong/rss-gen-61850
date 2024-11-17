@@ -1,0 +1,9 @@
+commit e9af41d666c05ceecd8b4af2a48cd95874a87098
+Author: Patrick <jummo@mailbox.org>
+Date:   Wed Jul 5 16:43:59 2023 +0200
+
+    Add bridges for JohannesBlick Steinfeld, OM Online and UsesTech (#3489)
+    
+    * Add bridges for JohannesBlick Steinfeld, OM Online and UsesTech
+    
+    * Fixed linit alert

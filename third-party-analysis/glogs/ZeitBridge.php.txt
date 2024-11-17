@@ -1,0 +1,105 @@
+commit 56994b3b5c732089548c7fba49286916550e569a
+Author: Alexander Sulfrian <alexander@sulfrian.net>
+Date:   Thu Oct 17 08:47:44 2024 +0200
+
+    [ZeitBridge] Remove content from original feed (#4260)
+    
+    The original feed contains a small version of the header image and
+    the summary or a literal "None". The header image is already added, but
+    the original content was kept. This removes the original content and
+    adds the summary if it exists.
+
+commit 7bde7a56f95a50f0394a1efb45cbbd80af643f9f
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sat May 18 16:18:23 2024 +0200
+
+    [ZeitBridge] Fix linting
+
+commit 4d12aa2a9ee03b32b270a4a0930d7e9cef0515ca
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sat May 18 16:11:26 2024 +0200
+
+    [ZeitBridge] Remove annoyances, add content
+    
+    Remove navigational elements, podcast images.
+    Add many more header images, article content in <ul> (and for ggod
+    measure in <ol>) and quotes with their content and not only their
+    author.
+    
+    Extreme example:
+    https://www.zeit.de/campus/2024-05/protest-palaestina-universitaet-europa-uebersicht
+
+commit a7ed3d56f9b8ea3194f78925e3d339f933aa726e
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sat May 18 15:46:53 2024 +0200
+
+    [ZeitBridge] Prettify author field
+    
+    By removing HTML tags (plaintext) and trimming it.
+
+commit 254efc281255a5d3308d33007e09ffd3bc2df49e
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sun Mar 10 22:21:10 2024 +0100
+
+    [ZeitBridge] Remove doubled text
+    
+    The first two paragraphs were repeated at the end of articles. The first
+    CSS selector filters those out (example 1).
+    The second CSS selector removes a "Zum Anschauen benötigen wir Ihre Zustimmung"
+    line from a poll widget. We can't load the widget successfully,
+    therefore we should remove all embeds that seem to use javascript
+    (example 2).
+    
+    1: https://www.zeit.de/campus/2024-03/bundesregierung-wissenschaft-arbeitsvertrag-regeln
+    2: https://www.zeit.de/campus/2024-03/ausbildung-abgebrochen-gruende-azubi-aufruf
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit c3b5b382ba1d64e7613b0c9249be053168c4e1f7
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sun Aug 27 12:33:17 2023 +0200
+
+    [ZeitBridge] Remove broken paywall workaround
+    
+    Clean up spoofing Google Bot as this workaround doesn't work anymore.
+
+commit 4068668de917a28f46847fb4b96b473a0d7f47ab
+Author: Paul Prechtel <Mynacol@users.noreply.github.com>
+Date:   Tue Apr 18 18:41:40 2023 +0200
+
+    [ZeitBridge] Re-add paywall workaround (#3352)
+    
+    Additionally to the Googlebot User-Agent, a Googlebot IP address has to
+    be used. For now, we can use `X-Forwarded-For` for this.
+
+commit 0718fdc829df2d46f0063b6e1fb2ad75c71ef640
+Author: Paul Prechtel <Mynacol@users.noreply.github.com>
+Date:   Mon Apr 17 15:33:14 2023 +0200
+
+    [ZeitBridge] Revert User-Agent (#3350)
+    
+    The Googlebot User-Agent is no longer sufficient to circumvent the
+    paywall.
+
+commit 9d871e8a45a92b3152e1c1987bf8f9034a87c31c
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Wed Sep 21 22:24:11 2022 +0200
+
+    [ZeitBridge] Add bridge for zeit.de (#3056)
+    
+    * [ZeitBridge] Add bridge for zeit.de
+    
+    New bridge expanding the feeds of zeit.de to full-text ones.
+    Circumvents cookie banners and Z+ premium article paywalls.
+    
+    * [ZeitBridge] Formatting

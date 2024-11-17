@@ -1,0 +1,45 @@
+commit e07a94d480d87710115101ae51147ed4895dfeb8
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Sat Jul 9 08:13:07 2022 +0200
+
+    Normalize some method calls (#2911)
+    
+    The methods were called as static even though they were not.
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit b090b17bbf934a102723101911e30796520680b8
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Tue Apr 26 00:53:18 2022 +0200
+
+    [RobinhoodSnacksBridge] fix bridge (#2676)
+
+commit b6e8350596f642f342f15d856882939e2dd9e658
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:37:30 2022 +0200
+
+    fix: a bunch of small changes in multiple bridges (#2644)
+    
+    Mostly refactors.
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 366d2d66b3fa126cfad7f2ac104e722d5f69d9ed
+Author: John Corser <johnpc@umich.edu>
+Date:   Wed Feb 26 17:32:57 2020 -0500
+
+    [RobinhoodSnacks] Add bridge for Robinhood Snacks (#1460)

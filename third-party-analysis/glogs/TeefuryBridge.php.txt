@@ -1,0 +1,11 @@
+commit edbafc614430d42789209bde3930cfe14bd8a8f0
+Author: Bocki <henning@bocklage.com>
+Date:   Sat Aug 20 21:11:27 2022 +0200
+
+    [Teefury] Fix occasional problem (#2974)
+
+commit e99cbf21b2e70f2e572fc3a4a0a341bb82119838
+Author: Bocki <henning@bocklage.com>
+Date:   Fri Aug 12 14:51:38 2022 +0200
+
+    [DailyShirts] Add daily shirt sites (#2962)

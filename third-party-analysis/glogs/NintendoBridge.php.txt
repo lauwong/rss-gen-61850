@@ -1,0 +1,55 @@
+commit 6afd13eb06276f085f245c5075972ef36eb6740a
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 03:43:26 2024 +0200
+
+    refactor: deprecate FeedItem constructor (#4201)
+    
+    * fix: bug in prior commit
+    
+    * refactor: deprecate FeedItem constructor
+    
+    * test: fix
+
+commit 545dc969d35bc8c94a8c15875562690ee2fd6605
+Author: Dag <me@dvikan.no>
+Date:   Sun Mar 31 03:38:42 2024 +0200
+
+    refactor (#4037)
+
+commit 487c692e68bdc75adddb23d342fd77d9418688d2
+Author: Dag <me@dvikan.no>
+Date:   Tue Jan 23 23:02:06 2024 +0100
+
+    fix: a few deprecation notices on php 8.2 (#3917)
+    
+    * fix: a few deprecation notices on php 8.2
+    
+    * tweak
+
+commit 44ff2f2cf8cc4403c7fd2af182607c59c74e14ba
+Author: Niehztog <Niehztog@users.noreply.github.com>
+Date:   Thu Nov 30 17:53:47 2023 +0100
+
+    adds Super Mario Bros. Wonder to NintendoBridge (#3810)
+
+commit 1dabd10e25ca6ac1ab7cd19742707380104d2642
+Author: Niehztog <Niehztog@users.noreply.github.com>
+Date:   Mon Oct 30 11:47:25 2023 +0100
+
+    [NintendoBridge] Add new bridge (#3784)
+    
+    * Adds new NintendoBridge
+    
+    * fix item uids, fix feed title
+    
+    * fix feed icon, adds item categories
+    
+    * fix feed source uri
+    
+    * make currentCatgory property nullable
+    
+    * fix linter errors
+    
+    * fix linter errors
+    
+    * attempt to fix unit tests by assigning default category

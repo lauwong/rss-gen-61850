@@ -1,0 +1,23 @@
+commit d11b7f77540760bf115b724dd06033ca6886485e
+Author: Patrick <jummo4@yahoo.de>
+Date:   Sun May 5 23:30:38 2024 +0200
+
+    Change URI for St. Johannes Blick (#4099)
+    
+    Co-authored-by: Patrick <jummo@mailbox.org>
+
+commit 58e2b56d40e0cae1cd3689f8c946650e5caba4cf
+Author: Patrick <jummo4@yahoo.de>
+Date:   Sun Mar 17 19:03:09 2024 +0100
+
+    Adjustment to new website layout (#4020)
+
+commit e9af41d666c05ceecd8b4af2a48cd95874a87098
+Author: Patrick <jummo@mailbox.org>
+Date:   Wed Jul 5 16:43:59 2023 +0200
+
+    Add bridges for JohannesBlick Steinfeld, OM Online and UsesTech (#3489)
+    
+    * Add bridges for JohannesBlick Steinfeld, OM Online and UsesTech
+    
+    * Fixed linit alert

@@ -1,0 +1,148 @@
+commit 38b957398aec532f640550cddc9dd748133c3f27
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Tue Sep 5 02:12:47 2023 +0200
+
+    [AutoJMBridge] Fix content extraction (#3649)
+    
+    * [AutoJMBridge] Fix content extraction
+    
+    - Website changed, bridge was updated accordingly
+    - Added the function detectParameters
+    - Added the test array for the detectParameters function
+    
+    * [AutoJMBridge] Fix test
+    
+    Fix content of the TEST_DETECT_PARAMETERS array
+    
+    * [AutoJMBridge] Update exaù^me value parameter
+    
+    Example value was not valid anymore, so it was updated
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 71cd15c35db17246e4572c327ccc478c17f4f735
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sat Jan 1 22:15:13 2022 +0100
+
+    [AutoJMBridge] Rework of the script to handle the new website (#2390)
+    
+    The brand - model page does not have filters now, so the actual feed
+    using this bridge are broken.
+    
+    Website has changed. The new website offers a new search function with
+    many more filter. So I switched to this new search page for this bridge.
+
+commit f4affe18337372973255e3f04c30be607683404c
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sun May 17 20:05:04 2020 +0200
+
+    [AuoJMBridge] Follow Website change (#1527)
+    
+    * [AuoJMBridge] Follow Website change
+
+commit cfe433e9e2edfff03f51ba0715287673ecbcad19
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Sep 6 10:52:58 2019 +0200
+
+    [AutoJMBridge] Fix the bridge to follow website changes (#1255)
+    
+    The Website changed in two way :
+    - The filter about availability disappeared (and this leads to a
+      parameters change, which will break existing bridges, sorry)
+    - Some HTML change
+
+commit 3b8f3da09d4d9ada1d78ad0826bcc867848127c6
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sat Apr 20 22:22:06 2019 +0200
+
+    [AutoJMBridge] Use title from website for Feed Title (#1093)
+    
+    * [AutoJMBridge] Use title from website for Feed Title
+
+commit 291e8c2a2374a6f7ac34c352295bc0fdccba4992
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Thu Apr 4 22:39:39 2019 +0200
+
+     [AutoJMBridge] Fix bridge after website change  (#1081)
+    
+    * [AutoJMBridge] Fix bridge after website change
+    
+    The website was totally reworked, so the bridge had to be reworked too.
+    The bridge parameters changed, therefore old RSS feed will not work
+    anymore, but it was impossible to do it in another way.
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit 7621784598b8a5e46e281e866d844ab13be947fd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Oct 26 18:07:34 2018 +0200
+
+    bridges: Add favicon to bridges missing it
+    
+    Adds favicon to bridges that support it. Some sites prevent downloading
+    favicons, those bridges are left untouched.
+    
+    Affected bridges:
+    
+    - AutoJMBridge
+    - BandcampBridge
+    - BlaguesDeMerdeBridge
+    - BloombergBridge
+    - BundesbankBridge
+    - ChristianDailyReporterBridge
+    - ContainerLinuxReleasesBridge
+    - DailymotionBridge
+    - DiceBridge
+    - DribbbleBridge
+    - EliteDangerousGalnetBridge
+    - ElsevierBridge
+    - FacebookBridge
+    - FB2Bridge
+    - FDroidBridge
+    - FierPandaBridge
+    - GooglePlusPostBridge
+    - JapanExpoBridge
+    - KATBridge
+    - KernelBugTrackerBridge
+    - LegifranceJOBridge
+    - NotAlwaysBridge
+    - NyaaTorrentsBridge
+    - PinterestBridge
+    - RadioMelodieBridge
+    - RainbowSixSiegeBridge
+    - SupInfoBridge
+    - TagBoardBridge
+    - TebeoBridge
+    - TheTVDBBridge
+    - WhydBridge
+    - ZoneTelechargementBridge
+
+commit 6688cf0c3b98461c966ac6313e7a2f5c3b2b0be5
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sat Sep 15 15:12:34 2018 +0200
+
+    [AutoJMBridge] Fix concatenation bug (#833)
+
+commit d5d7683ed3ac9d6078a3a61cb0c94e57bfb8d228
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Thu Sep 13 11:05:07 2018 +0200
+
+    [AutoJMBridge] New Bridge (#827)
+    
+    * [AutoJMBridge] New Bridge
+    
+    This bridge will show all the car offers AutoJM has for the model you
+    choosed and using your filter. Very useful to wait for a cheap price for
+    a new car !

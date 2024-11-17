@@ -1,0 +1,29 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit f54c996e0fae023bae5293aecce5bd0b81351782
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 30 14:20:47 2022 +0500
+
+    [CI] Add check, if php files are marked as non-executable (#2439)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit b56637c8331cb069395c4b9c6f28bb429bd98ca4
+Author: André Andersson <andre.eric.andersson@gmail.com>
+Date:   Fri Jan 29 19:36:45 2021 +0100
+
+    [BukowskisBridge] Add bridge (#1927)

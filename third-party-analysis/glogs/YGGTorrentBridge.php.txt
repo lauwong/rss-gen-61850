@@ -1,0 +1,220 @@
+commit e904de2dc987d6578f9fd5f527aa736801c2185c
+Author: Damien Calesse <2787828+kranack@users.noreply.github.com>
+Date:   Tue Jan 2 16:22:39 2024 +0100
+
+    [YGGTorrent] Update URI (#3871)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit ce63d8a7062e3aff96a47799ade3dac6143e5493
+Author: Gilles <gilles@wittezaele.fr>
+Date:   Sat Jun 18 05:06:59 2022 +0200
+
+    [YGGTorrentBridge] Changed base URL and one parameter name (#2826)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 41d02554f378e0db2ed35120b04649846a7efd78
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Nov 18 09:14:20 2018 +0100
+
+    [YGGTorrentBridge] Add URI to feed items
+    
+    References #931
+
+commit de8cee6a1cc1c79a356d80b17d4318a86aeb9290
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sun Sep 9 21:20:13 2018 +0200
+
+    Catching up | [Main] Debug mode, parse utils, MIME | [Bridges] Add/Improve 20 bridges (#802)
+    
+    * Debug mode improvements
+    
+     - Improve debug warning message
+     - Restore error reporting in debug mode
+     - Fix 'notice' messages for unset fields
+    
+    * Add parsing utility functions
+    
+    html.php
+     - extractFromDelimiters
+     - stripWithDelimiters
+     - stripRecursiveHTMLSection
+     - markdownToHtml (partial)
+    
+    bridges
+     - remove now-duplicate functions
+     - call functions from html.php instead
+    
+    * [Anidex] New bridge
+    
+    Anime torrent tracker
+    
+    * [Anime-Ultime] Restore thumbnail
+    
+    * [CNET] Recreate bridge
+    
+    Full rewrite as the previous one was broken
+    
+    * [Dilbert] Minor URI fix
+    
+    Use new self::URI property
+    
+    * [EstCeQuonMetEnProd] Fix content extraction
+    
+    Bridge was broken
+    
+    * [Facebook] Fix "SpSonsSoriSsés" label
+    
+    ... which was taking space in item title
+    
+    * [Futura-Sciences] Use HTTPS, More cleanup
+    
+    Use HTTPS as FS now offer HTTPS
+    Clean additional useless HTML elements
+    
+    * [GBATemp] Multiple fixes
+    
+    - Fix categories: missing "break" statements
+    - Restore thumbnail as enclosure
+    - Fix date extraction
+    - Fix user blog post extraction
+    - Use getSimpleHTMLDOMCached
+    
+    * [JapanExpo] Fix bridge, HTTPS, thumbnails
+    
+    - Fix getSimpleHTMLDOMCached call
+    - Upgrade to HTTPS as JE now offers HTTPS
+    - Restore thumbnails as enclosures
+    
+    * [LeMondeInformatique] Fix bridge, HTTPS
+    
+    - Upgrade to HTTPS as LMI now offers HTTPS
+    - Restore thumbnails using small images
+    - Fix content extraction
+    - Fix text encoding issue
+    
+    * [Nextgov] Fix content extraction
+    
+    - Restore thumbnail and use small image
+    - Field extraction fixes
+    
+    * [NextInpact] Add categories and filtering by type
+    
+    - Offer all RSS feeds
+    - Allow filtering by article type
+    - Implement extraction for brief articles
+    - Remove article limit, many brief articles are publied all at once
+    
+    * [NyaaTorrents] New bridge
+    
+    Anime torrent tracker
+    
+    * [Releases3DS] Cache content, restore thumbnail
+    
+    - Use getSimpleHTMLDOMCached
+    - Restore thumbnail as enclosure
+    
+    * [TheHackerNews] Fix bridge
+    
+     - Fix content extraction including article body
+     - Restore thumbnail as enclosure
+    
+    * [WeLiveSecurity] HTTPS, Fix content extraction
+    
+    - Upgrade to HTTPS as WLS now offers HTTPS
+    - Fix content extraction including article body
+    
+    * [WordPress] Reduce timeout, more content selectors
+    
+    - Reduce timeout to use default one (1h)
+    - Add new content selector (articleBody)
+    - Find thumbnail and set as enclosure
+    - Fix <script> cleanup
+    
+    * [YGGTorrent] Increase limit, use cache
+    
+    - Increase item limit as uploads are very frequent
+    - Use getSimpleHTMLDOMCached
+    
+    * [ZDNet] Rewrite with FeedExpander
+    
+    - Upgrade to HTTPS as ZD now offers HTTPS
+    - Use FeedExpander for secondary fields
+    - Fix content extraction for article body
+    
+    * [Main] Handle MIME type for enclosures
+    
+    Many feed readers will ignore enclosures (e.g. thumbnails) with no MIME type. This commit adds automatic MIME type detection based on file extension (which may be inaccurate but is the only way without fetching the content).
+    
+    One can force enclosure type using #.ext anchor (hacky, needs improving)
+    
+    * [FeedExpander] Improve field extraction
+    
+    - Add support for passing enclosures
+    - Improve author and uri extraction
+    - Fix 'notice' PHP error messages
+    
+    * [Pull] Coding style fixes for #802
+    
+    * [Pull] Implementing changes for #802
+    
+     - Fix coding style issues with str append
+     - Remove useless CACHE_TIMEOUT
+     - Use count() instead of $limit
+     - Use defaultLinkTo() + handle strings
+     - Use http_build_query()
+     - Fix missing </em>
+     - Remove error_reporting(0)
+     - warning CSS (@LogMANOriginal)
+     - Fix typo in FeedExpander comment
+    
+    * [Main] More documentation for markdownToHtml
+    
+    See #802 for more details
+
+commit 5fea9fc1f5014485818d0331666cb58675f89378
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 5 15:53:45 2018 +0200
+
+    bridges: Fix bridges failing unit test
+
+commit a574fa15ac882d6d39d46175a869a85fc42fb76f
+Author: Benasse <benasse@users.noreply.github.com>
+Date:   Tue Jul 31 21:46:10 2018 +0200
+
+    [YGGTorrentBridge] Order search result by publish date (#762)
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit df33dcff4effacad3765c61d856344cb4f561777
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Apr 26 22:57:18 2018 +0100
+
+    [YGGTorrentBridge] URL encode the first parts of the requests.
+
+commit aa0ff1c9b14efdb8ff97c9068ca896fe8045b0a4
+Author: teromene <teromene@teromene.fr>
+Date:   Wed Apr 18 21:57:27 2018 +0200
+
+    Added YGGTorrentBridge.

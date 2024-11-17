@@ -1,0 +1,43 @@
+commit c849576c936bf25982fe91f531301d57d787b285
+Author: Dag <me@dvikan.no>
+Date:   Fri Aug 23 17:09:17 2024 +0200
+
+    fix(rumble): fix guid bug (#4232)
+    
+    Remove tracking parameter in query to avoid feed readers to interpret these as new items
+
+commit 6d81d6d3068a56e121c2c448f84f93874172c25c
+Author: Zack Puhl <31320277+NotsoanoNimus@users.noreply.github.com>
+Date:   Mon Jul 29 11:53:14 2024 -0400
+
+    [RumbleBridge] Facelift, Validation, & Livestreams (#4160)
+    
+    * [RumbleBridge] Facelift+media types (livestreams)
+    
+    * [RumbleBridge] Remove 'required' from list input.
+    
+    * [RumbleBridge] lint
+
+commit 4c5cf89725e7ebd975eb6ec5136b5e3927df07fe
+Author: Dag <me@dvikan.no>
+Date:   Thu Dec 21 09:18:21 2023 +0100
+
+    fix(rumble): not all videos have a datetime (#3852)
+
+commit b34fa2d278eb14172cbeac4ddf34dca90716b5cb
+Author: Brendan Kidwell <snarf@glump.net>
+Date:   Sun Dec 17 11:08:40 2023 -0500
+
+    RumbleBridge - new selector needed on user/channel page (#3843)
+
+commit 354317d010f3b98328e2c8913e39e9ca63c46433
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 5 05:41:33 2023 +0200
+
+    fix(rumble): add timestamp to items (#3485)
+
+commit 3ee2c7f918f26aafcd2d13de70e0a1a8d222f66d
+Author: Dag <me@dvikan.no>
+Date:   Thu Nov 17 18:06:35 2022 +0100
+
+    feat: new bridge RumbleBridge (#3150)

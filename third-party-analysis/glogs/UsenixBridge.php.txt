@@ -1,0 +1,31 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 3927ecd8220fca3e52ddc2ba42267e258b6a2a5d
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Thu Jun 9 10:56:52 2022 -0400
+
+    [UsenixBridge] Add bridge (#2800)
+
+commit 75c4c9f256d55a7d1a4fb1d90073c9010b4398d1
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Wed Jun 8 00:44:37 2022 -0400
+
+    Revert "[Usenix] Add new bridge for USENIX (usenix.org) publications (#2772)" (#2793)
+    
+    This reverts commit baa4ea83384180a6b41bf7625c5e66753f33fda9.
+
+commit baa4ea83384180a6b41bf7625c5e66753f33fda9
+Author: Dag <me@dvikan.no>
+Date:   Wed Jun 8 05:43:56 2022 +0200
+
+    [Usenix] Add new bridge for USENIX (usenix.org) publications (#2772)
+    
+    Currently only supporting the ;login: publication.

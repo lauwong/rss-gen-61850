@@ -1,0 +1,5 @@
+commit c8039d483bb9f0690a4f9aef6700483c055aef22
+Author: Ryan Stafford <ryan@nanorex.net>
+Date:   Sat Jul 15 09:12:11 2023 -0400
+
+    [TraktBridge] new bridge (#3534)

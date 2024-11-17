@@ -1,0 +1,83 @@
+commit f358f1abec8278c4e5659b311bf8eea5f34802d8
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 17:47:04 2024 +0200
+
+    refactor: loadCacheValue/saveCacheValue (#4205)
+
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit 206bebc7bdf90b00b2457a5693fe07079b3df40a
+Author: Dag <me@dvikan.no>
+Date:   Tue Jun 18 20:22:46 2024 +0200
+
+    ci: disallow the sizeof function in linter (#4134)
+
+commit 3ce94409ab650e042993480d638482a89901776d
+Author: Dag <me@dvikan.no>
+Date:   Tue Jan 9 20:18:33 2024 +0100
+
+    feat: support itunes namespace in top channel feed (#3776)
+    
+    Also preserves other properties.
+
+commit a6a450220991a42f34b3dfa3219b0cafbaba11eb
+Author: mruac <ant8672@gmail.com>
+Date:   Sat Oct 21 20:24:50 2023 +1030
+
+    [Itaku] extend the number of images shown in a post (#3780)
+    
+    * minor fixes
+    
+    - extended itaku post if post does not have all images
+    
+    * phpcbf
+    
+    * .
+    
+    * resolve deprecated explode param
+    
+    yay null coalesces
+
+commit 3178deb5a8ce979baf186b69e5a427bb14adef4f
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 23:35:40 2023 +0200
+
+    fix: mastodon, cache tweaks, docs (#3661)
+    
+    * cache tweaks
+    
+    * docs
+    
+    * fix(mastodon): type bug
+
+commit 7a1180c80f790d0c9baf3512aa4da2593e621288
+Author: mruac <ant8672@gmail.com>
+Date:   Tue Aug 15 23:32:58 2023 +0930
+
+    bridges: added Itaku.ee Bridge (#3615)
+    
+    * Fix php8.2 deprecated warning
+    
+    Fix php8.2 warning: `Deprecated: Creation of dynamic property is deprecated`
+    
+    * modified tag presentation
+    
+    * renamed to fit naming convention
+    
+    * undo commit
+    
+    * applied phpcbf and phpunit

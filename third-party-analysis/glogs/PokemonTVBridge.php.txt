@@ -1,0 +1,35 @@
+commit 5f37c72be0a994257b01a8c43c4e488611f092f2
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 20:48:08 2023 +0200
+
+    fix(binance): plus some other tweaks (#3753)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 06ef3946cd9d0f52a1aaa2bb239a43a3eb440ab5
+Author: dag <me@dvikan.no>
+Date:   Thu Mar 31 09:55:55 2022 +0200
+
+    [PokemonTV] fix: use exampleValue that returns items (#2573)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 324932642dc2652c00df09148405a5dd10f7c2a3
+Author: Bockiii <henning@bocklage.com>
+Date:   Sun Sep 5 09:11:36 2021 +0200
+
+    [PokemonTVBridge] Add bridge (#2219)

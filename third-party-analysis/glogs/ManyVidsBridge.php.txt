@@ -1,0 +1,11 @@
+commit 6878eb26aa97413ad6f04e8d15f831c65f964c32
+Author: Dag <me@dvikan.no>
+Date:   Tue Feb 6 19:32:05 2024 +0100
+
+    fix: changed dom (#3958)
+
+commit b9ec6a0eb4ebafa3cfef0b76a628e8566468324a
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 29 00:39:24 2023 +0200
+
+    feat: add manyvids bridge (#3716)

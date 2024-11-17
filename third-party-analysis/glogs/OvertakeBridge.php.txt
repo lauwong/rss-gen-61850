@@ -1,0 +1,5 @@
+commit eb21e97d014decf37bdaef5e7c6254607db12c71
+Author: Tostiman <18124323+t0stiman@users.noreply.github.com>
+Date:   Wed Oct 16 18:37:30 2024 +0200
+
+    [OvertakeBridge] Renamed RaceDepartmentBridge to OvertakeBridge (#4294)

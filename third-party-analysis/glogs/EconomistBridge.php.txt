@@ -1,0 +1,144 @@
+commit aa3989873cbcd20919725e847e4d299ee5724740
+Author: Pavel Korytov <thexcloud@gmail.com>
+Date:   Tue Jul 30 23:10:57 2024 +0300
+
+    [EconomistBridge] Add cookie (#4173)
+    
+    * [EconomistBridge] Add cookie
+    
+    * [EconomistBridge] Fix lint
+
+commit cfef482366e296f2ab1526a97408114b4c1ef9a3
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Thu Feb 8 17:36:03 2024 +0300
+
+    [EconomistBridge] Handle 404s in feed gracefully (#3965)
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit cf6d94dc2ad9e96e8dc2dfdee26c63f936a92963
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Tue Aug 8 09:58:08 2023 +0500
+
+    [EconomistBridge] Fix strange image urls (#3600)
+
+commit 56a8c521c26249d2bae6bdf46c5d8fb18ab5b762
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Sat Oct 8 21:05:17 2022 +0300
+
+    [EconomistBridge] Fix bridge (#3095)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit f11e792f84ab304be836b3057fdadff771a4eaa4
+Author: Bocki <henning@bocklage.com>
+Date:   Fri Mar 25 10:41:27 2022 +0100
+
+    [maintenance] Fix tests (#2532)
+
+commit 6e0589f9a06ad21a9235eca66234b06dc7f99201
+Author: Dag <me@dvikan.no>
+Date:   Fri Mar 25 03:06:00 2022 +0100
+
+    [EconomistBridge] fix: broken bridge
+    
+    Fixes: Call to a member function find() on boo
+    
+    The new-style articles had their DOM changed.
+
+commit ac8e94ec56626ffeff07ac10b7587d28f7fdfe22
+Author: Bockiii <henning@bocklage.com>
+Date:   Tue Mar 22 20:24:07 2022 +0100
+
+    [EconomistBridge] Fix for new layout (#2489)
+
+commit 9dcce0ba1df463491412675ef49c2e4672b9f594
+Author: Bockiii <henning@bocklage.com>
+Date:   Sat Jan 15 06:29:18 2022 +0100
+
+    [EconomistBridge] Fix if no article image present (#2328)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 1ddce120aeac1bc33f03bcfe5a343a8eed71c770
+Author: Bockiii <henning@bocklage.com>
+Date:   Sun Sep 26 13:25:19 2021 +0200
+
+    [EconomistBridge] Full rework (#2272)
+
+commit 56eb829a66a7e1f9d332bb0fa19be63e0dd90568
+Author: Tobias Alexander Franke <thefranke@users.noreply.github.com>
+Date:   Sun Nov 29 10:31:20 2020 +0000
+
+    [EconomistBridge] Fixes for fetching new page structure (#1836)
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit 6c4098d6558c33a5fcb2a8bc9fb29e915d56fc6c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 2 13:03:26 2019 +0200
+
+    Revert "all: Use ->remove() instead of ->outertext = ''"
+    
+    This reverts commit 052844f5e13c71ceefd743136a71f71226a0eefb.
+    
+    There is a bug in ->remove() that causes the parser to incorrectly
+    identify elements in the DOM tree that shouldn't exist anymore.
+    
+    References #1151
+
+commit 052844f5e13c71ceefd743136a71f71226a0eefb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 1 21:15:30 2019 +0200
+
+    all: Use ->remove() instead of ->outertext = ''
+    
+    simplehtmldom 1.9 introduced new functions to recursively remove
+    nodes from the DOM. This allows removing elements without the need
+    to re-load the document by using $html->load($html->save()), which
+    is very inefficient.
+    
+    Find more information about remove() at
+    https://simplehtmldom.sourceforge.io/docs/1.9/api/simple_html_dom_node/remove/
+
+commit 50c90eb5df69ea140f50068318c3794d0cdf52d5
+Author: Tobias Alexander Franke <thefranke@users.noreply.github.com>
+Date:   Thu Apr 4 22:54:08 2019 +0200
+
+    [EconomistBridge] Add new bridge (#1067)
+    
+    * [EconomistBridge] Added new bridge

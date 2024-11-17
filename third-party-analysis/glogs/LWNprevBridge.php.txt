@@ -1,0 +1,409 @@
+commit 7252a899142974e1d0e1f8ade61137f4075d013e
+Author: John S Long <john@128.io>
+Date:   Sat Oct 1 23:46:04 2022 -0500
+
+    [LWNprevBridge] Fix article content parsing (#3078)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit 74ec1b5687a4222a1c72c72860f982d3f722eb95
+Author: Dag <me@dvikan.no>
+Date:   Sat Mar 26 03:17:46 2022 +0100
+
+    [LWNprevBridge] fix: broken bridge
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit 55a77c734d09aaa29062a9f5f4bd94bbb7bc2985
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 5 15:24:21 2017 +0200
+
+    [LWNprevBridge] Fix everchanging url
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+    
+    Closes #563
+
+commit 873a91259f9a05f23f7eed6abaf9c9ca31f7e4f2
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 3 00:15:55 2017 +0200
+
+    [LWNprevBridge] full rewrite
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+    [logmanoriginal@users.noreply.github.com: Fix coding style]
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit ff834105345b9c2120ce9ed8f3292e7e00a3c6fe
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 17:28:07 2017 +0100
+
+    style: Fix coding styles
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit 970e216c1fc7a10550cf4288fd2197255557324f
+Merge: 9020b09f a1ef589f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Oct 2 16:05:58 2016 +0200
+
+    Merge branch 'methods2functions' of https://framagit.org/peetah/rss-bridge
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 235c9859012887bda40c0f024c72975223256610
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 17:04:28 2016 +0200
+
+    [BridgeAbstract] replace getCacheDuration method by CACHE_TIMEOUT class constant
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 953faabb1adab336e941ec1980356b602e903ac9
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 29 12:28:27 2016 +0200
+
+    [LWNprevBridge] code simplification
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 65c6b08aed762eda0f7e8fa4de018bd7bac5f37b
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 14:06:00 2016 +0200
+
+    fix DOMNode and DOMElement mess
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 74f0572d914617b4e47fe0fd2fabfe356710d609
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Aug 17 14:45:08 2016 +0200
+
+    bridges: Replace returnError function with more specific
+    
+    Replacements depend on original error code:
+    400: returnClientError
+    404: returnServerError
+    500: returnServerError
+    501: returnServerError
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit e329a4c1b6a6c2ae266d05bb3777f78365113a7f
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 14:54:44 2016 +0200
+
+    bridges: Change ->name to ->author
+
+commit d73bfbab63de63d00001519045b2725d10c76f49
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Jun 26 11:18:23 2016 +0200
+
+    do not use advanced_file_get_contents
+    
+    as it should not exist in the first place
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 78b4500ba445ad6e67b897684275640fce2d4786
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Jun 26 11:17:12 2016 +0200
+
+    fix indentation
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 1f85a2294df31161a705404496e052836c9398ac
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Jun 25 09:52:17 2016 +0200
+
+    remove empty brackets from title
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit dc6928316b0740cc359b94ce83040285c76d9dcd
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Jun 19 00:41:02 2016 +0200
+
+    add bridge for LWN Free Weekly Edition
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>

@@ -1,0 +1,49 @@
+commit f0e5ef0fc58f3796bb4c03caa2c5e7ca78de119e
+Author: Bocki <henning@bocklage.com>
+Date:   Mon Mar 6 20:01:51 2023 +0100
+
+    [Various] getKey replacements and docu (#3283)
+    
+    * [Various] getKey replacements and docu
+    
+    * more bridges and fix to the abstract
+    
+    * linting
+    
+    * revert bandcampdaily. doing more than i thought
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 65be209a47ebfb44f8f2d1bb042c2bbfe770def8
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Mon Apr 12 18:01:46 2021 +0000
+
+    [TwitScoopBridge] Remove less than (<) character from item title (#2034)
+
+commit a6c0874b9a7a6059d1ef6ec5409efd2a1bfb0d20
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sun Mar 21 06:39:01 2021 +0000
+
+    [TwitScoopBridge] Fix encoding of less than character (<) (#2023)
+
+commit 5c011c8d90a27b672352cb2b2dfba835468e5832
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Mon Mar 15 16:20:02 2021 +0000
+
+    [TwitScoopBridge] Add bridge (#2018)

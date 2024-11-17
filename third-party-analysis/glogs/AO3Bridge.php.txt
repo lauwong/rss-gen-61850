@@ -1,0 +1,97 @@
+commit 6a24e53d6ca4fbfb3115a8cb30a51283684f0f20
+Author: Dag <me@dvikan.no>
+Date:   Fri Aug 30 04:21:51 2024 +0200
+
+    refactor (#4244)
+
+commit 7001fbaf49a801226e819919cff913909242e7ac
+Author: July <phantop@tuta.io>
+Date:   Sun Mar 31 16:41:58 2024 -0400
+
+    [AO3Bridge] Fix bad heading selector (#4045)
+
+commit db984d8a8b98a985fe9a272794fa20081908ad13
+Author: July <phantop@tuta.io>
+Date:   Thu Mar 28 14:43:17 2024 -0400
+
+    AO3Bridge: move tags to categories and remove duplicate fic summary (#4031)
+    
+    * AO3Bridge: move tags to categories and remove duplicate fic summary
+    
+    * [AO3Bridge] Fix tag html entity encoding
+
+commit 7813f4564e9c4f6054c827cead26fe6a6b2605c5
+Author: July <phantop@tuta.io>
+Date:   Thu Feb 15 22:14:17 2024 -0500
+
+    AO3Bridge: add options to fetch chapter contents and list titles (#3981)
+    
+    * AO3Bridge: add options to fetch chapter contents and titles for list feeds
+    
+    and add downloads for each fic to enclosures
+    
+    * AO3Bridge: fix list default value
+    
+    * AO3Bridge: fix erroneous dynamic property usage
+    
+    * AO3Bridge: fix unit test failure for getURI
+
+commit 4b9f6f7e53e0b2e9aae59df2bbffc0bdd6805aea
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 21:50:15 2023 +0200
+
+    fix: rewrite and improve caching (#3594)
+
+commit a59793e8d647c77a2537e41a4e8fa3fcca728cff
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 16 22:07:34 2023 +0200
+
+    refactor: extract CurlHttpClient (#3532)
+    
+    * refactor: extract CurlHttpClient
+    
+    * refactor
+    
+    * interface
+
+commit a13c4624fbab102e1741c02d3514b1c431a0f0af
+Author: Dag <me@dvikan.no>
+Date:   Tue Dec 13 09:53:42 2022 +0100
+
+    feat: custom http ua in AO3, fix #3188 (#3189)
+    
+    * refactor
+    
+    * feat: custom http ua in AO3, #3188
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit a3446ae77b87ce4d46204b98082954c7c11f6512
+Author: Obsidienne <26996026+ObsidianWitch@users.noreply.github.com>
+Date:   Mon May 6 13:28:42 2019 +0200
+
+    [AO3Bridge] Add new bridge (#1123)
+    
+    * [AO3Bridge] Add new bridge

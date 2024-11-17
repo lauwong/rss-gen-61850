@@ -1,0 +1,43 @@
+commit 36706a3dec464f1ab59b21356bc838ab77c657b4
+Author: Tim-Florian Feulner <50834839+R3dError@users.noreply.github.com>
+Date:   Mon Jun 3 00:55:39 2024 +0200
+
+    Fix NACSouthGermanyMediaLibraryBridge due to website changes (#4121)
+
+commit 36147a082d33faeef6e42fa103a3283cc5cf5dc3
+Author: Tim-Florian Feulner <50834839+R3dError@users.noreply.github.com>
+Date:   Fri Mar 15 19:20:04 2024 +0100
+
+    Fix NACSouthGermanyMediaLibraryBridge for new website layout (#4014)
+
+commit 64000a25264a579230b1dfba377bad368090fb57
+Author: R3dError <50834839+R3dError@users.noreply.github.com>
+Date:   Wed Aug 30 19:01:55 2023 +0200
+
+    [NACSouthGermanyMediaLibraryBridge] Add new bridge (#3636)
+    
+    * Init nac south bridge
+    
+    * Rename bridge
+    
+    * Refactoring
+    
+    * Refactor
+    
+    * Fix formatting
+    
+    * Fix testing errors
+    
+    * Change constants
+    
+    * Update logo
+    
+    * Remove author omission in descriptions
+    
+    * Fix comment
+    
+    * Add maintainer
+    
+    * Rename bridge
+    
+    * Add technical note to bridge description

@@ -1,0 +1,59 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 64b7c54bc8ebd0a2354bb34fa617547c66291967
+Author: KamaleiZestri <38802353+KamaleiZestri@users.noreply.github.com>
+Date:   Sun Oct 3 15:35:31 2021 -0500
+
+    [BakaUpdatesMangaReleasesBridge] Added option to display releases based on a user list (#2276)
+    
+    * [BakaUpdatesMangaReleasesBridge] Added option to display releases based on a user list
+
+commit 33c16f8be5e2e5c3d0b66c2489e2d25acbf40060
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Tue Apr 30 21:01:48 2019 +0200
+
+    [BakaUpdatesMangaReleasesBridge] Sanitize hash for more solid UIDs (#1113)
+    
+    This should minimize occasional hiccups on regular updates.
+
+commit 696afa96d3a1eac80b030656a1aeb36fc20a22db
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Thu Mar 14 19:43:00 2019 +0100
+
+    [BakaUpdatesMangaReleasesBridge] filter title and groups (#1058)
+    
+    Baka-Updates Manga uses an asterisk (*) to denote series information have
+    been updated within the last 24 hours. This is not helpful in a feed.
+
+commit 9d85b951f78fe9a7ab292ea7072b6c5baf520ad4
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Sat Mar 2 19:09:16 2019 +0100
+
+    [BakaUpdatesMangaReleasesBridge] rework to parse new layout (#1052)
+    
+    * rework to parse new layout
+    * skip incomplete rows
+    
+    The last row could have fewer columns if there are less rows than the items limit. This usually should not happen, though.
+    
+    * use constant for skipping
+
+commit 493e76e4b915468badaa1064f1c92ae1557986ad
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Tue Jan 15 16:36:42 2019 +0100
+
+    [BakaUpdatesMangaReleasesBridge] Add new bridge (#999)

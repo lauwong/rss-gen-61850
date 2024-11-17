@@ -1,0 +1,41 @@
+commit 37f1ab726b14f04070d26ebf65e591882ffb165e
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 16 20:26:33 2022 +0200
+
+    fix: various bug fixes (#3102)
+    
+    * fix: Undefined offset: 4
+    
+    * fix: Trying to access array offset on value of type bool
+    
+    * fix: Undefined variable: photo at bridges/TelegramBridge.php line 287
+    
+    * fix: Trying to get property innertext of non-object at bridges/ZDNetBridge.php line 186
+    
+    * fix: Undefined index: Category at bridges/UnraidCommunityApplicationsBridge.php line 42
+    
+    * fix: Undefined index: fullUrl at bridges/EuronewsBridge.php line 61
+
+commit 40dc0a2e5f6acf3f336246bc6f17b5a21cf6ce08
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 9 22:50:03 2022 +0200
+
+    [Euronews] fix: use correct url (#2916)
+    
+    The non-www domain has a tls config error.
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 53f99704036e0dd8b28ead0a4b56ef312b9de783
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Tue Jun 7 17:25:20 2022 +0300
+
+    [EuronewsBridge] Add bridge (#2786)

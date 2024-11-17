@@ -1,0 +1,69 @@
+commit bb7f329e81deb7661ad88b40858a866da05c3e03
+Author: Dag <me@dvikan.no>
+Date:   Wed Sep 13 22:48:37 2023 +0200
+
+    fix(instructables): migrate from dom to json api (#3667)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 9f2f1e526dccb3267aa3dbe6ccb60b3eebd58c74
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 02:19:47 2022 +0200
+
+    [Instructables] refactor: conform to PSR2 (#2870)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 60c1339612684867285286927517950567f0d770
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Jun 27 20:52:45 2019 +0200
+
+    [InstructablesBridge] Fix after layout changes
+
+commit d324aa5da1192273f808ee3dcf2990d5f57095af
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Jun 27 20:29:21 2019 +0200
+
+    [InstructablesBridge] Update available categories
+
+commit 6f2498760168d954ae6c9b02b412c788b6190c32
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Jun 27 20:28:23 2019 +0200
+
+    [InstructablesBridge] Fix listCategories() to work with new layout
+
+commit 54fb29d443be6ae7ccc58505536cc7845d081572
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Jun 27 20:16:53 2019 +0200
+
+    [InstructablesBridge] Add support for HTTPS
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit 4facbf32e3e246b9b93c1d086edac3cbde4dddee
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Sat Jul 21 15:25:13 2018 +0200
+
+    [InstructableBridge] Add new bridge (#724)
+    
+    This commit adds a new bridge for http://www.instructables.com. This bridge
+    currently supports fetching content by category (all categories available 200+),
+    using available filters (featured, recent, popular, views, contest winners).

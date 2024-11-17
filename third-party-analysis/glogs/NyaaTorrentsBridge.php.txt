@@ -1,0 +1,290 @@
+commit f7c1b7193961b957dfa0fe192b4a95d09ad9b1c6
+Author: July <phantop@tuta.io>
+Date:   Wed Mar 6 13:40:59 2024 -0500
+
+    NyaaTorrentsBridge: add torrent to enclosures and generate better feed name (#3996)
+    
+    * NyaaTorrentsBridge: add torrent to enclosures and generate better feed name
+    
+    * NyaaTorrentsBridge: fix accidental () in bridge name
+
+commit ef5bd83bd0d8645b1d7ae4201e7a167f82e3eaee
+Author: Dag <me@dvikan.no>
+Date:   Mon Oct 16 02:58:03 2023 +0200
+
+    feat: preserve and reproduce podcast feeds (itunes rss module) (#3759)
+
+commit e379019db27eb7e6c48a9e8c6ae7d3b379dcce16
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:02:19 2023 +0200
+
+    refactor (#3746)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit 9bda9e246a21a44daeeb08dd1f41665e5a9f16e3
+Author: Dag <me@dvikan.no>
+Date:   Thu Oct 12 22:14:04 2023 +0200
+
+    refactor: FeedExpander (#3740)
+    
+    * refactor: FeedExpander
+
+commit 6634291c67194428241f84d48f236a3037492bee
+Author: Jisagi <Jisagi@users.noreply.github.com>
+Date:   Thu Oct 12 21:24:08 2023 +0200
+
+    NyaaTorrentsBridge - add max items again (#3743)
+
+commit e55a88fb8ea6133bdc23076f1af80726b48c245a
+Author: Dag <me@dvikan.no>
+Date:   Thu Oct 12 20:32:17 2023 +0200
+
+    refactor(nyaa) (#3742)
+
+commit eb799e59a6d53043d9fa0193dbcea3ec290da3a5
+Author: Jisagi <Jisagi@users.noreply.github.com>
+Date:   Sat Jun 10 18:28:00 2023 +0200
+
+    [NyaaTorrentsBridge] Add custom fields (#3420)
+    
+    * Update NyaaTorrentsBridge.php
+    
+    * lint
+    
+    * lint #2
+    
+    * Sir Lint the Third
+    
+    * Add torrent id to custom fields
+    
+    * Proposed improvements
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 00a24a98be20e1edf6807a2f40d76e0ba8403e12
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Mon Apr 19 18:59:51 2021 +0200
+
+     [NyaaTorrents] Rewrite as Feed Expander (#2073)
+    
+    NyaaTorrents allows search criteria as URL parameters in RSS feed so we just need to expand feed items
+
+commit d61871a45eb674d7636ff66f92fef941f0880b31
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Wed Mar 31 07:59:31 2021 +0200
+
+    [NyaaTorrents] Allow searching by username (#2033)
+
+commit ff98efe8dc13c978be3a715da44f825af194513c
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Fri Oct 9 20:29:02 2020 +0200
+
+    [core] Use Parsedown for Markdown parsing (#1783)
+
+commit 7621784598b8a5e46e281e866d844ab13be947fd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Oct 26 18:07:34 2018 +0200
+
+    bridges: Add favicon to bridges missing it
+    
+    Adds favicon to bridges that support it. Some sites prevent downloading
+    favicons, those bridges are left untouched.
+    
+    Affected bridges:
+    
+    - AutoJMBridge
+    - BandcampBridge
+    - BlaguesDeMerdeBridge
+    - BloombergBridge
+    - BundesbankBridge
+    - ChristianDailyReporterBridge
+    - ContainerLinuxReleasesBridge
+    - DailymotionBridge
+    - DiceBridge
+    - DribbbleBridge
+    - EliteDangerousGalnetBridge
+    - ElsevierBridge
+    - FacebookBridge
+    - FB2Bridge
+    - FDroidBridge
+    - FierPandaBridge
+    - GooglePlusPostBridge
+    - JapanExpoBridge
+    - KATBridge
+    - KernelBugTrackerBridge
+    - LegifranceJOBridge
+    - NotAlwaysBridge
+    - NyaaTorrentsBridge
+    - PinterestBridge
+    - RadioMelodieBridge
+    - RainbowSixSiegeBridge
+    - SupInfoBridge
+    - TagBoardBridge
+    - TebeoBridge
+    - TheTVDBBridge
+    - WhydBridge
+    - ZoneTelechargementBridge
+
+commit de8cee6a1cc1c79a356d80b17d4318a86aeb9290
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sun Sep 9 21:20:13 2018 +0200
+
+    Catching up | [Main] Debug mode, parse utils, MIME | [Bridges] Add/Improve 20 bridges (#802)
+    
+    * Debug mode improvements
+    
+     - Improve debug warning message
+     - Restore error reporting in debug mode
+     - Fix 'notice' messages for unset fields
+    
+    * Add parsing utility functions
+    
+    html.php
+     - extractFromDelimiters
+     - stripWithDelimiters
+     - stripRecursiveHTMLSection
+     - markdownToHtml (partial)
+    
+    bridges
+     - remove now-duplicate functions
+     - call functions from html.php instead
+    
+    * [Anidex] New bridge
+    
+    Anime torrent tracker
+    
+    * [Anime-Ultime] Restore thumbnail
+    
+    * [CNET] Recreate bridge
+    
+    Full rewrite as the previous one was broken
+    
+    * [Dilbert] Minor URI fix
+    
+    Use new self::URI property
+    
+    * [EstCeQuonMetEnProd] Fix content extraction
+    
+    Bridge was broken
+    
+    * [Facebook] Fix "SpSonsSoriSsés" label
+    
+    ... which was taking space in item title
+    
+    * [Futura-Sciences] Use HTTPS, More cleanup
+    
+    Use HTTPS as FS now offer HTTPS
+    Clean additional useless HTML elements
+    
+    * [GBATemp] Multiple fixes
+    
+    - Fix categories: missing "break" statements
+    - Restore thumbnail as enclosure
+    - Fix date extraction
+    - Fix user blog post extraction
+    - Use getSimpleHTMLDOMCached
+    
+    * [JapanExpo] Fix bridge, HTTPS, thumbnails
+    
+    - Fix getSimpleHTMLDOMCached call
+    - Upgrade to HTTPS as JE now offers HTTPS
+    - Restore thumbnails as enclosures
+    
+    * [LeMondeInformatique] Fix bridge, HTTPS
+    
+    - Upgrade to HTTPS as LMI now offers HTTPS
+    - Restore thumbnails using small images
+    - Fix content extraction
+    - Fix text encoding issue
+    
+    * [Nextgov] Fix content extraction
+    
+    - Restore thumbnail and use small image
+    - Field extraction fixes
+    
+    * [NextInpact] Add categories and filtering by type
+    
+    - Offer all RSS feeds
+    - Allow filtering by article type
+    - Implement extraction for brief articles
+    - Remove article limit, many brief articles are publied all at once
+    
+    * [NyaaTorrents] New bridge
+    
+    Anime torrent tracker
+    
+    * [Releases3DS] Cache content, restore thumbnail
+    
+    - Use getSimpleHTMLDOMCached
+    - Restore thumbnail as enclosure
+    
+    * [TheHackerNews] Fix bridge
+    
+     - Fix content extraction including article body
+     - Restore thumbnail as enclosure
+    
+    * [WeLiveSecurity] HTTPS, Fix content extraction
+    
+    - Upgrade to HTTPS as WLS now offers HTTPS
+    - Fix content extraction including article body
+    
+    * [WordPress] Reduce timeout, more content selectors
+    
+    - Reduce timeout to use default one (1h)
+    - Add new content selector (articleBody)
+    - Find thumbnail and set as enclosure
+    - Fix <script> cleanup
+    
+    * [YGGTorrent] Increase limit, use cache
+    
+    - Increase item limit as uploads are very frequent
+    - Use getSimpleHTMLDOMCached
+    
+    * [ZDNet] Rewrite with FeedExpander
+    
+    - Upgrade to HTTPS as ZD now offers HTTPS
+    - Use FeedExpander for secondary fields
+    - Fix content extraction for article body
+    
+    * [Main] Handle MIME type for enclosures
+    
+    Many feed readers will ignore enclosures (e.g. thumbnails) with no MIME type. This commit adds automatic MIME type detection based on file extension (which may be inaccurate but is the only way without fetching the content).
+    
+    One can force enclosure type using #.ext anchor (hacky, needs improving)
+    
+    * [FeedExpander] Improve field extraction
+    
+    - Add support for passing enclosures
+    - Improve author and uri extraction
+    - Fix 'notice' PHP error messages
+    
+    * [Pull] Coding style fixes for #802
+    
+    * [Pull] Implementing changes for #802
+    
+     - Fix coding style issues with str append
+     - Remove useless CACHE_TIMEOUT
+     - Use count() instead of $limit
+     - Use defaultLinkTo() + handle strings
+     - Use http_build_query()
+     - Fix missing </em>
+     - Remove error_reporting(0)
+     - warning CSS (@LogMANOriginal)
+     - Fix typo in FeedExpander comment
+    
+    * [Main] More documentation for markdownToHtml
+    
+    See #802 for more details

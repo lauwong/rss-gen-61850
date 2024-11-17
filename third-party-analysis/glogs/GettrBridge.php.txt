@@ -1,0 +1,42 @@
+commit 98a94855dc6b909b75629c6630c3795c68e7d560
+Author: Dag <me@dvikan.no>
+Date:   Wed Dec 20 03:16:25 2023 +0100
+
+    feat: embed response in http exception (#3847)
+
+commit 7e4807530ec6199ac9754bce54f025a113edfbbe
+Author: Dag <me@dvikan.no>
+Date:   Mon Jul 31 20:43:18 2023 +0200
+
+    fix: various small fixes (#3580)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 76084cdccae8de22d67601caee542eaf1f022b3c
+Author: Dag <me@dvikan.no>
+Date:   Mon May 9 21:02:21 2022 +0200
+
+    fix: logic bug in limiting
+
+commit 5aa163e7d6b5bd4e21c7980ecaaafb65db538df2
+Author: Dag <me@dvikan.no>
+Date:   Tue Mar 22 21:08:15 2022 +0100
+
+    [GettrBridge] fix: don't use php7.2 feature
+    
+    The constant "JSON_THROW_ON_ERROR" is not present in
+    PHP version 7.2 or earlier
+
+commit 0b123ef8bebe7ff215877c6fcaa5ad4a48e21d91
+Author: dag <me@dvikan.no>
+Date:   Tue Mar 22 20:43:31 2022 +0100
+
+    [GettrBridge] Add new bridge for gettr.com (#2495) (#2505)

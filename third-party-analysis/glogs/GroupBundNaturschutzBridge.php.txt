@@ -1,0 +1,15 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit c6675ddeee68cc516e2db7a351569861f1c45ee8
+Author: DRogueRonin <code@drogueronin.de>
+Date:   Tue Mar 29 22:40:31 2022 +0200
+
+    [GroupBundNaturschutzBridge] Add bridge and adjust XPathAbstract (#2445)

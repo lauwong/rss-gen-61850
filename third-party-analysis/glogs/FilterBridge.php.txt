@@ -1,0 +1,197 @@
+commit d60f0b0e74278db9d30b50e40533d92d92c079ec
+Author: Dag <me@dvikan.no>
+Date:   Tue Jun 18 21:12:29 2024 +0200
+
+    feat(FilterBridge): custom feed name parameter (#4136)
+    
+    fix #4100
+
+commit 4602f4f475d938202de6c65214b321d41d0a93e8
+Author: Dag <me@dvikan.no>
+Date:   Sat Apr 6 18:07:45 2024 +0200
+
+    tweaks (#4065)
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit f421c45b21c6c98c0cf5893d8776bbc34b684240
+Author: Dag <me@dvikan.no>
+Date:   Mon Sep 25 22:32:15 2023 +0200
+
+    test: add feed item test (#3709)
+    
+    * test: add feed item test
+    
+    also some refactor
+    
+    * yup
+    
+    * yup
+
+commit 4976cd227ea8c92003bbf252fb8236f3980e3a8a
+Author: User123698745 <User123698745@users.noreply.github.com>
+Date:   Fri Aug 4 22:14:08 2023 +0200
+
+    [FeedExpander] support xhtml content / content with child elements (#3598)
+    
+    * [core] support xhtml content type in FeedExpander
+    
+    * [FilterBridge] change defaultValue to exampleValue
+    
+    * [core] support content with child elements in FeedExpander
+
+commit 701fe3cfeda0d14f1f49afe2bd0f89296214459e
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 29 00:14:30 2023 +0200
+
+    fix: various small fixes (#3578)
+
+commit e01e031e3a018d13ff1d8b79679f845aadfefcf1
+Author: Dag <me@dvikan.no>
+Date:   Wed Feb 1 20:11:20 2023 +0100
+
+    fix: # and / in filter bridge (#3236)
+
+commit 69290c8e55df8b33fcb04b8cf4a7c156829c91cc
+Author: Justin Goette <53531335+jcgoette@users.noreply.github.com>
+Date:   Sun Jan 29 14:13:29 2023 -0500
+
+    feat: [FilterBridge] Add URI/URL filter option to FilterBridge (#3212)
+
+commit 9d16e81e178718c0bd6eae5dcd14633d004bdeb9
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 4 19:07:04 2022 +0200
+
+    fix: php error PHP Notice:  Undefined index: author (#3002)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 3187592dba2f86150ecfd7cf86e23ac6de3dd8dd
+Author: Dag <me@dvikan.no>
+Date:   Fri Mar 25 15:33:34 2022 +0100
+
+    fix: add a few example/default values
+
+commit 75cc52a62c5f5e6ec13b54c2e06bdce035814880
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Mon Jun 7 20:11:12 2021 +0200
+
+    [FilterBridge] Various improvements (#2148)
+    
+    - Add option for case-insensitive regex
+    - Allow matching item content or author in addition to item title
+    - Optionally attempt to convert encoding when applying matches
+
+commit c6a7b9ac64021d46271abb05bce181bb60577e97
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Nov 18 16:53:21 2018 +0100
+
+    exception: Remove HttpException class
+    
+    This class served no particular purpose (other than adding a
+    layer on top of Exception).
+
+commit 5fea9fc1f5014485818d0331666cb58675f89378
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 5 15:53:45 2018 +0200
+
+    bridges: Fix bridges failing unit test
+
+commit 3a496e3b18f7b542c1f318092345e7eb2eb79504
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Aug 4 20:46:55 2018 +0200
+
+    [FilterBridge] Add option to build title from content
+    
+    Adds a new option '&title_from_content=on' to build the title for feed
+    items from the feeds content. The title is generated from the first
+    whitespace after 50 characters of the content or the entire content if
+    the total size is lower than 50 characters.
+    
+    References #587
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 995d78fa5ab4b1d925d2b98b3e61bb2ad5d595e3
+Author: Frans de Jonge <fransdejonge@gmail.com>
+Date:   Sat Jun 24 15:11:40 2017 +0200
+
+    [FilterBridge] Initial implementation of basic title permit and block
+    
+    See the comment https://github.com/RSS-Bridge/rss-bridge/issues/402#issuecomment-305982306
+    
+    Split off from https://github.com/RSS-Bridge/rss-bridge/pull/535

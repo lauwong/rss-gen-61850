@@ -1,0 +1,27 @@
+commit 3a57fc800bfb399ee708794c31255566700369da
+Author: mrtnvgr <48406064+mrtnvgr@users.noreply.github.com>
+Date:   Sun Jul 30 11:46:16 2023 +0700
+
+    DoujinStyleBridge: Update html tags (#3581)
+
+commit 4ce63c88aae24466c6990fa23b73f8ad74dbe3af
+Author: mrtnvgr <48406064+mrtnvgr@users.noreply.github.com>
+Date:   Wed Jul 19 01:48:29 2023 +0700
+
+    Add DoujinStyleBridge (#3549)
+    
+    * v1
+    
+    * improve title
+    
+    * search support
+    
+    * random support
+    
+    * fix categories
+    
+    * add metadata to content
+    
+    * fix linter errors
+    
+    * i'm sorry

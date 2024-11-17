@@ -1,0 +1,58 @@
+commit fee5e269d0763aade289677d6685ebd8bd45c542
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Sun Mar 24 16:38:51 2024 +0100
+
+    Update CaschyBridge.php (#4027)
+    
+    without removing the video-container-div the embedded youtube videos work again
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit 0c540b46379be040e55e6bc6bb5d1d5decf7f768
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Thu May 11 21:25:13 2023 +0200
+
+    added script to deleted elements in CaschyBridge (#3391)
+    
+    * added script to deleted elements
+    
+    Now it works much better with included content like twitter, e.g. in this article:
+    https://stadt-bremerhaven.de/1password-mit-android-14-wird-man-passkeys-in-chrome-und-apps-unterstuetzen/
+    
+    * Update CaschyBridge.php
+    
+    * Update CaschyBridge.php
+
+commit f26808d22c0d6aacc938f89cfb7467f45be61c26
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Mon May 8 16:21:39 2023 +0200
+
+    added article categories for CaschyBridge (#3379)
+    
+    * added article categories
+    
+    * whitespace
+
+commit 5d4247dded2d925cac3569caa9671a9e99f22237
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Wed Feb 15 22:20:22 2023 +0100
+
+    Update CaschyBridge.php (#3261)
+    
+    prevents the bug #3259 that quote-blocks will be displayed multiple times
+
+commit b9af53befffc5d9521429b588ce35831499ec0e9
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Tue Jan 17 17:06:49 2023 +0100
+
+    New Bridge for Caschys Blog (#3215)

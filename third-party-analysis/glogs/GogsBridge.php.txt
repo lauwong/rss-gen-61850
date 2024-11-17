@@ -1,0 +1,41 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit 46a356b0b2b43e74545961a9ff9c54845f87cc88
+Author: Eric G <e+github1690@linuxw.info>
+Date:   Mon Apr 18 22:31:26 2022 +0200
+
+    [GogsBridge] Add protocol to examplevalue (#2668)
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit e4444e6432b5222ee222648d42cc59c93e05f62d
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Jun 21 19:52:51 2019 +0200
+
+    [GogsBridge] Add new bridge

@@ -1,0 +1,49 @@
+commit fbe7cc11ec1801b439eec2f258b3ee48986926d5
+Author: toineenzo <toinerademacher@hotmail.com>
+Date:   Sat Mar 18 19:55:23 2023 +0100
+
+    Add more countries to App Store Bridge (#3246)
+    
+    * Added more countries
+    
+    * Fixed Brazil typo
+    
+    * Update AppleAppStoreBridge.php
+    
+    Removed whitespace line 52 for lint fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 2eaf48de993e8c77e182dde4f73921fd44803ea8
+Author: Nemo <commits@captnemo.in>
+Date:   Mon Apr 4 22:35:52 2022 +0530
+
+    Fix AppleAppStoreBridge (#2604)
+
+commit f469489b569d22fb5edbd13c6e5f5abf2a4ee186
+Author: benzel <info@witt-it.de>
+Date:   Thu Dec 2 23:56:06 2021 +0100
+
+    [AppleAppStoreBridge] Add Germany (#2350)
+
+commit 7f35fc9f6b798b83dc1775a9c55166d3d742e531
+Author: Nemo <me@captnemo.in>
+Date:   Sat Nov 9 22:58:00 2019 +0530
+
+    [AppleAppStoreBridge] Add new bridge (#1316)
+    
+    This bridge allows you to follow iOS/iPad application updates
+    directly over RSS. This allows you to get notified of an application
+    update even if you don't have a iDevice. This may be useful in cases
+    where you want to be notified of a competitor's application for eg.
+    
+    I built this after I got tired of waiting for WhatsApp to push their
+    security release on iOS. It shows up on the AppStore 7 days later

@@ -1,0 +1,494 @@
+commit 701fe3cfeda0d14f1f49afe2bd0f89296214459e
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 29 00:14:30 2023 +0200
+
+    fix: various small fixes (#3578)
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit bed20e9f2813c55388ed611d302e44eb0b97d7ef
+Author: dag <me@dvikan.no>
+Date:   Sun Apr 3 09:37:39 2022 +0200
+
+    feat: extract curl ua to config value (#2568)
+    
+    * exclude config.default.ini.php from phpcs
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit 2ac44172ac202860f9022f3a380907df14d8bfda
+Author: somini <somini@users.noreply.github.com>
+Date:   Mon Oct 28 18:01:04 2019 +0000
+
+    Facebook: Clarify Facebook bridges (#1221)
+    
+    * Clarify Facebook bridges status
+    
+    Distinguish between both Facebook bridges by their title.
+    This preserves all existing URLs.
+    
+    * Update all URLs to secure HTTPS versions.
+    * Configure author name abbreviation
+    * Improve feed names
+    
+    Use the correct feed name on each bridge.
+    Make sure the feed names don't repeat the "Facebook" name.
+
+commit 3d231a417f3670d3e93fb63e9af9d62a5d17e87d
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Jun 7 20:38:07 2019 +0200
+
+    bridges: Don't kill scripts with die()
+    
+    Bridges should generally utilize the API functions instead of killing
+    the script. Find more information on the Wiki.
+    
+    - returnServerError
+    https://github.com/RSS-Bridge/rss-bridge/wiki/The-returnServerError-function
+    
+    - returnClientError
+    https://github.com/RSS-Bridge/rss-bridge/wiki/The-returnClientError-function
+    
+    - returnError
+    https://github.com/RSS-Bridge/rss-bridge/wiki/The-returnError-function
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 242b6953ed3c720b37ea81b255206a39f232cd32
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Fri Nov 30 17:23:37 2018 +0000
+
+    [FB2Bridge] Adapt to Facebook html change (#950)
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit 5fe943562a5efa703cff8f9258b3668ec2dc1811
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Mon Nov 5 10:46:56 2018 +0000
+
+    [FB2Bridge] Prevent shared post duplication (#904)
+    
+    Prevent shared posts appearing twice in feed.
+
+commit b55ec51e0e4a31d7769053eea49fa1b813155f8b
+Author: teromene <teromene@teromene.fr>
+Date:   Sun Nov 4 21:50:18 2018 +0100
+
+    Fix timestamp decoding
+
+commit 7621784598b8a5e46e281e866d844ab13be947fd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Oct 26 18:07:34 2018 +0200
+
+    bridges: Add favicon to bridges missing it
+    
+    Adds favicon to bridges that support it. Some sites prevent downloading
+    favicons, those bridges are left untouched.
+    
+    Affected bridges:
+    
+    - AutoJMBridge
+    - BandcampBridge
+    - BlaguesDeMerdeBridge
+    - BloombergBridge
+    - BundesbankBridge
+    - ChristianDailyReporterBridge
+    - ContainerLinuxReleasesBridge
+    - DailymotionBridge
+    - DiceBridge
+    - DribbbleBridge
+    - EliteDangerousGalnetBridge
+    - ElsevierBridge
+    - FacebookBridge
+    - FB2Bridge
+    - FDroidBridge
+    - FierPandaBridge
+    - GooglePlusPostBridge
+    - JapanExpoBridge
+    - KATBridge
+    - KernelBugTrackerBridge
+    - LegifranceJOBridge
+    - NotAlwaysBridge
+    - NyaaTorrentsBridge
+    - PinterestBridge
+    - RadioMelodieBridge
+    - RainbowSixSiegeBridge
+    - SupInfoBridge
+    - TagBoardBridge
+    - TebeoBridge
+    - TheTVDBBridge
+    - WhydBridge
+    - ZoneTelechargementBridge
+
+commit afd5ef0f1d3585f29afa48ae0d7f22fe3668a3df
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Oct 18 21:10:02 2018 +0200
+
+    [FB2Bridge] Add images support
+    [FB2Bridge] Add basic "cards" support
+
+commit 30bc5179c2d150d98405109ab71dd1511ca78ce7
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Oct 18 18:44:11 2018 +0200
+
+    Fix number of fetched items.
+    Strip the username.
+
+commit 7596be65f22bce8e640f7d0b7c97fb764724dde2
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Oct 18 18:07:07 2018 +0200
+
+    Use a new URL for the cursor. Should fix #851.
+    Remove the "...More" item in the output
+    Remove the information card data
+
+commit 62d737efe21b5d89a4b7feea54fd407531c8e61a
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Oct 16 19:02:47 2018 +0200
+
+    Replace emoticon images by their textual representation
+    
+    References #850
+
+commit 6fce03daa77eba9230787a9ada4894d0eb9068b0
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Tue Oct 16 17:34:39 2018 +0100
+
+    [FB2Bridge] Add updated timestamps to each post (#849)
+    
+    Additionally, exclude shared posts from output since they already exist inside other posts.
+
+commit db24f55c86c20f78d43db2ca9c8e2a32dbef3053
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Fri Sep 21 19:19:22 2018 +0100
+
+    [FB2Bridge] Do not strip <h3> and <h4> (#836)
+    
+    Do not strip <h3> and <h4>. Output looks better when they are retained. See attached.
+
+commit ec607526505f95c91bc521a64e85843df894aa64
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Sat Sep 15 14:16:15 2018 +0100
+
+    [FB2Bridge] Prevent Facebook link href's ending in two quotes (#831)
+    
+    Additionally prevent Facebook links having two forward slashes after the hostname.
+
+commit 458b826871ca7b083589a6d3e840e1fd7116f463
+Author: Quentin Delmas <teromene@teromene.fr>
+Date:   Mon Sep 10 09:29:19 2018 +0100
+
+    Remove declaration of extractFromDelimiters, it is now a reusable function. Fixes #815
+
+commit 5fea9fc1f5014485818d0331666cb58675f89378
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 5 15:53:45 2018 +0200
+
+    bridges: Fix bridges failing unit test
+
+commit ead7b2e8decf8e4490314bd785f875f99c891347
+Author: Nemo <me@captnemo.in>
+Date:   Tue Jul 10 06:59:47 2018 +0530
+
+    [fb2] Switches to getContents (#742)
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 9c78362fd7c8c423d6a255fdb227d8090a43db54
+Author: Teromene <teromene@teromene.fr>
+Date:   Thu Jun 15 11:51:11 2017 +0100
+
+    Warn when accessing a private page.
+
+commit 18c6f0126fe0917500e6b5865fbe4037f2d30b45
+Author: Teromene <teromene@teromene.fr>
+Date:   Thu Jun 15 11:42:59 2017 +0100
+
+    Fix FB2 bridge
+
+commit b4f1dc35a138718928120a13fe057cf9d01bb415
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Feb 12 13:58:42 2017 +0100
+
+    [FB2Bridge] Split long lines
+    
+    Splits long lines into short sections without using
+    string concatenation (.) to prevent errors due to
+    coding styles.
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit 9bf74b2715159010da57d8ded8a1faf3737e581f
+Author: Teromene <teromene@teromene.fr>
+Date:   Wed Feb 8 11:21:59 2017 +0000
+
+    Added the alternate facebook bridge.

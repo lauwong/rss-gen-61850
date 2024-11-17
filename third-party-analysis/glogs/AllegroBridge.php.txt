@@ -1,0 +1,63 @@
+commit bb979e9e0865991806f0d2cf1c55044168bcf586
+Author: Dawid Wróbel <me@dawidwrobel.com>
+Date:   Tue Apr 2 00:06:15 2024 +0200
+
+    [AllegroBridge] fix logical condition on parameters (#4049)
+
+commit a12bab9eedcf149778ad47e2ee84346e7b0d2016
+Author: Dawid Wróbel <me@dawidwrobel.com>
+Date:   Mon Apr 1 23:44:45 2024 +0200
+
+    [AllegroBridge] ask for a complete cookie string, mere wcdx works no more (#4048)
+
+commit 487c692e68bdc75adddb23d342fd77d9418688d2
+Author: Dag <me@dvikan.no>
+Date:   Tue Jan 23 23:02:06 2024 +0100
+
+    fix: a few deprecation notices on php 8.2 (#3917)
+    
+    * fix: a few deprecation notices on php 8.2
+    
+    * tweak
+
+commit 2cc89b767c7f357da724c551b8cf2a512fc2f744
+Author: Dawid Wróbel <me@dawidwrobel.com>
+Date:   Tue Jul 25 20:52:47 2023 +0200
+
+    [AllegroBridge] fix non-functional bridge (#3571)
+    
+    — fix cookie pattern
+    – use data analytics attributes wherever possible to avoid relying on obfuscated class names
+    — add support for promoted offers
+    — include sponsored and promoted offers by default
+    — some additional refactoring
+
+commit 0726cce4266050fb84f186b77c81895b63349574
+Author: Dawid Wróbel <me@dawidwrobel.com>
+Date:   Thu Nov 17 05:13:33 2022 +0100
+
+    [AllegroBridge]: new bridge (#2942)
+    
+    * [AllegroBridge]: new bridge
+    
+    * [AllegroBridge] set feed name
+    
+    * [AllegroBridge] fix notices
+    
+    * [AllegroBridge] add images as attachments
+    
+    * [AllegroBridge] cleanup code
+    
+    * [AllegroBridge] add UID
+    
+    * [AllegroBridge] add categories
+    
+    * [AllegroBridge] fix pretty formatting
+    
+    * [AllegroBridge] fix notice when offerExtraInfo is not found
+    
+    * [AllegroBridge] add support for session cookie to prevent rate limiting
+    
+    * [AllegroBridge] return inputted URL as URI
+    
+    * [AllegroBridge] fix phpcs warning

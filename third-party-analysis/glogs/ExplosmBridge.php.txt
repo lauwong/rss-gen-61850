@@ -1,0 +1,37 @@
+commit 20bf2aa4fe4493474c5a31c5989304c4506570a3
+Author: sal0max <msal.coding@gmail.com>
+Date:   Fri Jul 8 00:23:29 2022 +0200
+
+    [ExplosmBridge] merge ExplosmBridge and CyanideAndHappinessBridge (#2844)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 799c93a3c60075c4514ec180053b89b62793939a
+Author: jNullj <iontankatchker@gmail.com>
+Date:   Mon Jan 10 12:44:18 2022 +0200
+
+    [ExplosmBridge] Rewrite to work without feedburner (#2417)
+    
+    * [ExplosmBridge] Rewrite to work without feedburner
+    
+    re-wrote the bridge to scrap from the new explosm site as the old method of using feedburner is not working anymore, feedburner is stuck on dec/22 when the explosm site changed.
+
+commit 459adf479040f0e669165f79b4e28e3c1bcdaf8e
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Tue Jun 1 05:18:14 2021 +0000
+
+    [ExplosmBridge] Fix website URI (#2140)
+
+commit e48617530d1401d5301d2d10c4f81a99db7eb05e
+Author: Bockiii <henning@bocklage.com>
+Date:   Thu May 13 20:35:42 2021 +0200
+
+    [ExplosmBridge] Add bridge (#2092)

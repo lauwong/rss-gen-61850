@@ -1,0 +1,29 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 645a8f62c69b5c23a19fa3ac96a2c96078475843
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Oct 15 12:53:19 2020 +0500
+
+    [.travis] Fix several phpcs and phpunit errors (#1799)
+
+commit fec52418d5adb9eff2b10280110d6d9702dca055
+Author: Christian Jonak <christian@jonak.org>
+Date:   Thu Sep 3 07:46:35 2020 +0200
+
+    [FM4Bridge] Add new bridge for FM4 news page (#1719)

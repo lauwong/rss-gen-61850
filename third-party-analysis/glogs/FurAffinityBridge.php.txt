@@ -1,0 +1,139 @@
+commit f358f1abec8278c4e5659b311bf8eea5f34802d8
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 17:47:04 2024 +0200
+
+    refactor: loadCacheValue/saveCacheValue (#4205)
+
+commit f0ec797f4bceb25b396e75499ea13419ba2b0292
+Author: mruac <ant8672@gmail.com>
+Date:   Wed Aug 30 00:35:37 2023 +0930
+
+    [FurAffinityBridge] Option for instance host to add custom cookie (#3638)
+    
+    * added custom cookie config
+    
+    * appease phpunit
+
+commit 9e33a15b93de43a1f8ef3fc705748c59d8dbeed7
+Author: mruac <ant8672@gmail.com>
+Date:   Wed Aug 30 00:34:10 2023 +0930
+
+    [FurAffinityBridge] Fix if search result contains hidden submission (#3637)
+    
+    * Reverts to preview submission if full is hidden
+    
+    * Reverts to preview submission if full is hidden
+    
+    * revert
+    
+    * added fallback to higher res preview if SWF
+    
+    * amend
+
+commit 52d3cce59dae1b5b8adb5497450e396473ebf6b2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 22:40:24 2023 +0200
+
+    bridges: add context to detectParameters (#3607)
+    
+    * bridges: add context to detectParameters
+    
+    Some bridges did not return the context parameter but they used it in
+    the parameters
+    
+    * bridges: add context to detectParameters
+    
+    Fix test for InstagramBridge
+
+commit 48385777b48105a6bd7172b10400b09916bd231e
+Author: Dag <me@dvikan.no>
+Date:   Mon Jul 3 10:48:33 2023 +0200
+
+    fix: php notices (#3482)
+    
+    * fix(furaffinity): notice
+    
+    * fox(releases3ds): remove references to non-existing vars
+
+commit 003ab585140c0817738df23ddcffe721e64f451a
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 10 19:48:37 2022 +0200
+
+    [FurAffinity] fix: errror (#2887)
+    
+    They changed parts of the dom.
+    
+    Fix error:
+    Error: Call to a member function find() on null
+    
+    Fixes #2868
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit cf525c964abc2f47c9082bbaf87807a6c09f3228
+Author: Roliga <roliga.here@gmail.com>
+Date:   Fri Jul 26 11:02:58 2019 +0200
+
+    [WIP][FurAffinityBridge] Add new bridge (#1083)
+    
+    * [FurAffinityBridge] Add new bridge

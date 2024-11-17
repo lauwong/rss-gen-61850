@@ -1,0 +1,23 @@
+commit 609eed1791598a798e7f94ac694d014605ec11ee
+Author: George Sokianos <walkero@gmail.com>
+Date:   Tue Nov 28 21:54:39 2023 +0000
+
+    KoFiBridge fix the "Call to a member function find() on null" line 39 (#3807)
+
+commit d55994643d5a5495d185bfef43ff52a59aea9a03
+Author: George Sokianos <walkero@gmail.com>
+Date:   Fri Aug 11 15:16:53 2023 +0100
+
+    bridges: Added Ko-Fi.com bridge (#3609)
+    
+    * Added Ko-Fi.com bridge
+    
+    * Changed the exampleValue based on KoFiBridge-pr-context1 artifacts
+    
+    * Fixed "Undefined array key 0" error
+    
+    * fixed PHPCS issues
+    
+    ---------
+    
+    Co-authored-by: George Sokianos <George.Sokianos@hostelworld.com>

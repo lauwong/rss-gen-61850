@@ -1,0 +1,35 @@
+commit a234392f801451f104edbe940c36fe2749757be6
+Author: alexvong243f <alexvong.n6215@simplelogin.com>
+Date:   Fri Jul 14 03:15:49 2023 +0000
+
+    docs: improve discoverability of instagram related bridges (#3528)
+
+commit ef0b86968c36c2303abe72aebe6388b948ebddb7
+Author: User123698745 <User123698745@users.noreply.github.com>
+Date:   Fri Jul 7 08:16:45 2023 +0200
+
+    [PicnobBridge] fix missing images (#3506)
+    
+    * [PicnobBridge] fix missing images
+    
+    * [PicnobBridge] handle invalid relative date (e.g.: 'Just now')
+    
+    * [PicnobBridge] fix code indent
+
+commit 7783e4133ddaee09e45b1f817afe5dcfd080aadd
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Tue Feb 21 00:56:17 2023 +0100
+
+    [PicnobBridge] Update description & uid (#3267)
+    
+    - Description now allows HTML and relative URLs are rewritten
+    - Post ID in the post URL is used as UID in the feed
+
+commit e1e340f65060f6f8a22126ef1d79712f879e354c
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sun Jan 22 16:00:18 2023 +0100
+
+    [PicnobBridge] New Bridge (#3221)
+    
+    Add new bridge
+    - some image can not be displayed in the feed because of the CORP policy

@@ -1,0 +1,97 @@
+commit f0e5ef0fc58f3796bb4c03caa2c5e7ca78de119e
+Author: Bocki <henning@bocklage.com>
+Date:   Mon Mar 6 20:01:51 2023 +0100
+
+    [Various] getKey replacements and docu (#3283)
+    
+    * [Various] getKey replacements and docu
+    
+    * more bridges and fix to the abstract
+    
+    * linting
+    
+    * revert bandcampdaily. doing more than i thought
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 68d9e2ff242251e161a56b72e89984d6c765d294
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Wed Aug 25 18:16:00 2021 +0500
+
+    [NineGagBridge] Remove whitespace on wtf section
+    
+    Don't know why github actions did not run on https://github.com/RSS-Bridge/rss-bridge/pull/2094
+    Certainly wtf
+
+commit 677e4974d1bf7d9ef0ee4bf40ee410516250f711
+Author: Bockiii <henning@bocklage.com>
+Date:   Wed Aug 25 15:06:10 2021 +0200
+
+    [NineGagBridge] Updated sections and added video
+
+commit 5e4f3c351e457db6b369b4ac6c3244cb55d9a0cb
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Oct 15 14:18:46 2020 +0500
+
+    [NineGagBridge] Lint previous commit
+
+commit a332a5a414fa9b9aa27f6a9f8d2d4bcc77f5d9e7
+Author: Gregor Santner <gsantner@users.noreply.github.com>
+Date:   Thu Oct 15 11:12:54 2020 +0200
+
+    [NineGagBridge] In post URI replace scheme from "http" to "https"
+
+commit 375831f51639fe19349b11ae95fc0f4aa66ec0da
+Author: David <32897194+gloony@users.noreply.github.com>
+Date:   Sun Dec 1 13:07:25 2019 +0100
+
+    [NineGagBridge] Add filter option for animated content (#1374)
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit 243e324efc14a849b63d1f1565e0d19cc6fcacf7
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Sep 22 15:18:43 2018 +0200
+
+    [NineGagBridge] Fix missing sections breaking feeds
+    
+    Posts may supply a list of 'sections' or a single 'postSection'
+    
+    References #844
+
+commit ae58b1566e1d441df409faa0c31d485d671bc99b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Sep 22 15:10:19 2018 +0200
+
+    [NineGagBridge] Remove type hinting
+    
+    Type hinting for strings doesn't work prior to PHP 7, see
+    http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration
+    
+    References #837
+
+commit efa550ef61a06670a21827dd7c5e956a6f086e7b
+Author: ZeNairolf <ze.nairolf@gmail.com>
+Date:   Thu Sep 13 11:11:42 2018 +0200
+
+    Add 9gag.com bridge (#801)
+    
+    * Add 9gag.com bridge

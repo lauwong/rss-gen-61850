@@ -1,0 +1,55 @@
+commit 437afd67e0bc339bf328488f4c7411d71a872647
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 24 18:15:14 2023 +0200
+
+    fix: various fixes (#3702)
+    
+    * fix: symfonycasts
+    
+    * various fixes
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit f040e4dc9c100b3f4b9598b0a6e89c111fe38460
+Author: floviolleau <floviolleau@users.noreply.github.com>
+Date:   Tue Feb 4 17:22:42 2020 +0100
+
+    [AtmoNouvelleAquitaine] Change description (#1423)
+    
+    * [AtmoNouvelleAquitaine] Change description
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit f1d3e8c9c9ad798b014a6014899720676355dcc7
+Author: floviolleau <floviolleau@users.noreply.github.com>
+Date:   Sat Sep 7 18:36:55 2019 +0200
+
+    [AtmoNouvelleAquitaineBridge] Add new bridge for air quality in Bordeaux (#1229)
+    
+    * Add new bridge for air quality in Bordeaux

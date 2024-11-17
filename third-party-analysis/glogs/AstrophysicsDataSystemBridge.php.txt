@@ -1,0 +1,21 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit abb4c17a0df6fb76255ba5b42cc84a820ba31f81
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Wed Jun 22 13:07:54 2022 -0400
+
+    bridges: Update maintainer (#2856)
+
+commit 9ac494b3508625e1e28abee063f34f1bba5f1fd1
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Fri Jun 17 14:00:31 2022 -0400
+
+    [AstrophysicsDataSystemBridge] Add bridge (#2796)

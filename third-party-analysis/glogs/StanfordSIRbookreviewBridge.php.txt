@@ -1,0 +1,15 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 14a75166253da28b7035c8e82ac3b9f464c5040c
+Author: Dag <me@dvikan.no>
+Date:   Wed Mar 23 00:43:26 2022 +0100
+
+    feat: add new bridge StandfordSIRbookreviewBridge (#1638)

@@ -1,0 +1,40 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 8530aa54f255824fe2c7fd00ee25afee72183282
+Author: somini <somini@users.noreply.github.com>
+Date:   Tue Jan 4 23:44:59 2022 +0000
+
+    [ComboiosDePortugalBridge] Temporarily ignore certificate checks (#2403)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit c9b0cd1315bbc8bcf1d85c4512b8bb0fdca8271a
+Author: somini <somini@users.noreply.github.com>
+Date:   Thu Apr 4 21:48:25 2019 +0100
+
+    ComboiosDePortugalBridge: HACK: Encode the URL (#1074)
+    
+    This seems like a weird bug somewhere.
+    
+    Either the HTML parser should return the valid page, or the CMS should
+    not convert the URL first, or the URL validation regex is buggy.
+
+commit dac685b88719a280ab36a9210a0c3ee57e4fa3b0
+Author: somini <somini@users.noreply.github.com>
+Date:   Sat Mar 2 18:05:23 2019 +0000
+
+    [ComboiosDePortugalBridge] Add new bridge (#1049)

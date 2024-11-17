@@ -1,0 +1,94 @@
+commit adad9d6405efb1b19987bf6933ea8309b5f3c28e
+Author: Thomas <mightymt@users.noreply.github.com>
+Date:   Mon Jun 24 22:32:03 2024 +0200
+
+    [YouTubeCommunityTabBridge] Improve JSON extraction (#4140)
+    
+    Small change that should make the extraction of JSON from HTML work more
+    reliably
+
+commit d15960f955be91c8fa236d96186fcb0524572859
+Author: Thomas <mightymt@users.noreply.github.com>
+Date:   Thu May 2 19:45:04 2024 +0200
+
+    [YouTubeCommunityTabBridge] Multi-image attachment support (#4091)
+    
+    Adds support for multi-image attachments.
+    Also changes individual if-statments in "getAttachments" to if/elseif
+    as each post can apparently only have one attachment anyway.
+
+commit d31f20758cb9c3a0841c4cf1c2c283b4cfc29077
+Author: Thomas <mightymt@users.noreply.github.com>
+Date:   Fri Apr 26 18:47:06 2024 +0200
+
+    [YouTubeCommunityTabBridge] Improve building of content & title (#4089)
+    
+    * [YouTubeCommunityTabBridge] Improve building of content & title
+    
+    Fixes truncated link hrefs in content and adds some general
+    improvements regarding the building of item content and item title
+    
+    * [YouTubeCommunityTabBridge] Fix PHP deprecation warnings
+    
+    Fixes the following deprecation warnings:
+    
+    substr(): Passing null to parameter #1 ($string) of type string is
+    deprecated
+
+commit 701fe3cfeda0d14f1f49afe2bd0f89296214459e
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 29 00:14:30 2023 +0200
+
+    fix: various small fixes (#3578)
+
+commit e5729fdaacb7fc18c3590c406cc3c50eaa0222c8
+Author: Thomas <mightymt@users.noreply.github.com>
+Date:   Sat Jul 15 15:18:09 2023 +0200
+
+    [YouTubeCommunityTabBridge] Fix PHP warnings for posts w/o text (#3536)
+    
+    Because "contentText" is always present, PHP warnings were previously
+    generated for posts without text.
+    Existence of sub-property "runs" gets checked now to avoid this.
+
+commit bf0d771367b78f59996bfbaa4ad4e8ac5e51d557
+Author: Thomas <bikertom@gmx.at>
+Date:   Tue Jul 4 16:21:14 2023 +0200
+
+    [YouTubeCommunityTabBridge] Fix getURI implementation
+    
+    Previously the undefined property "feedUri" was accessed here, always
+    causing a fallback to the parent class
+
+commit eb2b4747ae8019109c7011a8d591819626a51c9c
+Author: Thomas <mightymt@users.noreply.github.com>
+Date:   Sun Jul 2 22:56:08 2023 +0200
+
+    [YouTubeCommunityTabBridge] Add timestamps (#3477)
+    
+    As YouTube doesn't provide precise dates for community posts, an
+    increasing multiple of 60 seconds is subtracted from each timestamp.
+    This ensures that the original order is always preserved, even if there
+    are multiple posts with the same date (e.g. "1 month ago").
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 7a87a09fc54d8baf0d71e1183ebcba5747ac681d
+Author: Kingsley Yung <11942650+kkoyung@users.noreply.github.com>
+Date:   Tue May 17 15:35:16 2022 +0800
+
+    [YouTubeCommunityTab] Fix error occuring when YouTube returns non-English webpage. (#2739)
+
+commit 7f4a0fae0c298f600c9a225d52bb85ec8aa84012
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Fri Mar 25 20:31:39 2022 +0000
+
+    [YouTubeCommunityTabBridge] Add Bridge (#1594)

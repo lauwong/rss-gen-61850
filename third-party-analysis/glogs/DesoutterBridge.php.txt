@@ -1,0 +1,67 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit b57d19b29c92fdea6cbeead188bc0bada0b97901
+Author: Dag <me@dvikan.no>
+Date:   Fri Mar 25 02:29:51 2022 +0100
+
+    [DesoutterBridge] fix: default value
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit c0df9815c73bb80f5474a2e50e32f65d8f149466
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 15:07:25 2019 +0100
+
+    [DesoutterBridge] Add feed item limit
+    
+    This bridge currently takes a very long time to process
+    all news items on the page, when in many cases only one
+    or two had been added since the last check.
+    
+    This commit adds a new parameter 'limit', which defines
+    the maximum number of items to add to the feed. This is
+    an optional paramter that defaults to 3.
+
+commit 1efb7c7bcea6c6fa87afd5470cdb611a87b8c32c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 9 19:01:49 2019 +0200
+
+    [DesoutterBridge] Fix bridge after DOM changes
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit b4aea21f7185acc81b64f82b92a1c2b2feb19668
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Sep 22 20:44:54 2018 +0200
+
+    [DesoutterBridge] Add new bridge

@@ -1,0 +1,141 @@
+commit feb2a686d7b963e14c83dd2358e6f695ed67085b
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Tue Jan 23 15:58:30 2024 +0100
+
+    [CssSelectorBridge] Move metadata retrieval to lib (#3913)
+    
+    May become handy for making other bridges
+
+commit bb36eb9eb831eb6bce8641323b7e5ce90798575b
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Fri Jan 19 21:30:53 2024 +0100
+
+    [CssSelectorBridge] Time/Thumbnail improvements (#3879) (#3901)
+    
+    * Implement <time> metadata tag as timestamp source
+    * Add setting to include thumbnail as article header
+
+commit a41bb088f816454d9fbd07011e1365d0845fde3d
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Wed Oct 18 19:10:52 2023 +0200
+
+    [CssSelectorBridge] Add more metadata tags (#3768)
+    
+    Add og: variants for published/updated time and author
+
+commit 47f52b5912f442389e9b5a867044efc6f4680b7b
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Mon Oct 9 08:48:21 2023 +0200
+
+    Add CSS Selector Feed Expander (#3732)
+    
+    * Add CSS Selector Feed Expander
+    
+    This bridge combines CssSelectorBridge with FeedExpander
+    Allows expanding a feed using CSS selectors
+    
+    * Fix code linting
+    
+    ---------
+    
+    Co-authored-by: ORelio <ORelio>
+
+commit 3557e5ffd4c2024c36d6a448c520cb9afd5cc2aa
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sat Sep 30 15:03:52 2023 +0200
+
+    [CssSelector/Sitemap] Minor fixes (#3719)
+    
+    - Apply title_cleanup to title from metadata (#3717)
+    - Metadata: Fix ld+json object/array confusion
+    - Sitemap: Also try /sitemap.xml well known url
+
+commit e1b911fc1f3416d49c5ad5cc68587f64ab8890eb
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sun Sep 24 23:07:43 2023 +0200
+
+    [CssSelectorBridge] Retrieve metadata for social media embeds (#3602, #3687) (#3706)
+    
+    * [CssSelectorBridge] Metadata from social embed (#3602, #3687)
+    
+    Implement the following metadata sources:
+     - Facebook Open Graph
+     - Twitter <meta> tags
+     - Standard <meta> tags
+     - JSON linked data (ld+json)
+    
+    The following metadata is supported:
+     - Canonical URL (may help removing garbage from URLs)
+     - Article title
+     - Truncated summary
+     - Published/Updated timestamp
+     - Enclosure/Thumbnail image
+     - Author Name or Twitter handle
+    
+    SitemapBridge will also automatically benefit from this commit.
+    
+    * [php8backports] Add array_is_list()
+    
+    Needed this function for ld+json implementation in CssSelectorBridge.
+    
+    * [SitemapBridge] Add option to discard thumbnail
+    
+    * [CssSelectorBridge] Fix linting issues
+
+commit ce353c1e4f1ea7f2b1170fa3564dcdca85350c8c
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sun Sep 24 16:12:30 2023 +0200
+
+    [CssSelectorBridge] Fix URL filtering (#3676) (#3701)
+    
+    Co-authored-by: tougaj <tougaj@users.noreply.github.com>
+
+commit f8fd05f08f114c0fa007075a1da6b780eb6a593f
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Mon Jul 31 19:07:34 2023 +0200
+
+    [CssSelectorBridge] Handling of missing links (#3585)
+    
+    When using parent element as URL selector:
+    
+    * If no <a> inside some elements, ignore them
+    * If no <a> inside ALL elements, report an error
+    
+    Fixes #3573 #issuecomment-1656943318
+
+commit 977c0db38222e22b364578ba1d78e800445e44f9
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Wed Jul 26 19:41:29 2023 +0200
+
+    [CssSelectorBridge] Improvements (#3537) (#3573)
+    
+    * [CssSelectorBridge] Improvements (#3537)
+    
+    * Improve parameter documentation / add tooltips
+    * Allow extracting content from home page instead of article page
+    * Keep titles from home page when every page <title> is the same
+    
+    * [CssSelectorBridge] Code linting
+    
+    * [CssSelectorBridge] Code linting (2)
+    
+    * [CssSelectorBridge] Code linting (3)
+
+commit 9efdf24a6ed4c96a03d4aeb8684d5b082627057c
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Fri Jul 14 22:09:45 2023 +0200
+
+    Add CustomBridge (#3457)
+    
+    * Add CustomBridge
+    
+    For advanced users. Create RSS feed using HTML selectors.
+    
+    * [CssSelectorBridge] Refactor, Allow Unexpanded
+    
+    Rename bridge to CssSelectorBridge
+    Allow unexpanded feed, i.e. make feed from home page only (1 request)
+    Refactor bridge to put most of the code into protected functions
+    Makes the code more maintainable and allows inheritance for variants
+    
+    * [CssSelectorBridge] Fix linting

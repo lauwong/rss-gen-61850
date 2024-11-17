@@ -1,0 +1,65 @@
+commit 5f37c72be0a994257b01a8c43c4e488611f092f2
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 20:48:08 2023 +0200
+
+    fix(binance): plus some other tweaks (#3753)
+
+commit faf63269a12292e8e97982f7baf8747309009c76
+Author: Tobias Alexander Franke <thefranke@users.noreply.github.com>
+Date:   Sun Sep 25 19:19:35 2022 +0200
+
+    [BinanceBridge] Adapt code to new JSON structure and fetch full article (#3065)
+    
+    * [BinanceBridge] Add new bridge
+    
+    * [BinanceBridge] TravisCI fixes
+    
+    * [BinanceBridge] PR fixes
+    
+    * [BinanceBridge] Fix for Binance blog: Pull JSON data instead of HTML
+    
+    * [BinanceBridge] Fix double quotes
+    
+    * [BinanceBridge] Remove announcements category (because of Cloudflare)
+    
+    * [BinanceBridge] Simplify code to bare minimum
+    
+    * [BinanceBridge] Adapt code to new JSON structure and fetch full article
+    
+    * [BinanceBridge] Fix linting issues
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit a3b0b91deee9629ec39373eed4cc75afdb5dfff7
+Author: Tobias Alexander Franke <thefranke@users.noreply.github.com>
+Date:   Tue Apr 5 22:20:27 2022 +0100
+
+    [BinanceBridge] Remove announcements because of Cloudflare issue (#2610)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit c673917acaa7f95a846a1902b98df0e9fdb2ecc0
+Author: Tobias Alexander Franke <thefranke@users.noreply.github.com>
+Date:   Thu Jul 29 18:55:36 2021 +0200
+
+    [BinanceBridge] Fix blog posts (#2226)
+
+commit 4a60f05fd6517c3d90a6f66567428170d792cca0
+Author: Tobias Alexander Franke <thefranke@users.noreply.github.com>
+Date:   Sat Jun 1 09:18:30 2019 +0000
+
+    [BinanceBridge] Add new bridge (#1135)

@@ -1,0 +1,136 @@
+commit 6a24e53d6ca4fbfb3115a8cb30a51283684f0f20
+Author: Dag <me@dvikan.no>
+Date:   Fri Aug 30 04:21:51 2024 +0200
+
+    refactor (#4244)
+
+commit 58544cd61a465102bebc315b4467e4e45d587723
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 29 22:48:59 2024 +0200
+
+    refactor: introduce DI container (#4238)
+    
+    * refactor: introduce DI container
+    
+    * add bin/test
+
+commit 4602f4f475d938202de6c65214b321d41d0a93e8
+Author: Dag <me@dvikan.no>
+Date:   Sat Apr 6 18:07:45 2024 +0200
+
+    tweaks (#4065)
+
+commit 17a3b4c9d871208896e6c50a64b539d8689be128
+Author: Dag <me@dvikan.no>
+Date:   Sun Mar 31 21:32:27 2024 +0200
+
+    Fix 198 (#4041)
+    
+    * fix(twitch): log instead of exception
+    
+    * typo
+
+commit a6a1d553d9a5e17cd45f11f1e1c8d597e7184c77
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 22 20:59:45 2023 +0200
+
+    tweaks (#3686)
+
+commit 39d671079863e3ba18534094146b32eaebd617a8
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 22 20:41:39 2023 +0200
+
+    fix(twitch) (#3685)
+
+commit 0bf38e5c56a795301d540f4b0ce6e9bd9935b058
+Author: Dag <me@dvikan.no>
+Date:   Wed Sep 20 03:15:15 2023 +0200
+
+    fix: small notice errors (#3677)
+    
+    * fix notice
+    
+    * fix notice
+    
+    * tweak
+    
+    * tweaks
+
+commit 3ac861a86681b480fd194e102713044c485c57c0
+Author: Dag <me@dvikan.no>
+Date:   Tue Aug 22 19:47:32 2023 +0200
+
+    fix(twitch): Invalid argument supplied for foreach() at bridges/TwitchBridge.php line 115 (#3630)
+
+commit 5e22459eb69fa97292faa3a384a99ea5279163bf
+Author: Dag <me@dvikan.no>
+Date:   Thu Jul 6 18:52:19 2023 +0200
+
+    fix: remove unnecessary calls to purgeCache (#3502)
+
+commit b64f8f2a09a837722b4b83da056aaf371c661c18
+Author: Dag <me@dvikan.no>
+Date:   Tue Nov 8 21:17:32 2022 +0100
+
+    fix: various fixes (#3136)
+
+commit 94ae098ef5687f6cc128a0fb7bd33443e40e3e55
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 9 20:18:50 2022 +0200
+
+    fix: various fixes (#3023)
+    
+    * improve twitch error message
+    
+    * fix worldcosplay notice
+    
+    * fix: add new video image to telegram
+    
+    * fix: reuters
+    
+    * fix: formula1
+    
+    * twitter
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit b48bc77c22e13d93aa9f8216b0503a77305fd078
+Author: Roliga <roliga.here@gmail.com>
+Date:   Fri Oct 30 14:50:36 2020 +0100
+
+    [TwitchBridge] Switch to unofficial GraphQL API (#1829)
+    
+    * [TwitchBridge] Switch to unofficial GraphQL API
+    
+    The GraphQL API that the twitch.tv website uses has a lot more
+    information available than the official APIs. Hopefully it'll be stable.
+
+commit 52d2d21da55da8298cd14af442a08ede8f6b33e7
+Author: Roliga <roliga.here@gmail.com>
+Date:   Sat Sep 7 18:27:44 2019 +0200
+
+    [TwitchBridge] Add new bridge (#1253)
+    
+    * [TwitchBridge] Add new bridge

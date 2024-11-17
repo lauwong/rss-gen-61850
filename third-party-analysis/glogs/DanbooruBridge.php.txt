@@ -1,0 +1,424 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit b6e8350596f642f342f15d856882939e2dd9e658
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:37:30 2022 +0200
+
+    fix: a bunch of small changes in multiple bridges (#2644)
+    
+    Mostly refactors.
+
+commit cd174c7e2209d975da5de8869ec0cd55955e3a52
+Author: dag <me@dvikan.no>
+Date:   Tue Mar 29 22:44:20 2022 +0200
+
+    [DanbooruBridge] refactor: remove unnecessary fork of simplehtmldom (#2550)
+
+commit 78a5136cc98d1f8a04139eb800227b25d0932b83
+Author: dawidsowa <dawid_sowa@posteo.net>
+Date:   Thu Mar 24 23:04:12 2022 +0100
+
+    bridges: change 'tags' to 'categories' (#1942)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 6a99904e64fb8bad615ac3cdc6caec9ab14a20ca
+Author: Rudolf M. Schreier <rudolfschreier@gmx.de>
+Date:   Mon Aug 26 14:26:19 2019 +0200
+
+    [DanbooruBridge]  Decode href of HTML element to avoid double escaping. (#1262)
+    
+    Directly accessing ...->href resulted in a string that contained '&amp;'
+    instead of '&'. This was later escaped again to '&amp;amp;' in some
+    formats (e.g. Atom).
+
+commit ee28b124e0b0335348dcdb4267b38e88c8506ebc
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Aug 9 21:55:43 2018 +0200
+
+    [DanbooruBridge] Fix bridge
+    
+    This commit fixes an issue caused by self closing tags not supported
+    by simplehtmldom (<source>).
+    
+    Adds a monkey patch to extend simplehtmldom with the ability to detect
+    that particular tag. Most of the code added is copied directly from
+    simplehtmldom (see vendor/simplehtmldom) with adjustments to account
+    for RSS-Bridge formatting.
+    
+    Related to: https://sourceforge.net/p/simplehtmldom/bugs/83/
+    
+    Notice: The tag itself is valid according to Mozilla:
+    
+    The HTML <picture> element serves as a container for zero or more
+    <source> elements and one <img> element to provide versions of an
+    image for different display device scenarios. The browser will
+    consider each of the child <source> elements and select one
+    corresponding to the best match found; if no matches are found
+    among the <source> elements, the file specified by the <img>
+    element's src attribute is selected. The selected image is then
+    presented in the space occupied by the <img> element.
+    
+    -- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture
+    
+    References #753
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit 9599f921a502581b48656f70e66b7399a2c3c0f3
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Aug 5 22:24:48 2017 +0200
+
+    [DanbooruBridge] Allow descendant classes to override tag collection
+    
+    Add protected function 'getTags' that receives the current element
+    and returns a string containing all tags.
+    
+    References #560
+
+commit f6f3a213ef87eb876d99e08cb10e08290c808e5f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jul 25 14:40:34 2017 +0200
+
+    [DanbooruBridge] Fix broken URI
+    
+    This fixes broken URIs in the output data caused by duplicate domain
+    names caused by sites (descendant class Delbooru) providing absolute
+    URIs instead of relative ones.
+    
+    References #552
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit 970e216c1fc7a10550cf4288fd2197255557324f
+Merge: 9020b09f a1ef589f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Oct 2 16:05:58 2016 +0200
+
+    Merge branch 'methods2functions' of https://framagit.org/peetah/rss-bridge
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 235c9859012887bda40c0f024c72975223256610
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 17:04:28 2016 +0200
+
+    [BridgeAbstract] replace getCacheDuration method by CACHE_TIMEOUT class constant
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 97926b839e51abf6d8e4ec616bc7231ecaac6da8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 4 01:18:06 2016 +0200
+
+    [bridges] one bridge for technically different imageboard solutions
+    
+    Danbooru serves HTML content while Moebooru send content in JSON format
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit ebe7084cc2f73cf068177a6ddb11e4776597c3d6
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 13:48:26 2016 +0200
+
+    [DanbooruBridge] fix + code simplification
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 1b3c8a8aeba5641f3bec9a6a720939df537bfa83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 01:25:33 2016 +0200
+
+    [core + bridges] add BridgeAbstract::$inputs and BridgeAbstract::getInput()
+    
+    Inputs are not stored in BridgeAbstract::$parameters anymore to separate
+    static data from dynamic data.
+    The getInput method allows for more readable code.
+    
+    Also fix an "undefined index 'global'" notice
+    
+    Probability of breaking bridges: high !
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3c0d13c1bb72a87f0d671692e205f45f04d94eba
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 19:06:35 2016 +0200
+
+    bridges: use BridgeAbstract::getSimpleHTMLDOM
+    
+    instead of BridgeAbstract::file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 74f0572d914617b4e47fe0fd2fabfe356710d609
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Aug 17 14:45:08 2016 +0200
+
+    bridges: Replace returnError function with more specific
+    
+    Replacements depend on original error code:
+    400: returnClientError
+    404: returnServerError
+    500: returnServerError
+    501: returnServerError
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit 42b6c82753127407e7c5ccd5f39ffa4e78040e9e
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 15:50:25 2016 +0200
+
+    bridges: Cleanup occurrences of $item->thumbnailUri
+    
+    This is a subsequent change to f3eefab
+
+commit 955eecc299e67a1062a9e75149b6c098fb9d2cbc
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Jun 25 23:17:42 2016 +0200
+
+    use BridgeAbstract::file_get_html in all bridges
+    
+    instead of simple_html_dom function file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 78c9dcc705682cb3e71912fae19365d71ee7bf22
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Nov 5 15:50:18 2015 +0000
+
+    Last batch of bridges, all implemented !
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 3b558e1c2a7fde3802e82c47d837a9ab5b2fb169
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Mon May 26 00:30:46 2014 +0200
+
+    Add extra bridges, first batch (So feed, Many RSS)

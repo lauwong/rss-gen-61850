@@ -1,0 +1,35 @@
+commit 36fd72c87e5e96923a61bc79aeff8cc97b950423
+Author: bloominstrong <114744388+bloominstrong@users.noreply.github.com>
+Date:   Sun Sep 1 00:27:45 2024 +1000
+
+    [ABCNewsBridge] Fix broken due to site redesign (#4247)
+
+commit 6f7be67a8c4a0cfe1433490fb87ef2b966094f70
+Author: Dag <me@dvikan.no>
+Date:   Tue Sep 13 19:00:51 2022 +0200
+
+    fix: broken bridge abcnews (#3033)
+    
+    Fix #3031
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 35afee6103a2233b3b605b329d9d575ff1dd84e2
+Author: Dag <me@dvikan.no>
+Date:   Fri Mar 25 01:41:40 2022 +0100
+
+    [ABCNews] fix: broken css selector
+
+commit 3cef35a43258734bb1fc6fa18e278adf13cf8538
+Author: 岳东辰 <38829129+yue-dongchen@users.noreply.github.com>
+Date:   Mon Jan 17 16:35:01 2022 +1100
+
+    [ABCNewsBridge] New bridge (#2255)

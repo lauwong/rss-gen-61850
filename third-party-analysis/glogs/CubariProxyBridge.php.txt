@@ -1,0 +1,9 @@
+commit d379f3e575e9b84f3e65e7571532f11a6d298279
+Author: July <phantop@tuta.io>
+Date:   Wed Aug 21 16:57:02 2024 -0400
+
+    [CubariProxyBridge] add bridge for cubari manga proxies (#4220)
+    
+    * [CubariProxyBridge] add bridge for cubari manga proxies
+    
+    * [CubariProxyBridge] add limit and use isset

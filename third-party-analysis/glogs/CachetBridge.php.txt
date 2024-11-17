@@ -1,0 +1,35 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit 4c58768d4d99bc694242234e1c37e8b6d87bd7e1
+Author: Klimplant <klimplant@disroot.org>
+Date:   Mon Feb 11 21:07:46 2019 +0100
+
+    [CachetBridge] Add new bridge (#1034)
+    
+    * Fix issue with CachetAPI Pagination
+    
+    Fixing issue that only the oldest 20 entries were shown.
+    
+    _Background:_
+    
+    _Cachet has a, lets call it odd, system of pagination. On the first page you see the incidents first created, so they are not what you want to see. But on the last page you can have 1 or 20 of the newest incidents. So you have to take the incidents from the last page (call it Pmax) and combine them with the incidents from  Pmax - 1._

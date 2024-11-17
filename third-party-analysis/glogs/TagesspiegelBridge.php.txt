@@ -1,0 +1,9 @@
+commit 29d984cbe78bddd31fa97f810f1eebd0a46cbcb7
+Author: Alexander Sulfrian <alexander@sulfrian.net>
+Date:   Sun Nov 3 18:25:51 2024 +0100
+
+    [TagesspiegelBridge] Add bridge for tagesspiegel.de (#4270)
+    
+    * [TagesspiegelBridge] Add bridge for tagesspiegel.de
+    
+    * [TagesspiegelBridge] Raise timtout to 60min

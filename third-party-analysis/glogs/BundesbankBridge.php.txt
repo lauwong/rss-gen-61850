@@ -1,0 +1,112 @@
+commit a6a1d553d9a5e17cd45f11f1e1c8d597e7184c77
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 22 20:59:45 2023 +0200
+
+    tweaks (#3686)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 6c4098d6558c33a5fcb2a8bc9fb29e915d56fc6c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 2 13:03:26 2019 +0200
+
+    Revert "all: Use ->remove() instead of ->outertext = ''"
+    
+    This reverts commit 052844f5e13c71ceefd743136a71f71226a0eefb.
+    
+    There is a bug in ->remove() that causes the parser to incorrectly
+    identify elements in the DOM tree that shouldn't exist anymore.
+    
+    References #1151
+
+commit 052844f5e13c71ceefd743136a71f71226a0eefb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 1 21:15:30 2019 +0200
+
+    all: Use ->remove() instead of ->outertext = ''
+    
+    simplehtmldom 1.9 introduced new functions to recursively remove
+    nodes from the DOM. This allows removing elements without the need
+    to re-load the document by using $html->load($html->save()), which
+    is very inefficient.
+    
+    Find more information about remove() at
+    https://simplehtmldom.sourceforge.io/docs/1.9/api/simple_html_dom_node/remove/
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 7621784598b8a5e46e281e866d844ab13be947fd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Oct 26 18:07:34 2018 +0200
+
+    bridges: Add favicon to bridges missing it
+    
+    Adds favicon to bridges that support it. Some sites prevent downloading
+    favicons, those bridges are left untouched.
+    
+    Affected bridges:
+    
+    - AutoJMBridge
+    - BandcampBridge
+    - BlaguesDeMerdeBridge
+    - BloombergBridge
+    - BundesbankBridge
+    - ChristianDailyReporterBridge
+    - ContainerLinuxReleasesBridge
+    - DailymotionBridge
+    - DiceBridge
+    - DribbbleBridge
+    - EliteDangerousGalnetBridge
+    - ElsevierBridge
+    - FacebookBridge
+    - FB2Bridge
+    - FDroidBridge
+    - FierPandaBridge
+    - GooglePlusPostBridge
+    - JapanExpoBridge
+    - KATBridge
+    - KernelBugTrackerBridge
+    - LegifranceJOBridge
+    - NotAlwaysBridge
+    - NyaaTorrentsBridge
+    - PinterestBridge
+    - RadioMelodieBridge
+    - RainbowSixSiegeBridge
+    - SupInfoBridge
+    - TagBoardBridge
+    - TebeoBridge
+    - TheTVDBBridge
+    - WhydBridge
+    - ZoneTelechargementBridge
+
+commit d14f8e3c83545c9dbccf1537b340e628e18a00b1
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Oct 1 18:52:16 2018 +0200
+
+    [BundesbankBridge] Add new bridge

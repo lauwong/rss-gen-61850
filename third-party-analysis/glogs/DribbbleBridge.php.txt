@@ -1,0 +1,115 @@
+commit d5d470cbc2195472fc1387ab55befd09d9ce21fc
+Author: Dag <me@dvikan.no>
+Date:   Sun Mar 31 22:10:59 2024 +0200
+
+    fix(dribble) (#4044)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit fbbd6a02c6240efa56032b46341bcce9aa70bc19
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Wed Jan 20 18:26:15 2021 +0100
+
+    [DribbbleBridge] Fix pictures parsing (#1911)
+
+commit 645a8f62c69b5c23a19fa3ac96a2c96078475843
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Oct 15 12:53:19 2020 +0500
+
+    [.travis] Fix several phpcs and phpunit errors (#1799)
+
+commit 82acbbb421dc1091a166df295a4b137ca9baaf3e
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Fri Oct 9 21:46:40 2020 +0200
+
+    [DribbbleBridge] Fix picture parsing (#1787)
+
+commit d5a75a2545a87f488f8d4a7c78363ac1b7b5c946
+Author: Thomas <mightymt@users.noreply.github.com>
+Date:   Sat Jul 25 05:58:42 2020 +0200
+
+    [DribbbleBridge] regex fix and CSS selector update (#1657)
+    
+    * [DribbbleBridge] Fixed regular expressions for quote replacement in JSON (previously invalid JSON was created if a property value contained colons or single quotes). Also updated two CSS selectors as Dribbble's HTML has changed.
+    
+    * [DribbbleBridge] Added fix for relative dates in JSON
+    
+    * [DribbbleBridge] Removed redundant whitespaces
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit 7621784598b8a5e46e281e866d844ab13be947fd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Oct 26 18:07:34 2018 +0200
+
+    bridges: Add favicon to bridges missing it
+    
+    Adds favicon to bridges that support it. Some sites prevent downloading
+    favicons, those bridges are left untouched.
+    
+    Affected bridges:
+    
+    - AutoJMBridge
+    - BandcampBridge
+    - BlaguesDeMerdeBridge
+    - BloombergBridge
+    - BundesbankBridge
+    - ChristianDailyReporterBridge
+    - ContainerLinuxReleasesBridge
+    - DailymotionBridge
+    - DiceBridge
+    - DribbbleBridge
+    - EliteDangerousGalnetBridge
+    - ElsevierBridge
+    - FacebookBridge
+    - FB2Bridge
+    - FDroidBridge
+    - FierPandaBridge
+    - GooglePlusPostBridge
+    - JapanExpoBridge
+    - KATBridge
+    - KernelBugTrackerBridge
+    - LegifranceJOBridge
+    - NotAlwaysBridge
+    - NyaaTorrentsBridge
+    - PinterestBridge
+    - RadioMelodieBridge
+    - RainbowSixSiegeBridge
+    - SupInfoBridge
+    - TagBoardBridge
+    - TebeoBridge
+    - TheTVDBBridge
+    - WhydBridge
+    - ZoneTelechargementBridge
+
+commit ff3b1c9eb21d2e0a93e1c1a29585e1c16e687f8c
+Author: Quentin de Longraye <quentin@dldl.fr>
+Date:   Sun Aug 6 20:29:21 2017 +0200
+
+    [DribbbleBridge] Add dribble bridge listing last dribble popular shots (#558)

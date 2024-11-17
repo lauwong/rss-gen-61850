@@ -1,0 +1,27 @@
+commit 819e4530645ef419f1a9d57f4bced3cc3b85cdfe
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Fri Jun 2 20:28:29 2023 +0200
+
+    remove newsletter ad from finanzflussBridge (#3417)
+    
+    * remove newsletter ad
+    
+    * whitespace
+
+commit b40714079ff106700fb27e6a8fd12d77fb3d0e76
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Sun Mar 5 23:45:45 2023 +0100
+
+    Create FinanzflussBridge.php (#3282)
+    
+    * Create finanzflussBridge.php
+    
+    new bridge for finanzfluss.de
+    
+    * Pascal case
+    
+    * Rename finanzflussBridge.php to FinanzflussBridge.php
+    
+    * Update FinanzflussBridge.php
+    
+    more spaces!

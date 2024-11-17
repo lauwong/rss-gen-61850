@@ -1,0 +1,48 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 1814116d67a912bf6b31aab4718531157615aae2
+Author: Antoine Cadoret <antoine.cdrt@gmail.com>
+Date:   Thu Jun 6 19:59:30 2019 +0200
+
+    [SteamBridge] Follow source changes (#1143)
+    
+    * Follow source data fetching changes
+    * Improve media path building
+    * Improve price fetching and display
+
+commit cb91cd5d2fd824cdcc976f253cb3175ae40fc27e
+Author: Antoine Cadoret <antoine.cdrt@gmail.com>
+Date:   Mon Mar 12 10:22:34 2018 +0100
+
+    Fix SteamBridge (#637) (#639)
+    
+    Fixes #639
+
+commit 6eea51eeeb1f988a366ac315c411d2420ac47967
+Author: teromene <teromene@teromene.fr>
+Date:   Wed Mar 7 10:24:33 2018 +0000
+
+    Fix SteamBridge.
+    Fixes #636
+
+commit 1faa91ef0fce79ba0f771ba917e8ff606259a38e
+Author: Antoine Cadoret <antoine.cdrt@gmail.com>
+Date:   Mon Jul 17 15:45:58 2017 +0200
+
+    Add SteamBridge (#543)

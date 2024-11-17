@@ -1,0 +1,41 @@
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit c5cbab123120e243f091a20644b4de16d068667e
+Author: veloute <21003408+veloute@users.noreply.github.com>
+Date:   Tue Aug 22 15:59:06 2023 +0000
+
+    Update TheGuardianBridge.php (#3629)
+
+commit 8ac5045963cffe71d762180077af7017e0600aee
+Author: Corentin Garcia <cgarcia@meilleursagents.com>
+Date:   Sat Oct 1 08:41:19 2022 +0200
+
+    [TheGuardianBridge] Fix missing article content (fix #3032) (#3072)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit f27b267614a8146adfee30d7003f7181ec262a9c
+Author: Anchit Bajaj <ab@abifog.com>
+Date:   Wed Aug 28 19:57:45 2019 +0530
+
+    [GuardianBridge] - New bridge for the Guardian (#1249)
+    
+    * [GuardianBridge] - New bridge for the Guardian

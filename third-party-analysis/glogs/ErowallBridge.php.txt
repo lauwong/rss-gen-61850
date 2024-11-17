@@ -1,0 +1,22 @@
+commit 487c692e68bdc75adddb23d342fd77d9418688d2
+Author: Dag <me@dvikan.no>
+Date:   Tue Jan 23 23:02:06 2024 +0100
+
+    fix: a few deprecation notices on php 8.2 (#3917)
+    
+    * fix: a few deprecation notices on php 8.2
+    
+    * tweak
+
+commit 1ffb2df46d4ad8fd0854ff52e05ffd7aa1b934e8
+Author: Dag <me@dvikan.no>
+Date:   Sat Mar 11 01:41:02 2023 +0100
+
+    New bridge (#3300)
+    
+    Create rss feed from wallpapers published on erowall.com.
+    
+    Allow fetching n latest wallpapers sorted by date, views, downloads and
+    tags.
+    
+    Co-authored-by: Kurz Junge <kurz.junge.0xa@tutanota.com>

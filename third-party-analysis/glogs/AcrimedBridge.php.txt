@@ -1,0 +1,398 @@
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 33da1476c97cead08c1ced85dc7b6cd776f53e1c
+Author: Dag <me@dvikan.no>
+Date:   Fri Mar 25 20:59:23 2022 +0100
+
+    [AcrimedBridge] feat: add limit option
+    
+    This change preserves the prior behavior of
+    fetching all items.
+    
+    This particular feed always has exactly 10 items.
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 16bdf6b204e74fb1a8b2594e767206f8294d9df6
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 18 13:41:45 2017 +0100
+
+    links: Rename defaultImageSrcTo to defaultLinkTo
+    
+    This function not only fixes image sources, but also anchors
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit 970e216c1fc7a10550cf4288fd2197255557324f
+Merge: 9020b09f a1ef589f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Oct 2 16:05:58 2016 +0200
+
+    Merge branch 'methods2functions' of https://framagit.org/peetah/rss-bridge
+
+commit 747be1384944c48420e946c1b09d3fc7996a2fd1
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:58:52 2016 +0200
+
+    [core] extract HTMLUtils methods to make them functions
+    
+    Methods displayBridgeCard, sanitize, defaultImageSrcTo are now
+    functions in lib/html.php
+    getHelperButtinsFormat and getFormHeader are now anonymous functions
+    defined in displayBridgeCard
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 235c9859012887bda40c0f024c72975223256610
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 17:04:28 2016 +0200
+
+    [BridgeAbstract] replace getCacheDuration method by CACHE_TIMEOUT class constant
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3bacb407fecdaab7fb02bec326137ab49a2dc9aa
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Sep 12 10:42:27 2016 +0200
+
+    [bridges] use parent::parseItems() instead of feed type specific method
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit a0dfbe6efd946b289116e5ccc436398dc385b5c4
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 4 14:58:25 2016 +0200
+
+    [AcrimedBridge] reapply code simplification
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 15f24b3cf4b418633c2028e4318399b67b413130
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Sep 4 13:47:13 2016 +0200
+
+    [Acrimed] Use internal RSS 2.0 parser
+
+commit 88f52196b8dcc4c42f01500de3fe6d9fda4652e0
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Sep 4 13:28:55 2016 +0200
+
+    [bridges] Fix bridges extending RssExpander to FeedExpander
+
+commit 878db6f96ea61441f419be59ea05ed303722570f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Sep 4 13:26:40 2016 +0200
+
+    [bridges] Rename 'parseRSSItem' to 'parseItem'
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit c37aee408d8b0ed65d3f854f65dc2cefc7a174c8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 10:40:52 2016 +0200
+
+    [AcrimedBridge] fix method calling
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit a67a219bf97012a02c89fdffcbe7441b50ecad37
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 17:11:49 2016 +0200
+
+    [core] remove '$param' argument from RssExpander::collectExpandableDatas
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3c0d13c1bb72a87f0d671692e205f45f04d94eba
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 19:06:35 2016 +0200
+
+    bridges: use BridgeAbstract::getSimpleHTMLDOM
+    
+    instead of BridgeAbstract::file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit 955eecc299e67a1062a9e75149b6c098fb9d2cbc
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Jun 25 23:17:42 2016 +0200
+
+    use BridgeAbstract::file_get_html in all bridges
+    
+    instead of simple_html_dom function file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit d92dc71fae41a9e95112c275c0dd1d33b07a36d2
+Author: Teromene <teromene@teromene.fr>
+Date:   Fri Feb 26 18:42:52 2016 +0000
+
+    Fixed cache time.
+
+commit e064b5fe28d5ee5b6808e0ed2aef14c0d0672653
+Author: Teromene <teromene@teromene.fr>
+Date:   Fri Feb 26 18:41:35 2016 +0000
+
+    Corrected no content in AcrimedBridge, modified to make it use RSS-Expander.
+
+commit 2d526f4e0a557e9325a06658cac5421486006aaa
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Nov 3 23:05:10 2015 +0000
+
+    Correction de quelques bugs dans les bridges, qui apparaissent à cause du fait qu'ils sont tous instanciés lors du chargement de tout les bridges.
+    Ré-ajout et ré-utilisation de getName et getURI, qui permettent d'avoir des élements dynamiques.
+    Changement en public de certaines valeurs.
+    Changement du nom de certaines constantes, déja utilisés.
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 11ad75c7e6e4aca193b6ccfddb07c93c976644dc
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Nov 3 22:28:44 2015 +0000
+
+    Premier lot de bridges utilisant le premier système.
+    
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 5d2e7ac83ddc8e300336b955b654afab2f078438
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Nov 3 14:36:19 2015 +0000
+
+    Ajout d'options multiples pour les méta-données.
+    Ajout d'un bridge de démonstration, DemoBridge.
+    Ajout d'un début de documentation pour créer un bridge dans CREATE_BRIDGE.md
+
+commit 3b558e1c2a7fde3802e82c47d837a9ab5b2fb169
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Mon May 26 00:30:46 2014 +0200
+
+    Add extra bridges, first batch (So feed, Many RSS)

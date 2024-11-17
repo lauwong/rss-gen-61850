@@ -1,0 +1,866 @@
+commit 9973f731dfb0b34ae4c1d3d86143eee346ff5641
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 02:13:04 2024 +0200
+
+    feat: introduce RateLimitException (#4199)
+
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit f01729c86f29b61d4a50ea8f76c639cd1fc19f5a
+Author: Dag <me@dvikan.no>
+Date:   Wed Dec 13 21:40:13 2023 +0100
+
+    fix(arstechnica): plus a few unrelated tweaks (#3829)
+
+commit f3df283c4d93a90f81bda7c466e8b9937f178acf
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Dec 3 22:54:23 2023 +0500
+
+    [VkBridge] Fix single photo duplication (#3816)
+
+commit 7a7fa876d2a07526f0c57610b3d83c261b99e0ed
+Author: wpdevelopment11 <85058595+wpdevelopment11@users.noreply.github.com>
+Date:   Wed Nov 8 18:40:24 2023 +0300
+
+    [VkBridge] Fix regex that extracts page name (#3793)
+    
+    Dot should be allowed in page names.
+    Precise rules for page names are available here:
+    https://vk.com/faq19715 (in Russian)
+
+commit 920d00480dcfa669229ad6a420525e2e670a38bf
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 11:24:22 2023 +0200
+
+    fix(senscritique) (#3750)
+
+commit 7e183915a956a24b235e6c30914b2d8f1018a65a
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Wed Oct 11 21:28:54 2023 +0500
+
+    [VkBridge] Fix missing feed title (#3737)
+
+commit 145bd10f4c00f3aef9d178266cb3282920dc6f41
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Wed Oct 11 21:16:57 2023 +0500
+
+    [VkBridge] Revert more universal regex for title generation (#3736)
+    
+    In practice it lead to feed items to have "untitled".
+    Using previous regex with more covered cases.
+    
+    Credits to https://t.me/votkot as author of regex
+
+commit 959dd937b4b5c6bc9f37c659652900986c123f69
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Aug 21 07:53:54 2023 +0500
+
+    [VkBridge] Using more universal regular expression to generate item title (#3627)
+
+commit 8b6eecea25c7ffbc9c55b6905f07588881200a90
+Author: Dag <me@dvikan.no>
+Date:   Mon Jul 31 20:43:11 2023 +0200
+
+    docs: add note about expensive operation (#3579)
+
+commit 701fe3cfeda0d14f1f49afe2bd0f89296214459e
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 29 00:14:30 2023 +0200
+
+    fix: various small fixes (#3578)
+
+commit 38ca124de0886de6e808d1a21526f04f47343326
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sat Jul 22 17:00:12 2023 +0500
+
+    [VkBridge] Better title generation (#3563)
+    
+    1. Use first parargraph only
+    2. Remove tags
+    3. Allow to use comma and colon in title
+
+commit 80376830c5ffe55fd0f9e05e674e79fb4525101f
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sat Jun 10 21:27:32 2023 +0500
+
+    [VkBridge] Handle some secondary attachments (#3430)
+
+commit 7c4591c550e6f4fba6bb4a67be1aa9d1686a9620
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Tue Apr 18 21:41:11 2023 +0500
+
+    [VkBridge] Add detectParameters (#3351)
+
+commit c8af9f90550593edcd829d75a9bdf5b4d3df660e
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Mar 23 00:32:15 2023 +0500
+
+    [VkBridge] Make timestamps more accurate (#3325)
+
+commit 91f91ba621f30c89641a912e2f6a63113048b8ae
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Tue Feb 7 19:10:43 2023 +0500
+
+    [VkBridge] Follow site changes (#3244)
+
+commit eab82f0a260f4aa841853f4e2be67afb14a98068
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Tue Jan 3 23:26:05 2023 +0500
+
+    [VkBridge] Add video thumbnails (#3206)
+
+commit fdf380bccdb3eb52497539f4b9057f76d7255b5e
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sat Dec 3 08:58:25 2022 +0500
+
+    [VkBridge] Remove junky 'Show more' button (#3176)
+
+commit 2db523a37a37f0cf5e9ea7dddf710f67e77b41d4
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Tue Sep 20 21:07:57 2022 +0500
+
+    [VkBridge] Handle empty posts before fixing image links (#3052)
+
+commit 6cd8b90d288f691bb38d41c4e709f210a7463287
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Tue Sep 20 21:07:31 2022 +0500
+
+    [VkBridge] Follow changes on HTTP redirection (#3051)
+    
+    When visiting canonical link like https://vk.com/club1,
+    VK returns redirection response to non-canical link,
+    which raises "Unexpected redirect location" exception.
+    
+    This patch removes path check in order to handle this situation
+
+commit a12152e8a59ff38f01948c5ee2515c9eaa377759
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Sep 19 22:22:41 2022 +0500
+
+    [VkBridge] Code cleanup (#3047)
+    
+    - Remove .page_album_link patch, since VK already patched its renderer
+    - Remove non working code, that tries to get clean video links
+
+commit 11220ef373d55385eb1ea6c52072636820b8d836
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Fri Sep 16 01:17:10 2022 +0500
+
+    [VkBridge] Photo fixes (#3039)
+    
+    This commit fixes following issues:
+    
+    - Photos from user profile wall started appearing as blured
+    - On posts with photo collection small thumbnails are shown
+
+commit 70ba6c5b53fef4ddee85574612cf241a0e4f842b
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Wed Sep 7 06:02:23 2022 +0500
+
+    [VkBridge] Manually handle redirects (#3017)
+    
+    Some redirects are legit, some redirects lead to "Too many requests" page
+
+commit 8033a5f461e524d9f5860319683742802b2fe4ae
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Tue Sep 6 02:41:41 2022 +0500
+
+    [VkBridge] Fix photo URI retrieving (#3010)
+    
+    VK stopped filling JSON structure containing information for generating URI to full size photo
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit bed20e9f2813c55388ed611d302e44eb0b97d7ef
+Author: dag <me@dvikan.no>
+Date:   Sun Apr 3 09:37:39 2022 +0200
+
+    feat: extract curl ua to config value (#2568)
+    
+    * exclude config.default.ini.php from phpcs
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 9254d14f50685322192ae0ef7e8174848e6b73b2
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Mon Oct 25 10:16:24 2021 +0500
+
+    [VkBridge] Multiple fixes:
+    
+    - Correct video title
+    - Do not add repost of deleted post to feed
+
+commit 98352845a14b9f2eb8925ad7a04a5f6cc6a5af06
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Wed Feb 10 18:11:48 2021 +0500
+
+    [VkBridge] Remove non ascii chars from post date to correctly parse it (#1977)
+
+commit 59bbc9d2e7a38c8ec1c05040f2c63314877cd628
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Fri Dec 18 07:58:51 2020 +0500
+
+    [VkBridge] Several improvements (#1802)
+    
+    * Improved post author computation
+    * Show repost sources
+    * Handle second copy quote
+    * Fixed incorrect image uri's
+
+commit 7709b8d662d6b54ff4f3129aaf208a98e2d4c558
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Fri Jul 31 15:29:18 2020 +0500
+
+    [VkBridge] Correct fallback behavior, when trying to get direct video links (#1670)
+
+commit 868d3f600d85e0c3bcc96e63d208751564793b35
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun May 17 23:21:37 2020 +0500
+
+    [VkBridge] Fix one letter bug on titles (#1555)
+
+commit 46b9879c084ac0defff4308c40abf7661c3f94b0
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Jan 16 11:00:10 2020 +0000
+
+    [VkBridge] Correct post date calculating (#1417)
+    
+    * [VkBridge] Correct post date calculating
+    
+    Before this commit, post dates from december past year were
+    calculated as december current year.
+
+commit 02dd77812447f608668309ca4eae1ef66ad998e5
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Nov 18 14:51:35 2019 +0500
+
+    [VkBridge] Save internal links in posts and get hashtags before making item (#1363)
+
+commit 5b63121e929b4c644cac8df1b08cc650dc2da8a9
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sat Nov 9 22:51:16 2019 +0500
+
+    [VkBridge] Change access token (#1357)
+    
+    Previous access token was revoked
+
+commit 50b234d89349669868f057d7c6884c2068f6a745
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Tue Sep 17 00:30:27 2019 +0500
+
+    [VkBridge] Photo and timestamp fixes (#1287)
+    
+    * [VkBridge] Correct parsing of photos, fix timestamp for old posts
+
+commit af48f36fd2d079b58c7fa08581f49c43fe901bdb
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Tue Sep 17 00:29:45 2019 +0500
+
+    [VkBridge] Switch maintainer (#1288)
+
+commit b0a780acda5b4bc86327c7461a9f21628cb32b0f
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Jun 6 23:05:41 2019 +0500
+
+    [VkBridge] Ignore illegal characters in input html for iconv (#1154)
+
+commit 6c4098d6558c33a5fcb2a8bc9fb29e915d56fc6c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 2 13:03:26 2019 +0200
+
+    Revert "all: Use ->remove() instead of ->outertext = ''"
+    
+    This reverts commit 052844f5e13c71ceefd743136a71f71226a0eefb.
+    
+    There is a bug in ->remove() that causes the parser to incorrectly
+    identify elements in the DOM tree that shouldn't exist anymore.
+    
+    References #1151
+
+commit 052844f5e13c71ceefd743136a71f71226a0eefb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 1 21:15:30 2019 +0200
+
+    all: Use ->remove() instead of ->outertext = ''
+    
+    simplehtmldom 1.9 introduced new functions to recursively remove
+    nodes from the DOM. This allows removing elements without the need
+    to re-load the document by using $html->load($html->save()), which
+    is very inefficient.
+    
+    Find more information about remove() at
+    https://simplehtmldom.sourceforge.io/docs/1.9/api/simple_html_dom_node/remove/
+
+commit 6feda2220e4c4ac2b12ca978e47b0f9cebab53ae
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Apr 8 00:50:58 2019 +0500
+
+    [VkBridge] Add option to hide reposts (#1089)
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit 5fea9fc1f5014485818d0331666cb58675f89378
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 5 15:53:45 2018 +0200
+
+    bridges: Fix bridges failing unit test
+
+commit df81fa62d1356d5cd6022f7e92f6156df4f2db79
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Aug 9 20:02:36 2018 +0500
+
+    [VkBridge] Video attachment fixes (#766)
+    
+    * use defaultLinkTo
+    * remove duplicate video links
+    * remove line ending before "Reposted" label
+    * return newline before reposted string
+    * remove comments
+    * use video links that won't require login
+    * set title if video has no title
+
+commit 43bb17f995726ad9aee71aaa2b9bad0655b94e96
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jul 22 19:43:00 2018 +0500
+
+    [VkBridge] Converting hashtags to categories  (#755)
+    
+    * [VkBridge] Converting hashtags to categories
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit 7dc09db9ca52c10257f906e518cf7d306ad86b63
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Jun 11 01:09:50 2018 +0500
+
+    [VkBridge] More beatifications and fixes (#712)
+    
+    * Add one more selector for article_author_selector
+    * Extend video parsing
+    * Add poll parsing
+
+commit 4369e077c20e27f740af44f7a983020e2178f38e
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Tue May 29 14:01:54 2018 +0500
+
+    [VkBridge] Fixed image src link generating for photo (#700)
+
+commit c1e33522186314c7b1b15f501956de934bd9fb8c
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sat May 5 15:03:54 2018 +0500
+
+    [VkBridge] Extended article link parsing (#685)
+    
+    * [VkBridge] Extended article link parsing
+
+commit 55f112e0345e474b9f6508cd8c89c70bd1e9e5c5
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Apr 16 14:55:31 2018 +0500
+
+    [VkBridge] Rewrited bridge code (#667)
+    
+    * [VkBridge] Convert special HTML entities to characters in pageName
+    
+    * [VkBridge] Generate feed item title
+    
+    * [VkBridge] Remove double backslashes in feed item link
+    
+    * [VkBridge] Unpin post if pinned
+    
+    * [VkBridge] Mark reposted messages
+    
+    * [VkBridge] Correct external link parsing
+    
+    * [VkBridge] Added article parsing
+    
+    * [VkBridge] Added video parsing
+    
+    * [VkBridge] Added photo parsing
+    
+    * [VkBridge] Added album link parsing
+    
+    * [VkBridge] Added one more external link selector
+    
+    * [VkBridge] Using array of link selectors to remove
+    
+    * [VkBridge] Added document parsing
+    
+    * [VkBridge] Added sign parsing
+    
+    * [VkBridge] Fixed incorrect sorting with pinned item
+    
+    * [VkBridge] More methods to parse documents
+    
+    * [VkBridge] Save fallback if page name element not found
+    
+    * [VkBridge] Using post signed as feed item author
+    
+    * [VkBridge] Fixed document link
+    
+    * [VkBridge] Coding policy fixes
+
+commit 45c3dcb636e9e63ab17a405491a234b74df7af9b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Apr 6 20:24:43 2018 +0200
+
+    [VkBridge] Simplify header specification
+
+commit 6caca4946bf4593e4c6d254e871d2783286eeb37
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Mar 25 14:01:35 2018 +0200
+
+    bridges: Fix bridges with custom headers and options
+    
+    This commit fixes bridges which called getContents, getSimpleHTMLDOM
+    or getSimpleHTMLDOMCached with custom settings.
+
+commit 159b00145dfc390e9e8e6315a1413985068142bf
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Mar 5 14:46:15 2018 +0500
+
+    [VkBridge] Setting feed title (#635)
+    
+    * [VkBridge] Setting feed title
+
+commit 1d35149191224cbffd68306117cd08c20096ec6e
+Author: Ruslan <AHILES3005@GMAIL.COM>
+Date:   Tue Jan 30 20:57:07 2018 +0400
+
+    Update VkBridge (#625)
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit bf7ce987197f78b5a4b4a0d6e77c69f602e0cdb0
+Author: Teromene <teromene@teromene.fr>
+Date:   Fri Mar 3 14:14:05 2017 +0000
+
+    Fix VKBridge.
+
+commit 512a4f292b48de827357cbef6874d4c5df6d9e20
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 22:36:33 2017 +0100
+
+    bridges: Return parent::getURI by default
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit 970e216c1fc7a10550cf4288fd2197255557324f
+Merge: 9020b09f a1ef589f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Oct 2 16:05:58 2016 +0200
+
+    Merge branch 'methods2functions' of https://framagit.org/peetah/rss-bridge
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 235c9859012887bda40c0f024c72975223256610
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 17:04:28 2016 +0200
+
+    [BridgeAbstract] replace getCacheDuration method by CACHE_TIMEOUT class constant
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3daeacc2089386e651d4523d4187d6b688d9c513
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 4 14:40:38 2016 +0200
+
+    [VkBridge] use 'Group or user name' parameter instead of full URI
+    
+    This breaks compatibility with previous versions of VkBridge (which
+    seems broken anyway).
+    Bridges should never use full URIs as inputs since their validation will
+    always be more complicated, hence prone to security issues,
+    than rebuilding a clean URI from simple validated inputs.
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit ada5903d68dd91653e1c7ffd24b43ac21a2dbd6a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 29 23:46:47 2016 +0200
+
+    [VkBridge] remove getName() + code simplification
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 4f7fbae861e2f7f4e879fcba7d7b1ccb51dd2a08
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 28 20:38:01 2016 +0200
+
+    [bridges] Fix conditional checks on getInput
+    
+    isset($this->getInput('')) does not work
+
+commit 1b3c8a8aeba5641f3bec9a6a720939df537bfa83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 01:25:33 2016 +0200
+
+    [core + bridges] add BridgeAbstract::$inputs and BridgeAbstract::getInput()
+    
+    Inputs are not stored in BridgeAbstract::$parameters anymore to separate
+    static data from dynamic data.
+    The getInput method allows for more readable code.
+    
+    Also fix an "undefined index 'global'" notice
+    
+    Probability of breaking bridges: high !
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 341ce2bf3e5f4e1de869422d36cfabc14f680541
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 18:13:06 2016 +0200
+
+    [VkBridge] remove useless $request member
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 306d50582d191eac8bd37dc95537a3b5e0882e7d
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 00:26:53 2016 +0200
+
+    [VkBridge] fix parameter 'u' requirement status
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit b5cc7b4ded0985b6699333dc56c1255c19575520
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 00:26:14 2016 +0200
+
+    [VkBridge] use BridgeAbstract::getSimpleHTMLDOM
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 74f0572d914617b4e47fe0fd2fabfe356710d609
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Aug 17 14:45:08 2016 +0200
+
+    bridges: Replace returnError function with more specific
+    
+    Replacements depend on original error code:
+    400: returnClientError
+    404: returnServerError
+    500: returnServerError
+    501: returnServerError
+
+commit 0ddf664d898f785973653a54f8ec41b6018a3dd2
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Sat Aug 6 18:40:36 2016 +0200
+
+    bridges: Remove obsolete getName() and getURI()
+
+commit 3318e66cbcd21e6331a7c4ec283dfb0688129c70
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Sun Mar 20 16:54:05 2016 +0100
+
+    Add info about debug mode in README
+
+commit 54e912805e6ba4bf4d2210b6244aabe174537d28
+Author: ahiles3005 <ahiles3005@ahiles3005-pc>
+Date:   Tue Mar 1 21:10:46 2016 +0400
+
+    add: Bridge for Russian popular social network.Vkontakte or simply VK
+
+commit 5f35988a184416c54738a8690937e82c94e493ad
+Author: ahiles3005 <ahiles3005@ahiles3005-pc>
+Date:   Tue Mar 1 21:08:33 2016 +0400
+
+    Revert "add: Bridge for Russian popular social network.Vkontakte or simply VK"
+    
+    This reverts commit ffa1ea8f0f3cd6231f51cfc4edd7865c93b51cca.
+
+commit ffa1ea8f0f3cd6231f51cfc4edd7865c93b51cca
+Author: ahiles3005 <ahiles3005@ahiles3005-pc>
+Date:   Tue Mar 1 21:06:08 2016 +0400
+
+    add: Bridge for Russian popular social network.Vkontakte or simply VK

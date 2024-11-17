@@ -1,0 +1,181 @@
+commit f358f1abec8278c4e5659b311bf8eea5f34802d8
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 17:47:04 2024 +0200
+
+    refactor: loadCacheValue/saveCacheValue (#4205)
+
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 5f37c72be0a994257b01a8c43c4e488611f092f2
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 20:48:08 2023 +0200
+
+    fix(binance): plus some other tweaks (#3753)
+
+commit 9bda9e246a21a44daeeb08dd1f41665e5a9f16e3
+Author: Dag <me@dvikan.no>
+Date:   Thu Oct 12 22:14:04 2023 +0200
+
+    refactor: FeedExpander (#3740)
+    
+    * refactor: FeedExpander
+
+commit ae53adefadea4b05a419afff1f2ae447bf555132
+Author: Dag <me@dvikan.no>
+Date:   Tue Sep 26 00:27:45 2023 +0200
+
+    refactor: FeedItem::setTimestamp() (#3711)
+
+commit 3178deb5a8ce979baf186b69e5a427bb14adef4f
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 23:35:40 2023 +0200
+
+    fix: mastodon, cache tweaks, docs (#3661)
+    
+    * cache tweaks
+    
+    * docs
+    
+    * fix(mastodon): type bug
+
+commit 4b9f6f7e53e0b2e9aae59df2bbffc0bdd6805aea
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 21:50:15 2023 +0200
+
+    fix: rewrite and improve caching (#3594)
+
+commit 79e3f7f20474c2fda99640ffa69f94fd05d6d991
+Author: John S Long <john@128.io>
+Date:   Sat Aug 19 21:37:21 2023 -0500
+
+    [MastodonBridge] Add support for excluding regular statuses (non-boosts/replies) (#3624)
+    
+    * [MastodonBridge]: add support for excluding posts (non-boosts/replies)
+    
+    * Update name of input
+    
+    * Fix lint failures
+
+commit 286790727bad17e103238d73a5ce1d7893c5e5e7
+Author: Dag <me@dvikan.no>
+Date:   Wed Feb 15 21:42:05 2023 +0100
+
+    fix: throw exception when outbox not found, #3255 (#3260)
+
+commit e788e14baac155a0b3a3e66f0cc5c30ba659121d
+Author: Austin Huang <im@austinhuang.me>
+Date:   Wed Nov 16 17:05:01 2022 +0000
+
+    [MastodonBridge] Add support for various platforms (#3133)
+    
+    * [MastodonBridge] Add support for various platforms
+    
+    * [MastodonBridge] satisfy the lint
+
+commit 78fa03238c523ed0067c58ac5a0ac7e951f4dbc1
+Author: John S Long <john@128.io>
+Date:   Wed Oct 12 14:43:09 2022 -0500
+
+    [MastodonBridge] Add support for GoToSocial (#3098)
+    
+    * [MastodonBridge] Add support for GoToSocial
+    
+    GoToSocial expects URLs in HTTP Signatures to include the query string; Mastodon
+    does not. To provide support for both types of ActivityPub services, define a
+    new parameter for signature types, defaulting to Mastodon's format.
+    
+    This change also introduces auto-resolution of linked objects, which GoToSocial
+    uses instead of including content directly in a user's outbox.
+    
+    * [MastodonBridge] Fix lint failure
+
+commit 5a9336df12b1b7b3150e969be1767b69000be02e
+Author: Dag <me@dvikan.no>
+Date:   Sat Sep 10 07:38:09 2022 +0200
+
+    fix: wrong accept header in mastodonbridge (#3025)
+    
+    Fixes bug introduced by afcc38786e85cfe99efacfddb3a222989bd09f5e because of
+    the default Accept header which caused xml to be returned.
+    
+    Fix #3024
+
+commit a2c786522657831244061d8d02f8eac2b0f232cb
+Author: Dag <me@dvikan.no>
+Date:   Mon Sep 5 05:58:18 2022 +0200
+
+    fix: exclude mastodon boosts when told to do so (#3007)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit e9b8a1f9f97b5b2e70b86770a9bde06ebfc58497
+Author: Austin Huang <im@austinhuang.me>
+Date:   Mon Jun 20 19:11:46 2022 -0400
+
+    [Mastodon] Use ActivityPub outbox for Mastodon (et al.) feed (#2756)
+    
+    * Use ActivityPub outbox for Mastodon (et al.) feed
+    
+    closes #2754
+    
+    * Better description for Mastodon bridge
+    
+    I mean I could rename it to ActivityPub bridge if the maintainer so pleases
+    
+    * [Mastodon] Please the lint
+    
+    * [Mastodon] address feedback
+    
+    * [Mastodon] fix link, address spelling case bug
+    
+    * refactor
+    
+    * [Mastodon] add username cache, fix try-catch, rename
+    
+    * [Mastodon] shorten description to satisfy the lint
+    
+    * [Mastodon] address feedback
+    
+    * [Mastodon] support Secure Mode instances
+    
+    * [Mastodon] add config documentation
+    
+    * [Mastodon] update docs
+    
+    Co-authored-by: Dag <me@dvikan.no>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit d33e090fe18ea1ca8ad52aa4d8dcce5fd7bb3b96
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Thu Sep 3 05:49:19 2020 +0000
+
+    [MastodonBridge] Update feed URL format (#1718)
+    
+    Changes feed URL from `https://instance/users/username.atom` to `https://instance/@username.rss`.
+
+commit e2bca5bb052420c78db01120037b06206b01412d
+Author: husimo <50374438+husim0@users.noreply.github.com>
+Date:   Fri Jun 21 17:30:34 2019 +0200
+
+    [MastodonBridge] Add new bridge (#1178)

@@ -1,0 +1,21 @@
+commit 2e6e2467598c8400cf476cb5914b3a8bd1a3601d
+Author: July <phantop@tuta.io>
+Date:   Sat Aug 10 17:11:43 2024 -0400
+
+    [KemonoBridge] attempt to fix malformed tag responses (#4209)
+
+commit 4ef5ca50c6f9080481e34fa305af952187b39d88
+Author: July <phantop@tuta.io>
+Date:   Sat Aug 10 11:36:58 2024 -0400
+
+    [KemonoBridge] Add KemonoBridge (#4192)
+    
+    * [KemonoBridge] Add KemonoBridge
+    
+    * refactor
+    
+    * [KemonoBridge] fix categories in cases where it's a proper json array
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>

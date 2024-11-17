@@ -1,0 +1,67 @@
+commit 8c4dbb32debc4a0061e23b745a7728b62d329182
+Author: Joseph <VerifiedJoseph@users.noreply.github.com>
+Date:   Sat Mar 4 16:33:28 2023 +0000
+
+    [DockerHubBridge] Display compressed image size in items (#3279)
+    
+    * [DockerHubBridge] Display compressed image size in items
+    
+    * [DockerHubBridge] lint
+    
+    * [DockerHubBridge] Use format_bytes()
+
+commit 787b4d7cadc120ebbcca73985715890f1e91300b
+Author: Joseph <VerifiedJoseph@users.noreply.github.com>
+Date:   Wed Feb 15 19:15:38 2023 +0000
+
+    [DockerHubBridge] Add tag filter option (#3258)
+    
+    * [DockerHubBridge] Add tag filter option
+    
+    * [DockerHubBridge] Add example value
+    
+    * [DockerHubBridge] lint
+    
+    * [DockerHubBridge] Fix
+    
+    * Update DockerHubBridge.php
+    
+    * [DockerHubBridge] Make repo required
+    
+    * [DockerHubBridge] Add filter example value for user images
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 07e1e8497c441c67d11bab25beacc3b5dae14783
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Mon Mar 15 16:54:26 2021 +0000
+
+    [DockerHubBridge] Add detectParameters() (#1996)
+
+commit 30aeeb2a0c89fc7b68d88aeb4ecffb493ee69232
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sun Feb 28 13:26:24 2021 +0000
+
+    [DockerHubBridge] Add support for official images (#1999)
+
+commit 687eb728d4549cf440cea781bc0afadd25c72670
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Mon Feb 22 15:03:04 2021 +0000
+
+    [DockerHubBridge] Fix bridge name (#1994)

@@ -1,0 +1,29 @@
+commit adcc8e371d7b369f46945e01ce57b7561f383726
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Fri Aug 9 15:20:10 2024 +0200
+
+    [TarnkappeBridge] changed "unwanted stuff" (#4206)
+    
+    * [TarnkappeBridge] changed "unwanted stuff"
+    
+    em was removed because the annoying affiliate info, but it also deleted the text from blockquotes.
+    
+    The p-element with the affiliate info has no attributes like class, but it is the only p-element with a style-attribute, so I used this to identify it.
+    
+    * Update TarnkappeBridge.php
+    
+    removed whitespace
+    
+    * Update TarnkappeBridge.php
+    
+    don't know why I did it twice before
+
+commit 154b8b9cdb6ad7f125753c5e0964871c1730e8f8
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Fri Apr 19 19:08:58 2024 +0200
+
+    Create TarnkappeBridge.php (#4085)
+    
+    * Create TarnkappeBridge.php
+    
+    * Update TarnkappeBridge.php

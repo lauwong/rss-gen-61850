@@ -1,0 +1,45 @@
+commit 3a5de759fa74252d8ea7c76e84d7a552bd5af8fb
+Author: Tostiman <18124323+t0stiman@users.noreply.github.com>
+Date:   Wed Oct 16 18:57:44 2024 +0200
+
+    [CarThrottleBridge] update for new layout (#4285)
+
+commit d175bab58e3afd63140791446b01dd36837fe2d8
+Author: Tostiman <18124323+t0stiman@users.noreply.github.com>
+Date:   Sun Feb 4 18:28:12 2024 +0100
+
+    Fix car throttle bridge (#3925)
+
+commit f40f99740588b09033917fd38132a99875495540
+Author: Dag <me@dvikan.no>
+Date:   Thu Dec 21 09:24:22 2023 +0100
+
+    fix: various small fixes (#3853)
+
+commit 6a72c56cdd9230fedddc3d5eb23ebe94bfdc3310
+Author: Dag <me@dvikan.no>
+Date:   Thu Oct 12 19:49:04 2023 +0200
+
+    fix: various fixes (#3741)
+
+commit 0325c2414a6b00311abb291d1189c97f120053bd
+Author: t0stiman <18124323+t0stiman@users.noreply.github.com>
+Date:   Fri Aug 25 12:34:35 2023 +0200
+
+    fix carthrottlebridge (#3633)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 16470e811996b8e0ab7a257d7450880672bb9331
+Author: t0stiman <18124323+t0stiman@users.noreply.github.com>
+Date:   Tue Mar 22 21:15:40 2022 +0100
+
+    [CarThrottleBridge] add bridge for carthrottle.com (#2514)

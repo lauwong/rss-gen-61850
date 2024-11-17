@@ -1,0 +1,77 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 408c2e5e918dd94716281dfce4bb5b6882cc829e
+Author: Ololbu <bukachyov.oleg@gmail.com>
+Date:   Sun Oct 15 18:24:07 2023 +0500
+
+    [FicbookBridge] Fix timestamp (#3760)
+    
+    Delete a year word after date digits: `DD m YYYY г., HH:MM` to `DD m YYYY, HH:MM`
+
+commit 5ab949ca5508b59b2e9586ceb133c35886a552f0
+Author: Ololbu <bukachyov.oleg@gmail.com>
+Date:   Sat Mar 4 20:12:46 2023 +0500
+
+    [FicbookBridge] Fix new lines in content (#3278)
+    
+    * [FicbookBridge] Fix new lines in content
+    
+    Sets `$stripRN` in `getSimpleHTMLDOMCached` to `false` and replace new line to `br` through `str_replace()`.
+    
+    * [FicbookBridge] Add space after comma
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 645a8f62c69b5c23a19fa3ac96a2c96078475843
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Oct 15 12:53:19 2020 +0500
+
+    [.travis] Fix several phpcs and phpunit errors (#1799)
+
+commit 84d5daaa032d94e3b9c634a182316148f012c8b1
+Author: Ololbu <bukachyov.oleg@gmail.com>
+Date:   Sat Oct 10 00:39:35 2020 +0500
+
+    [FicbookBridge] Add getName implementation (#1771)
+
+commit 3df2de4c6f823291484c600e74f9fa594593bc44
+Author: Ololbu <bukachyov.oleg@gmail.com>
+Date:   Mon Sep 28 14:02:40 2020 +0500
+
+    [FicbookBridge] Fix data getting and months (#1765)
+
+commit aea8484ccc18f66e25dcada67e3bc890cb5e0004
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Sat Jul 6 12:29:36 2019 +0200
+
+    [FicbookBridge] Add new bridge (#1185)

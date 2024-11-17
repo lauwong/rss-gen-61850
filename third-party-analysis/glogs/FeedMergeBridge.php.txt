@@ -1,0 +1,168 @@
+commit 001dd47439339672b6e84979fd0e1a0118bc27b6
+Author: Dag <me@dvikan.no>
+Date:   Thu Apr 4 19:12:04 2024 +0200
+
+    fix: small tweaks (#4057)
+
+commit 7329b83cc0fe1a5f707f864b1f3d62efd4be2172
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 21 22:05:55 2023 +0200
+
+    refactor: logger (#3678)
+
+commit f0a504bb9af1a46a6f49b89462805dea0d287927
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 23:36:36 2023 +0200
+
+    fix(FeedMerge): allow xml parse failure too (#3518)
+
+commit 341649a8a4c48654818fef60ca784b1817525c24
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 17:07:08 2023 +0200
+
+    fix: tweak the defaultly enabled bridges (#3510)
+    
+    * fix: tweak the defaultly enabled bridges
+    
+    enabled_bridges[] = FeedMerge
+    enabled_bridges[] = Filter
+    enabled_bridges[] = GettrBridge
+    enabled_bridges[] = MastodonBridge
+    enabled_bridges[] = Reddit
+    enabled_bridges[] = RumbleBridge
+    enabled_bridges[] = SoundcloudBridge
+    enabled_bridges[] = Telegram
+    enabled_bridges[] = ThePirateBay
+    enabled_bridges[] = Twitch
+    enabled_bridges[] = Twitter
+    enabled_bridges[] = Vk
+    enabled_bridges[] = XPathBridge
+    enabled_bridges[] = Youtube
+    enabled_bridges[] = YouTubeCommunityTabBridge
+    
+    * add feed reducer too
+    
+    * add tiktok too
+
+commit 82c22bd2b563102e4b198f69ac3d93623aa0b952
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 5 05:41:01 2023 +0200
+
+    fix(feedmerge): allow a single feed to break, and dont break the whole bridge (#3476)
+
+commit b64f8f2a09a837722b4b83da056aaf371c661c18
+Author: Dag <me@dvikan.no>
+Date:   Tue Nov 8 21:17:32 2022 +0100
+
+    fix: various fixes (#3136)
+
+commit 23f8c81646b288e8b8410e8e135bdbf592ab38bb
+Author: Dag <me@dvikan.no>
+Date:   Sat Oct 29 10:46:37 2022 +0200
+
+    refactor/fix: css organization and error rendering (#3117)
+    
+    * fix: php notice
+    
+    * refactor/feat: merge HtmlFormat.css into style.css
+    
+    Also improve ux of error rendering.
+    
+    * fix: center-align footer text
+
+commit 5578a735d9aa3e750755b6f20f19fa8d933940e4
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 8 18:44:15 2022 +0200
+
+    feat: allow more feeds in FeedMerge (#3021)
+    
+    Fix #3011
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 192fc0ee9b34e16772d3da71f27156e2b30b61d0
+Author: Dag <me@dvikan.no>
+Date:   Tue Jul 5 15:39:00 2022 +0200
+
+    [FeedMerge] feat: remove duplicates (#2888)
+    
+    Fix #2855
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit a166899633e96a9aff84e7615cd1e38c21ebe2fa
+Author: Dag <me@dvikan.no>
+Date:   Wed Jun 22 18:34:05 2022 +0200
+
+    [FeedMerge] fix bugs (#2854)
+    
+    * [FeedMerge] fix: sort items by timestamp descending
+    
+    * [FeedMerge] fix: fetch 10 most recent items
+    
+    This fixes a bug where the bridge e.g. fetched 10 items from the first feed and then nothing from the rest
+
+commit 51d27300be280df5d4c91252b3117f2ae7a63c4c
+Author: Antoine Turmel <antoine.social@turmel.info>
+Date:   Fri Apr 8 21:13:05 2022 +0200
+
+    [FeedMergeBridge] Add new bridge (#1385)
+    
+    * [FeedMergeBridge] Add new bridge
+    
+    Here is a bridge that merges two or more feeds into one.
+    
+    Co-authored-by: Bocki <henning@bocklage.com>
+    Co-authored-by: Dag <me@dvikan.no>

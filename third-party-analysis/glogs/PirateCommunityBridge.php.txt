@@ -1,0 +1,47 @@
+commit 2bbce8ebef8cf4f88392431aabe84a15482dc933
+Author: Dag <me@dvikan.no>
+Date:   Sat Aug 6 22:46:28 2022 +0200
+
+    refactor: general code base refactor (#2950)
+    
+    * refactor
+    
+    * fix: bug in previous refactor
+    
+    * chore: exclude phpcompat sniff due to bug in phpcompat
+    
+    * fix: do not leak absolute paths
+    
+    * refactor/fix: batch extensions checking, fix DOS issue
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit b68c0e0df85a8bb7c6f2ed4dcb1713afc24690a4
+Author: Roliga <roliga.here@gmail.com>
+Date:   Wed Aug 28 16:28:39 2019 +0200
+
+    [PirateCommunityBridge] Add new bridge (#1252)
+    
+    * [PirateCommunityBridge] Add new bridge

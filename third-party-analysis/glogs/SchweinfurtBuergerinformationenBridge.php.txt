@@ -1,0 +1,45 @@
+commit ccc20849ffe297e09e046a086734c2c90e94420a
+Author: Michael Bemmerl <mail@mx-server.de>
+Date:   Thu Nov 30 16:52:51 2023 +0000
+
+    [SchweinfurtBuergerinformationenBridge] Don't include images with data URIs as enclosures. (#3811)
+    
+    See also setEnclosures() in FeedItem.php: URIs with a path are required.
+
+commit ee498eadf93a1e5ffdc7932ed1519c875eadcd7d
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 2 20:22:09 2023 +0200
+
+    fix: move debug mode to config (#3324)
+    
+    * fix: move debug mode to config
+    
+    * fix: also move debug_whitelist to .ini config
+    
+    * fix: move logic back to Debug class
+    
+    * docs
+    
+    * docs
+    
+    * fix: disable debug mode by default
+    
+    * fix: restore previous behavior for alerts
+    
+    * fix: center-align alert text
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit e89b4287b8338b63203aafc6f61d1b2bcc39792e
+Author: Michael Bemmerl <mail@mx-server.de>
+Date:   Thu Mar 24 21:37:44 2022 +0000
+
+    [SchweinfurtBuergerinformationenBridge] Add new bridge (#1610)

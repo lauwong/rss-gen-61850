@@ -1,0 +1,248 @@
+commit 0eac7a078479eac48be6c841a79f77ff04f429a8
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sun Jun 16 13:16:42 2024 +0200
+
+    [HeiseBridge] Remove lost+found icon
+    
+    Remove the icon visible in l+f articles, e.g.
+    https://www.heise.de/news/l-f-DISGOMOJI-die-Linux-Malware-die-auf-Emojis-steht-9765024.html
+    
+    Using a css selector in the form img[alt*="l+f"] was tried, but is not
+    supported by the used library.
+
+commit 87fa6ea71e8ae8c6e0cddd47e28fd65664a6cb05
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Mon Jun 10 19:40:07 2024 +0200
+
+    [HeiseBridge.php] Prevent Youtube videos from being filtered out (#4125)
+
+commit 75f35391fa3399f230d425a33a6836ccf07340ff
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sat May 18 16:51:00 2024 +0200
+
+    [HeiseBridge] Add missing <ol> elements (#4110)
+    
+    The following article has <ol> elements that were missing.
+    Adding them to have the full content.
+    
+    https://heise.de/-9714438
+
+commit 1f71d76ac1e93ef403098eec3c7a864fe8748ee6
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Thu Apr 18 13:18:45 2024 +0200
+
+    [HeiseBridge] Remove additional ad banners
+    
+    For example
+    https://www.heise.de/meinung/Kommentar-Microsofts-Sicherheitspraxis-wird-zur-Gefahr-und-das-BSI-schweigt-9686629.html
+    has two inline banners for a heise offering, not directly related to the
+    article. Removing all "inline" figures, which seems to catch all inline
+    unwanted elements, while avoiding removing useful figures/images.
+
+commit e251e358ff757023f0e0863d47d1781c5196964c
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Thu Mar 28 19:42:41 2024 +0100
+
+    [HeiseBridge] fix for embedded youtube-videos (#4034)
+    
+    * [HeiseBridge] fix for embbedded youtube-videos
+    
+    with this the embedded youtube videos will work in the feed
+    
+    * Update HeiseBridge.php
+    
+    * Update HeiseBridge.php
+
+commit 75a0a779c0587dee5c4a60d12c1bfab65d7f7ec1
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Thu Feb 8 15:35:24 2024 +0100
+
+    Update HeiseBridge.php (#3963)
+    
+    fix for broken article categories
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit 999d5dce405165ce0a025259405943f7a9d8753f
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sun Aug 27 12:54:02 2023 +0200
+
+    [HeiseBridge] Remove archive link for heise+
+    
+    archive.ph is also not able to provide the full content of paywalled
+    heise+ articles.
+
+commit d32419ffcf979754a4a73219729af0745a73e5bf
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Thu Aug 3 22:43:55 2023 +0200
+
+    added the option for a sessioncookie in heiseBridge (#3596)
+    
+    * added the option for a sessioncookie
+    
+    with a valid cookie you can get full heise+ (paywall) articles
+    
+    * formating
+    
+    * lint
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>
+
+commit ecd717cf58ab94dc86ed4e9c0af1a286e7d9e6a1
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Fri May 12 23:41:08 2023 +0200
+
+    removing a-collapse (#3394)
+    
+    it is only used for ads for their magazine
+    e.g.: https://www.heise.de/news/Eventtipps-fuer-Fotografen-und-Fotografiebegeisterte-9010049.html?seite=all
+
+commit ec091fb7478f610b29cb03e7a5fa9d22a96af504
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Sun May 7 12:33:45 2023 +0200
+
+    fixed authors and added categories for HeiseBridge (#3376)
+
+commit 212c56fde580887d84f0030a0910f4d884ffd1fe
+Author: Paul Prechtel <Mynacol@users.noreply.github.com>
+Date:   Thu Apr 20 23:02:08 2023 +0200
+
+    [HeiseBridge] Handle heise+ articles better (#3358)
+    
+    - Stop parsing paywalled heise+ articles, as they had garbage content
+      and anyways not the full article.
+    - Link to archive.today to access the full article without account.
+      (Automatically getting the full article from archive.ph was not feasible
+      b/c of captchas and problems extracting the actual content)
+
+commit e44e45861742aaf561ceeaf5205f26d1702ac013
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Fri Jan 27 02:54:08 2023 +0100
+
+    [HeiseBridge] add all RSS feeds from heise.de (#3223)
+    
+    Add all feeds from https://www.heise.de/news-extern/news.html with
+    (mostly) their original name.
+    
+    The existing ones moved from e.g. https://www.heise.de/newsticker/heise-atom.xml
+    to https://www.heise.de/rss/heise-atom.xml.
+    
+    Some feeds were commented out, as they do not provide full-text feeds
+    for multiple reasons.
+
+commit 04090bd84a31624ef637a52831bb3a8c35ebc844
+Author: Dag <me@dvikan.no>
+Date:   Tue Jan 17 21:21:32 2023 +0100
+
+    docs (#3217)
+
+commit 077fc4bc3c24f772fe18285363ad1725afbee27a
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Tue Jan 17 17:01:09 2023 +0100
+
+    Update HeiseBridge.php (#3214)
+    
+    loading smaller images instead the original ones with a size of around 20Mb
+
+commit 314d4c7a3f30ab77807cdf1761d21b0768a041ba
+Author: Dag <me@dvikan.no>
+Date:   Thu Oct 27 19:59:45 2022 +0200
+
+    fix: quickfix for heise, #3118 (#3119)
+
+commit 8d8fe66aab916a63cd04eb129a91122c14e8c623
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Wed Sep 21 21:31:43 2022 +0200
+
+    [HeiseBridge] Parser rewrite (#3054)
+    
+    * [HeiseBridge] Parser rewrite
+    
+    This rewrite is more readable and consistent than the previous one.
+    
+    Additionally, this removes unwanted elements, largely recommendations
+    for other articles.
+    Furthermore, it increases the image quality by using the original
+    picture link instead of the compressed ones.
+    
+    * [HeiseBridge] Formatting
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit b144ab2bd7a792e8a582ee9add449789b7f4329d
+Author: Dag <me@dvikan.no>
+Date:   Sat Mar 26 02:30:21 2022 +0100
+
+    [HeiseBrige] fix: broken bridge
+    
+    This is a feed expander and heise sometimes includes
+    feed items which point to https://www.techstage.de
+    for which we dont have parsing for.
+
+commit cbef3b336007d94e2684699b22a6127b005c4f19
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sat Mar 5 19:51:03 2022 +0100
+
+    [HeiseBridge] Properly extract authors (#2466)
+
+commit 2811bdc054aa6acfa88ed92fb9b8811fe8b0f2c8
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Thu Feb 24 19:41:42 2022 +0100
+
+    [HeiseBridge] Consistently use seite=all parameter (#2465)
+    
+    This also filters out the parameter wt_mc=rss.red.ho.ho.atom.beitrag.beitrag from the item uri.
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit cc548b16a819d6a5fb4a217027e800fc344a34fb
+Author: ayacoo <info@ayacoo.de>
+Date:   Tue Nov 10 07:14:09 2020 +0100
+
+    [HeiseBridge] Check for article (#1790)
+
+commit 712f60e91066700d648ed9c60305adc022359e9e
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Fri Oct 9 18:55:28 2020 +0000
+
+    [HeiseBridge] Fix multi-page article fetching (#1767)
+    
+    Fixes multi-page article fetching by adding '&seite=all' to  article URL.
+
+commit cccd390b0f4e6ab4639d5ff9f5aa21c2f5c7c14b
+Author: Dreckiger-Dan <Dreckiger-Dan@users.noreply.github.com>
+Date:   Tue Mar 31 23:47:57 2020 +0200
+
+    [HeiseBridge] add TechStage support
+
+commit 281eaacaeb769e9b3a97e81953a4b6c4e8a0b52f
+Author: Dreckiger-Dan <Dreckiger-Dan@users.noreply.github.com>
+Date:   Sat Mar 23 16:22:44 2019 +0100
+
+    [HeiseBridge] Add new bridge (#744)

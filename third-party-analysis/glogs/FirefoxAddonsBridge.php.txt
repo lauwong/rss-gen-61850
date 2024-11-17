@@ -1,0 +1,73 @@
+commit d01c462ad514c327a82e92f269c139028de0a4f7
+Author: Dag <me@dvikan.no>
+Date:   Mon Jan 29 21:51:34 2024 +0100
+
+    fix(FeedExpander): if parse fails, include offending url in exception message (#3938)
+    
+    Also some refactors
+
+commit 734a5868b8b8ca72e00e700ab593bb7f3c1a9354
+Author: Joseph <VerifiedJoseph@users.noreply.github.com>
+Date:   Mon Nov 14 21:56:12 2022 +0000
+
+    [FirefoxAddonsBridge] Fix removal of link redirects (#3144)
+    
+    * [FirefoxAddonsBridge] Fix removable of link redirects
+    
+    * Update FirefoxAddonsBridge.php
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit c65feffb61b2c5d305435690572328bbfbb7e7bb
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sat Jan 15 05:16:43 2022 +0000
+
+    [FirefoxAddonsBridge] Fix add-on download links (#2338)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 971cd9ba39c38815709cb7d97ae684b429478c06
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Mon Jul 12 17:56:51 2021 +0000
+
+    [FirefoxAddonsBridge] Remove duplicate code (#2209)
+
+commit f02d80e1417d1b0c6f182f2f18255fbb9e55d49c
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Mon May 24 19:46:07 2021 +0000
+
+    [FirefoxAddonsBridge] Fix download link extraction (#2120)
+
+commit 700813e924dff17ba1b1a4d57b1eddb67e3c1fff
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Mon Mar 15 16:27:53 2021 +0000
+
+    [FirefoxAddonsBridge] Add detectParameters() (#1997)
+
+commit 2ed34f5ebea8cba842dd756cdcf8964bcd042753
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Tue Mar 9 06:16:56 2021 +0000
+
+    [FirefoxAddonsBridge] Set unique id for items (#2007)
+    
+    Adds unique id for each item using item title.
+
+commit 3d642971c0cb6b2a57405b60aec4b24cac8f214e
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sun Feb 21 12:30:01 2021 +0000
+
+    [FirefoxAddonsBridge] Add bridge (#1952)

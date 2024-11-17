@@ -1,0 +1,27 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit aeca4cfd60c53f1429d318c8f78066cd65dbe9e5
+Author: Thibault Couraud <1036233+couraudt@users.noreply.github.com>
+Date:   Sun Jun 16 17:40:21 2019 +0000
+
+    [BAEBridge] Use defaultLinkTo rather than str_replace (#1168)
+
+commit c58331f74d9a2a3039909add2c629e78f1c144de
+Author: Thibault Couraud <1036233+couraudt@users.noreply.github.com>
+Date:   Mon Nov 5 10:38:22 2018 +0000
+
+    [BAEBridge] Add bridge for bourse-aux-equipiers.com (#903)

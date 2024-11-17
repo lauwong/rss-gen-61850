@@ -1,0 +1,130 @@
+commit 52d3cce59dae1b5b8adb5497450e396473ebf6b2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 22:40:24 2023 +0200
+
+    bridges: add context to detectParameters (#3607)
+    
+    * bridges: add context to detectParameters
+    
+    Some bridges did not return the context parameter but they used it in
+    the parameters
+    
+    * bridges: add context to detectParameters
+    
+    Fix test for InstagramBridge
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 7705d097e31be3419b7b2ea8eb2ad67a593d68cf
+Author: Alex Kirk <akirk@users.noreply.github.com>
+Date:   Sun Nov 29 11:28:07 2020 +0100
+
+    [SkimfeedBridge] Add parameter detection (#1877)
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit ce896b424775ad3c629b391bede1c63472e10bd6
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Jul 27 23:07:25 2018 +0200
+
+    [SkimfeedBridge] Add new bridge
+    
+    New bridge for Skimfeed: https://skimfeed.com
+    
+    Generates feeds for all features of Skimfeed:
+    
+    - News (the ones displayed on the front page)
+    - Hot topics ("What's Hot" section on the front page)
+    - Tech news (preconfigured feeds in the menu bar)
+    - Custom feeds (using the configuration system of Skimfeed), see
+    https://skimfeed.com/custom.php
+    
+    The number of items returned by the bridge can be limited for all
+    categories ('&limit=...'). This parameter is optional, all categories
+    are unlimited by default!
+    
+    Authors are added with HTML anchors in order to allow quick navigation
+    to source channels.
+    
+    The bridge ships with developer tools to auto-generate lists in the
+    future (especially useful for 'Tech news'!)
+    
+    References #748

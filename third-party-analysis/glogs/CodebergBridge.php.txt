@@ -1,0 +1,95 @@
+commit 4986119f1fd8bab05f05abbcf90615d623dc8d4b
+Author: Dag <me@dvikan.no>
+Date:   Tue Jan 23 22:25:43 2024 +0100
+
+    fix(codeberg): semi-fix parsing of pull requests (#3916)
+
+commit 38e9c396cfe6b933f1752942385dcf5ee05730d6
+Author: Dag <me@dvikan.no>
+Date:   Wed Dec 13 22:20:21 2023 +0100
+
+    fix(codeberg): css selector tweak (#3832)
+    
+    * fix(codeberg): css selector tweak
+    
+    * yup
+
+commit 5f777d4126fe79c2095a0716a2ba070e51173be0
+Author: Dag <me@dvikan.no>
+Date:   Thu Oct 5 15:36:35 2023 +0200
+
+    fix(codeberg): add temp fix (#3730)
+    
+    they changed html for tag and commit
+
+commit 2172df9fa2de2752396a55260f49594606466ec1
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 29 19:17:03 2023 +0200
+
+    fix: various notice fixes (#3718)
+
+commit 0bf38e5c56a795301d540f4b0ce6e9bd9935b058
+Author: Dag <me@dvikan.no>
+Date:   Wed Sep 20 03:15:15 2023 +0200
+
+    fix: small notice errors (#3677)
+    
+    * fix notice
+    
+    * fix notice
+    
+    * tweak
+    
+    * tweaks
+
+commit ce72503df607cf7aa7d53bd10f38da97eb9bf17b
+Author: Dag <me@dvikan.no>
+Date:   Fri Aug 11 19:02:38 2023 +0200
+
+    fix(codeberg): change dom selectors for timestamp and content, fix #3610 (#3611)
+
+commit 69518e95c11477b87d1ebf4d281271c5fb4ab7b3
+Author: Dag <me@dvikan.no>
+Date:   Thu Dec 8 21:21:17 2022 +0100
+
+    feat: add tags to codeberg bridge, fix #3177 (#3185)
+    
+    * refactor
+    
+    * feat: add tags to codeberg bridge, fix #3177
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 0cf9da927e37f639ed6b40366a81798b53861c9d
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Wed Feb 23 19:31:08 2022 +0000
+
+    [CodebergBridge] Fix bridge (#2464)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit f36832b66e32c9364af4ffa4307a48797371fa5c
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Fri Aug 13 03:51:50 2021 +0000
+
+    [CodebergBridge] Add bridge (#1951)

@@ -1,0 +1,45 @@
+commit 6a24e53d6ca4fbfb3115a8cb30a51283684f0f20
+Author: Dag <me@dvikan.no>
+Date:   Fri Aug 30 04:21:51 2024 +0200
+
+    refactor (#4244)
+
+commit b0674d7b19f2bba901e8aab75760c021d0495e9d
+Author: Clemens Neubauer <cn-tools@gmx.at>
+Date:   Thu Aug 22 11:36:58 2024 +0200
+
+    [BMDSystemhausBlogBridge] rework detectParameters (#4138)
+    
+    * bridge BMDSystemhausBlog: rework of detectParameters
+    
+    * fix lint phpcs error
+    
+    * Update BMDSystemhausBlogBridge.php
+    
+    * Update BMDSystemhausBlogBridge.php
+
+commit 81be72ea04c60b27a2a078a8802a88d9d1b6ee3a
+Author: Clemens Neubauer <cn-tools@gmx.at>
+Date:   Fri Feb 2 15:33:59 2024 +0100
+
+    Update BMDSystemhausBlogBridge.php (#3943)
+
+commit d01c462ad514c327a82e92f269c139028de0a4f7
+Author: Dag <me@dvikan.no>
+Date:   Mon Jan 29 21:51:34 2024 +0100
+
+    fix(FeedExpander): if parse fails, include offending url in exception message (#3938)
+    
+    Also some refactors
+
+commit 6ac976b92ea3f4c913288afe40e36d69c818d1f1
+Author: Clemens Neubauer <cn-tools@gmx.at>
+Date:   Sun Jan 21 16:26:25 2024 +0100
+
+    create bridge to BMDSystemhaus Blog (#3907)
+    
+    * create bridge to BMDSystemhaus Blog
+    
+    * Update BMDSystemhausBlogBridge.php
+    
+    * Update BMDSystemhausBlogBridge.php

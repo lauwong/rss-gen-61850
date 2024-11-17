@@ -1,0 +1,13 @@
+commit deb9a7269e166c74dfd9140da3da74923bb67608
+Author: knrdl <35548889+knrdl@users.noreply.github.com>
+Date:   Wed Dec 6 17:07:22 2023 +0100
+
+    [MotatosBridge] add bridge (#3799)
+    
+    * [MotatosBridge] add bridge
+    
+    * [MotatosBridge] fix uid as string
+    
+    * [MotatosBridge] add support for all regions
+    
+    * [MotatosBridge] fix: region: "required" attribute not supported for list

@@ -1,0 +1,11 @@
+commit 5f37c72be0a994257b01a8c43c4e488611f092f2
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 20:48:08 2023 +0200
+
+    fix(binance): plus some other tweaks (#3753)
+
+commit f957eea3003a734acd8f9fa72ef13661cee277ed
+Author: User123698745 <User123698745@users.noreply.github.com>
+Date:   Mon Jul 31 01:05:38 2023 +0200
+
+    [FallGuysBridge] new bridge (#3584)

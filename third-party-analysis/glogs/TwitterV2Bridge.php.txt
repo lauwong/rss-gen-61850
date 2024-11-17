@@ -1,0 +1,167 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit f660c16ca6f699fccc9b00ad40182d91f6d60f83
+Author: Tobias Zulauf <zero-24@users.noreply.github.com>
+Date:   Tue Sep 20 18:07:18 2022 +0200
+
+    [TwitterV2Bridge] noexternallink option to remove external stuff from the content_html output (#3041)
+    
+    * [TwitterV2Bridge] noexternallink option to remove external stuff from the content_html output
+    
+    * Update bridges/TwitterV2Bridge.php
+    
+    * Update bridges/TwitterV2Bridge.php
+
+commit 36f64a3258ad91e0a16313457f18b29637c5cca6
+Author: quickwick <2566133+quickwick@users.noreply.github.com>
+Date:   Sun Sep 4 20:31:36 2022 -0700
+
+    feat: add preview for external urls in twitterv2 (#3006)
+    
+    Fix #2430
+
+commit 8ffc002e5392f2cc70db569936a14a0fd1f70cf1
+Author: quickwick <2566133+quickwick@users.noreply.github.com>
+Date:   Sun Sep 4 17:04:09 2022 -0700
+
+    fix: truncated retweet text in twitter bridge(#3004)
+    
+    Fix #2988
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit 9110b70f0785a07c3dfccfc56d413da08182c745
+Author: quickwick <2566133+quickwick@users.noreply.github.com>
+Date:   Tue May 10 00:41:12 2022 -0700
+
+    [TwitterV2Bridge] Properly include quoted tweets (#2713)
+
+commit d1075920940c27361e4757216ac2d6baf80a8dec
+Author: quickwick <2566133+quickwick@users.noreply.github.com>
+Date:   Sun May 8 07:22:31 2022 -0700
+
+    Don't hide quoting tweets when 'hide retweets' is selected (#2706)
+
+commit 4c26950b71dc6ccc0b27ebc5935c5ceb80cf2785
+Author: quickwick <2566133+quickwick@users.noreply.github.com>
+Date:   Tue Apr 26 03:11:26 2022 -0700
+
+    [TwitterV2Bridge] Fix empty object check (#2673)
+
+commit db28bedb2349d0c36d4d3da5fe292fd4363001f5
+Author: quickwick <2566133+quickwick@users.noreply.github.com>
+Date:   Sun Apr 10 09:53:35 2022 -0700
+
+    [TwitterV2Bridge] Changes to output HTML/CSS, larger display image by default (#2626)
+
+commit c0e2a430abc350353e337741b881eab4ec79211e
+Author: quickwick <2566133+quickwick@users.noreply.github.com>
+Date:   Thu Apr 7 00:00:28 2022 -0700
+
+    [TwitterV2Bridge] Add parameter to include only media tweets (#2614)
+
+commit daae089299a44829d657326a60421f66913956e7
+Author: quickwick <2566133+quickwick@users.noreply.github.com>
+Date:   Wed Apr 6 11:56:56 2022 -0700
+
+    [TwitterV2Bridge] Changes to parameters and output titles (#2612)
+
+commit 780581939a883b80b3f6db01ac43e09b83e0e795
+Author: quickwick <2566133+quickwick@users.noreply.github.com>
+Date:   Mon Apr 4 12:13:05 2022 -0700
+
+    [TwitterV2Bridge] New Bridge for Twitter v2 API (#2471)
+    
+    * New Bridge for Twitter using v2 API
+    
+    * Top comment block, tweaks to match contributing guide
+    
+    * [TwitterV2Bridge] new Bridge (sort of)
+    
+    * Discovered the point of, and re-added, no image scaling option
+    
+    * Fix the phpcs sniff violations (I hope)
+    
+    * More linter fixes, I figured out how to use phpcs locally
+    
+    * Removed unnecessary custom version of getContents function
+    
+    * Limit query to 100 tweets, valid example query, improved error handling
+    
+    * Added config doc (correctly, I hope) with link from DESCRIPTION
+    
+    * little tweak to doc

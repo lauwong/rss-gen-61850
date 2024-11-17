@@ -1,0 +1,11 @@
+commit 40041dd65f9ea81abda0092dff2e160b61a5e682
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Mon Sep 9 22:36:08 2024 +0530
+
+    [DailythanthiBridge] fix url (#4261)
+
+commit ecf61f6fa777fcaeb6ce0bdf1c82cdcbc89e74a1
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Tue Mar 12 00:44:10 2024 +0530
+
+    [DailythanthiBridge] New Bridge (#4006)

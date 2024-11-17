@@ -1,0 +1,111 @@
+commit 701fe3cfeda0d14f1f49afe2bd0f89296214459e
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 29 00:14:30 2023 +0200
+
+    fix: various small fixes (#3578)
+
+commit 37f1ab726b14f04070d26ebf65e591882ffb165e
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 16 20:26:33 2022 +0200
+
+    fix: various bug fixes (#3102)
+    
+    * fix: Undefined offset: 4
+    
+    * fix: Trying to access array offset on value of type bool
+    
+    * fix: Undefined variable: photo at bridges/TelegramBridge.php line 287
+    
+    * fix: Trying to get property innertext of non-object at bridges/ZDNetBridge.php line 186
+    
+    * fix: Undefined index: Category at bridges/UnraidCommunityApplicationsBridge.php line 42
+    
+    * fix: Undefined index: fullUrl at bridges/EuronewsBridge.php line 61
+
+commit 499d5c2b77def0b9761cf3be68f5981edd4fbe9b
+Author: Dawid Wróbel <me@dawidwrobel.com>
+Date:   Thu Jul 21 20:41:15 2022 +0200
+
+    [Amazon & AmazonPriceTracker] Add Poland (#2930)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 8172d10bb56fbec2a6303a40c6c9db763c93b777
+Author: Austin Huang <im@austinhuang.me>
+Date:   Sat Jun 4 19:59:52 2022 +0000
+
+    [Amazon & AmazonPriceTracker] Add Turkey, close #2665 (#2758)
+    
+    * [AmazonPriceTracker] Add Turkey, close #2665
+    
+    * [Amazon] Add Sweden & Turkey
+    
+    consistent with price tracker
+
+commit e1e9a12440be621417dde4cdf1c96613e3f84a65
+Author: Nemo <commits@captnemo.in>
+Date:   Mon Apr 4 23:11:40 2022 +0530
+
+    [AmazonPriceTrackerBridge] Minor fix for parser, and new strategy (#2603)
+
+commit 9fa782105d0e8f891414077482169a4ea4a8c9a9
+Author: Nemo <commits@captnemo.in>
+Date:   Mon Jul 12 23:19:29 2021 +0530
+
+    [AmazonPriceTrackerBridge] Fixes for subscription items (#2205)
+
+commit 7dd1a7dcccbb074eea70363b83ade6ff2efdef53
+Author: sal0max <msal.coding@gmail.com>
+Date:   Mon Jul 5 22:26:08 2021 +0200
+
+    [AmazonPriceTrackerBridge] Fix bridge (#2194)
+
+commit 0b494d9c0e7069bf4f7c328f667497bc4634f674
+Author: David Pedersen <Limero@users.noreply.github.com>
+Date:   Mon Nov 16 18:13:23 2020 +0100
+
+    [AmazonPriceTrackerBridge] Add support for Swedish Amazon (#1856)
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit 8f9a385b4deedb8e5f3cd70d0404f562b937b94e
+Author: Nemo <me@captnemo.in>
+Date:   Wed Aug 1 01:14:37 2018 +0530
+
+    [AmazonPriceTrackerBridge] Improve Amazon scraper logic (#761)
+    
+    - Now works on all websites, and even with products
+      with multiple prices
+    - Closes #750
+
+commit c7b0c9fd31aa5ce88dbf4d4a0fb7ca71bf8b7f46
+Author: Nemo <me@captnemo.in>
+Date:   Mon Jul 16 18:24:52 2018 +0530
+
+    Amazon Price Tracker Bridge (#741)
+    
+    * [amazonprice] Adds AmazonPriceTracker bridge

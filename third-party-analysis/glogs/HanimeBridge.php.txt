@@ -1,0 +1,9 @@
+commit 08c1f55f4a12eec3ab11e6ac8d767131e4bda162
+Author: Miika Launiainen <miika.launiainen@proton.me>
+Date:   Thu Aug 11 00:46:17 2022 +0300
+
+    Created Hanime bridge (#2958)
+    
+    * Created Hanime bridge
+    
+    * Moved cover image from enclosures to content as dvikan suggested

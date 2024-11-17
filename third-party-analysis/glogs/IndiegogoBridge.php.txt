@@ -1,0 +1,23 @@
+commit e07a94d480d87710115101ae51147ed4895dfeb8
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Sat Jul 9 08:13:07 2022 +0200
+
+    Normalize some method calls (#2911)
+    
+    The methods were called as static even though they were not.
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit bf1cb8fadc9f41dfeb99350b9519490fd95e79d0
+Author: Bockiii <henning@bocklage.com>
+Date:   Tue Jul 27 21:41:56 2021 +0200
+
+    [IndiegogoBridge] New bridge (#2135)

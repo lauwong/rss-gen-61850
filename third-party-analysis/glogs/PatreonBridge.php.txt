@@ -1,0 +1,124 @@
+commit 206bebc7bdf90b00b2457a5693fe07079b3df40a
+Author: Dag <me@dvikan.no>
+Date:   Tue Jun 18 20:22:46 2024 +0200
+
+    ci: disallow the sizeof function in linter (#4134)
+
+commit a3c29f3a52faddca776706759ef7ee33b68c32d5
+Author: mruac <ant8672@gmail.com>
+Date:   Fri Sep 22 17:08:05 2023 +0930
+
+    resolve comment (#3683)
+    
+    https://github.com/RSS-Bridge/rss-bridge/pull/3617#issuecomment-1730244049
+
+commit 3e1e96e477a26cf81582c16e9ef1edf399702b31
+Author: mruac <ant8672@gmail.com>
+Date:   Mon Sep 11 20:45:14 2023 +0930
+
+    [PatreonBridge] resolve null coalescing issue (#3664)
+    
+    * extend post presentation
+    
+    * applied phpcbf
+    
+    note: phpcs does not like long null coalescing chains
+    
+    * resolved phpcs
+    
+    * resolved github comment https://github.com/RSS-Bridge/rss-bridge/pull/3617/#issuecomment-1699568400
+    
+    * .
+    
+    * lint SteamAppNewsBridge
+
+commit 9707586ee8d92b153fd7b969e94ec883bfc2223b
+Author: mruac <ant8672@gmail.com>
+Date:   Wed Aug 30 00:39:05 2023 +0930
+
+    [PatreonBridge] Extend the presentation of parsed posts (#3617)
+    
+    * extend post presentation
+    
+    * applied phpcbf
+    
+    note: phpcs does not like long null coalescing chains
+    
+    * resolved phpcs
+
+commit 28077155ca9343c6492fac36fc71078a6633e984
+Author: mruac <ant8672@gmail.com>
+Date:   Tue Aug 15 23:34:09 2023 +0930
+
+    [PatreonBridge] Resolve creator name in feed name (#3616)
+    
+    * resolve creators without custom url
+    
+    * hint how to enter creator with non-custom url
+    
+    * applied phpcbf
+
+commit 748fc9fd65fe775f66580e9929c11c3a2d5c4c3a
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 2 06:40:25 2023 +0200
+
+    fix: various small notice fixes (#3474)
+    
+    * fix(patreon): php notice
+    
+    * fix(pepperbridge): php notice
+    
+    * fix(ebay): php notice
+    
+    * fix(tiktok): php notice
+    
+    * fix(yandex): fix notice
+    
+    * fix(justwatch): notice
+    
+    * lint
+
+commit ffbc10768715cf867607e696d64471281062ccd8
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 16 17:55:43 2022 +0200
+
+    Improve logging and error handling (#3059)
+    
+    * refactor: logging and errror handling
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit abb74f056c5858495a54374b6ebe87c937338970
+Author: Roliga <roliga.here@gmail.com>
+Date:   Sat Sep 7 18:26:58 2019 +0200
+
+    [PatreonBridge] Add new bridge (#1254)
+    
+    * [PatreonBridge] Add new bridge
+    
+    * [PatreonBridge] Add UID to articles
+    
+    Patreon changes post URLs when the post title is updated, so set a UID
+    based on the post ID instead.

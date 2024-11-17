@@ -1,0 +1,5 @@
+commit 08be0ad7a57f723ae2aab64b537d91db535fbf81
+Author: Simon Alberny <contact@simounet.net>
+Date:   Wed Jun 7 22:36:21 2023 +0200
+
+    Add GoAccessBridge (#3422)

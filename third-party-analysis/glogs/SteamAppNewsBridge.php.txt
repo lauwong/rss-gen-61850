@@ -1,0 +1,38 @@
+commit 3e1e96e477a26cf81582c16e9ef1edf399702b31
+Author: mruac <ant8672@gmail.com>
+Date:   Mon Sep 11 20:45:14 2023 +0930
+
+    [PatreonBridge] resolve null coalescing issue (#3664)
+    
+    * extend post presentation
+    
+    * applied phpcbf
+    
+    note: phpcs does not like long null coalescing chains
+    
+    * resolved phpcs
+    
+    * resolved github comment https://github.com/RSS-Bridge/rss-bridge/pull/3617/#issuecomment-1699568400
+    
+    * .
+    
+    * lint SteamAppNewsBridge
+
+commit a9cf1512e787d3dabb875fe033a0c08a4c274c65
+Author: ImportTaste <53661808+ImportTaste@users.noreply.github.com>
+Date:   Sun Sep 10 20:35:09 2023 -0500
+
+    [SteamAppNewsBridge] Add tags filter (#3662)
+    
+    Undocumented tags filter discovered through /ISteamWebAPIUtil/GetSupportedAPIList/v1/
+    e.g. /ISteamNews/GetNewsForApp/v2/?appid=1091500&tags=patchnotes
+
+commit aa14d4aafbdbd6dab956ef836f24994fc9bcf568
+Author: Alexander <otakuf@gmail.com>
+Date:   Thu Nov 3 23:43:33 2022 +0300
+
+    [SteamAppNewsBridge] new bridge (#3126)
+    
+    * [SteamAppNewsBridge] new bridge
+    
+    * [SteamAppNewsBridge] test fixes

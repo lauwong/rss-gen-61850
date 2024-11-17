@@ -1,0 +1,41 @@
+commit 7e4807530ec6199ac9754bce54f025a113edfbbe
+Author: Dag <me@dvikan.no>
+Date:   Mon Jul 31 20:43:18 2023 +0200
+
+    fix: various small fixes (#3580)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit d123e6007ee6b5f7f53c889d26c9cca3457f935a
+Author: somini <somini@users.noreply.github.com>
+Date:   Sun Apr 3 08:53:13 2022 +0100
+
+    Fixup deprecations on PHP 8 (#2592)
+    
+    * Fixup deprecations on PHP 8
+    
+    Fix #2448
+    
+    * Configure a default fallback for getInput function
+    
+    * Appease phpcs
+    
+    * Avoid changing getInput function
+    
+    Revert "Configure a default fallback for getInput function"
+    
+    This reverts commit 94004c5104de6b84bd4c72356806d994c05a0119.
+
+commit cf2dad3ab8872d3ff50a702a8bfaa93cc3ff794d
+Author: Matt DeMoss <demoss.matt@gmail.com>
+Date:   Tue Mar 29 19:50:07 2022 -0400
+
+    Reducer (retrying after failed tests) (#2273)

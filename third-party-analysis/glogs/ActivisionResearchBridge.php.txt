@@ -1,0 +1,9 @@
+commit 307c22204d643308b8cb22ba024a5b6b95fbcb84
+Author: Tobias Alexander Franke <thefranke@users.noreply.github.com>
+Date:   Sun Aug 11 23:20:20 2024 +0200
+
+    [ActivisionResearchBridge] New bridge for the Activision Research blog (#4213)
+    
+    * [ActivisionResearchBridge] New bridge for the Activision Research blog
+    
+    * [ActivisionResearchBridge] Fix linting issues

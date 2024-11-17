@@ -1,0 +1,21 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit d082bfca4a2b97246cffe40fbb029f94c21480a2
+Author: Alex Balgavy <8124851+thezeroalpha@users.noreply.github.com>
+Date:   Thu Apr 14 14:38:16 2022 +0200
+
+    [SeznamZpravyBridge] fix: broken bridge (#2658)
+
+commit 7d4b76be99fc78954f1d9755e8348fa3e8713ba9
+Author: Alex Balgavy <8124851+thezeroalpha@users.noreply.github.com>
+Date:   Wed Nov 11 18:39:34 2020 +0100
+
+    [SeznamZpravyBridge] New bridge (#1806)

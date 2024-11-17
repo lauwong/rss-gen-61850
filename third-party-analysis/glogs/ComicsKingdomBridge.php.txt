@@ -1,0 +1,56 @@
+commit 84b93e0f8f67dd69a242e3ecb1cfd743b5e167e4
+Author: Jonathan Kay <git@jonathankay.com>
+Date:   Sun Mar 10 10:18:50 2024 -0400
+
+    [ComicsKingdomBridge] Fix/Rewrite of ComicsKingdom Bridge (#4003)
+    
+    * Rewrite ComicsKingdom Bridge
+    
+    Rewrite of bridge as the existing one no longer works:
+    - Now uses REST API
+    - Added optional limit to get desired number of comics
+    - Author now reflects the comic creators name
+    - Feed name and comic titles now pulled from site
+    - Added myself as the maintainer as I've been the one maintaining, and the existing code no longer is used
+    
+    * Change API to URI to pass test
+    
+    * Remove whitespace, add curly braces and switch to single quotes
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 9564e9291febd75c60227c7df7f2c17734c1d1bd
+Author: Jonathan Kay <git@jonathankay.com>
+Date:   Sat Mar 5 13:47:04 2022 -0500
+
+    [ComicsKingdomBridge] Grab the last meta og:url content instead of first (#2484)
+    
+    There are now two og:url values on the page, the first no longer contains the necessary date URL for the bridge to work.  Finding the last og:url on the page restores the bridge to working order.
+
+commit 7252252e3c525cdf568cba65852e74599592c388
+Author: Jonathan Kay <trekie99@hotmail.com>
+Date:   Sun Feb 13 02:27:41 2022 -0500
+
+    [ComicsKingdomBridge] Fixes to accomodate new layout and site changes (#2444)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 49019a843fe421cf24f4fe9736291bed69974068
+Author: St. John Johnson <st.john.johnson@gmail.com>
+Date:   Sat Nov 9 09:50:08 2019 -0800
+
+    [ComicsKingdomBridge] Add new bridge (#1353)

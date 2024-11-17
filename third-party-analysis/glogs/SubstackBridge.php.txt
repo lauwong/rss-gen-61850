@@ -1,0 +1,15 @@
+commit b505667168225a74c30e7b58ab6a54bc00c3b89e
+Author: Pavel Korytov <thexcloud@gmail.com>
+Date:   Wed Jul 31 22:57:20 2024 +0300
+
+    [SubstackBridge] Add Substack bridge (#4174)
+    
+    * [SubstackBridge] Add Substack
+    
+    * [SubstackBridge] Add docs
+    
+    * [SubstackBridge] Fix lint
+    
+    * [SubstackBridge] Update description
+    
+    * [SubstackBridge] Update description (x2)

@@ -1,0 +1,15 @@
+commit 4a3919c1a35083ade3dca0a49dd9c78cd8fc4f28
+Author: July <phantop@tuta.io>
+Date:   Wed Aug 21 17:05:29 2024 -0400
+
+    [NPRBridge] Add missing tag and remove extra HTML elements (#4227)
+
+commit 3a327503ee26bc8efeb1b3dd43ac4e1d58334229
+Author: July <phantop@tuta.io>
+Date:   Wed Aug 21 16:10:03 2024 -0400
+
+    [NPRBridge] add bridge for NPR stories (#4225)
+    
+    * [NPRBridge] add bridge for NPR stories
+    
+    * [NPRBridge] Use better selectors for multiple items

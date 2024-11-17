@@ -1,0 +1,57 @@
+commit 400e1376733d14bed8d8de1adcededd5684281f6
+Author: John S Long <john@128.io>
+Date:   Thu Nov 3 14:33:43 2022 -0500
+
+    [DiscogsBridge] Add optional image, if personal access token is configured (#3083)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 3160e62293c3a06609390e1dfde035a32cd6c0c8
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jan 5 15:24:44 2019 +0100
+
+    [DiscogsBridge] Fix timestamp parsing
+    
+    References #978
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit 57b15a089e44fc117b5ecd64fb38334c4feb0011
+Author: teromene <teromene@teromene.fr>
+Date:   Fri Apr 20 16:57:09 2018 +0200
+
+    Added DiscogsBridge. Closes #615

@@ -1,0 +1,15 @@
+commit 19384463857c35b1d3ef0a7dbbbcc40d2f0cba0c
+Author: Florent V <floviolleau@users.noreply.github.com>
+Date:   Tue Dec 26 12:19:08 2023 +0100
+
+    [EdfPricesBridge] add new bridge (#3846)
+    
+    * [EdfPricesBridge] add new brige
+    
+    * [EdfPricesBridge] bad refactor
+    
+    * [EdfPricesBridge] support php 7.4
+    
+    ---------
+    
+    Co-authored-by: Florent VIOLLEAU <florent.violleau@samsic.fr>

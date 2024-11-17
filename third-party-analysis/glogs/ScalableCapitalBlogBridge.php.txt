@@ -1,0 +1,23 @@
+commit 6afd13eb06276f085f245c5075972ef36eb6740a
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 03:43:26 2024 +0200
+
+    refactor: deprecate FeedItem constructor (#4201)
+    
+    * fix: bug in prior commit
+    
+    * refactor: deprecate FeedItem constructor
+    
+    * test: fix
+
+commit 8e8028b7860ebb09eae92dcd43b4b6916d26d4d6
+Author: hleskien <34342248+hleskien@users.noreply.github.com>
+Date:   Sat Feb 10 04:42:22 2024 +0100
+
+    Adopt WebDriverAbstract as a solution for active (JavaScript) websites (#3971)
+    
+    * first working version
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>

@@ -1,0 +1,17 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 50bab079e1eedc46cc969f7bb30776c288fabb31
+Author: Dag <me@dvikan.no>
+Date:   Thu Mar 24 23:58:17 2022 +0100
+
+    feat: add new bridge HashnodeBridge (#2231)
+    
+    https://github.com/RSS-Bridge/rss-bridge/pull/2231

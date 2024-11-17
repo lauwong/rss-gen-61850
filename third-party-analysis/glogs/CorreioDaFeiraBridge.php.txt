@@ -1,0 +1,29 @@
+commit 1b02d4f49b3be7b8317fb585ec60104a9805560b
+Author: rmscoelho <50850007+rmscoelho@users.noreply.github.com>
+Date:   Thu Jun 22 06:27:52 2023 +0100
+
+    [CorreioDaFeiraBridge] cache timeout + getName fixes (#3453)
+    
+    * [CorreioDaFeiraBridge] cache timeout fix
+    
+    * [CorreioDaFeiraBridge] cache timeout fix
+    
+    * [CorreioDaFeiraBridge] getName() fix
+
+commit 60be4cdebdfd6c4abacf0e1b0e507b194fd9212d
+Author: rmscoelho <50850007+rmscoelho@users.noreply.github.com>
+Date:   Tue Jun 20 11:46:24 2023 +0100
+
+    [CorreioDaFeiraBridge] adding timestamps; fixing categories; (#3445)
+    
+    * [New Bridge] Correio da Feira (regional newspaper)
+    
+    * [CorreioDaFeiraBridge] adding timestamp; fixing name
+    
+    * [CorreioDaFeiraBridge] formatting fixes
+
+commit 98b72b2c5cced12f727028caf61a8197cd13f2f5
+Author: rmscoelho <50850007+rmscoelho@users.noreply.github.com>
+Date:   Tue Jun 20 04:57:22 2023 +0100
+
+    [New Bridge] Correio da Feira (regional newspaper) (#3443)

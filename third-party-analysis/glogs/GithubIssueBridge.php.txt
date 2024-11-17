@@ -1,0 +1,700 @@
+commit 52d3cce59dae1b5b8adb5497450e396473ebf6b2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 22:40:24 2023 +0200
+
+    bridges: add context to detectParameters (#3607)
+    
+    * bridges: add context to detectParameters
+    
+    Some bridges did not return the context parameter but they used it in
+    the parameters
+    
+    * bridges: add context to detectParameters
+    
+    Fix test for InstagramBridge
+
+commit 701fe3cfeda0d14f1f49afe2bd0f89296214459e
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 29 00:14:30 2023 +0200
+
+    fix: various small fixes (#3578)
+
+commit 440adf2f3b62a99160166a531f985064344ba4e7
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 16 22:28:20 2023 +0200
+
+    fix(githubissue): add 10 min cache (#3545)
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit 7dcf09a876eff6a3d5af79b4329b6e47728f608e
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Sun Apr 3 04:07:35 2022 -0400
+
+    [GitHub] Allow custom search query (#2593)
+
+commit 8aa091beda927b00375c66f882700de600198546
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Fri Apr 1 10:38:07 2022 -0400
+
+    [GithubIssueBridge] Fix notice with reviews (#2589)
+    
+    Some timeline items, like review threads and the first comment on PRs,
+    have no header, so this handles the first comment and adds a generic
+    title if that doesn't work.
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 6f75d0745665fe4c8bc8d34f46b93df2637c27bc
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Mon Mar 29 13:15:56 2021 -0400
+
+    [GitHubPullRequestBridge] Add new bridge inheriting GithubIssueBridge (#2001)
+
+commit ea289a0cea454109d813e8b2248b215e41321dc5
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Wed Jan 27 06:06:59 2021 +0000
+
+    [GithubIssueBridge] Fix issue id and comment id extraction (#1950)
+
+commit d39741c29677e50acf618db1f43562cd8863f939
+Author: somini <somini@users.noreply.github.com>
+Date:   Wed Feb 26 21:15:50 2020 +0000
+
+    [GithubIssueBridgeIssue] Fix bridge (#1453)
+    
+    * fix bridge according to website evolution
+
+commit 6d6d6037a3b8065a37f4f7bf3ec92300c1ec72ea
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Jun 13 19:49:48 2019 +0200
+
+    [GithubIssueBridge] Don't return error messages in detectParameters()
+    
+    detectParameters() is called in a loop for all bridges on a URL, thus
+    if a bridge returns an error message, the output messages get mixed
+    up and all detect operations fail.
+    
+    This seems to be a limitation of the detect function for now.
+
+commit 75b021368423fef339ae58cf05f12dc89581ed88
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Jun 10 15:32:57 2019 +0200
+
+    [GithubIssueBridge] Add support for detect action
+    
+    References #1100
+
+commit e4e04a78652f19c52237c3b423d0872da3c7c163
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Jun 10 00:02:13 2019 +0200
+
+    [GithubIssueBridge] Fix broken feed item URLs
+    
+    References #1100
+
+commit da339fd5cc5c74ad76e16c94f01752aa66862e0c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 9 20:39:45 2019 +0200
+
+    [GithubIssueBridge] Include issue author comment in the feed
+    
+    - Add function to build an URL to the GitHub issue comment
+    - Change scope of internal functions from protected to private
+    - Use IDs instead of classes as comment selectors, to include the
+    issue author in the output feed.
+    
+    References #1100
+
+commit ba116d9ab603e8fc369fe4c47f5cc0ebb52ac44f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 9 19:57:48 2019 +0200
+
+    [GithubIssueBridge] Fix bridge after DOM changes
+
+commit 288d4de218dec81035ffa06d2326ca15d9598e4e
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Sat Jan 5 12:29:26 2019 +0100
+
+    bridges: Fix bridges to pass unit test (#984)
+    
+    * [DealabsBridge] fixed parameters
+    * [DemonoidBridge] added parameter context names
+    * [DevToBridge] fixed parameters
+    * [ExtremeDownloadBridge] fixed parameters
+    * [GithubIssueBridge] fixed parameters
+    * [InstagramBridge] added parameter context names
+    * [MydealsBridge] fixed parameters
+    * [OnVaSortirBridge] fixed parameters
+    * [ThingyverseBridge] fixed parameters
+    * [HotUKDealsBridge] fixed parameters
+    * [FeedExpanderExample] added proper URI
+    * [GQMagazineBridge] fixed parameters and getDomain()
+    * [MozillaSecurityBridge] fixed filename
+    
+    References #980
+
+commit f4b46e497e877b73521de677644188594f023435
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Nov 11 01:38:49 2018 +0100
+
+    [GithubIssueBridge] Be consistent in avoiding is_null
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit d5085a4116c50361b3ab0c30c402222759e93056
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Nov 11 01:36:41 2018 +0100
+
+    [GithubIssueBridge] Fix non existing comments count
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit d7cabfca54bade061445f58e69520c92e71dcaed
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Nov 11 01:35:42 2018 +0100
+
+    [GithubIssueBridge] Fix issue comments and events parsing
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de575982a16e54559750a3f8bdf007416b051da2
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Nov 10 23:15:09 2018 +0100
+
+    [GithubIssueBridge] Fix most relevant coding style related issues
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 512a4f292b48de827357cbef6874d4c5df6d9e20
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 22:36:33 2017 +0100
+
+    bridges: Return parent::getURI by default
+
+commit c4169f1579701342f7f462f0103f68c5382946ad
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 22:20:55 2017 +0100
+
+    bridges: Return parent::getName by default
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit 970e216c1fc7a10550cf4288fd2197255557324f
+Merge: 9020b09f a1ef589f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Oct 2 16:05:58 2016 +0200
+
+    Merge branch 'methods2functions' of https://framagit.org/peetah/rss-bridge
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 235c9859012887bda40c0f024c72975223256610
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 17:04:28 2016 +0200
+
+    [BridgeAbstract] replace getCacheDuration method by CACHE_TIMEOUT class constant
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit b3a36a26978d673695a03a96b2dd6311bf3e58cd
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Sep 23 14:15:07 2016 +0200
+
+    [GithubIssueBridge] add issue events to the feed
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 957ae5d37980da05e02fa087a70e35cbc355d58a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Wed Sep 21 18:17:58 2016 +0200
+
+    [GithubIssueBridge] fix comments page cache duration
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 120247256df38dc72bf4abc98c3bdc09e67d0ef6
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Sep 20 00:21:42 2016 +0200
+
+    [GithubIssueBridge] fix entities in titles
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 19a4880c861dc5fb24fa2bba869a345be67e10f5
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Sep 19 23:52:44 2016 +0200
+
+    [GithubIssueBridge] return comments for all issues
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf8214e3dddca40c9a2af0f5a56865075477a385
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Sep 10 11:44:55 2016 +0200
+
+    [GithubIssueBridge] add getURI() and getName()
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 73b4aea084b22af165b9f69007b4c8d44473b7d6
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Sep 10 11:44:18 2016 +0200
+
+    [GithubIssueBridge]: fix collecting issue comments
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 0fea61a4707a8c1a679f8e764f50b4fbd5a25e9c
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 29 00:12:42 2016 +0200
+
+    [GithubIssueBridge] fix comments number + code simplification
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 4f7fbae861e2f7f4e879fcba7d7b1ccb51dd2a08
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 28 20:38:01 2016 +0200
+
+    [bridges] Fix conditional checks on getInput
+    
+    isset($this->getInput('')) does not work
+
+commit 1b3c8a8aeba5641f3bec9a6a720939df537bfa83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 01:25:33 2016 +0200
+
+    [core + bridges] add BridgeAbstract::$inputs and BridgeAbstract::getInput()
+    
+    Inputs are not stored in BridgeAbstract::$parameters anymore to separate
+    static data from dynamic data.
+    The getInput method allows for more readable code.
+    
+    Also fix an "undefined index 'global'" notice
+    
+    Probability of breaking bridges: high !
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit c051730f7ce13f7890172224eb2ab32d7c54f184
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 23 21:20:21 2016 +0200
+
+    [GithubIssueBridge] fix comments number
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit c9822bffa75bcedd4cc7eeeff4419a5c836d62d4
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 23 20:29:29 2016 +0200
+
+    [GithubIssueBriddge] list all issues when 'i' parameter is not provided
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3c0d13c1bb72a87f0d671692e205f45f04d94eba
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 19:06:35 2016 +0200
+
+    bridges: use BridgeAbstract::getSimpleHTMLDOM
+    
+    instead of BridgeAbstract::file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 74f0572d914617b4e47fe0fd2fabfe356710d609
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Aug 17 14:45:08 2016 +0200
+
+    bridges: Replace returnError function with more specific
+    
+    Replacements depend on original error code:
+    400: returnClientError
+    404: returnServerError
+    500: returnServerError
+    501: returnServerError
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit e329a4c1b6a6c2ae266d05bb3777f78365113a7f
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 14:54:44 2016 +0200
+
+    bridges: Change ->name to ->author
+
+commit 94289511e151dd7d1421635807f977cb9a165449
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Jul 3 19:04:32 2016 +0200
+
+    [GithubIssueBridge] fix parameters
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit e03a7de15f111b3d6ad723272244221221b384e9
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Jun 26 11:53:44 2016 +0200
+
+    fix missing quotes
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit aa96c6b1d2451fb611fd4c8bd6c64700a3aef864
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Jun 26 11:28:41 2016 +0200
+
+    fix malformed JSON
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3922b9534c122f1fa5856b350cd2542256346916
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Jun 26 00:33:27 2016 +0200
+
+    new bridge: Github Issue
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>

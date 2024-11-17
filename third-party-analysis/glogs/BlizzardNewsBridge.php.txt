@@ -1,0 +1,43 @@
+commit fb66775ecee9db86c6be55c28eeae1c8f50e4cee
+Author: Niehztog <Niehztog@users.noreply.github.com>
+Date:   Tue Apr 2 23:14:25 2024 +0200
+
+    [XPathAbstract] Refactor xpath abstract (#4047)
+    
+    * refactor XPathAbstract, keep all functionality intact
+    
+    * fix linter errors
+    
+    * further simplify code
+    
+    * set default value for raw item content to true, avoiding escaping of html tags in feed item contents by default
+
+commit 1c3c85d8ff5a6d071f688ef09ca93f275b4995af
+Author: Niehztog <Niehztog@users.noreply.github.com>
+Date:   Sun Mar 31 18:46:07 2024 +0200
+
+    [XPathBridge] Allow multiple categories (#4038)
+    
+    * [XPathAbstract] allow multiple categories
+    
+    * fix feed icons in two bridges
+    
+    * fix warning
+    
+    * fix linter errors
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 3ad138026d887f88228b6133366c0aea8da6c55b
+Author: Niehztog <Niehztog@users.noreply.github.com>
+Date:   Sun Nov 8 08:22:41 2020 +0100
+
+    [BridgeXPathAbstract + BlizzardNewsBridge + XPathBridge] Add new abstract class + two example implementations (#1671)

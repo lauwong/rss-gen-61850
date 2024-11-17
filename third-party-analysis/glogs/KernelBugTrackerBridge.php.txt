@@ -1,0 +1,162 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit 1cfcacbbebc67ab900de61f0c1e3a6d82858a6b9
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Fri Jun 24 05:04:49 2022 -0400
+
+    [BugzillaBridge] Add new bridge (#2825)
+
+commit 1e75f9d3d558cb9dd91aab36a61cdc81f1c8dcb3
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Mon Nov 23 18:49:25 2020 +0000
+
+    [ReporterreBridge + KernelBugTrackerBridge + BastaBridge] Use defaultLinkTo() (#1862)
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 7621784598b8a5e46e281e866d844ab13be947fd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Oct 26 18:07:34 2018 +0200
+
+    bridges: Add favicon to bridges missing it
+    
+    Adds favicon to bridges that support it. Some sites prevent downloading
+    favicons, those bridges are left untouched.
+    
+    Affected bridges:
+    
+    - AutoJMBridge
+    - BandcampBridge
+    - BlaguesDeMerdeBridge
+    - BloombergBridge
+    - BundesbankBridge
+    - ChristianDailyReporterBridge
+    - ContainerLinuxReleasesBridge
+    - DailymotionBridge
+    - DiceBridge
+    - DribbbleBridge
+    - EliteDangerousGalnetBridge
+    - ElsevierBridge
+    - FacebookBridge
+    - FB2Bridge
+    - FDroidBridge
+    - FierPandaBridge
+    - GooglePlusPostBridge
+    - JapanExpoBridge
+    - KATBridge
+    - KernelBugTrackerBridge
+    - LegifranceJOBridge
+    - NotAlwaysBridge
+    - NyaaTorrentsBridge
+    - PinterestBridge
+    - RadioMelodieBridge
+    - RainbowSixSiegeBridge
+    - SupInfoBridge
+    - TagBoardBridge
+    - TebeoBridge
+    - TheTVDBBridge
+    - WhydBridge
+    - ZoneTelechargementBridge
+
+commit ecfc220b100cc73b70702cbbaaafa08c04b0d8c3
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Mar 25 16:20:25 2018 +0200
+
+    [KernelBugTrackerBridge] Fix too many parameters requesting HTML DOM
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit ff834105345b9c2120ce9ed8f3292e7e00a3c6fe
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 17:28:07 2017 +0100
+
+    style: Fix coding styles
+
+commit 6ddcedb53ff1c53619faf6f092d8fc048dd53834
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Dec 24 13:55:46 2016 +0100
+
+    [KernelBugTracker] Add new bridge
+    
+    This adds a bridge for bugzilla.kernel.org to provide feeds for
+    bug comments without the need of registering an email address.
+    
+    This implementation makes use of the print preview feature that
+    reduces bandwidth by a small margin.
+    
+    Provides options to specify the number of comments to return as
+    well as the sorting order (latest first or oldest first)

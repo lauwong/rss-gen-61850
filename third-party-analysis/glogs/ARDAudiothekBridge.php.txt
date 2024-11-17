@@ -1,0 +1,41 @@
+commit 98dafb61ae5519b7c6c4be2d7dd4d66b6bd6a4eb
+Author: xduugu <xduugu@gmx.com>
+Date:   Sat Dec 23 08:43:01 2023 +0000
+
+    [ARDAudiothekBridge] add duration to feed items (#3854)
+
+commit f40f99740588b09033917fd38132a99875495540
+Author: Dag <me@dvikan.no>
+Date:   Thu Dec 21 09:24:22 2023 +0100
+
+    fix: various small fixes (#3853)
+
+commit 563c2a345b632a0245f888a925151e4d23b1a776
+Author: Dag <me@dvikan.no>
+Date:   Mon Oct 16 03:43:18 2023 +0200
+
+    refactor (#3763)
+
+commit 307f5865c0bd12c32e7c5bdc0869dd0dcd403e40
+Author: realansgar <realansgar@realansgar.dev>
+Date:   Tue Mar 21 18:24:28 2023 +0100
+
+    [ARDAudiothekBridge] fix feed icon not showing in RSS feeds (#3274)
+    
+    * [ARDAudiothekBridge] fix feed icon not showing in RSS feeds
+    
+    * [ARDAudiothekBridge] Fix lint errors
+
+commit fe59cbabc950046ead7a8342e76e7a42ab1de28a
+Author: MarKoeh <75181140+Mar-Koeh@users.noreply.github.com>
+Date:   Fri Nov 4 19:03:12 2022 +0100
+
+    [ARDAudiothekBridge] added bridge ARDAudiothek.de (#3132)
+    
+    * [ARDAudiothekBridge] added bridge ARDAudiothek.de
+    
+    ARD, the union of Germany's regional public-service broadcasters, operates a video and an audio streaming service. The video streaming service is ARDMediathek, for which a bridge already exists. The audio streaming service is ARDAudiothek. This commit adds initial support for ARDAudiothek. It currently supports turning shows to feeds.
+    
+    * [ARDAudiothekBridge]  fixed code style
+    
+    Sorry. Forgot spaces surrounding the concatenation symbol

@@ -1,0 +1,17 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 8233497611075216b12d0dd4ef4ed1a1d254f69e
+Author: Fanch <github.com@qth.fr>
+Date:   Sun May 17 20:33:14 2020 +0200
+
+    [AirBreizhBridge] Add new bridge (#1544)
+    
+    * [AirBreizhBridge] Add new bridge

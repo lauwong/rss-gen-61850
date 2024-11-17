@@ -1,0 +1,29 @@
+commit 2fcba49433886ef2e1237f1bd256aadcea494309
+Author: enwuenwu <108224417+enwuenwu@users.noreply.github.com>
+Date:   Sun Jul 28 20:11:48 2024 +0000
+
+    [Mailman2Bridge] fix message separation and improve "From_ lines" disambiguation   (#4156)
+    
+    * [Mailman2Bridge.php] enable PCRE_MULTILINE pattern modifier
+    
+    Enable PCRE_MULTILINE pattern modifier on mbox content parsing. Without it parsing monthly archives results in only a single message each.
+    
+    * [Mailman2Bridge.php] extend mbox "From_ lines" pattern
+    
+    Extend PCRE pattern matching individual "From_ lines" used to split single messages in mbox content.
+    
+    In addition to the matching line having to start with 'From ' it now also has to end with time and date (hh:mm:ss yyyy).
+    
+    This makes the pattern slightly more robust against accidental matches when a line within the actual message body starts with 'From ' which Mailman 2 (Pipermail) may not be configured to disambiguate.
+    
+    * [Mailman2Bridge.php] remove trailing slash from URI constant
+    
+    ---------
+    
+    Co-authored-by: enwu <108224417+8279279374@users.noreply.github.com>
+
+commit 87f8571ccf5b3f8dcc2fcbc466970077480d1215
+Author: Loïc Fürhoff <git.noreply@posteo.no>
+Date:   Sun Jul 10 19:40:03 2022 +0200
+
+    [Mailman2] Add bridge (#2877)

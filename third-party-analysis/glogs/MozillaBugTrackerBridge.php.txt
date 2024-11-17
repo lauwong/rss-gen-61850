@@ -1,0 +1,43 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1cfcacbbebc67ab900de61f0c1e3a6d82858a6b9
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Fri Jun 24 05:04:49 2022 -0400
+
+    [BugzillaBridge] Add new bridge (#2825)
+
+commit c445ba6ebba6b8647c5a918cc9d65c02bc644c23
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Thu Oct 14 05:13:18 2021 -0400
+
+    [MozillaBugTrackerBridge] Fix incorrect newlines in feed title (#2298)
+
+commit 71745116e1a92dbe383a2938fae307608b125621
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sun May 17 18:33:01 2020 +0000
+
+    [MozillaBugTrackerBridge] Fix bridge (#1550)
+    
+    * [MozillaBugTrackerBridge] Fix bridge
+
+commit 835e3b11638f9106fa75c71b0fe2359b7b71eb8b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Mar 23 16:30:15 2019 +0100
+
+    [MozillaBugTrackerBridge] Fix typo
+
+commit 3212156925534411b3ab61beeec0d780303b31d1
+Author: Antoine Turmel <antoine.code@turmel.info>
+Date:   Sat Mar 23 16:27:07 2019 +0100
+
+    [MozillaBugTrackerBridge] New Bridge (#916)
+    
+    This Bridge is a clone of KernelBugTrackerBridge but for Mozilla Bugzilla. There is some difference in the class used to get the right comments.

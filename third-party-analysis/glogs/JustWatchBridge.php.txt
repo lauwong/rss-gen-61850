@@ -1,0 +1,41 @@
+commit cb6c931b1f62b80634b73af63ace9693bc3cbe76
+Author: Dag <me@dvikan.no>
+Date:   Sat Sep 23 17:50:41 2023 +0200
+
+    fix(duckduckgo): order by date (#3689)
+
+commit 748fc9fd65fe775f66580e9929c11c3a2d5c4c3a
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 2 06:40:25 2023 +0200
+
+    fix: various small notice fixes (#3474)
+    
+    * fix(patreon): php notice
+    
+    * fix(pepperbridge): php notice
+    
+    * fix(ebay): php notice
+    
+    * fix(tiktok): php notice
+    
+    * fix(yandex): fix notice
+    
+    * fix(justwatch): notice
+    
+    * lint
+
+commit f3f98a117cf55be85e0078766fac6879e914256e
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 2 13:25:57 2023 +0100
+
+    [Core] Add getKey function (#3275)
+    
+    * [Core] Add getKey function
+
+commit f0d8cfd4d44477920cfc890cda7b0fab4d541dd7
+Author: Bocki <henning@bocklage.com>
+Date:   Wed Mar 1 20:24:01 2023 +0100
+
+    [JustWatchBridge] New bridge (#3273)
+    
+    * [JustWatchBridge] New bridge

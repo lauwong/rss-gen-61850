@@ -1,0 +1,67 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit f34e09e93bc2d1a5f119497abdc0202d11cb32f5
+Author: Dag <me@dvikan.no>
+Date:   Thu Mar 24 01:50:07 2022 +0100
+
+    [GithubGist] fix: broken css selector for title
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 4187d8f4cfd84cd194e2de72d8825604bfe2e4c7
+Author: Florent Machen <florent.machen@gmail.com>
+Date:   Fri Oct 29 22:32:31 2021 +0200
+
+    [GitHubGistBridge] fix use the css selector "contains" to find a class in the middle of the utility classes (#2306)
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 2e6cbd1ce7510bd7fde874a593b1c519a156d6cb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Nov 3 11:52:31 2018 +0100
+
+    [GitHubGistBridge] Fix broken bridge
+    
+    `defaultLinkTo` makes anchors point to the correct path which broke
+    parsing because it expected href to start with `#gistcomment`.
+    
+    This commit changes the implementation to make `defaultLinkTo` point
+    to the correct page (using `getURI` instead of `self::URI`) and search
+    with `*=` instead of `^=`.
+
+commit 0d1923c52f9b3f4f916309971e793be551169b3f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jul 29 16:26:20 2018 +0200
+
+    [GitHubGistBridge] Add new bridge
+    
+    Adds a new bridge for https://gist.github.com
+    
+    The bridge generates feeds for comments on a particular gist based on
+    the gist ID or full URI. For better readability the general behavior
+    of code sections is manually restored with the original CSS styles
+    from GitHub.

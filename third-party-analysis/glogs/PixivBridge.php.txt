@@ -1,0 +1,201 @@
+commit f358f1abec8278c4e5659b311bf8eea5f34802d8
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 17:47:04 2024 +0200
+
+    refactor: loadCacheValue/saveCacheValue (#4205)
+
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit 001dd47439339672b6e84979fd0e1a0118bc27b6
+Author: Dag <me@dvikan.no>
+Date:   Thu Apr 4 19:12:04 2024 +0200
+
+    fix: small tweaks (#4057)
+
+commit 0bf5dbbc0ba46cc27fe40b554b0c3c0ba705ef8b
+Author: Dag <me@dvikan.no>
+Date:   Tue Jan 9 20:33:35 2024 +0100
+
+    chore: add tools for manually administrating the configured cache (#3867)
+
+commit 3178deb5a8ce979baf186b69e5a427bb14adef4f
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 23:35:40 2023 +0200
+
+    fix: mastodon, cache tweaks, docs (#3661)
+    
+    * cache tweaks
+    
+    * docs
+    
+    * fix(mastodon): type bug
+
+commit b3a784244808041a264c3bd548d2bdca9a143275
+Author: mruac <ant8672@gmail.com>
+Date:   Wed Sep 6 23:46:25 2023 +0930
+
+    [PixivBridge] Add cookie auth and options (#3653)
+    
+    * added cookie mgmt and support for issue
+    https://github.com/RSS-Bridge/rss-bridge/issues/2759
+    
+    * added image proxy option
+    
+    * + mature and ai options, + cookie doc
+    
+    * mention doc
+    
+    * check cookie is auth'd
+
+commit 9e9a697b8bf43041f9c946996a25300df8870ea4
+Author: Dag <me@dvikan.no>
+Date:   Mon Mar 20 19:10:01 2023 +0100
+
+    feat: add config option "path" for file cache (#3297)
+
+commit f0e5ef0fc58f3796bb4c03caa2c5e7ca78de119e
+Author: Bocki <henning@bocklage.com>
+Date:   Mon Mar 6 20:01:51 2023 +0100
+
+    [Various] getKey replacements and docu (#3283)
+    
+    * [Various] getKey replacements and docu
+    
+    * more bridges and fix to the abstract
+    
+    * linting
+    
+    * revert bandcampdaily. doing more than i thought
+
+commit f40ed566be6e1192fc128884910a3f072bdb008c
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 2 20:35:17 2022 +0200
+
+    fix: absolute urls for images in pixivbridge (#2993)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1e7ad6ed51d1f8e567b254706c7239930fd6de31
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Fri Jun 24 05:31:24 2022 -0400
+
+    [PixivBridge] Remove backwards compatability hack (#2846)
+    
+    There is no need for this since the context is guessed if it's not
+    provided.
+
+commit abb4c17a0df6fb76255ba5b42cc84a820ba31f81
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Wed Jun 22 13:07:54 2022 -0400
+
+    bridges: Update maintainer (#2856)
+
+commit 8f0d90f653702f4a38e1069f655d140b0faa1cce
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Wed Jun 8 23:05:56 2022 -0400
+
+    [PixivBridge] Fix tags (#2799)
+
+commit 1fd2f37bb400b46530d5d1b510ceaae862b30336
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Sat Jun 4 14:53:10 2022 -0400
+
+    [PixivBridge] Fix 404 for fullsize novel images (#2751)
+
+commit 0ce71d561d94fd31a652b182299178696fedfd8a
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Sun May 8 10:17:26 2022 -0400
+
+    [PixivBridge] [UnsplashBridge] Fix deprecated null (#2705)
+
+commit 410daee1d5cdc0fd7c5ec2125126b0f2089af85f
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Sat May 7 20:46:57 2022 -0400
+
+    [PixivBridge] Add User context (#2650)
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 44e01a4282031912a8d2becba032cf3101386d96
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Mon May 24 15:42:39 2021 -0400
+
+    [PixivBridge] Rewrite Bridge (#2111)
+    
+    Also added options:
+    - Search for Illustrations, Manga or Novels
+    - Custom Post Limit
+    - Choose between thumbnails and full-sized image
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit ecdac1b0893e6e0e5ec35168fdf136482b82cce6
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Nov 10 19:48:05 2018 +0100
+
+    core: Add path separator to PATH_CACHE
+
+commit 2126db84accbc303e0420cac2bda19b199b2d76b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Nov 6 18:35:40 2018 +0100
+
+    core: Replace CACHE_DIR by PATH_CACHE
+    
+    Move CACHE_DIR from index.php to /lib/RssBridge.php and change name
+    to PATH_CACHE.
+    
+    PATH_CACHE is one of the core paths of RSS-Bridge and should therefore
+    be defined in the core file RssBridge.php.
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit e7dab5d35167a9537feee5d03cfca68dcc4a9d07
+Author: Piranhaplant <piranhaplant1@gmail.com>
+Date:   Sat Aug 18 14:54:24 2018 -0500
+
+    Fixed timestamp on Pixiv bridge (#785)
+
+commit 5fea9fc1f5014485818d0331666cb58675f89378
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 5 15:53:45 2018 +0200
+
+    bridges: Fix bridges failing unit test
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit 494169f959363bf71e4b0be005cb5542f6d2d871
+Author: teromene <teromene@teromene.fr>
+Date:   Sat Apr 14 16:19:35 2018 +0100
+
+    Added bridge for Pixiv.
+    This bridge is slow, as caching of images is required (REFERER header required to access the full size images)

@@ -1,0 +1,127 @@
+commit 00d524287141179ca591065ad7b8b23db4ffcaab
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Mon Jul 29 01:30:36 2024 +0530
+
+    [GithubTrendingBridge] Add support for spoken languages (#4149)
+    
+    * [GithubTrendingBridge] Add support for spoken languages
+    
+    * Update GithubTrendingBridge.php
+
+commit 8fd677f4ae43c49a89fa4526d6f98e9f30701909
+Author: Joseph <VerifiedJoseph@users.noreply.github.com>
+Date:   Wed May 10 20:14:21 2023 +0000
+
+    [GithubTrendingBridge] Fix items (#3381)
+
+commit f0e5ef0fc58f3796bb4c03caa2c5e7ca78de119e
+Author: Bocki <henning@bocklage.com>
+Date:   Mon Mar 6 20:01:51 2023 +0100
+
+    [Various] getKey replacements and docu (#3283)
+    
+    * [Various] getKey replacements and docu
+    
+    * more bridges and fix to the abstract
+    
+    * linting
+    
+    * revert bandcampdaily. doing more than i thought
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 6d4155f995cc4c0b6456e37e453cd2f874630b85
+Author: Michael Bemmerl <mail@mx-server.de>
+Date:   Tue Mar 29 18:15:18 2022 +0000
+
+    [GithubTrendingBridge] Fix bridge: not all languages worked (#1615)
+    
+    * [GithubTrendingBridge] Fix bridge: not all languages worked
+    
+    Languages with more than one word (like "Common Lisp") were not working. Looks like GitHub changed the parameter format: white space is encoded with dashes.
+    
+    This prompted me to update all languages while I was at it. This also fixed the bug that the C# & F# languages were not working, because the # has to be URL encoded, which is now done in the parameter value. The language "Ren'Py" was commented out. Probably because the single quote was not escaped? I also fixed that.
+    
+    * [GithubTrendingBridge] Fix PHP notice.
+    
+    A repo owner can leave the repo description empty, which means the HTML element isn't there. In this case the code produced a PHP notice. This is fixed by checking for null.
+    
+    * Changed getName() to retrieve the language name directly from the PARAMETERS.
+    
+    Co-authored-by: dag <me@dvikan.no>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit e8db2479b568d4bb56371bb34c9759500de370b4
+Author: dag <me@dvikan.no>
+Date:   Tue Mar 22 20:41:59 2022 +0100
+
+    [GithubTrendingBridge] fix: the description selector was broken (#2513)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit fbfc82b0b7118a9c986da34a4a048b19b4344335
+Author: Kirill Kotikov <liamka@me.com>
+Date:   Thu Mar 26 21:37:19 2020 +0300
+
+    Revert feed title
+
+commit f2de5aecc729e70f8d72a49f4ca0c5da033cfff7
+Author: Kirill Kotikov <liamka@me.com>
+Date:   Tue Mar 24 19:07:23 2020 +0300
+
+    Change feed title
+
+commit 0fd702103051d4e9a2fd1c800eac0bfc7a068f6d
+Author: Kirill Kotikov <liamka@me.com>
+Date:   Mon Mar 23 10:35:02 2020 +0300
+
+    Change cache time to 24hr (daily update time)
+
+commit 3ec32bb6c2bb2e41c76d9d755794dde0ec9e4075
+Author: Kirill Kotikov <liamka@me.com>
+Date:   Sun Mar 22 21:43:37 2020 +0300
+
+    Fix title if language not set
+
+commit ec7ef8f5026681ca0624992aad2fa4d6715ca003
+Author: Kirill Kotikov <liamka@me.com>
+Date:   Sat Mar 21 05:07:38 2020 +0300
+
+    Update GithubTrendingBridge.php
+
+commit 7b73f3217f1239a1f5784d261e13a9c49e3db73b
+Author: Kirill Kotikov <liamka@me.com>
+Date:   Sat Mar 21 05:01:45 2020 +0300
+
+    Fix page request
+
+commit 7c71377af08db38695deb7f89d19f8731324fc5f
+Author: Kirill Kotikov <liamka@me.com>
+Date:   Fri Mar 20 16:34:42 2020 +0300
+
+    Add additional languages + fix issues
+
+commit c2559ff71fb3ffb81810152d46071129a2e8a4d9
+Author: Kirill Kotikov <liamka@me.com>
+Date:   Mon Mar 16 19:25:28 2020 +0300
+
+    Add sdfsf

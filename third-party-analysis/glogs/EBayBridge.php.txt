@@ -1,0 +1,81 @@
+commit 1a8d0fb8ab9fe32350c1395bd5a9d1b3166980fa
+Author: Zack Puhl <31320277+NotsoanoNimus@users.noreply.github.com>
+Date:   Wed Jul 31 11:51:05 2024 -0400
+
+    [EBayBridge] fix undefined vars errors (#4175)
+
+commit 22b39e3fcd75705db99f53b74eb03aa1e16d0fab
+Author: Zack Puhl <31320277+NotsoanoNimus@users.noreply.github.com>
+Date:   Mon Jul 29 11:53:39 2024 -0400
+
+    [EBayBridge] Repair & Augment the eBay Feed (#4157)
+    
+    * [EBayBridge]: discount details; fix DOM parsing
+    
+    * [EBayBridge] Ending slash. No "www.ebay.commyhijack.net", for example.
+    
+    * [EBayBridge] Trim discountLine details when set.
+    
+    * [EBayBridge] Refactor and update content
+    
+    * shameless self-addition to CONTRIBUTORS.md
+    
+    * [EBayBridge] Toggle original search links w/ checkbox
+    
+    * [EBayBridge] oops: fix introduced XSS vuln
+    
+    * [EBayBridge] Fix linting error: use array_column
+    
+    * [EBayBridge] fix compat with <php8
+
+commit 8f962383c269aa181c3fc7025c478ae712cd38a3
+Author: Dawid Wróbel <me@dawidwrobel.com>
+Date:   Tue Apr 2 01:01:23 2024 +0200
+
+    [eBayBridge] fix Belgian eBay URL handling (#4050)
+    
+    Fixes #3918
+
+commit 487c692e68bdc75adddb23d342fd77d9418688d2
+Author: Dag <me@dvikan.no>
+Date:   Tue Jan 23 23:02:06 2024 +0100
+
+    fix: a few deprecation notices on php 8.2 (#3917)
+    
+    * fix: a few deprecation notices on php 8.2
+    
+    * tweak
+
+commit 701fe3cfeda0d14f1f49afe2bd0f89296214459e
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 29 00:14:30 2023 +0200
+
+    fix: various small fixes (#3578)
+
+commit 748fc9fd65fe775f66580e9929c11c3a2d5c4c3a
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 2 06:40:25 2023 +0200
+
+    fix: various small notice fixes (#3474)
+    
+    * fix(patreon): php notice
+    
+    * fix(pepperbridge): php notice
+    
+    * fix(ebay): php notice
+    
+    * fix(tiktok): php notice
+    
+    * fix(yandex): fix notice
+    
+    * fix(justwatch): notice
+    
+    * lint
+
+commit 7eca5271602f5529b47008d63fbfe319f422b951
+Author: Dawid Wróbel <me@dawidwrobel.com>
+Date:   Sat Apr 15 18:40:49 2023 +0200
+
+    [eBayBridge] New bridge (#3349)
+    
+    Fixes #3268

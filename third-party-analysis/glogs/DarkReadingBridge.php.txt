@@ -1,0 +1,71 @@
+commit 6f731b20a9a0a6f7913b77dc9c92dd59a21279fc
+Author: Dag <me@dvikan.no>
+Date:   Fri Feb 9 08:03:04 2024 +0100
+
+    fix(DarkReading): official rss endpoint changed (#3967)
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit f53e0e4beea62d1ca4b8a600a8110b59fbf49484
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Tue Nov 22 18:42:31 2022 +0100
+
+    [DarkReading] Convert pictures to plain images (#3158)
+    
+    Convert <picture> to <img> element
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5a733b3d821ec857711a65bc451f303a846b5faa
+Author: dag <me@dvikan.no>
+Date:   Sun Apr 10 18:56:24 2022 +0200
+
+    feat: add limit options to the slowest bridges
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 970bdd45f9d4e548355c0bd8cfce1f5f87ef7688
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Fri Oct 29 22:21:07 2021 +0200
+
+    [DarkReadingBridge] Fix content extraction (#2315)
+    
+    Also:
+    - Add article limit (main feed was broken due to too many articles)
+    - Add support for article thumbnail
+
+commit 00dd81a8aadad1ec94e955255abc2dab151222da
+Author: ORelio <oreliogitantispam.l0gin@spamgourmet.com>
+Date:   Wed Mar 25 20:40:17 2020 +0100
+
+    [DarkReading] Hide dummy articles
+
+commit f12f6a2dba100f7622874e5b5fd35d7417ab9582
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Mon Sep 16 21:25:28 2019 +0200
+
+    [DarkReading] Add DarkReading Bridge (#1289)

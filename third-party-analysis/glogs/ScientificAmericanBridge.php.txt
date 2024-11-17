@@ -1,0 +1,31 @@
+commit 428c6c3c66b0f2730a8eb899d7a5768cdd279777
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Fri Apr 12 02:57:55 2024 +0300
+
+    [ScientificAmericanBridge] Update bridge (#4074)
+    
+    * [ScientificAmericanBridge] Update bridge
+    
+    * [ScientificAmericanBridge] Fix lint
+
+commit a73b66f4d63766e42e6c772fe5d096e11de2a753
+Author: Dag <me@dvikan.no>
+Date:   Wed Apr 10 18:32:48 2024 +0200
+
+    fix(ScientificAmericanBridge) (#4070)
+
+commit bf4ea127196a318b3e0440d0e8be9d96fc186b13
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Wed Jul 26 22:47:47 2023 +0300
+
+    [ScientificAmerican] Fix bridge (#3575)
+
+commit 5b53e76477218b1861e317511f3d40b5deba229d
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Wed Oct 19 19:34:11 2022 +0300
+
+    [ScientificAmericanBridge] Add bridge (#3109)
+    
+    * [ScientificAmericanBridge] Add bridge
+    
+    * [ScientificAmericanBridge] Fix lint errors and timeout

@@ -1,0 +1,101 @@
+commit bb36eb9eb831eb6bce8641323b7e5ce90798575b
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Fri Jan 19 21:30:53 2024 +0100
+
+    [CssSelectorBridge] Time/Thumbnail improvements (#3879) (#3901)
+    
+    * Implement <time> metadata tag as timestamp source
+    * Add setting to include thumbnail as article header
+
+commit 9056106c2d52991931ba7fc1c41494697396d477
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Wed Oct 18 19:13:33 2023 +0200
+
+    [CNet] Rewrite bridge (#3764) (#3770)
+    
+    Bridge was broken.
+    Full bridge rewrite using Sitemap as source.
+
+commit 47f52b5912f442389e9b5a867044efc6f4680b7b
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Mon Oct 9 08:48:21 2023 +0200
+
+    Add CSS Selector Feed Expander (#3732)
+    
+    * Add CSS Selector Feed Expander
+    
+    This bridge combines CssSelectorBridge with FeedExpander
+    Allows expanding a feed using CSS selectors
+    
+    * Fix code linting
+    
+    ---------
+    
+    Co-authored-by: ORelio <ORelio>
+
+commit 3557e5ffd4c2024c36d6a448c520cb9afd5cc2aa
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sat Sep 30 15:03:52 2023 +0200
+
+    [CssSelector/Sitemap] Minor fixes (#3719)
+    
+    - Apply title_cleanup to title from metadata (#3717)
+    - Metadata: Fix ld+json object/array confusion
+    - Sitemap: Also try /sitemap.xml well known url
+
+commit e1b911fc1f3416d49c5ad5cc68587f64ab8890eb
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sun Sep 24 23:07:43 2023 +0200
+
+    [CssSelectorBridge] Retrieve metadata for social media embeds (#3602, #3687) (#3706)
+    
+    * [CssSelectorBridge] Metadata from social embed (#3602, #3687)
+    
+    Implement the following metadata sources:
+     - Facebook Open Graph
+     - Twitter <meta> tags
+     - Standard <meta> tags
+     - JSON linked data (ld+json)
+    
+    The following metadata is supported:
+     - Canonical URL (may help removing garbage from URLs)
+     - Article title
+     - Truncated summary
+     - Published/Updated timestamp
+     - Enclosure/Thumbnail image
+     - Author Name or Twitter handle
+    
+    SitemapBridge will also automatically benefit from this commit.
+    
+    * [php8backports] Add array_is_list()
+    
+    Needed this function for ld+json implementation in CssSelectorBridge.
+    
+    * [SitemapBridge] Add option to discard thumbnail
+    
+    * [CssSelectorBridge] Fix linting issues
+
+commit 437afd67e0bc339bf328488f4c7411d71a872647
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 24 18:15:14 2023 +0200
+
+    fix: various fixes (#3702)
+    
+    * fix: symfonycasts
+    
+    * various fixes
+
+commit b86ee5778bc34fe032439f540c8a1e2c1e6b3ec9
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Tue Aug 8 15:02:01 2023 +0200
+
+    [SitemapBridge] Add SitemapBridge (#3602)
+    
+    * [SitemapBridge] Add SitemapBridge
+    
+    This bridge is a variant of CssSelectorBridge.
+    Instead of retrieving article list from home page,
+    retrieves article list from SEO sitemap.xml.
+    Requires CssSelectorBridge to be installed.
+    
+    * [SitemapBridge] Code linting

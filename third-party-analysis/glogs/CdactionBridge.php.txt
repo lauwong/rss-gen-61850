@@ -1,0 +1,21 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 2e889556489fa267033fb66a8985f8ee2eb915d1
+Author: Tomasz Kane <tomasz.kane@gmail.com>
+Date:   Wed Mar 9 22:03:21 2022 +0100
+
+    [CdactionBridge] Add missing channels (#2477)
+
+commit 09fac3aa35cc85713f40dcd520c11dafcb3e3549
+Author: Tomasz Kane <tomasz.kane@gmail.com>
+Date:   Sun Jan 30 09:52:00 2022 +0100
+
+    [CdactionBridge] Add new bridge (#2431)

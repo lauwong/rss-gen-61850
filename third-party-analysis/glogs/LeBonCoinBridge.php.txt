@@ -1,0 +1,559 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit e5846c03ba06f8feea66a78bc2fde8c3fbf602e6
+Author: Lyra <teromene@teromene.fr>
+Date:   Sun Feb 7 14:44:28 2021 +0100
+
+    Attempt to fix LeBonCoinBridge
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit a86a94555d70f75ab48d413cd755cc69cdfa2002
+Author: Lyra <teromene@teromene.fr>
+Date:   Mon Aug 26 14:22:58 2019 +0200
+
+    [LeBonCoinBridge] Submit user agent to LBC to get results.
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 622802e5d4f1869a1a5fb6c603264391294dadc7
+Author: Quentin Delmas <teromene@teromene.fr>
+Date:   Wed Sep 12 13:31:11 2018 +0100
+
+    Fix multiple warnings.
+    Fix JSON request string in case of empty location
+
+commit 19f294d71d1946a61ec4ff2941688a4ac8a50b9b
+Author: Antoine Cadoret <antoine.cdrt@gmail.com>
+Date:   Fri Aug 31 15:34:41 2018 +0200
+
+    Add fields to leboncoin bridge (#783)
+    
+    * [LeBonCoinBridge] Add fields to LeBonCoinBridge
+
+commit b0e33e4e01d72387577b68adea9ef4ee9ce50982
+Author: Teromene <teromene@teromene.fr>
+Date:   Tue Aug 28 14:20:02 2018 +0100
+
+    Update LeBonCoinBridge to use the site's API (#795)
+    
+    * Update LeBonCoinBridge to use the site's API
+
+commit 059656c3707cfeaf3ef8e12dd77444569c343635
+Author: Quentin Delmas <teromene@teromene.fr>
+Date:   Wed Aug 22 16:25:08 2018 +0100
+
+    Fix phpcs.
+
+commit 9fc1e97efe01a07b6f701ffff70a03ceac1110b3
+Author: Quentin Delmas <teromene@teromene.fr>
+Date:   Wed Aug 22 16:21:39 2018 +0100
+
+    Avoid bot exclusion.
+
+commit f92ac4994784529aa762068d18d40046f40779ac
+Author: sublimz <sublimz@gmail.com>
+Date:   Wed Aug 1 17:25:18 2018 +0200
+
+    [LeBonCoinBridge] Add cities support (#751)
+
+commit 1f2fe25471f51115af4679ca17133acc934ca746
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Jul 17 10:50:30 2018 +0200
+
+    Fix LeBonCoinBridge, now uses getContents correctly,
+
+commit 87fc9e915661adad323c552ea82a7dbc2b59dbaf
+Author: Antoine Cadoret <antoine.cdrt@gmail.com>
+Date:   Mon Jul 16 20:13:08 2018 +0200
+
+    fix LeBonCoin bridge (#747)
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit e125e9aba12ff350c643cd459af516c4e132e6aa
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Aug 5 22:00:00 2017 +0200
+
+    [LeBonCoinBridge] Fix bridge is marked executable
+    
+    Closes #561
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 2ac0469750ba31ff8b998d17e920f53b26282012
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Tue Mar 21 21:27:12 2017 +0100
+
+    Updated 4 bridges to use HTTPS (#497)
+    
+    * [NextInpactBridge] Use https
+    
+    * [InstagramBridge] Use https
+    
+    * [GBAtempBridge] Use https
+    
+    * [LeBonCoinBridge] Use https
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 5547de1785b8bbc6d8d58a0291875f5db1c42efa
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Sep 23 19:38:36 2016 +0200
+
+    Allow "Toute la France" as a "Région"
+    
+    The way Leboncoin.fr handles "Toute la France" is weird, but the value is "ile_de_france/occasions"
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 0668f79704099243778e9302a16755b0db8a2322
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 29 12:42:34 2016 +0200
+
+    [LeBonCoinBridge] code simplification
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 1b3c8a8aeba5641f3bec9a6a720939df537bfa83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 01:25:33 2016 +0200
+
+    [core + bridges] add BridgeAbstract::$inputs and BridgeAbstract::getInput()
+    
+    Inputs are not stored in BridgeAbstract::$parameters anymore to separate
+    static data from dynamic data.
+    The getInput method allows for more readable code.
+    
+    Also fix an "undefined index 'global'" notice
+    
+    Probability of breaking bridges: high !
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit d5418b3d11eba65f58ffab6491df86a7356dcfc1
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 11:15:00 2016 +0200
+
+    [LeBonCoinBridge] fix typo in values list
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3c0d13c1bb72a87f0d671692e205f45f04d94eba
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 19:06:35 2016 +0200
+
+    bridges: use BridgeAbstract::getSimpleHTMLDOM
+    
+    instead of BridgeAbstract::file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 74f0572d914617b4e47fe0fd2fabfe356710d609
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Aug 17 14:45:08 2016 +0200
+
+    bridges: Replace returnError function with more specific
+    
+    Replacements depend on original error code:
+    400: returnClientError
+    404: returnServerError
+    500: returnServerError
+    501: returnServerError
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit 5ad157d2fddc23e447dfb0792911f40dc28ee8a0
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Sat Aug 6 16:17:58 2016 +0200
+
+    bridges: Remove getCacheDuration if default
+    
+    BridgeAbstract will return 3600 seconds by default, so the function
+    can be removed from any bridge implementing getCacheDuration
+    returning the same value.
+    
+    Documentation updated accordingly.
+
+commit 955eecc299e67a1062a9e75149b6c098fb9d2cbc
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Jun 25 23:17:42 2016 +0200
+
+    use BridgeAbstract::file_get_html in all bridges
+    
+    instead of simple_html_dom function file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 796c14758ff90784c772605a7db8f2c50f7d209e
+Author: wtuuju <wtuuju@users.noreply.github.com>
+Date:   Mon May 2 10:30:13 2016 +0200
+
+    categories added + fixed html entities
+
+commit 642e4173d1756b56abdfbc7c38a16737f037b749
+Author: wtuuju <wtuuju@users.noreply.github.com>
+Date:   Mon May 2 00:55:22 2016 +0200
+
+    categories added
+
+commit 88a78b56662d8d7b435554b465419d36e8503e51
+Author: Teromene <teromene@teromene.fr>
+Date:   Sun May 1 16:57:40 2016 +0100
+
+    LeBonCoinBridge fixed.
+
+commit 438a389286017a90a24fd0e3b2c34d9091695e7f
+Author: Ginko-Aloe <ginko.aloe@gmail.com>
+Date:   Tue Jan 19 18:04:35 2016 +0100
+
+    urlencode keyword parameter
+    
+    in order to handle non-trivial request keywords
+
+commit 379c89045b81443b0c69501e23bc480aacbb88e6
+Author: Teromene <teromene@teromene.fr>
+Date:   Tue Jan 19 12:15:16 2016 +0000
+
+    Quoted the "r" and "k" in the parameters
+
+commit 80008f01f8e91df3e024a6a6a2aa6d3a7b7fd3e7
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Nov 5 18:05:46 2015 +0000
+
+    Updating a few bridges.
+    Adding everybody to the contributors in README.md
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 78c9dcc705682cb3e71912fae19365d71ee7bf22
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Nov 5 15:50:18 2015 +0000
+
+    Last batch of bridges, all implemented !
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 182be9b57564ba26d7318e281a470768f9b4db68
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Fri Oct 30 17:49:46 2015 +0100
+
+    [LeBonCoin] -oops- forgot keyword type
+
+commit 60a82b52b722ea163f8f875cd60c540e4598694a
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Fri Oct 30 17:45:10 2015 +0100
+
+    [LeBonCoin] add region selection list
+
+commit ef0329b09cb9980c5c9e7721e02ef247bb2e320e
+Author: Glandos <bugs-github@antipoul.fr>
+Date:   Wed Apr 15 21:55:24 2015 +0200
+
+    Handle missing items in LeBonCoinBridge
+    
+    Ignore missing items instead of doing 500 errors.
+
+commit 5714892115640d03c2d6a02c5ce96f2ac9b31e9a
+Author: 16mhz <yoros@gmx.com>
+Date:   Tue Jul 22 17:20:43 2014 +0200
+
+    Add: New bridge for LeBonCoin with region filter

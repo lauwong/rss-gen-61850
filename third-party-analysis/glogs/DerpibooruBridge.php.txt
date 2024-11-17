@@ -1,0 +1,54 @@
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit b48739d0baa7e12c01dbcfa4fedddf33b9771e47
+Author: dag <me@dvikan.no>
+Date:   Wed Dec 8 17:17:28 2021 +0100
+
+    [DerpibooruBridge] Fix parsing of title (#2346)
+    
+    The previous value was an int and was not accepted
+    by rss-bridge as a title. This change uses the image
+    name instead which fixes the problem and is a better
+    title than the image id.
+
+commit d7ba7782f3ecc721a63a9f9f0b87932b246765b4
+Author: marius851000 <marius851000@gmail.com>
+Date:   Mon Apr 26 20:07:42 2021 +0200
+
+    [DerpibooruBridge] Make it work again (#2079)
+
+commit 4b22862295699490e8e56044942cf0f29a8b918c
+Author: Roliga <roliga.here@gmail.com>
+Date:   Wed Dec 26 21:14:04 2018 +0100
+
+    [DerpibooruBridge] Add new bridge (#949)
+    
+    New bridge for the derpibooru.org image board.

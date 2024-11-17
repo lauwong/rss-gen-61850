@@ -1,0 +1,23 @@
+commit 7a7f8d5050177dfc4eac763feb257745ce39c238
+Author: July <phantop@tuta.io>
+Date:   Tue Mar 5 19:28:24 2024 -0500
+
+    AnnasArchiveBridge: correctly handling partial matches and file links (#3997)
+
+commit 8a6798a2276026ec8fe06b0056607a6e461cf330
+Author: Dag <me@dvikan.no>
+Date:   Fri Feb 9 07:27:16 2024 +0100
+
+    fix: escape token for html context (#3966)
+
+commit d9ac0195506040e68cebfc81c5753e416ab7b22f
+Author: July <phantop@tuta.io>
+Date:   Wed Jan 10 18:42:57 2024 -0500
+
+    [AnnasArchiveBridge] Add new bridge (#3888)
+    
+    * [AnnasArchiveBridge] Add new bridge
+    
+    * [AnnasArchiveBridge] Add missing exampleValue
+    
+    * [AnnasArchiveBridge] Remove vestigial debug print

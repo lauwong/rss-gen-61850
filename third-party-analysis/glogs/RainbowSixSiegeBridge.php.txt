@@ -1,0 +1,189 @@
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit a1237d90f10539dcea9d3efdbff5dd5472b1928b
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Tue Aug 15 16:16:06 2023 +0200
+
+    [RainbowSixSiegeBridge] fix links, date and img tag (#3619)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit d94bb082597299d3cf39003be4e3db998385485f
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Sun Feb 27 19:33:46 2022 +0100
+
+    [RainbowSixSiegeBridge] Fix bridge (#2475)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit ff98efe8dc13c978be3a715da44f825af194513c
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Fri Oct 9 20:29:02 2020 +0200
+
+    [core] Use Parsedown for Markdown parsing (#1783)
+
+commit 9e74cc64ede0a82172c9d165598a7b85e2506d0c
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Fri Jul 24 09:56:41 2020 +0200
+
+    [RainbowSixSiegeBridge] Fix bridge (#1587)
+
+commit 45287e6853926aa49714ca7f2127efe4d8af8cd1
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Fri Jan 31 14:51:59 2020 +0100
+
+    [RainbowSixSiegeBridge] Fix bridge (#1433)
+
+commit 0f8443e1d3c8486c526e5382b780e56f04b7ff65
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Mon Nov 5 18:20:17 2018 +0100
+
+    [RainbowSixSiegeBridge] Fix missing news (#908)
+
+commit 7621784598b8a5e46e281e866d844ab13be947fd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Oct 26 18:07:34 2018 +0200
+
+    bridges: Add favicon to bridges missing it
+    
+    Adds favicon to bridges that support it. Some sites prevent downloading
+    favicons, those bridges are left untouched.
+    
+    Affected bridges:
+    
+    - AutoJMBridge
+    - BandcampBridge
+    - BlaguesDeMerdeBridge
+    - BloombergBridge
+    - BundesbankBridge
+    - ChristianDailyReporterBridge
+    - ContainerLinuxReleasesBridge
+    - DailymotionBridge
+    - DiceBridge
+    - DribbbleBridge
+    - EliteDangerousGalnetBridge
+    - ElsevierBridge
+    - FacebookBridge
+    - FB2Bridge
+    - FDroidBridge
+    - FierPandaBridge
+    - GooglePlusPostBridge
+    - JapanExpoBridge
+    - KATBridge
+    - KernelBugTrackerBridge
+    - LegifranceJOBridge
+    - NotAlwaysBridge
+    - NyaaTorrentsBridge
+    - PinterestBridge
+    - RadioMelodieBridge
+    - RainbowSixSiegeBridge
+    - SupInfoBridge
+    - TagBoardBridge
+    - TebeoBridge
+    - TheTVDBBridge
+    - WhydBridge
+    - ZoneTelechargementBridge
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 5caca6267715d154be5b4934ac9913a96d641427
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Fri Jul 14 22:05:51 2017 +0200
+
+    Update RainbowSixSiegeBridge (#548)
+    
+    * Fix non-working RainbowSixSiegeBridge
+    
+    * Updated RainbowSixSiegeBridge to use API to fetch articles
+    
+    * Fix RainbowSixSiegeBridge coding style
+    
+    * RainbowSixSiegeBridge fix url coding style error
+
+commit ea3073e27f545fe5b1b5652c8bfcdef01640ebc9
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Mon Mar 20 21:32:31 2017 +0100
+
+    [RainbowSixSiegeBridge] Added bridge for Rainbow Six Siege blog

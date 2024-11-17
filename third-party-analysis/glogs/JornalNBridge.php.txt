@@ -1,0 +1,53 @@
+commit 6c0e186d3fb469465ed991866abda9b146525c25
+Author: Dag <me@dvikan.no>
+Date:   Tue Jul 11 16:54:59 2023 +0200
+
+    fix(jornaln): Array to string conversion at lib/BridgeAbstract.php li… (#3523)
+    
+    * fix(jornaln): Array to string conversion at lib/BridgeAbstract.php line 320
+    
+    * yup
+
+commit d8bc015efcad6e5fb456ff956d82bd4ec797e5d1
+Author: Dag <me@dvikan.no>
+Date:   Mon Jul 3 00:39:01 2023 +0200
+
+    fix: php notices (#3479)
+    
+    * fix(jornaln): A non well formed numeric value encountered
+    
+    fixes
+    
+    A non well formed numeric value encountered at bridges/JornalNBridge.php line 89
+    
+    * fix(reuters): fix notice
+
+commit cc91ee1e37a16e40c89bb04b0782ab8eb2187655
+Author: rmscoelho <50850007+rmscoelho@users.noreply.github.com>
+Date:   Fri Jun 30 14:54:53 2023 +0100
+
+    [JornalNBridge] getName() fix (#3456)
+    
+    * [JornalNBridge] getName() fix
+    
+    * [JornalNBridge] feed fixes
+
+commit 12ba6154f93a4ad2cc3984a8381f6512461a87df
+Author: rmscoelho <50850007+rmscoelho@users.noreply.github.com>
+Date:   Wed Jun 21 10:15:36 2023 +0100
+
+    [JornalNBridge] cache timeout fix (#3452)
+    
+    * [JornalNBridge] cache timeout fix
+    
+    * [JornalNBridge] cache timeout fix
+
+commit 8e35ebf482e51597d086356e610f91be8b61b323
+Author: rmscoelho <50850007+rmscoelho@users.noreply.github.com>
+Date:   Wed Jun 21 04:17:11 2023 +0100
+
+    [New Bridge] Jornal N (Portuguese local newspaper) (#3451)
+    
+    * [New Bridge] Jornal N (Portuguese local newspaper)
+    
+    * [JornalNBridge] formatting fixes

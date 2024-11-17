@@ -1,0 +1,39 @@
+commit f358f1abec8278c4e5659b311bf8eea5f34802d8
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 17:47:04 2024 +0200
+
+    refactor: loadCacheValue/saveCacheValue (#4205)
+
+commit 4b9f6f7e53e0b2e9aae59df2bbffc0bdd6805aea
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 21:50:15 2023 +0200
+
+    fix: rewrite and improve caching (#3594)
+
+commit 887f4bbe154b451707004e0da16aaa420ac015e9
+Author: mrnoname1000 <mrnoname1000@riseup.net>
+Date:   Thu Apr 27 12:24:29 2023 -0500
+
+    [BugzillaBridge] Explicitly request JSON (#3364)
+
+commit 343fd36671cc1c30fa707334fa7be03d183d12d3
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Wed Apr 19 20:53:35 2023 +0500
+
+    [core] Remove hardcoded maximum duration of 24 hours in loadCacheValue (#3355)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1cfcacbbebc67ab900de61f0c1e3a6d82858a6b9
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Fri Jun 24 05:04:49 2022 -0400
+
+    [BugzillaBridge] Add new bridge (#2825)

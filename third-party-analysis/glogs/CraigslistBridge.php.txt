@@ -1,0 +1,68 @@
+commit 7881c87bed8ccade2d49c7eab758fb4c80a4a0c5
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 23:21:55 2023 +0200
+
+    fix: various small fixes (#3517)
+    
+    * fix(asrocknews): Trying to get property src of non-object
+    
+    Trying to get property 'src' of non-object at bridges/ASRockNewsBridge.php line 37
+    
+    * refactor(http): tweak max redirs config
+    
+    * fix(tiktok)
+    
+    * fix(gizmodo)
+    
+    * fix(craig)
+    
+    * fix(nationalg)
+    
+    * fix(roadandtrack)
+    
+    * fix(etsy)
+
+commit 0dab51e26f309d9bf92d023e6e5737d5ca83c72e
+Author: Dag <me@dvikan.no>
+Date:   Tue Sep 6 00:14:20 2022 +0200
+
+    fix: php errors (#3013)
+    
+    * fix: php error in tiktok bridge
+    
+    * fix: notice in craigslist
+    
+    * fix: php notice in wordpress bridge
+    
+    * feat: improve ux in telegram bridge
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit abb4c17a0df6fb76255ba5b42cc84a820ba31f81
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Wed Jun 22 13:07:54 2022 -0400
+
+    bridges: Update maintainer (#2856)
+
+commit d4707fc1195809e4c95a3cf1af785865a755925f
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Fri Apr 1 10:38:37 2022 -0400
+
+    [CraigslistBridge] Fix notice with nearby results (#2588)
+    
+    If the search query includes searchNearby=1, nearby results do not have
+    .result-hood to indicate location, instead using .nearby.
+
+commit 197149d90b223c578b7fcf201398360c45af6097
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Fri Mar 25 05:58:54 2022 -0400
+
+    [CraigslistBridge] Add new bridge (#2479)

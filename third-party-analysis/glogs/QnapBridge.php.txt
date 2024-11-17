@@ -1,0 +1,11 @@
+commit 44e5bf53387399863254b90dafa29ab89523c347
+Author: Dag <me@dvikan.no>
+Date:   Wed Oct 5 19:21:02 2022 +0200
+
+    docs: point to offical feed in qnap (#3088)
+
+commit e63e3d072c05763f48d623d9b0e16795d9488d9d
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 8 18:28:36 2022 +0200
+
+    feat: new bridge QnapBridge (#3020)

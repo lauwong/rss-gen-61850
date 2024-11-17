@@ -1,0 +1,36 @@
+commit 66a6847fd09c90e1cecccce38cdeb61f3e48675a
+Author: Scott Colby <scolby33@users.noreply.github.com>
+Date:   Mon Feb 5 20:21:30 2024 -0500
+
+    Two fixes to DeutscheWelle (#3954)
+    
+    * [DeutscheWelleBridge] Small URL fix.
+    
+    Reset the $item's uri value after removing the tracking query string.
+    
+    * [DeutscheWelleBridge] Fix "hero" images.
+    
+    The main "hero" image for each article has src="" and relies on the
+    srcset attribute for the browser to pick the best image based on the
+    actual displayed size.
+    
+    The call to `defaultLinkTo()` replaces the empty src with the article's
+    link, which, not being an image, breaks the image.
+    
+    This change resets the src's of any such images back to "".
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit cf7e3eea5612f3466f297883395723e5b325fd1e
+Author: Scott Colby <scolby33@users.noreply.github.com>
+Date:   Fri Sep 15 17:41:08 2023 -0400
+
+    Add DeutscheWelle FeedExpander bridge. (#3673)
+    
+    * [DeutscheWelle] Add DeutscheWelle FeedExpander bridge.
+    
+    * [DeutscheWelle] Fix linting errors.

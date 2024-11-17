@@ -1,0 +1,39 @@
+commit 206bebc7bdf90b00b2457a5693fe07079b3df40a
+Author: Dag <me@dvikan.no>
+Date:   Tue Jun 18 20:22:46 2024 +0200
+
+    ci: disallow the sizeof function in linter (#4134)
+
+commit e1b74aeb1bd120ac0c337fae9f55943cf7d00a0d
+Author: July <phantop@tuta.io>
+Date:   Wed Jun 12 23:02:17 2024 -0400
+
+    [GameBananaBridge] Add categories and more detailed updates (#4129)
+    
+    * [GameBananaBridge] Add mod categorie(s)
+    
+    * [GameBananaBridge] Include full update changelog details
+
+commit 6e2aeda61d4aefb1106be2cef63cc775ee4f300d
+Author: July <phantop@tuta.io>
+Date:   Sun May 12 15:46:07 2024 -0400
+
+    [GameBananaBridge] Include update contents in feed (#4103)
+    
+    * [GameBananaBridge] Include update contents in feed
+    
+    * [GameBananaBridge] Fix dynamic title property
+
+commit 54957d2a03bfb066a15e24a91799e70cbdc663b2
+Author: July <phantop@tuta.io>
+Date:   Tue Jun 6 14:00:55 2023 -0400
+
+    [GameBananaBridge] Load all full quality screenshots (#3419)
+    
+    Replaces the low quality preview images used previously
+
+commit 01f731cfa44cf9a3c6c4f6ef8bf29af9a13763ed
+Author: July <phantop@tuta.io>
+Date:   Fri May 26 12:19:34 2023 -0400
+
+    [GameBananaBridge] Create new bridge (#3410)

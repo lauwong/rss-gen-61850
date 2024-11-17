@@ -1,0 +1,21 @@
+commit 8a6798a2276026ec8fe06b0056607a6e461cf330
+Author: Dag <me@dvikan.no>
+Date:   Fri Feb 9 07:27:16 2024 +0100
+
+    fix: escape token for html context (#3966)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 2be613e0156e8f5c4e8f9630cc6e29b502c0d80e
+Author: Nemo <commits@captnemo.in>
+Date:   Fri Apr 15 23:25:32 2022 +0530
+
+    [BookMyShowBridge] Add new bridge (#1349)

@@ -1,0 +1,316 @@
+commit 9973f731dfb0b34ae4c1d3d86143eee346ff5641
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 02:13:04 2024 +0200
+
+    feat: introduce RateLimitException (#4199)
+
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit 955fb6f315ca86693b1b3185b47ef313168c6bd2
+Author: Dag <me@dvikan.no>
+Date:   Mon Jul 29 00:18:28 2024 +0200
+
+    fix(reddit): increase default cache ttl (#4168)
+
+commit 17a3b4c9d871208896e6c50a64b539d8689be128
+Author: Dag <me@dvikan.no>
+Date:   Sun Mar 31 21:32:27 2024 +0200
+
+    Fix 198 (#4041)
+    
+    * fix(twitch): log instead of exception
+    
+    * typo
+
+commit a61524bf776fb29aaf30451c972f1ddb90920fdf
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Sun Mar 17 19:02:51 2024 +0100
+
+    Update RedditBridge.php (#4019)
+    
+    prevent error htmlspecialchars_decode(): Passing null to parameter #1
+
+commit 4bad1c140a25d8ef8577d0fa7b0a60e27a5d7649
+Author: Dag <me@dvikan.no>
+Date:   Tue Mar 12 23:59:10 2024 +0100
+
+    fix(reddit): url encoding (#4010)
+
+commit ae2eb2f1d1af63a3068e18e9d85f92f360b60a34
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Thu Feb 8 20:05:24 2024 +0100
+
+    feat(Reddit): add parameter for web UI frontend
+
+commit fac1f5cd88f04855a891aeb7341f783e57ce5b3c
+Author: Dag <me@dvikan.no>
+Date:   Sat Dec 30 01:33:31 2023 +0100
+
+    refactor(reddit) (#3869)
+    
+    * refactor
+    
+    * yup
+    
+    * fix also reporterre
+
+commit 3944ae68cbe8b8dd4fd653a288cffdb42cd3802e
+Author: Dag <me@dvikan.no>
+Date:   Tue Dec 19 07:53:25 2023 +0100
+
+    fix(reddit): use old.reddit.com instead of www.reddit.com (#3848)
+
+commit 0c4b498d4f41d8402bbc33cbf2864e13c0d76ba2
+Author: Dag <me@dvikan.no>
+Date:   Wed Dec 13 22:06:47 2023 +0100
+
+    fix(reddit): tweak internal cache logic (#3831)
+
+commit d157816e07e47dfdc8583d5fcee1925031aa6496
+Author: Dag <me@dvikan.no>
+Date:   Wed Dec 13 21:56:14 2023 +0100
+
+    fix(reddit): cache tweak for 403 forbidden (#3830)
+
+commit f321f000c170c45aadd750bddd25d5074b4e281f
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 24 18:34:09 2023 +0200
+
+    feat: add url component (#3684)
+    
+    * feat: add url library
+    
+    * fix
+
+commit 7329b83cc0fe1a5f707f864b1f3d62efd4be2172
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 21 22:05:55 2023 +0200
+
+    refactor: logger (#3678)
+
+commit 409236e48e4cf8bc2e2ce6e6f73942feee6a8469
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 14 03:26:01 2023 +0200
+
+    fix: logic bug in 429 caching logic (#3669)
+
+commit 4b9f6f7e53e0b2e9aae59df2bbffc0bdd6805aea
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 21:50:15 2023 +0200
+
+    fix: rewrite and improve caching (#3594)
+
+commit 52d3cce59dae1b5b8adb5497450e396473ebf6b2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 22:40:24 2023 +0200
+
+    bridges: add context to detectParameters (#3607)
+    
+    * bridges: add context to detectParameters
+    
+    Some bridges did not return the context parameter but they used it in
+    the parameters
+    
+    * bridges: add context to detectParameters
+    
+    Fix test for InstagramBridge
+
+commit a4a328583a1870fc3cb2617d46072d54553402f0
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 19 06:39:17 2023 +0200
+
+    fix(reddit): set custom http ua to fix 429 errors (#3552)
+    
+    * refactor
+    
+    * refactor
+    
+    * fix(reddit): set custom http ua to fix 429 errors
+    
+    * lint
+
+commit 52af2ae34cab0cc945772f81e3078e3e93c4c243
+Author: Dag <me@dvikan.no>
+Date:   Wed Oct 26 00:47:45 2022 +0200
+
+    fix: php errors (notices) (#3115)
+
+commit 8b7b32d516090e3678504b3f3b609b3220d0a771
+Author: joshinat0r <info@joshuahahn.de>
+Date:   Wed Oct 5 19:35:02 2022 +0200
+
+    [RedditBrige] Fix old feed URLs (#3087)
+    
+    * flair filter
+    
+    * syntax
+    
+    * fix multi & user feeds
+    
+    * '
+    
+    * dont replace ,
+    
+    * fix old reddit feeds
+
+commit 30d964b356d9ed697949a2007ff0798d485e7092
+Author: joshinat0r <info@joshuahahn.de>
+Date:   Sun Oct 2 07:34:20 2022 +0200
+
+    [RedditBridge] Search for specific flairs (#3067)
+    
+    * flair filter
+    
+    * syntax
+    
+    * fix multi & user feeds
+    
+    * '
+    
+    * dont replace ,
+
+commit 2bbce8ebef8cf4f88392431aabe84a15482dc933
+Author: Dag <me@dvikan.no>
+Date:   Sat Aug 6 22:46:28 2022 +0200
+
+    refactor: general code base refactor (#2950)
+    
+    * refactor
+    
+    * fix: bug in previous refactor
+    
+    * chore: exclude phpcompat sniff due to bug in phpcompat
+    
+    * fix: do not leak absolute paths
+    
+    * refactor/fix: batch extensions checking, fix DOS issue
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit bcc15228d8c03f229b3f7af79234903a21a8e95f
+Author: Bockiii <henning@bocklage.com>
+Date:   Sat Sep 4 15:00:02 2021 +0200
+
+    [RedditBridge] Return back NSFW posts to feed (#2257)
+    
+    As it was working before applying https://github.com/RSS-Bridge/rss-bridge/pull/2229
+
+commit a5d33615f592afd2a3dc8b5f6d0ddd6f26e12deb
+Author: Bockiii <henning@bocklage.com>
+Date:   Wed Aug 25 15:09:36 2021 +0200
+
+    [RedditBridge] Add keyword search function (#2229)
+
+commit 1f6ad000ceb096e3c56092a454375520cf1508a8
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Fri Jul 2 02:41:56 2021 +0700
+
+    [RedditBridge] Add option to choose for New, Hot and Top submissions (#2189)
+
+commit 4f7ef212b7ab10690d6c483273354a995179f98b
+Author: dawidsowa <dawid_sowa@posteo.net>
+Date:   Mon Apr 19 19:17:36 2021 +0200
+
+    [RedditBridge] Add detectParameters (#2070)
+
+commit 13e9a96cf38c1c13ce1451f489288b44941ac480
+Author: dawidsowa <dawid_sowa@posteo.net>
+Date:   Mon Apr 19 19:14:35 2021 +0200
+
+    [RedditBridge]: Add score filter (#2045)
+
+commit 569276f4efa27b883a78f34604e4395abe4c687a
+Author: dawidsowa <dawid_sowa@posteo.net>
+Date:   Tue Feb 23 08:08:43 2021 +0100
+
+    [RedditBridge]: Add user option (#1943)
+
+commit 3c285d50ec84c157e2475c8d34a31db9776049ee
+Author: dawidsowa <dawid_sowa@posteo.net>
+Date:   Wed Dec 23 18:42:15 2020 +0100
+
+    [RedditBridge] Rewrite to use JSON (#1781)
+
+commit ad661c4c91d26bbf563062d33ca1abb14148a094
+Author: Joe Digilio <jdigilio@users.noreply.github.com>
+Date:   Thu Dec 5 11:07:50 2019 -0600
+
+    [RedditBridge] Fix typo prevents bridge from working (#1383)
+
+commit 46d5895d1df4cc4fcf144a42030e0240bc7b9cee
+Author: Léo Maradan <3043485+Leomaradan@users.noreply.github.com>
+Date:   Fri Nov 1 13:54:03 2019 +0100
+
+    [RedditBridge] Add new bridge (#1213)

@@ -1,0 +1,5 @@
+commit 4d8e40e74623e7722b27dd5f4aa23337e0b40314
+Author: Harvey Christian Pacleb <kimpacleb@gmail.com>
+Date:   Thu Oct 13 03:29:38 2022 +0800
+
+    [HonkaiImpactSeaBridge] Add bridge (#3084)

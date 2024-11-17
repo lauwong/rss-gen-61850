@@ -1,0 +1,15 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 684558e276af9af6858adfa6d9d5d0e5bf964bb6
+Author: Nemo <me@captnemo.in>
+Date:   Mon Mar 18 01:10:21 2019 +0530
+
+    [StockFilingsBridge] Add new bridge (#1011)

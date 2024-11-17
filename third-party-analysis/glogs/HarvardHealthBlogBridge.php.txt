@@ -1,0 +1,13 @@
+commit cfd406861eeb6f90b61df56981cc0337ab504a06
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Thu May 30 19:38:08 2024 +0530
+
+    [HarvardHealthBlogBridge] Update (#4117)
+    
+    Make article image optional as all images are representative
+
+commit bd90109c70fd3d4b302ed38e7b768e6df7d323d9
+Author: tillcash <tillcash@users.noreply.github.com>
+Date:   Thu May 30 00:46:10 2024 +0530
+
+    [HarvardHealthBlogBridge] New (#4116)

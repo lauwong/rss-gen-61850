@@ -1,0 +1,63 @@
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit 288d4de218dec81035ffa06d2326ca15d9598e4e
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Sat Jan 5 12:29:26 2019 +0100
+
+    bridges: Fix bridges to pass unit test (#984)
+    
+    * [DealabsBridge] fixed parameters
+    * [DemonoidBridge] added parameter context names
+    * [DevToBridge] fixed parameters
+    * [ExtremeDownloadBridge] fixed parameters
+    * [GithubIssueBridge] fixed parameters
+    * [InstagramBridge] added parameter context names
+    * [MydealsBridge] fixed parameters
+    * [OnVaSortirBridge] fixed parameters
+    * [ThingyverseBridge] fixed parameters
+    * [HotUKDealsBridge] fixed parameters
+    * [FeedExpanderExample] added proper URI
+    * [GQMagazineBridge] fixed parameters and getDomain()
+    * [MozillaSecurityBridge] fixed filename
+    
+    References #980
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 42e25e7fc071185c71fb4e5a0eba729439db219b
+Author: Antoine Turmel <antoine.code@turmel.info>
+Date:   Wed Nov 7 18:52:29 2018 +0100
+
+    [OnVaSortirBridge] New Bridge (#914)
+    
+    Bridge to expand OnVaSortir RSS feed to get the full description of an event

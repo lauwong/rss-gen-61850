@@ -1,0 +1,31 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 105fbe9ddad6abdfd7674d2572f0323fbfd801e9
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Fri Mar 25 11:44:42 2022 -0400
+
+    [PlantUMLReleasesBridge] Bridge optimizations (#2459)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit b4581418d4aad714315d5d14274edf011806b3b5
+Author: Nicolas Delsaux <nicolas.delsaux@gmx.fr>
+Date:   Thu Oct 3 22:30:22 2019 +0200
+
+    [PlantUMLBridge] Added bridge for PlantUML. Fixes #1191
+    
+    * Fixes #1191 by implementing the RSS feed of PlantUML releases

@@ -1,0 +1,15 @@
+commit 2b741b1c1bf3ef352cea0903bd1561bc00ff45b0
+Author: joaomqc <joaomqc@hotmail.com>
+Date:   Wed Nov 15 15:26:25 2023 +0000
+
+    [SongkickBridge] add new bridge (#3803)
+    
+    * [SongkickBridge] add new bridge
+    
+    * [SongkickBridge] fix var reference and outdoor category
+    
+    * [SongkickBridge] remove unnecessary string concat
+    
+    * [SongkickBridge] fix if clause formatting
+    
+    * [SongkickBridge] fix formatting and event title

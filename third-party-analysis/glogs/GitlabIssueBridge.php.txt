@@ -1,0 +1,103 @@
+commit 14607c07f682a2766777b909e732af653c400fee
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sun Aug 27 13:14:21 2023 +0200
+
+    [GitlabIssueBridge] Fix example values for MR
+    
+    These values are used for testing and PR artifacts, but
+    https://gitlab.com/fdroid/fdroidclient currently has no MR !2099,
+    leading to a HTTP 404 error. This just uses issue #1 and MR !1.
+    
+    To support epics, the specified repository is ignored.
+
+commit 18a8a5127180d9c4a4318f88cf2ffbc441b0ed60
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sun Aug 27 12:13:44 2023 +0200
+
+    [GitlabIssueBridge] Add support for GitLab Epics
+
+commit dbab225fd272492d32f4114e75cc3e3cd874072c
+Author: Dag <me@dvikan.no>
+Date:   Tue Nov 15 03:01:27 2022 +0100
+
+    fix: Call to a member function find() on bool (#3146)
+    
+    * fix: Call to a member function find() on bool
+    
+    Happens when defaultLinkTo() is passed the empty string.
+    
+    * fix: prevent exception in defaultLinkTo() when passed the empty string
+    
+    * refactor
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 713d06ba08b289e8e0fcf4f08e8ab1b8530037e7
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sun Jun 5 18:39:54 2022 +0200
+
+    [GitlabIssueBridge] Code cleanup (#2780)
+    
+    - Rename parseMRDescription() -> parseMergeRequestDescription()
+    - Move parseMergeRequestDescription() below parseIssueDescription()
+    - Inline getProjectURI()
+
+commit 3f896f946505a303db52d6779b9a6958744b9f97
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sat Jun 4 23:59:10 2022 +0200
+
+    [GitlabIssueBridge] Add bridge (#2760)
+    
+    * [GitlabIssueBridge] new bridge
+    
+    This tracks issue comments on arbitrary gitlab projects.
+    
+    * [GitlabIssueBridge] Prepare for Merge Request support + fixes
+    
+    - Proper UIDs
+    - Default bridge name fixed
+    - Fix cache identifiers
+    - Add TODOs
+    
+    * [GitlabIssueBridge] creation timestamp preferred
+    
+    And prefer original author over editor.
+    
+    * [GitlabIssueBridge] Do not add date to item title
+    
+    Prettier without it.
+    
+    * [GitlabIssueBridge] Support Merge Requests
+    
+    This bridge can now generate feeds for Merge Requests.
+    
+    * [GitlabIssueBridge] typo
+    
+    * [GitlabIssueBridge] Fix Img src attr in comments
+    
+    * [GitlabIssueBridge] Fix function call
+    
+    * [GitlabIssueBridge] Fix test
+    
+    Use gitlab.com if no h parameter was given.
+    Fixes a phpunit test.
+    
+    * [GitlabIssueBridge] linting
+    
+    * [GitlabIssueBridge] Add MR support to description
+    
+    * [GitlabIssueBridge] Move function collectData
+    
+    * [GitlabIssueBridge] rm single-use class constants
+    
+    * [GitlabIssueBridge] Remove manual caching
+    
+    Just depend on rss-bridges built-in caching.

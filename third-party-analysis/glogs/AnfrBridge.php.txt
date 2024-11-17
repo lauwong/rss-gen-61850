@@ -1,0 +1,13 @@
+commit db85015daa62b26cf1ea2aab4d94e992b40a040f
+Author: Quentin B. <quent1-fr@users.noreply.github.com>
+Date:   Thu Aug 8 01:20:42 2024 +0200
+
+    [AnfrBridge] Add bridge (#4191)
+    
+    * [AnfrBridge] Add bridge
+    
+    * yup
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>

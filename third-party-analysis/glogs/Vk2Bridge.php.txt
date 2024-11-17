@@ -1,0 +1,29 @@
+commit 6afd13eb06276f085f245c5075972ef36eb6740a
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 03:43:26 2024 +0200
+
+    refactor: deprecate FeedItem constructor (#4201)
+    
+    * fix: bug in prior commit
+    
+    * refactor: deprecate FeedItem constructor
+    
+    * test: fix
+
+commit 9973f731dfb0b34ae4c1d3d86143eee346ff5641
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 02:13:04 2024 +0200
+
+    feat: introduce RateLimitException (#4199)
+
+commit d28a0fd94b0f863cf630e327ed5ad646a05909b9
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Jul 29 01:34:12 2024 +0500
+
+    [Vk2Bridge] Handling albums (#4163)
+
+commit 257799be8ea3e1fe81a58320c9381c9191a1ff51
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sat Feb 10 19:59:39 2024 +0500
+
+    [Vk2Bridge] Alternative bridge for VK (#3878)

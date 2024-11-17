@@ -1,0 +1,48 @@
+commit 9f163ab7c651f44c1d6266ca817aca2c0f208f51
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Mon Dec 25 14:51:51 2023 +0100
+
+    [FreeTelechargerBridge] Update to the new URL (#3856)
+    
+    * [FreeTelechargerBridge] Update to the new URL
+    
+    Website has changed URL and some design : this bridge is now adapted to
+    thoses changes
+    
+    * [FreeTelechargerBridge] Fix example value
+    
+    Example valuse seems to use an "old" template, switch to a newer example
+    that use the new template
+    
+    * [FreeTelechargerBridge] Fix notice
+    
+    Fix notice
+
+commit 52d3cce59dae1b5b8adb5497450e396473ebf6b2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 22:40:24 2023 +0200
+
+    bridges: add context to detectParameters (#3607)
+    
+    * bridges: add context to detectParameters
+    
+    Some bridges did not return the context parameter but they used it in
+    the parameters
+    
+    * bridges: add context to detectParameters
+    
+    Fix test for InstagramBridge
+
+commit 23fb5819cd1d0fcd177c11b79300c8809516db7a
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Thu Mar 16 09:35:49 2023 +0100
+
+    [FreeTelechargerBridge] New bridge (#3318)
+    
+    * [FreeTelechargerBridge] New bridge
+    
+    New bridge
+    
+    * [FreeTelechargerBridge ] Fix CACHE_TIMEOUT value
+    
+    Fixed CACHE_TIMEOUT value

@@ -1,0 +1,131 @@
+commit 99b86c0e1c8972a6529cd470967e2258702238a8
+Author: User123698745 <User123698745@users.noreply.github.com>
+Date:   Mon Sep 4 03:00:08 2023 +0200
+
+    [GithubSearchBridge] repair bridge / handle new search ui (#3647)
+
+commit 7c96334e3b66ab02f63bcbe71093f75ccd56fdb1
+Author: Corentin Garcia <cgarcia@meilleursagents.com>
+Date:   Sat Oct 1 08:42:50 2022 +0200
+
+    [GithubSearchBridge] Add programming language (#3074)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit f52eb43f8cdcc24f4f8648f8484d7d8f0623c9cc
+Author: Antoine Turmel <antoine.social@turmel.info>
+Date:   Fri Jan 31 15:01:46 2020 +0100
+
+    Update GithubSearchBridge.php (#1431)
+    
+    Fixes #1430
+
+commit 92775abe11feddcb9ec0591bc914becc0151ade8
+Author: Lyra <teromene@teromene.fr>
+Date:   Fri Apr 5 10:59:30 2019 +0200
+
+    Fix phpcs
+
+commit 24cdeabed814903ccd86b4ed99ebaf534ac3887a
+Author: Lyra <teromene@teromene.fr>
+Date:   Fri Apr 5 10:53:28 2019 +0200
+
+    [GithubSearchBridge] Update the bridge to match Github's layout
+
+commit 111c45d0100b5f11a544c47b7bc020ac5342b6eb
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Sun Sep 9 21:30:29 2018 +0200
+
+    [GithubSearchBridge] Fix content parsing, add tags if present (#803)
+    
+    * [GithubSearchBridge] Fix content parsing, add tags if present
+    
+    * [GithubSearchBridge] Add categories (from tags)
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 88586381e71bf824a871fa14a17c843bd60d74c2
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Sat Mar 25 12:24:00 2017 +0100
+
+    [GithubSearchBridge] Added github search bridge (#500)
+    
+    * [GithubSearchBridge] Added github search bridge, only repos search atm

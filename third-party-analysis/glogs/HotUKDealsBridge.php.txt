@@ -1,0 +1,222 @@
+commit 82606a479a75cd4eff4740ba49715b3135c89c49
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Thu Apr 4 04:08:29 2024 +0200
+
+    [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] Fix search URL, No results handling fixed, Thread title and Message URL handling (#4053)
+    
+    * [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] Fix search URL, No results handling fixed, Thread title and Message URL handling
+    
+    Search URL has been updated according to the website.
+    
+    If a search doesn't return any results, the HTML won't contain any
+    specific text now : the HTML structure is slightly different, so the
+    bridge has been updated.
+    
+    The unnneded 'no-results' text is now removed from the specific bridges.
+    
+    The board thread title has been removed from the content, so now we use
+    the page <title> element.
+    
+    In case a board message is empty, there was an exception during the
+    filtering of message without URL.
+    
+    * [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] Fix search URL, No results handling fixed, Thread title and Message URL handling
+    
+    Coding policy fixes
+
+commit be445759b631ea1ec954d70e8e1f30cfb9271f2b
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Thu Mar 28 19:44:27 2024 +0100
+
+    [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] Move as much as possible to JSON (#4032)
+    
+    As the website use more and more JSON, and JSON is a machine readable
+    format, I migrated as much as possible to the JSON.
+    
+    This simplifies the Abstract class a lot, and the Bridge classes need
+    less language specifi strings.
+
+commit 4d15ffd2cf44807210cb5d2783ce3bc5c8476275
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Feb 16 03:58:15 2024 +0100
+
+    [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] (#3982)
+    
+    Exclude thread results
+    
+    Some categories showed some thread in the middle of the deals : now only
+    the deals are handled
+    
+    Updated the "no results" text to follow the sites changes
+
+commit 64f95b4990c5b890eb526af1990205cbef5ac77a
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Tue Feb 6 02:23:12 2024 +0100
+
+    [PepperBridgeAbstract,DealabsBridge,HotUKDealsBridge,MydealsBridge] Fix missing price, discount and ships from information (#3956)
+    
+    - DealabsBridge
+    - HotUKDealsBridge
+    - MydealsBridge
+    Add the currency in the i8n data of the bridges
+    
+    - PepperBridgeAbstract
+    The Price, discount data ans Ships from information are in the HTML
+    content anymore, so switched to the js-vue2 attributes
+
+commit 55ffac5bae8d84ff1b42339d1114117cf32a6854
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Jan 5 07:23:40 2024 +0100
+
+    [PepperBridgeAbstract, DealabsBridge, HotUKDealsBridge, MydealsBridge] (#3876)
+    
+    Fix the Deal source link
+    
+    The HTML does not contain the link to the "Deal source anymore", now only an
+    attribute does contain the information about the Deal Source.
+    
+    The JSON data is now extraced for each Deal, and used to get the
+    Temperature and Deal Source.
+
+commit 1cbe1a6f98ec536be7f894ebcc255d7417c0060b
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Tue Oct 3 23:15:10 2023 +0200
+
+    [PepperBridge] Fix date parsing (#3727)
+    
+    Website changed the date display.
+    This fix adapt the date parsing to the new website date display
+
+commit 69da0dd5830e1e8a48e4b22066ae645e790a5a9e
+Author: User123698745 <User123698745@users.noreply.github.com>
+Date:   Sun Oct 1 20:46:51 2023 +0200
+
+    [refactoring] replace direct use of curl with getContents (#3723)
+    
+    + some fixed warnings
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit a4785370fa5ed3c3987fa42010d0fd6db405fbf2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Tue Jun 7 23:55:15 2022 +0200
+
+    [DealabsBridge-HotUKDealsBridge-MydealsBridge-PepperBridgeAbstract] Fix (#2789)
+    
+    the date handling
+    
+    The deal posting date logic was wrong, and leaded to warnings and
+    notice. Now, only the feed with the deal sorted by date contains date
+    (the feed sorted by hottest deal does not contain a date anymore,
+    because there are no deal date in this case).
+
+commit 8e41887393491be9151014bbafc05b11b172126a
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sat Jun 4 22:40:20 2022 +0200
+
+    [DealabsBridge-HotUKDealsBridge-MydealsBridge] Fix example values (#2766)
+    
+    Added real example values for discussion to allow automatic testing.
+    
+    Updated keywords example value to be sure there will be some results.
+
+commit f00f90328d4e03558a917b421f7d2b8ead582507
+Author: Dag <me@dvikan.no>
+Date:   Fri May 13 09:29:56 2022 +0200
+
+    refactor: extract class PepperBridgeAbstract
+
+commit bb6d553dd561934689bbd13d2b247a2b4dfe149c
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Thu May 12 16:28:03 2022 -0400
+
+    Revert "refactor: remove unnecesary includes" (#2723)
+    
+    This reverts commit fd449be4ebb331c6b726f971231a8ec828ab6bd5.
+
+commit fd449be4ebb331c6b726f971231a8ec828ab6bd5
+Author: Dag <me@dvikan.no>
+Date:   Thu May 12 15:14:15 2022 +0200
+
+    refactor: remove unnecesary includes
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 368a19832172c91c15cb21892fe5d5f2e4bb91ee
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Mon Jan 10 11:46:26 2022 +0100
+
+    [PepperBridge] fix and discussion (#2383)
+    
+    * [PepperBridge] Fix some Notice for expired items
+    
+    Some expired iteams are not identical to normal items for the title and
+    URI, so they got a special handling to remove PHP Notice.
+    
+    The "most commented" sorting option was removed and show now some forum.
+    So it was removed.
+    
+    With DealabsBridge, MydealsBridge and HotUKDealsBridge, you can monitor
+    a discussion for new comments, excluding or not post without URL
+
+commit 2b634002f2608eeda01413cd0acb511f142118ec
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sat Nov 6 19:43:44 2021 +0100
+
+    [DealabsBridge - HotUKDealsBridge - MydealsBridge] Set the Feed URL according to the parameters (#2320)
+
+commit 2689f5f7fa1988be424b9f78955a9bad10e475e5
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Tue Jul 27 21:46:01 2021 +0200
+
+    [DealabsBridge - HotUKDealsBridge - MydealsBridge] Update groups (#2083)
+    
+    The bridges has been updated with the newest "groups" available on every website
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit 288d4de218dec81035ffa06d2326ca15d9598e4e
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Sat Jan 5 12:29:26 2019 +0100
+
+    bridges: Fix bridges to pass unit test (#984)
+    
+    * [DealabsBridge] fixed parameters
+    * [DemonoidBridge] added parameter context names
+    * [DevToBridge] fixed parameters
+    * [ExtremeDownloadBridge] fixed parameters
+    * [GithubIssueBridge] fixed parameters
+    * [InstagramBridge] added parameter context names
+    * [MydealsBridge] fixed parameters
+    * [OnVaSortirBridge] fixed parameters
+    * [ThingyverseBridge] fixed parameters
+    * [HotUKDealsBridge] fixed parameters
+    * [FeedExpanderExample] added proper URI
+    * [GQMagazineBridge] fixed parameters and getDomain()
+    * [MozillaSecurityBridge] fixed filename
+    
+    References #980
+
+commit 7126f5e8380f05820d668b2728bf454cc67d9efb
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Jul 13 01:35:13 2018 +0200
+
+    [DealabsBridge] First version of the generic "Pepper" Bridge (#726)
+    
+    * [DealabsBridge] First version of the generic "Pepper" Bridge

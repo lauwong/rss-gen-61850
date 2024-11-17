@@ -1,0 +1,60 @@
+commit bb36eb9eb831eb6bce8641323b7e5ce90798575b
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Fri Jan 19 21:30:53 2024 +0100
+
+    [CssSelectorBridge] Time/Thumbnail improvements (#3879) (#3901)
+    
+    * Implement <time> metadata tag as timestamp source
+    * Add setting to include thumbnail as article header
+
+commit ef5bd83bd0d8645b1d7ae4201e7a167f82e3eaee
+Author: Dag <me@dvikan.no>
+Date:   Mon Oct 16 02:58:03 2023 +0200
+
+    feat: preserve and reproduce podcast feeds (itunes rss module) (#3759)
+
+commit fd52b9b9a487cd6693455ed6df36d6b805adb1f7
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Fri Oct 13 19:27:33 2023 +0200
+
+    [CssSelectorFeedExpander] Fix ArgumentCountError (#3739) (#3751)
+    
+    * [CssSelectorFeedExpander] Fix ArgumentCountError (#3739)
+    
+    Fix ArgumentCountError (#3739) using new FeedParser class (#3740)
+    Implement default value for feed name / url if missing
+    
+    * [CssSelectorFeedExpander] Skip empty fields in source feed
+    
+    Fix empty feed properties being passed down from source feed
+     rssbridge.DEBUG lib/FeedItem.php(177): Author must be a string!
+     rssbridge.DEBUG lib/FeedItem.php(267): Unique id must be a string!
+    
+    If "don't expand metadata" is checked, then source feed is passed
+    down verbatim (only content is expanded) so the debug messages
+    will persist, but the issue is in source feed, not in the bridge.
+
+commit 9bda9e246a21a44daeeb08dd1f41665e5a9f16e3
+Author: Dag <me@dvikan.no>
+Date:   Thu Oct 12 22:14:04 2023 +0200
+
+    refactor: FeedExpander (#3740)
+    
+    * refactor: FeedExpander
+
+commit 47f52b5912f442389e9b5a867044efc6f4680b7b
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Mon Oct 9 08:48:21 2023 +0200
+
+    Add CSS Selector Feed Expander (#3732)
+    
+    * Add CSS Selector Feed Expander
+    
+    This bridge combines CssSelectorBridge with FeedExpander
+    Allows expanding a feed using CSS selectors
+    
+    * Fix code linting
+    
+    ---------
+    
+    Co-authored-by: ORelio <ORelio>

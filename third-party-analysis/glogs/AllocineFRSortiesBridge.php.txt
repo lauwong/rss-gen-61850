@@ -1,0 +1,11 @@
+commit 1f6c2cd32c9668c5945580a9cfb04948188b0a1d
+Author: Simon Alberny <contact@simounet.net>
+Date:   Mon Jul 24 16:25:09 2023 +0200
+
+    Allocine Sorties movie date added (#3569)
+
+commit 6fa1f349d914821e513c91100e51e8c07d00e993
+Author: Simon Alberny <contact@simounet.net>
+Date:   Wed Jun 7 22:35:54 2023 +0200
+
+    Add AllocineFRSortiesBridge (#3421)

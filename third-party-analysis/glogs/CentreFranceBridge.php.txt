@@ -1,0 +1,29 @@
+commit 829d570f8e4f6b38f04b2fac4a3da387e64bf403
+Author: Quentin B. <quent1-fr@users.noreply.github.com>
+Date:   Thu Aug 8 00:57:40 2024 +0200
+
+    [CentreFranceBridge] Add bridge (#4189)
+    
+    * [CentreFranceBridge] Add bridge
+    
+    * [CentreFranceBridge] Fix bridge
+    
+    * [CentreFranceBridge] Fix bridge
+    
+    * [CentreFranceBridge] Improved icon choice
+    
+    * [CentreFranceBridge] Fetch additional data from articles
+    
+    * [CentreFranceBridge] New parameter to allow client to control how many articles to fetch
+    
+    * [CentreFranceBridge] Improve bridge name based on existing parameters
+    
+    * [CentreFranceBridge] Fixed some edge cases
+    
+    * refactor: reorder
+    
+    * fix
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>

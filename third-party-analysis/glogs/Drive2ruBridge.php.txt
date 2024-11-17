@@ -1,0 +1,79 @@
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 126cf1a7fa6ab68c32fdcc29328c02cd5b576a79
+Author: dotter-ak <github.com@dott.su>
+Date:   Tue Jul 20 11:03:17 2021 +0300
+
+    [Drive2ruBridge] Fixed incorrect titles and URLs in logbooks (#2215)
+
+commit 84450e7e8d7a4f34de41fc21adffbc126ea85407
+Author: dotter-ak <github.com@dott.su>
+Date:   Tue Jul 13 08:20:46 2021 +0300
+
+    [Drive2ruBridge] Bugfix (#2211)
+
+commit cb7f5b057fa79cf0d32a9a27945ef574bf5216e7
+Author: dotter-ak <github.com@dott.su>
+Date:   Thu Jul 8 22:00:16 2021 +0300
+
+    [Drive2ruBridge] Add news, personal blogs and featured topics (#2156)
+
+commit 37cd0714531607deda05c307fe3e6001d3e8df02
+Author: dotter-ak <github.com@dott.su>
+Date:   Sun May 23 22:33:46 2021 +0300
+
+    [Drive2ruBridge] Add bridge (#2116)

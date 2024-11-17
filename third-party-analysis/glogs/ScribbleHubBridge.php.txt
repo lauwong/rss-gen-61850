@@ -1,0 +1,65 @@
+commit 494990086335bfa498f0ba7497765c09f3ff7570
+Author: July <phantop@tuta.io>
+Date:   Sun May 12 15:45:14 2024 -0400
+
+    [ScribbleHubBridge] Handle 429 errors and use consistent GUID (#4104)
+
+commit 7d6881732dababa6a3188128e40227421cd8c972
+Author: July <phantop@tuta.io>
+Date:   Sun Apr 7 17:02:36 2024 -0400
+
+    [ScribbleHubBridge] Add list page feed creation (#4012)
+    
+    * [ScribbleHubBridge] Add list page feed creation
+    
+    * [ScribbleHubBridge] Add list title handling
+    
+    * [ScribbleHubBridge] Don't include timestamp in List GUIDs
+    
+    * [ScribbleHubBridge] Fix usage of dynamic property
+
+commit d5175aebcc6f74430189caab1525e6511722a6ed
+Author: July <phantop@tuta.io>
+Date:   Thu Jan 11 14:09:45 2024 -0500
+
+    [ScribbleHubBridge] Get author feed title regardless of CloudFlare (#3892)
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit dc4134ed1d069ef206f64681b79c947386c6e4fb
+Author: July <phantop@tuta.io>
+Date:   Wed May 10 19:33:21 2023 -0400
+
+    [ScribbleHubBridge] Add CloudFlare error handling (#3361)
+    
+    * [ScribbleHubBridge] Set html defaultLinkTo
+    
+    * [ScrubbleHubBridge] Add CloudFlare error handling
+
+commit f0c96008bc9bbb3397bf9025ea1f4abfd23095db
+Author: July <phantop@tuta.io>
+Date:   Wed Apr 19 14:35:04 2023 -0400
+
+    [ScribbleHubBridge] Create new bridge (#3353)
+    
+    * [ScribbleHubBridge] Create new bridge
+    
+    * [ScribbleHubBridge] Improve 'Series' filtering
+    
+    * [ScribbleHubBridge] Properly fetch feed name
+    
+    * [ScribbleHubBridge] Fix feed name and set feed URI
+    
+    * [ScribbleHubBridge] Fix linting violations with phpcbf
+    
+    * [ScribbleHubBridge] Properly handle html encoding in titles

@@ -1,0 +1,51 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit b6e8e3ea6e219d93b025d790f3c8a4632d4c59be
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:34:52 2022 +0200
+
+    [N26] fix: broken css selectors (#2639)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit 9b5bf565b3dfdc49dd6c7b77ec043226599b0a06
+Author: lukasklinger <lukasklinger@users.noreply.github.com>
+Date:   Thu Oct 3 21:58:57 2019 +0200
+
+    [N26Bridge] Updated bridge to reflect changes on N26 blog (#1295)
+    
+    N26 made some changes to their blog, this commit fixes the N26Bridge
+
+commit fc96e97d51c551148391f95ab0a46dc88773d0fb
+Author: Quentin de Longraye <quentin@dldl.fr>
+Date:   Sun Jan 13 19:12:31 2019 +0100
+
+    [N26Bridge] Add new bridge (#1006)
+    
+    https://n26.com

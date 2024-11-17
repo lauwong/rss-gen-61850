@@ -1,0 +1,35 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit d6695c0e73452bbef0dcd62c1a1a5060f2ca33f9
+Author: Foxocube <cyberjacob@gmail.com>
+Date:   Thu Mar 31 19:28:46 2022 +0100
+
+    [FurAffinityUserBridge] Replate username/password with cookie login (#1641)
+
+commit 3187592dba2f86150ecfd7cf86e23ac6de3dd8dd
+Author: Dag <me@dvikan.no>
+Date:   Fri Mar 25 15:33:34 2022 +0100
+
+    fix: add a few example/default values
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 2de45b163e9cc8df52b54a82816521d5e4d95980
+Author: Jacob Mansfield <cyberjacob@gmail.com>
+Date:   Sun Dec 1 10:27:41 2019 +0000
+
+    [FurAffinityUser] Add new bridge (#1326)

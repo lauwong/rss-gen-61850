@@ -1,0 +1,35 @@
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 7dc34492074e7a87258151850cbb0d84f7616fa2
+Author: Dag <me@dvikan.no>
+Date:   Wed Jun 22 18:33:48 2022 +0200
+
+    [KilledByGoogle] fix: broken enclosure url (#2852)
+    
+    * [KilledByGoogle] fix: broken enclosure url
+    
+    The previous enclosure url was HTTP 404.
+    
+    Also add link to items.
+    
+    * fix: close unclosed <a> tag
+
+commit 296ff9c63afb7637c631ddf700e3cd821412ad32
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Thu Mar 24 19:03:18 2022 +0000
+
+    [KilledbyGoogleBridge] Add bridge (#1373)

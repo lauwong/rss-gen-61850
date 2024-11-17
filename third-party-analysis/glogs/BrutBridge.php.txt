@@ -1,0 +1,65 @@
+commit 437afd67e0bc339bf328488f4c7411d71a872647
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 24 18:15:14 2023 +0200
+
+    fix: various fixes (#3702)
+    
+    * fix: symfonycasts
+    
+    * various fixes
+
+commit f0e5ef0fc58f3796bb4c03caa2c5e7ca78de119e
+Author: Bocki <henning@bocklage.com>
+Date:   Mon Mar 6 20:01:51 2023 +0100
+
+    [Various] getKey replacements and docu (#3283)
+    
+    * [Various] getKey replacements and docu
+    
+    * more bridges and fix to the abstract
+    
+    * linting
+    
+    * revert bandcampdaily. doing more than i thought
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit e85932b1a524f88db6af66d4c3aac3a7983c169b
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Tue Jun 7 16:05:03 2022 +0000
+
+    [BrutBridge] Fix bridge (#2787)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit a23d4bd0e66109a04e195a729152a8c65601b64f
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Mon Nov 9 13:14:13 2020 +0000
+
+    [BrutBridge] Add support for Spain edition and health category (#1833)
+
+commit 2559dbbf490bd72fb07672168a7ee53308cf3af1
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Thu Jun 13 17:13:02 2019 +0000
+
+    [BrutBridge] Create custom feed name for each category and edition (#1164)
+
+commit f00a054e0fcac783ae54b2aedaff8e054f8787dc
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sat Jun 8 17:30:42 2019 +0000
+
+    [BrutBridge] Add new bridge (#1159)

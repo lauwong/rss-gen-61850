@@ -1,0 +1,43 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5a733b3d821ec857711a65bc451f303a846b5faa
+Author: dag <me@dvikan.no>
+Date:   Sun Apr 10 18:56:24 2022 +0200
+
+    feat: add limit options to the slowest bridges
+
+commit 87533222c7120abf1aed515e7252948ac278f882
+Author: Thibault Couraud <thibault.couraud@potloc.com>
+Date:   Sat Mar 26 14:10:48 2022 -0400
+
+    [FindACrewBridge] Fix bridge (#2541)
+
+commit 686f21bc5017517ad5c0efc500490811388812ce
+Author: Thibault Couraud <1036233+couraudt@users.noreply.github.com>
+Date:   Sun Jun 16 17:35:43 2019 +0000
+
+    [FindACrew] Improve bridge results (#1120)
+
+commit 966d450d2703a51028deaa79eb7f92d388294498
+Author: Thibault Couraud <1036233+couraudt@users.noreply.github.com>
+Date:   Thu Apr 4 20:44:44 2019 +0000
+
+    [FindACrew] Update bridge according new findacrew.net website (#1080)
+    
+    * update bridge according new crewbay.com website
+
+commit 53d2fbe3a55b6cd82804a417efa6b4e6802ce155
+Author: Thibault Couraud <1036233+couraudt@users.noreply.github.com>
+Date:   Tue Nov 6 13:57:54 2018 +0000
+
+    [FindACrewBridge] Implement bridge for findacrew.net (#901)
+    
+    * [FindACrewBridge] Implement bridge for findacrew.net - sailing boats offers

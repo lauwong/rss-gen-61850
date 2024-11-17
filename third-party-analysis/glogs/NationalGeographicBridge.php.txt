@@ -1,0 +1,122 @@
+commit 8ca1b908400d2965c3ca6aa76b821b7bca7c50e0
+Author: Dag <me@dvikan.no>
+Date:   Sun Mar 31 20:07:14 2024 +0200
+
+    fix(NationalGeographicBridge) (#4039)
+
+commit 7881c87bed8ccade2d49c7eab758fb4c80a4a0c5
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 23:21:55 2023 +0200
+
+    fix: various small fixes (#3517)
+    
+    * fix(asrocknews): Trying to get property src of non-object
+    
+    Trying to get property 'src' of non-object at bridges/ASRockNewsBridge.php line 37
+    
+    * refactor(http): tweak max redirs config
+    
+    * fix(tiktok)
+    
+    * fix(gizmodo)
+    
+    * fix(craig)
+    
+    * fix(nationalg)
+    
+    * fix(roadandtrack)
+    
+    * fix(etsy)
+
+commit 52af2ae34cab0cc945772f81e3078e3e93c4c243
+Author: Dag <me@dvikan.no>
+Date:   Wed Oct 26 00:47:45 2022 +0200
+
+    fix: php errors (notices) (#3115)
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 8bcf4ebfbf220adbd65becdc824f0832c80424f9
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Fri Oct 1 20:39:36 2021 +0700
+
+    [NationalGeographicBridge] Rewrite bridge (#2177)
+    
+    - All the option will be preserved.
+    - Add timestamp, author's name included with full article.
+
+commit 91e73b00b5051b213074ed852f6f93f564db6efe
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Tue Jun 18 22:57:42 2019 +0200
+
+    [NationalGeographicBridge] Add new bridge (#1065)
+    
+    Closes #1029

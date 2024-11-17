@@ -1,0 +1,100 @@
+commit b64f8f2a09a837722b4b83da056aaf371c661c18
+Author: Dag <me@dvikan.no>
+Date:   Tue Nov 8 21:17:32 2022 +0100
+
+    fix: various fixes (#3136)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5b7dd45b20882cd2a9e6a80f7e18a0eedb717deb
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:37:17 2022 +0200
+
+    [UsbekEtRica] fix: broken css selectors (#2643)
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit b48a44c9793b872317fc9f806348b6c9d4b7fcec
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Mar 19 14:07:25 2017 +0100
+
+    [UsbekEtRicaBridge] Add new bridge
+    
+    Adds a new bridge to fetch contents from https://usbeketrica.com/
+    Feeds are build from cards displayed on the front page
+    
+    This bridge provides two options:
+    - limit: Defines how many articles are returned
+    - fullarticle: Defines whether or not the full article is retured
+    
+    Requested via #457

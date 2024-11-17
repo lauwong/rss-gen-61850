@@ -1,0 +1,41 @@
+commit d050fe9a9b6476efde29891eb59e87505e3200bf
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Thu Aug 1 12:36:26 2024 +0200
+
+    [AnisearchBridge] fixed typo (#4182)
+    
+    don't know why it was there
+
+commit a1b3e596fc24845d5c74a80c061bf3eee94618c0
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Sun Jul 28 22:21:14 2024 +0200
+
+    [AnisearchBridge.php] fixed youtube link (#4159)
+    
+    $trailer->{'data-xsrc'} wasn't read correctly in EOT context
+
+commit e0be3662589fbc86b944906713cd6ebfaaf43ccc
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Fri Mar 29 15:37:43 2024 +0100
+
+    Update AnisearchBridge.php (#4025)
+    
+    * Update AnisearchBridge.php
+    
+    added youtube trailer
+    
+    * made trailers optional and reduced scraping to 5 articles if selected
+    
+    * Update AnisearchBridge.php
+
+commit 2aace6c898c2d0f473b0a2071bf3e2d7e1f8e4d4
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Fri Mar 22 21:01:16 2024 +0100
+
+    Added Bridge for Anisearch.de (#4023)
+    
+    * Create AnisearchBridge.php
+    
+    * Update AnisearchBridge.php
+    
+    * Update AnisearchBridge.php

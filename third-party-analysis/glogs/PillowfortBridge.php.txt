@@ -1,0 +1,97 @@
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit dd025894e90ff24f405a27430ad7012ef145504e
+Author: KamaleiZestri <38802353+KamaleiZestri@users.noreply.github.com>
+Date:   Sun May 22 14:30:45 2022 -0500
+
+    [PillowfortBridge] Modify example value for Pillowfort Bridge (#2746)
+
+commit b6e8350596f642f342f15d856882939e2dd9e658
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:37:30 2022 +0200
+
+    fix: a bunch of small changes in multiple bridges (#2644)
+    
+    Mostly refactors.
+
+commit 3187592dba2f86150ecfd7cf86e23ac6de3dd8dd
+Author: Dag <me@dvikan.no>
+Date:   Fri Mar 25 15:33:34 2022 +0100
+
+    fix: add a few example/default values
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit d5a010adcd8f9f9e9086dd05c26a2f1f9e1cb224
+Author: KamaleiZestri <38802353+KamaleiZestri@users.noreply.github.com>
+Date:   Sun Oct 3 14:59:33 2021 -0500
+
+    [PillowfortBridge] Added new bridge (#2275)
+    
+    * [PillowfortBridge] Added new bridge

@@ -1,0 +1,184 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 46abc18e877d87ecffeedd35eb81fdda44205694
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Mon Aug 31 19:04:56 2020 +0200
+
+    [Anidex] Fix content retrieval (#1693)
+    
+    Anidex uses two separate domains, anidex.info and anidex.moe
+    anidex.info has ddos-guard so we need to request
+    anidex.moe with Host header set to anidex.info
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit de8cee6a1cc1c79a356d80b17d4318a86aeb9290
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sun Sep 9 21:20:13 2018 +0200
+
+    Catching up | [Main] Debug mode, parse utils, MIME | [Bridges] Add/Improve 20 bridges (#802)
+    
+    * Debug mode improvements
+    
+     - Improve debug warning message
+     - Restore error reporting in debug mode
+     - Fix 'notice' messages for unset fields
+    
+    * Add parsing utility functions
+    
+    html.php
+     - extractFromDelimiters
+     - stripWithDelimiters
+     - stripRecursiveHTMLSection
+     - markdownToHtml (partial)
+    
+    bridges
+     - remove now-duplicate functions
+     - call functions from html.php instead
+    
+    * [Anidex] New bridge
+    
+    Anime torrent tracker
+    
+    * [Anime-Ultime] Restore thumbnail
+    
+    * [CNET] Recreate bridge
+    
+    Full rewrite as the previous one was broken
+    
+    * [Dilbert] Minor URI fix
+    
+    Use new self::URI property
+    
+    * [EstCeQuonMetEnProd] Fix content extraction
+    
+    Bridge was broken
+    
+    * [Facebook] Fix "SpSonsSoriSsés" label
+    
+    ... which was taking space in item title
+    
+    * [Futura-Sciences] Use HTTPS, More cleanup
+    
+    Use HTTPS as FS now offer HTTPS
+    Clean additional useless HTML elements
+    
+    * [GBATemp] Multiple fixes
+    
+    - Fix categories: missing "break" statements
+    - Restore thumbnail as enclosure
+    - Fix date extraction
+    - Fix user blog post extraction
+    - Use getSimpleHTMLDOMCached
+    
+    * [JapanExpo] Fix bridge, HTTPS, thumbnails
+    
+    - Fix getSimpleHTMLDOMCached call
+    - Upgrade to HTTPS as JE now offers HTTPS
+    - Restore thumbnails as enclosures
+    
+    * [LeMondeInformatique] Fix bridge, HTTPS
+    
+    - Upgrade to HTTPS as LMI now offers HTTPS
+    - Restore thumbnails using small images
+    - Fix content extraction
+    - Fix text encoding issue
+    
+    * [Nextgov] Fix content extraction
+    
+    - Restore thumbnail and use small image
+    - Field extraction fixes
+    
+    * [NextInpact] Add categories and filtering by type
+    
+    - Offer all RSS feeds
+    - Allow filtering by article type
+    - Implement extraction for brief articles
+    - Remove article limit, many brief articles are publied all at once
+    
+    * [NyaaTorrents] New bridge
+    
+    Anime torrent tracker
+    
+    * [Releases3DS] Cache content, restore thumbnail
+    
+    - Use getSimpleHTMLDOMCached
+    - Restore thumbnail as enclosure
+    
+    * [TheHackerNews] Fix bridge
+    
+     - Fix content extraction including article body
+     - Restore thumbnail as enclosure
+    
+    * [WeLiveSecurity] HTTPS, Fix content extraction
+    
+    - Upgrade to HTTPS as WLS now offers HTTPS
+    - Fix content extraction including article body
+    
+    * [WordPress] Reduce timeout, more content selectors
+    
+    - Reduce timeout to use default one (1h)
+    - Add new content selector (articleBody)
+    - Find thumbnail and set as enclosure
+    - Fix <script> cleanup
+    
+    * [YGGTorrent] Increase limit, use cache
+    
+    - Increase item limit as uploads are very frequent
+    - Use getSimpleHTMLDOMCached
+    
+    * [ZDNet] Rewrite with FeedExpander
+    
+    - Upgrade to HTTPS as ZD now offers HTTPS
+    - Use FeedExpander for secondary fields
+    - Fix content extraction for article body
+    
+    * [Main] Handle MIME type for enclosures
+    
+    Many feed readers will ignore enclosures (e.g. thumbnails) with no MIME type. This commit adds automatic MIME type detection based on file extension (which may be inaccurate but is the only way without fetching the content).
+    
+    One can force enclosure type using #.ext anchor (hacky, needs improving)
+    
+    * [FeedExpander] Improve field extraction
+    
+    - Add support for passing enclosures
+    - Improve author and uri extraction
+    - Fix 'notice' PHP error messages
+    
+    * [Pull] Coding style fixes for #802
+    
+    * [Pull] Implementing changes for #802
+    
+     - Fix coding style issues with str append
+     - Remove useless CACHE_TIMEOUT
+     - Use count() instead of $limit
+     - Use defaultLinkTo() + handle strings
+     - Use http_build_query()
+     - Fix missing </em>
+     - Remove error_reporting(0)
+     - warning CSS (@LogMANOriginal)
+     - Fix typo in FeedExpander comment
+    
+    * [Main] More documentation for markdownToHtml
+    
+    See #802 for more details

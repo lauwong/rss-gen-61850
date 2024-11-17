@@ -1,0 +1,89 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 8b91921a70d51e787c6873cef3750be312fdbceb
+Author: somini <somini@users.noreply.github.com>
+Date:   Tue Oct 4 20:23:49 2022 +0100
+
+    [AsahiShimbunAJWBridge]: Fix title extraction (#3085)
+
+commit e07a94d480d87710115101ae51147ed4895dfeb8
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Sat Jul 9 08:13:07 2022 +0200
+
+    Normalize some method calls (#2911)
+    
+    The methods were called as static even though they were not.
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 9dc31dfcfa991133ef46eb36eee23d09a6bf8f87
+Author: pirnz <96375165+pirnz@users.noreply.github.com>
+Date:   Tue Apr 26 10:10:10 2022 +0000
+
+    [AsahiShimbunAJWBridge] Updated Asia section links (#2671)
+
+commit dbd480e2c08b9e2295c794611b0488a62dd92e07
+Author: Dag <me@dvikan.no>
+Date:   Fri Mar 25 02:04:55 2022 +0100
+
+    [AsahiShimbunAJWBridge] fix: use case sensitive list value
+    
+    This bug happened not in web UI but when extracting the default
+    value in order to do automatic testing.
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 6c4098d6558c33a5fcb2a8bc9fb29e915d56fc6c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 2 13:03:26 2019 +0200
+
+    Revert "all: Use ->remove() instead of ->outertext = ''"
+    
+    This reverts commit 052844f5e13c71ceefd743136a71f71226a0eefb.
+    
+    There is a bug in ->remove() that causes the parser to incorrectly
+    identify elements in the DOM tree that shouldn't exist anymore.
+    
+    References #1151
+
+commit 052844f5e13c71ceefd743136a71f71226a0eefb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 1 21:15:30 2019 +0200
+
+    all: Use ->remove() instead of ->outertext = ''
+    
+    simplehtmldom 1.9 introduced new functions to recursively remove
+    nodes from the DOM. This allows removing elements without the need
+    to re-load the document by using $html->load($html->save()), which
+    is very inefficient.
+    
+    Find more information about remove() at
+    https://simplehtmldom.sourceforge.io/docs/1.9/api/simple_html_dom_node/remove/
+
+commit 3d24596a52ef4540631c66bb0cdac728395e01fa
+Author: somini <somini@users.noreply.github.com>
+Date:   Sun Feb 24 10:47:29 2019 +0000
+
+    [AsahiShimbunAJW] Add new Bridge (#1036)

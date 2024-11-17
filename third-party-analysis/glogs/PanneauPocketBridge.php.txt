@@ -1,0 +1,27 @@
+commit a3b064f4eef00ca5559cd23f2c7a47ded8083f21
+Author: Guillaume Lacasa <glacasa@users.noreply.github.com>
+Date:   Mon Dec 11 17:38:39 2023 +0100
+
+    Find PanneauPocket city id from page URL (#3825)
+    
+    Co-authored-by: Guillaume Lacasa <git@adhess.net>
+
+commit 3ea7d4683740c100632783815c2794cb67b8e233
+Author: floviolleau <floviolleau@users.noreply.github.com>
+Date:   Wed Oct 12 21:10:58 2022 +0200
+
+    [PanneauPocketBridge] enhancements (#2940)
+    
+    * [PanneauPocketBridge] small fixes
+    
+    * [PanneauPocketBridge] rename variable
+    
+    * [PanneauPocketBridge] remove function call
+    
+    Co-authored-by: Florent VIOLLEAU <florent.violleau@samsic.fr>
+
+commit f1319f5b2b769d1e306d4435fe4f9760d583b95d
+Author: floviolleau <floviolleau@users.noreply.github.com>
+Date:   Sun Jul 10 19:36:01 2022 +0200
+
+    [PanneauPocket] add new bridge (#2823)

@@ -1,0 +1,23 @@
+commit ee54cf457623afd48538b844d1fbb8b714be7674
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Thu Aug 8 00:00:26 2024 +0200
+
+    add NurembergerNachrichten bridge (#4185)
+    
+    * add NurembergerNachrichten bridge
+    
+    apply suggested changes and fix regions
+    
+    put collectData on top
+    
+    replace self:: with -> for methodcalls
+    
+    * refactor: remove unused var
+    
+    * refactor: order methods
+    
+    * fix
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>

@@ -1,0 +1,9 @@
+commit 2a84350cb2bf4d62111c0294e71d56302714ee63
+Author: July <phantop@tuta.io>
+Date:   Fri Jun 21 09:47:34 2024 -0400
+
+    [HumbleBundleBridge] Create new bridge (#4139)
+    
+    * [HumbleBundleBridge] Create new bridge
+    
+    * [HumbleBundleBridge] Use less redundant bundle type handling

@@ -1,0 +1,23 @@
+commit 7cf64daac9ea565e3a5a8ae18c7a83fc2c04cbd3
+Author: Niehztog <Niehztog@users.noreply.github.com>
+Date:   Wed Nov 30 00:59:24 2022 +0100
+
+    Adds new Bridge for kitso.io episode feed (#3169)
+    
+    * Adds new Bridge for kitso.io episode feed
+    
+    * linter fixes, changed item titles
+    
+    * more linter fixes
+    
+    * fix bridge uri
+    
+    * linter fixes
+    
+    * added sorting of items by timestamp, added parameters to spicify show
+    
+    * trying to fix linter again
+    
+    * linter doesnt like tenary operators
+    
+    * fix whitespace

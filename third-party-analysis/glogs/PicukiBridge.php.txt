@@ -1,0 +1,88 @@
+commit d9316cdc606ff09a3623035e0766cd3ef2bc6904
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Sep 11 15:14:19 2024 +0200
+
+    [PicukiBridge] Try to fix the bridge (#4262)
+    
+    This is a try to fix the bridge HTML parsing
+
+commit 815dc180ccd9298015a2e6c55aaf05a189259e6c
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Apr 10 17:30:56 2024 +0200
+
+    [PicukiBridge] Fix image URL (#4068)
+    
+    Image URL does not need to be faked anymore, as the content/type is now valid.
+
+commit 2ffb54c7c2b961c83b0a876bd5d34f7d698c2b13
+Author: Predä <46051820+PredaaA@users.noreply.github.com>
+Date:   Thu Jul 20 00:52:09 2023 +0200
+
+    [PicukiBridge] Add count parameter (#3556)
+
+commit a234392f801451f104edbe940c36fe2749757be6
+Author: alexvong243f <alexvong.n6215@simplelogin.com>
+Date:   Fri Jul 14 03:15:49 2023 +0000
+
+    docs: improve discoverability of instagram related bridges (#3528)
+
+commit db437b63265c4b9b1d15673d0c7d860700062ce4
+Author: Predä <46051820+PredaaA@users.noreply.github.com>
+Date:   Sun Feb 19 01:35:28 2023 +0100
+
+    [PicukiBridge] Add source field (#3265)
+    
+    * [PicukiBridge] Add source_url field
+    
+    * Simplify the regex matching.
+    
+    * Add picuki source for feeds
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 96a63a8e81b6430611f9dfa17f95488abc83ca52
+Author: User123698745 <User123698745@users.noreply.github.com>
+Date:   Tue May 10 19:53:29 2022 +0200
+
+    [PicukiBridge] fix image not displaying (#2717)
+
+commit 0b40f51c01774d6b3ce5c7c9617dd1fbc2201128
+Author: dag <me@dvikan.no>
+Date:   Sun Apr 10 18:54:48 2022 +0200
+
+    [Picuki] fix: item parsing (#2619)
+    
+    Fixes a problem with the entire content being a link.
+    
+    Also truncate title.
+    
+    They have referrer checks on their images. So clicking the
+    enclosure doesnt work. Will fix later.
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 42e40e2823affd2d8f05ce7f07d95726f9c2d5b1
+Author: Timendum <timedum@gmail.com>
+Date:   Tue Sep 28 11:15:41 2021 +0200
+
+    [PicukiBridge] Fix image URLs in content (#2282)
+    
+    URLs in Picuki are already absolute
+
+commit 34489431b440ae3250203d5d22836eae669c9864
+Author: Marcus <info@marcus-obst.de>
+Date:   Tue Jul 20 03:06:56 2021 -0500
+
+    [PicukiBridge] New bridge. Alternative to InstagramBridge (#2183)

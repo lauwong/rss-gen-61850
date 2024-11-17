@@ -1,0 +1,25 @@
+commit 97f5dafbc5e2ff9dadbe8a76cb7e07818da566e8
+Author: llamasblade <69692580+llamasblade@users.noreply.github.com>
+Date:   Tue Apr 16 15:58:05 2024 +0000
+
+    [HytaleBridge] Fix bridge not pulling all blog posts (#4079)
+
+commit 2c63d5707d25d721b40818553b8c4556e7792699
+Author: llamasblade <69692580+llamasblade@users.noreply.github.com>
+Date:   Thu Jul 21 20:33:00 2022 +0200
+
+    [HytaleBridge] Improve bridge performance (#2928)
+
+commit 64c8d4ad371882e51c1b26f550f0d1b8d438d017
+Author: llamasblade <69692580+llamasblade@users.noreply.github.com>
+Date:   Sun Jul 10 21:06:41 2022 +0200
+
+    [HytaleBridge] Improve bridge contents (#2912)
+    
+    Co-authored-by: BuildTools <unconfigured@null.spigotmc.org>
+
+commit f887ce8f63e78de5ed3ec937b058fcefa715f84a
+Author: llamasblade <69692580+llamasblade@users.noreply.github.com>
+Date:   Thu Jul 7 15:12:35 2022 +0200
+
+    [HytaleBridge] Add bridge (#2900)

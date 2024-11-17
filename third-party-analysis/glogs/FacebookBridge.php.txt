@@ -1,0 +1,1356 @@
+commit 52d3cce59dae1b5b8adb5497450e396473ebf6b2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 22:40:24 2023 +0200
+
+    bridges: add context to detectParameters (#3607)
+    
+    * bridges: add context to detectParameters
+    
+    Some bridges did not return the context parameter but they used it in
+    the parameters
+    
+    * bridges: add context to detectParameters
+    
+    Fix test for InstagramBridge
+
+commit e65fd7c82215cfe45d25d73ba7d629ec2b433222
+Author: Dag <me@dvikan.no>
+Date:   Thu Oct 6 21:05:50 2022 +0200
+
+    fix: remove debug line (#3092)
+
+commit 5d188521084ed5693bfbc0c87baa47b63131401e
+Author: Dag <me@dvikan.no>
+Date:   Wed Oct 5 19:30:42 2022 +0200
+
+    fix: more verbose error in fb (#3089)
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 4bc534c80fa9b5853d6a5d26121a1e7427a82dfa
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Fri Dec 3 05:31:46 2021 +0500
+
+    [FacebookBridge] teromene and logmanoriginal do not maintain this bridge defacto
+
+commit 9c99a1a9c1697823505f70d7c48ca9c8c1c94480
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Sat Jun 12 19:15:56 2021 +0100
+
+    [FacebookBridge] Increase cache timeout (#2149)
+    
+    Facebook aggressively throttles queries now
+
+commit efe32aad2290dbd1866370678261cbf825a83279
+Author: Joshua Coales <joshua@coales.co.uk>
+Date:   Fri Nov 6 13:43:10 2020 +0000
+
+    [FacebookBridge] Permalink fix (#1838)
+    
+    Also removing timestamp which does not work
+
+commit 6af87b2f326b5e52943e1413952ca40ea8570a49
+Author: Joshua Coales <joshua@coales.co.uk>
+Date:   Thu Oct 29 03:42:49 2020 +0000
+
+    [FacebookBridge] Use touch.facebook.com for groups (#1817)
+
+commit 45e2f385b35f38c081bf5911d9b7460bbd789b15
+Author: Joshua Coales <joshua@coales.co.uk>
+Date:   Thu Oct 15 10:08:03 2020 +0100
+
+    [FacebookBridge] Handle mobile links and unify host validation (#1789)
+
+commit ef54a78430d56b5b6f3f091080b22d2b6722afd7
+Author: jannyba <56595831+jannyba@users.noreply.github.com>
+Date:   Sun Aug 16 08:23:48 2020 +0200
+
+    [InstagramBridge] Fix "Skip reviews" checkbox description (#1702)
+
+commit 6a90a9d33fa9868cd12db60b1370d22b38061aef
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Fri Jan 31 18:30:31 2020 +0500
+
+    phpcs: fix new sudden violations (#1443)
+
+commit df9f7eb778275ff79415d2ce9843e7129e57e4db
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Sun Dec 1 13:24:11 2019 +0100
+
+    [FacebookBridge] Fix permalink issue (#1358)
+    
+    Facebook has changed their strategy regarding permalinks, which
+    now include lots of unnecessary target data. Fortunately it also
+    contains the unique story id which we can utilize as URI.
+
+commit 2ac44172ac202860f9022f3a380907df14d8bfda
+Author: somini <somini@users.noreply.github.com>
+Date:   Mon Oct 28 18:01:04 2019 +0000
+
+    Facebook: Clarify Facebook bridges (#1221)
+    
+    * Clarify Facebook bridges status
+    
+    Distinguish between both Facebook bridges by their title.
+    This preserves all existing URLs.
+    
+    * Update all URLs to secure HTTPS versions.
+    * Configure author name abbreviation
+    * Improve feed names
+    
+    Use the correct feed name on each bridge.
+    Make sure the feed names don't repeat the "Facebook" name.
+
+commit 0eab63d728def33f5592da94266e923d386ce1e6
+Author: somini <somini@users.noreply.github.com>
+Date:   Wed Oct 16 20:32:30 2019 +0100
+
+    Update Facebook URL detection (#1334)
+    
+    * add detectParameters to FacebookBridge.php
+
+commit 53fbd2a5a0215d9de28ca4da64743cbab3632b73
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Sat Sep 7 17:32:06 2019 +0100
+
+    [FacebookBridge] Prevent sending empty header (#1239)
+    
+    * [FacebookBridge] Prevent sending empty header
+    
+    When running in CLI mode, `getEnv('HTTP_ACCEPT_LANGUAGE')` returns `false`. In that case, don't send the `Accept-Language` header.
+
+commit 21b27a104248b5d0c3f0d516fd43fb4c6066fb39
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Fri Jul 26 09:56:34 2019 +0100
+
+    [FacebookBridge] Remove relative date from content (#1212)
+    
+    Remove relative date from content, as well as the separator after it.
+    
+    As mentioned in #1188.
+
+commit 6c4098d6558c33a5fcb2a8bc9fb29e915d56fc6c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 2 13:03:26 2019 +0200
+
+    Revert "all: Use ->remove() instead of ->outertext = ''"
+    
+    This reverts commit 052844f5e13c71ceefd743136a71f71226a0eefb.
+    
+    There is a bug in ->remove() that causes the parser to incorrectly
+    identify elements in the DOM tree that shouldn't exist anymore.
+    
+    References #1151
+
+commit 052844f5e13c71ceefd743136a71f71226a0eefb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 1 21:15:30 2019 +0200
+
+    all: Use ->remove() instead of ->outertext = ''
+    
+    simplehtmldom 1.9 introduced new functions to recursively remove
+    nodes from the DOM. This allows removing elements without the need
+    to re-load the document by using $html->load($html->save()), which
+    is very inefficient.
+    
+    Find more information about remove() at
+    https://simplehtmldom.sourceforge.io/docs/1.9/api/simple_html_dom_node/remove/
+
+commit b9bbc9bdda83c212f026c45c235c437f2114a202
+Author: Aleś Bułojčyk <alex73mail@gmail.com>
+Date:   Sat Mar 23 18:39:09 2019 +0300
+
+    [FacebookBridge] Fix decoding of cyrillic letters in group names (#842)
+
+commit 81ee15a161f9a3a5129097f4a6c6879b2b086f8f
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Fri Dec 28 15:13:03 2018 +0000
+
+    general: Fix PHP 7.3 deprecation warnings (#982)
+    
+    Fix PHP 7.3 deprecation warnings. FILTER_VALIDATE_URL implies FILTER_FLAG_SCHEME_REQUIRED and FILTER_FLAG_HOST_REQUIRED since PHP 5.2.1
+    
+    https://bugs.php.net/bug.php?id=75442
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 38068950596a866c188f2d7dd06ba2875467e9fc
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Fri Nov 16 14:33:54 2018 +0000
+
+    [FacebookBridge] Improve titles (#924)
+    
+    A slightly improved version of #454 and #468 . Build titles from content rather than author + pre-content (which doesn't reflect anything useful).
+
+commit 599d438a0d48d55cca7a625436ac516e538b4f47
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Fri Nov 16 14:25:58 2018 +0000
+
+    [FacebookBridge] Decode all elements in $item (#925)
+
+commit cb91d9cce8cdb41c50b61264d14bc0a279ef3d57
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Nov 8 19:23:52 2018 +0100
+
+    [FacebookBridge] Fix media origin info is not inside a tag
+    
+    References #912
+
+commit bf91f106b4fd2a44a401e71455283f77fd57937e
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Thu Nov 8 18:04:58 2018 +0000
+
+    [FacebookBridge] Remove "Posts" from author name (#917)
+
+commit 0b2ede35cd698f1b9b1817dc5845bbd2d473be0c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Nov 8 18:58:49 2018 +0100
+
+    [FacebookBridge] Don't remove origin information from embedded media
+    
+    References #912
+
+commit 5842bdfc83ce1a4ee79ce647711d2f974ae70c73
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Nov 8 18:44:09 2018 +0100
+
+    [FacebookBridge] Simplify implementation
+
+commit 68ee24d6bd7572fde7984b34176eecbeecf810cc
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Nov 8 18:36:07 2018 +0100
+
+    [FacebookBridge] Remove videos and views
+    
+    This commit adds filters to remove embedded videos and view counts from
+    all posts. This doesn't remove the preview image for videos, which are
+    embedded separately.
+
+commit 104ae2298e553cacaa9a58b5aae8e8b87959f130
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Nov 8 18:21:42 2018 +0100
+
+    [FacebookBridge] Remove hidden elements
+    
+    Hidden elements are used for error conditions and generally made
+    visible using JavaScript. Since RSS-Bridge doesn't support JS, these
+    error messages are shown in the final feed. For example:
+    
+    "It looks like you may be having problems playing this video. If so,
+    please try restarting your browser."
+    
+    This commit removes all hidden elements to prevent error messages being
+    added to the feed.
+    
+    - "It looks like you may be having problems playing this video. If so,
+    please try restarting your browser."
+
+commit 7026684e34b5e62696a50bc65018edf9df475454
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Nov 8 18:06:51 2018 +0100
+
+    [FacebookBridge] Don't remove description of embedded media
+    
+    FB includes origin information (i.e. "YOUTUBE.COM") as well as
+    descriptions with embedded media (images and video).
+    
+    These details are currently being removed by the bridge.
+    
+    This commit changes implementation to only remove origin information
+    and keep the media description in place. The media description consists
+    of two elements - title and description. The title provided by FB is
+    included in an anchor, which gets replaced by a paragraph with the
+    same contents to improve readability.
+    
+    References #912
+
+commit 723bd1150a219af28f6ab1cee8f710f7b43dea98
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Nov 6 16:58:58 2018 +0100
+
+    Remove tracking codes from Facebook posts
+
+commit 3031fa406db44e6acf63ef176af359c20254466a
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 19:28:47 2018 +0100
+
+    core: Set code in header() instead of calling http_response_code()
+
+commit 7621784598b8a5e46e281e866d844ab13be947fd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Oct 26 18:07:34 2018 +0200
+
+    bridges: Add favicon to bridges missing it
+    
+    Adds favicon to bridges that support it. Some sites prevent downloading
+    favicons, those bridges are left untouched.
+    
+    Affected bridges:
+    
+    - AutoJMBridge
+    - BandcampBridge
+    - BlaguesDeMerdeBridge
+    - BloombergBridge
+    - BundesbankBridge
+    - ChristianDailyReporterBridge
+    - ContainerLinuxReleasesBridge
+    - DailymotionBridge
+    - DiceBridge
+    - DribbbleBridge
+    - EliteDangerousGalnetBridge
+    - ElsevierBridge
+    - FacebookBridge
+    - FB2Bridge
+    - FDroidBridge
+    - FierPandaBridge
+    - GooglePlusPostBridge
+    - JapanExpoBridge
+    - KATBridge
+    - KernelBugTrackerBridge
+    - LegifranceJOBridge
+    - NotAlwaysBridge
+    - NyaaTorrentsBridge
+    - PinterestBridge
+    - RadioMelodieBridge
+    - RainbowSixSiegeBridge
+    - SupInfoBridge
+    - TagBoardBridge
+    - TebeoBridge
+    - TheTVDBBridge
+    - WhydBridge
+    - ZoneTelechargementBridge
+
+commit c56f7abc2a368b2bf1b7af80b499f8baebd1b86d
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Oct 24 17:23:09 2018 +0200
+
+    [FacebookBridge] Reduce occurrence of HTTP error 302
+    
+    Facebook returns "HTTP/1.1 302 Found" when requesting:
+      https://www.facebook.com//pg/username/posts?_fb_noscript=1
+    Automatically redirecting to:
+      https://www.facebook.com/username/posts/
+    
+    We receive a positive response faster when directly requesting the
+    correct page:
+      https://www.facebook.com/username/posts?_fb_noscript=1
+    
+    Notice: This is just a minor adjustment to improve performance while
+    requesting data from the server. The previous version worked fine as
+    well.
+
+commit cb488d9d8c0c79f6b263bbb4e023d8042cd6407d
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Oct 20 15:38:44 2018 +0200
+
+    [FacebookBridge] Fix broken feeds
+    
+    This commit collects the original contents from a different
+    tag to prevent this issue. The root cause is unknown but closely
+    related to the regex.
+    
+    References #877
+
+commit 717b0bdd9cdf637f9f067b4236cda56154ce829e
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Oct 16 19:16:51 2018 +0200
+
+    Fix items link to localhost
+    
+    References #864
+
+commit 7561c0685db761b4530f1237b7c83b203908a0d7
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Oct 15 19:53:41 2018 +0200
+
+    [FacebookBridge] Fix 'SpSonSsoSredS' text in title
+    
+    The function 'defaultLinkTo' applied to the source HTML does break
+    regex matches later in the bridge. We need to apply the function
+    right before adding the contents to the item for the bridge to work
+    properly.
+    
+    References #856
+
+commit 5779f641c01d209d3a21df8a2b9ce8fa421a36b2
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Oct 15 17:33:19 2018 +0200
+
+    [FacebookBridge] Add option to limit number of returned items
+    
+    This commit adds a new optional parameter 'limit' which can be used
+    to limit the number of items returned by this bridge (i.e. '&limit=10')
+    
+    As requested in #669
+
+commit fcc9f9fd61cb25825c5b34f785cb0940663b9f9f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Sep 26 18:24:43 2018 +0200
+
+    [FacebookBridge] Use alternative URI to load more posts
+    
+    The URI "https://facebook.com/username?_fb_noscript=1" returns two
+    posts per user. Some profiles, however, are very active, causing the
+    bridge to miss items if more than two posts are send within the cache
+    duration (5 minutes).
+    
+    The alternative suggested in #669 is to use a different URI:
+    "https://facebook.com/pg/username/posts?_fb_noscript=1"
+    
+    While the contents of this URI essentially look the same when viewed
+    in a browser, it actually returns more than 10 posts depending on the
+    profile.
+    
+    References #669
+
+commit e1c4914b1c78e3b1f180615dad093d9635ea83a4
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Sep 25 18:56:33 2018 +0200
+
+    [FacebookBridge] Optimize for readability
+
+commit de8cee6a1cc1c79a356d80b17d4318a86aeb9290
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sun Sep 9 21:20:13 2018 +0200
+
+    Catching up | [Main] Debug mode, parse utils, MIME | [Bridges] Add/Improve 20 bridges (#802)
+    
+    * Debug mode improvements
+    
+     - Improve debug warning message
+     - Restore error reporting in debug mode
+     - Fix 'notice' messages for unset fields
+    
+    * Add parsing utility functions
+    
+    html.php
+     - extractFromDelimiters
+     - stripWithDelimiters
+     - stripRecursiveHTMLSection
+     - markdownToHtml (partial)
+    
+    bridges
+     - remove now-duplicate functions
+     - call functions from html.php instead
+    
+    * [Anidex] New bridge
+    
+    Anime torrent tracker
+    
+    * [Anime-Ultime] Restore thumbnail
+    
+    * [CNET] Recreate bridge
+    
+    Full rewrite as the previous one was broken
+    
+    * [Dilbert] Minor URI fix
+    
+    Use new self::URI property
+    
+    * [EstCeQuonMetEnProd] Fix content extraction
+    
+    Bridge was broken
+    
+    * [Facebook] Fix "SpSonsSoriSsés" label
+    
+    ... which was taking space in item title
+    
+    * [Futura-Sciences] Use HTTPS, More cleanup
+    
+    Use HTTPS as FS now offer HTTPS
+    Clean additional useless HTML elements
+    
+    * [GBATemp] Multiple fixes
+    
+    - Fix categories: missing "break" statements
+    - Restore thumbnail as enclosure
+    - Fix date extraction
+    - Fix user blog post extraction
+    - Use getSimpleHTMLDOMCached
+    
+    * [JapanExpo] Fix bridge, HTTPS, thumbnails
+    
+    - Fix getSimpleHTMLDOMCached call
+    - Upgrade to HTTPS as JE now offers HTTPS
+    - Restore thumbnails as enclosures
+    
+    * [LeMondeInformatique] Fix bridge, HTTPS
+    
+    - Upgrade to HTTPS as LMI now offers HTTPS
+    - Restore thumbnails using small images
+    - Fix content extraction
+    - Fix text encoding issue
+    
+    * [Nextgov] Fix content extraction
+    
+    - Restore thumbnail and use small image
+    - Field extraction fixes
+    
+    * [NextInpact] Add categories and filtering by type
+    
+    - Offer all RSS feeds
+    - Allow filtering by article type
+    - Implement extraction for brief articles
+    - Remove article limit, many brief articles are publied all at once
+    
+    * [NyaaTorrents] New bridge
+    
+    Anime torrent tracker
+    
+    * [Releases3DS] Cache content, restore thumbnail
+    
+    - Use getSimpleHTMLDOMCached
+    - Restore thumbnail as enclosure
+    
+    * [TheHackerNews] Fix bridge
+    
+     - Fix content extraction including article body
+     - Restore thumbnail as enclosure
+    
+    * [WeLiveSecurity] HTTPS, Fix content extraction
+    
+    - Upgrade to HTTPS as WLS now offers HTTPS
+    - Fix content extraction including article body
+    
+    * [WordPress] Reduce timeout, more content selectors
+    
+    - Reduce timeout to use default one (1h)
+    - Add new content selector (articleBody)
+    - Find thumbnail and set as enclosure
+    - Fix <script> cleanup
+    
+    * [YGGTorrent] Increase limit, use cache
+    
+    - Increase item limit as uploads are very frequent
+    - Use getSimpleHTMLDOMCached
+    
+    * [ZDNet] Rewrite with FeedExpander
+    
+    - Upgrade to HTTPS as ZD now offers HTTPS
+    - Use FeedExpander for secondary fields
+    - Fix content extraction for article body
+    
+    * [Main] Handle MIME type for enclosures
+    
+    Many feed readers will ignore enclosures (e.g. thumbnails) with no MIME type. This commit adds automatic MIME type detection based on file extension (which may be inaccurate but is the only way without fetching the content).
+    
+    One can force enclosure type using #.ext anchor (hacky, needs improving)
+    
+    * [FeedExpander] Improve field extraction
+    
+    - Add support for passing enclosures
+    - Improve author and uri extraction
+    - Fix 'notice' PHP error messages
+    
+    * [Pull] Coding style fixes for #802
+    
+    * [Pull] Implementing changes for #802
+    
+     - Fix coding style issues with str append
+     - Remove useless CACHE_TIMEOUT
+     - Use count() instead of $limit
+     - Use defaultLinkTo() + handle strings
+     - Use http_build_query()
+     - Fix missing </em>
+     - Remove error_reporting(0)
+     - warning CSS (@LogMANOriginal)
+     - Fix typo in FeedExpander comment
+    
+    * [Main] More documentation for markdownToHtml
+    
+    See #802 for more details
+
+commit bf30ad127c51dbf323b83fdff0786788a81f9c2e
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Sep 9 20:31:15 2018 +0500
+
+    [FacebookBridge] Removes query string from post links
+    
+    * [FacebookBridge] Removes query string from post links
+
+commit 0d80a19e84c2c22da2de3a8b71e67e6970d85d03
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Sun Jul 8 17:16:00 2018 +0200
+
+    [FacebookBridge] Add context for public Facebook groups (#739)
+    
+    The previous context is now labeled 'User', while the new context is
+    labeled 'Group'. The existing code was not changed, instead new group*
+    functions were implemented to handle groups.
+    
+    The general principle of capturing groups is the same as done for users
+    with adjustments to account for different HTML structures.
+    
+    Captcha responses are currently not supported for groups! There doesn't
+    seem to be a way to trigger them consistently, which makes it hard to
+    handle them properly.
+    
+    Features of the group context:
+    
+    - The feed title is based on the group name
+    - The group URI used for capturing is returned for the feed URI
+    - Author names and timestamps are reproduced from the source
+    - Post titles are reproduced from the source if they exist, otherwise
+    the title is build manually from the author name and the content
+    - Original contents are included with the feed
+    - All images are attached as enclosures as well
+    
+    Closes #
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit 5087f5f79e64c648765384fdc952efc68c57243a
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 24 11:03:43 2018 +0200
+
+    [FacebookBridge] Support facebook links as user name
+    
+    Allows users to paste facebook links as user name. The link must contain
+    the correct host (www.facebook.com) and a valid path (/user-name/...).
+    The first part of the path is used for the user name. Errors are returned
+    in case something went wrong.
+    
+    References #706
+
+commit 4a5f190e0e2dd83f89bf60a6c7598d6c64e4a5c3
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 24 10:52:00 2018 +0200
+
+    [FacebookBridge] Add option to skip reviews
+    
+    Reviews are provided the same way as summary posts and therefore returned
+    as separate feed item for each review. This commit adds a new option
+    '&skip_reviews=on' to skip reviews entirely.
+    
+    References #706
+
+commit 79ebdc4b3974f63149b5fad90d50e45fb904393f
+Author: teromene <teromene@teromene.fr>
+Date:   Sat May 5 13:49:49 2018 +0100
+
+    Warn the user when trying to fetch a non-public facebook page.
+
+commit 6caca4946bf4593e4c6d254e871d2783286eeb37
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Mar 25 14:01:35 2018 +0200
+
+    bridges: Fix bridges with custom headers and options
+    
+    This commit fixes bridges which called getContents, getSimpleHTMLDOM
+    or getSimpleHTMLDOMCached with custom settings.
+
+commit df6da837dca4d1f11c9c288f32d81c24b38345e5
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Mar 23 21:23:27 2018 +0100
+
+    [FacebookBridge] Return error if username starts with slash
+    
+    Requesting a username with a leading slash would cause error 500
+    because the requested URI would contain two slashes in a row.
+    
+    For example username "/test" would result in:
+    https://facebook.com//test
+    
+    References #628
+
+commit be03764029eac64a12f847fe2cc361b4a95c0acf
+Author: Tameroski <tameroski@users.noreply.github.com>
+Date:   Tue Jan 23 12:27:45 2018 +0100
+
+    Fixing double quote issue at the end of URL (#623)
+
+commit 99e7e7876e44bf9d23506016e9e2c06c722d8f6b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 6 12:47:48 2017 +0200
+
+    exception: Use built-in HTTP response codes
+    
+    PHP >= 5.4 provides a built-in function to generate valid HTTP
+    error header including the error description: http_response_code()
+    
+    See: http://php.net/manual/en/function.http-response-code.php
+    See also: https://stackoverflow.com/a/12018482
+    
+    This commit removes the '\Http' utility class and replaces all
+    calls to 'Http::getMessageForCode()' by 'http_response_code()'
+
+commit cbda060b86aa071b0772d86a61756a0158cb24bd
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Aug 4 21:12:43 2017 +0200
+
+    [FacebookBridge] Fix &amp; in URLs
+    
+    All formats except HTML return &amp; instead of & in URLs causing
+    all links with parameters (...&id=...) to break.
+    
+    Facebook does not return valid HTML URIs but instead provides them
+    with all special characters encoded (like using htmlspecialchars).
+    This seems to be related to the page being build almost entirely of
+    script blocks.
+    
+    This commit adds htmlspecialchars_decode() to URI and content to
+    reverse the encoding.
+    
+    References #550
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 6e4bc341b74287fe4d6b7a612f60fa903a1ba401
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jul 25 16:04:21 2017 +0200
+
+    [FacebookBridge] Replace 'novideo' with 'media_type'
+    
+    This replaces the 'novideo' parameter with 'media_type' in order
+    to filter for specific content types. Currently supported:
+    
+    - 'all': Returns all posts (default)
+    - 'video': Returns only posts including videos
+    - 'novideo': Returns only posts that don't include videos
+    
+    References #553
+
+commit fa2df09b1b359b69a44f6840d83e11e146d55910
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jul 25 15:39:26 2017 +0200
+
+    [FacebookBridge] Add option to hide posts with facebook videos
+    
+    This adds a new option 'novideo' that can be set to 'on' or 'off'
+    in order to skip posts that include facebook videos (does not work
+    for linked videos like YouTube). This option is 'off' by default.
+    
+    References #533
+
+commit 8ed4812e00e6f6bb55a3ee6ab374a4642b135a62
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun May 7 13:17:43 2017 +0200
+
+    [FacebookBridge] Add requester languages to HTTP header
+    
+    If no accepted languages are specified Facebook will guess your
+    language. This guess can go horribly wrong if your server does not
+    provide origin information.
+    
+    This adds a context header with language information when retrieving
+    page contents. The accepted languages are read from the list of
+    accepted languages specified by the web browser of the requester.
+    
+    References #530
+
+commit e221358eade88a23ff60af47cd0e22223b80fa02
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Apr 10 13:04:38 2017 +0200
+
+    [FacebookBridge] Handle summary posts
+    
+    Previously summary posts were ignored which resulted in the last
+    two posts not showing up in the feed (the latest two are shown in
+    the summary post).
+    
+    Now summary posts are treated like regular posts, returning them
+    as part of the regular feed.
+    
+    References #502, #505
+
+commit c4169f1579701342f7f462f0103f68c5382946ad
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 22:20:55 2017 +0100
+
+    bridges: Return parent::getName by default
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit 1028e538ab4e531eeae8646b11335a96e035163a
+Author: Pellaeon Lin <pellaeon@hs.ntnu.edu.tw>
+Date:   Fri Feb 3 00:18:23 2017 +0800
+
+    Fix duplicate `https://www.facebook.com/`  on captcha_action POST URL (#466)
+
+commit 49cc0661ad346d15f5185396ad7d3cb9b616549a
+Author: Pellaeon Lin <pellaeon@hs.ntnu.edu.tw>
+Date:   Fri Feb 3 00:17:18 2017 +0800
+
+    Fix FacebookBridge feed name empty when data loaded from cache (#456)
+
+commit 3109694b1c37ca19d5564d62193aaa0e0a164068
+Author: Pellaeon Lin <pellaeon@hs.ntnu.edu.tw>
+Date:   Fri Feb 3 00:13:26 2017 +0800
+
+    Ignore summary posts generated by facebook (#467)
+
+commit 9c1bedb33f3218008dbe7dab1dd740241387dd42
+Author: Pellaeon Lin <pellaeon@hs.ntnu.edu.tw>
+Date:   Fri Jan 13 06:38:05 2017 +0800
+
+    Preserve br and p from Facebook post content
+
+commit 970e216c1fc7a10550cf4288fd2197255557324f
+Merge: 9020b09f a1ef589f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Oct 2 16:05:58 2016 +0200
+
+    Merge branch 'methods2functions' of https://framagit.org/peetah/rss-bridge
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 235c9859012887bda40c0f024c72975223256610
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 17:04:28 2016 +0200
+
+    [BridgeAbstract] replace getCacheDuration method by CACHE_TIMEOUT class constant
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 8c7b53b883283fce7c07936095d5984132cec209
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 14:24:17 2016 +0200
+
+    [FacebookBridge] fix + code simplification
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 1b3c8a8aeba5641f3bec9a6a720939df537bfa83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 01:25:33 2016 +0200
+
+    [core + bridges] add BridgeAbstract::$inputs and BridgeAbstract::getInput()
+    
+    Inputs are not stored in BridgeAbstract::$parameters anymore to separate
+    static data from dynamic data.
+    The getInput method allows for more readable code.
+    
+    Also fix an "undefined index 'global'" notice
+    
+    Probability of breaking bridges: high !
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 4a1f360d396e08ce914bf5a5f7e90060d60eaf3d
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 23:39:40 2016 +0200
+
+    [bridges] use BridgeAbstract::getContents instead of file_get_contents
+    
+    use of the proxy feature when enabled
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3c0d13c1bb72a87f0d671692e205f45f04d94eba
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 19:06:35 2016 +0200
+
+    bridges: use BridgeAbstract::getSimpleHTMLDOM
+    
+    instead of BridgeAbstract::file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 74f0572d914617b4e47fe0fd2fabfe356710d609
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Aug 17 14:45:08 2016 +0200
+
+    bridges: Replace returnError function with more specific
+    
+    Replacements depend on original error code:
+    400: returnClientError
+    404: returnServerError
+    500: returnServerError
+    501: returnServerError
+
+commit fa59a25229a11d9a8fbb93494713984f7d26fe06
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 15 01:19:16 2016 +0200
+
+    bridges: Update bridges with 'required' attributes
+
+commit 42b6c82753127407e7c5ccd5f39ffa4e78040e9e
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 15:50:25 2016 +0200
+
+    bridges: Cleanup occurrences of $item->thumbnailUri
+    
+    This is a subsequent change to f3eefab
+
+commit 0ddf664d898f785973653a54f8ec41b6018a3dd2
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Sat Aug 6 18:40:36 2016 +0200
+
+    bridges: Remove obsolete getName() and getURI()
+
+commit 955eecc299e67a1062a9e75149b6c098fb9d2cbc
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Jun 25 23:17:42 2016 +0200
+
+    use BridgeAbstract::file_get_html in all bridges
+    
+    instead of simple_html_dom function file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 96de64af6399b57f70e0d5e0e9c4093a6924d63d
+Author: ORelio <oreliogitantispam.l0gin@spamgourmet.com>
+Date:   Sun Jun 12 22:10:59 2016 +0200
+
+    [Facebook] Update field retrieval
+    
+    Due to changes on their side.
+    Related issue: #253
+
+commit 3288328ff7eec6ba17656f764610f3568a976a9a
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Thu Mar 31 11:45:35 2016 +0200
+
+    [Facebook] Update date in loadMetadatas
+
+commit e62c6af62e86ad7bf5ffe0c43b1abc47fa7f6b9a
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Thu Mar 31 11:33:38 2016 +0200
+
+    [Facebook] Select page content one level further down
+    
+    This fixes loading issues where feeds appeared empty.
+
+commit d16d5147363a30efa236007ffcaac520d3b24a08
+Author: ORelio <oreliogitantispam.l0gin@spamgourmet.com>
+Date:   Sat Jan 23 21:53:23 2016 +0100
+
+    [Facebook] Capcha retrieval and response submit
+    
+    This does not solve the captcha issue but allows the viewer to manually
+    solve the captcha by displaying a form and using the response from the
+    viewer. Maybe a first step to automated captcha solving?
+    
+    This process relies on the use of a PHP session for storing captcha
+    details so that the user cannot submit anything else than the response
+    to the captcha. Response is filtered before being forwarded, also. Once
+    captcha is solved we get a page ready to be parsed, as usual.
+    
+    Combined to some kind of OCR, this could automatically solve the
+    captcha, but currently if only automates the process of retrieving the
+    challenge and submitting the response.
+
+commit e582c887fbd590f16a2871d6440521ab0ce658a9
+Author: Teromene <teromene@teromene.fr>
+Date:   Wed Nov 11 21:45:24 2015 +0000
+
+    Ajout du paramètre pattern pour les entrées de type texte, ajout du required côté HTML.
+    Correction de la page d'accueuil pour qu'elle soit conforme aux standards du W3C.
+    Correction de la regex de listage des fichiers pour qu'elle ignore les sauvegardes.
+    Ajout d'un nettoyeur HTML, par défaut.
+
+commit 78c9dcc705682cb3e71912fae19365d71ee7bf22
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Nov 5 15:50:18 2015 +0000
+
+    Last batch of bridges, all implemented !
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 5d2e7ac83ddc8e300336b955b654afab2f078438
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Nov 3 14:36:19 2015 +0000
+
+    Ajout d'options multiples pour les méta-données.
+    Ajout d'un bridge de démonstration, DemoBridge.
+    Ajout d'un début de documentation pour créer un bridge dans CREATE_BRIDGE.md
+
+commit b592f8ebbfeb1893825187538f594ff32b9c86a7
+Author: ORelio <oreliogitantispam.l0gin@spamgourmet.com>
+Date:   Sat Oct 24 20:11:21 2015 +0200
+
+    [Facebook] Convert textual emoticons to ASCII
+    
+    Currently emoticons are retrived in textual form eg <i><u>smile
+    emoticon</u></i> which is not really visual... so let's convert them back
+    as ASCII emoticons eg ':)'. This works using a hardcoded table mapping
+    emoticon names to their visual representation, and the regular expression
+    match the two words because eg in french facebook will display
+    <i><u>émoticône smile</u></i> so we need to test both. Unknown emoticon
+    descriptions will be left as is.
+
+commit 300b8bba9b229fd5dfbd496602195a173da46901
+Author: ORelio <oreliogitantispam.l0gin@spamgourmet.com>
+Date:   Fri Oct 23 12:08:18 2015 +0200
+
+    [Facebook] More cleaning and bypass link redirect
+    
+    Remove a bunch of useless html node properties
+    Bypass all l.php facebook link redirections
+    Restore <u> and <i> basic formatting
+
+commit d7436c2d0a5c26fb350fde4f168894e79adc7562
+Author: ORelio <oreliogitantispam.l0gin@spamgourmet.com>
+Date:   Sat Sep 5 14:31:57 2015 +0200
+
+    Improve Facebook Bridge
+    
+    Retrieve author display name from page title
+    Build short readable title using name and content
+    Convert relative links into absolute links
+    Remove attributes from </a> tags (may cause issues)
+    Remove onclick and onmouseover (javascript code)
+    Retrieve url of first image of post as thumnail
+    Use author avatar as thumnail if no first image
+    Use display name in feed name: name - Fb bridge
+    Minor code indent fixes and use simple quotes
+
+commit ee4d4d9603be01c6396b189cb8652c7a37f278db
+Author: teromene <teromene@teromene.fr>
+Date:   Wed Sep 2 13:49:36 2015 +0200
+
+    Ajout du support des journaux de profils
+
+commit 9dfa1d6f258beb3083955244499576b19d701f63
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Sep 1 00:04:13 2015 +0200
+
+    Ajout d'une URI par post
+
+commit 7680b065b52cc4bebdbc75cfd8a8dca1d1da7849
+Author: teromene <teromene@teromene.fr>
+Date:   Mon Aug 31 23:02:11 2015 +0200
+
+    Modification de la durée du cache
+
+commit 221ac239e1e31e5066799a8e44bb6e2fb569f016
+Author: teromene <teromene@teromene.fr>
+Date:   Mon Aug 31 22:59:08 2015 +0200
+
+    Ajout d'un bridge pour Facebook

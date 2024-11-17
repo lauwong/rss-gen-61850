@@ -1,0 +1,63 @@
+commit cdf21d48e5dbdd09f41528cc9e522507d67adf71
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Wed Oct 16 21:58:18 2024 +0500
+
+    [RutubeBridge] Multiple fixes (#4284)
+
+commit 6afd13eb06276f085f245c5075972ef36eb6740a
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 03:43:26 2024 +0200
+
+    refactor: deprecate FeedItem constructor (#4201)
+    
+    * fix: bug in prior commit
+    
+    * refactor: deprecate FeedItem constructor
+    
+    * test: fix
+
+commit 401cc187b71661cad81a27381763059c047c69e4
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Fri Aug 2 20:44:46 2024 +0500
+
+    [RutubeBridge] Fix playlist mode returning empty result (#4184)
+
+commit bba225dfe85e8db237df114991657708ec4210c0
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Mon Jul 29 01:33:48 2024 +0500
+
+    [RutubeBridge] New option to fetch video from search results (#4162)
+
+commit fd0d5350bef44c624eb22f965b3482f80973d187
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Wed Aug 24 17:49:54 2022 +0500
+
+    [RutubeBridge] Include timestamp and author in feed (#2982)
+
+commit 205f0a7239cc924638437d8bb0cf5bf322ee8008
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Fri Aug 5 14:45:50 2022 +0500
+
+    [RutubeBridge] Fix regex for retreiving reduxState (#2955)
+    
+    Before this commit regex captured window.reduxState value until first semicolon.
+    This is incorrect since it produces invalid json, if semicolon is
+    also somethere in the middle of stringified json.
+    
+    After this commit regex will capture window.reduxState value until last semicolon.
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit ac766aa47fd629c78e7f6a2047003d55dc208a1c
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sat Apr 16 00:37:38 2022 +0500
+
+    [RutubeBridge] Add bridge (#2661)

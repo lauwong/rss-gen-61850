@@ -1,0 +1,21 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit ccb2e64fd068a89cbf2014727a41b931a186eb68
+Author: D5k H3h <85834680+dhuschde@users.noreply.github.com>
+Date:   Sat Sep 11 10:27:17 2021 +0200
+
+    [WallpaperflareBridge] Add bridge (#2179)

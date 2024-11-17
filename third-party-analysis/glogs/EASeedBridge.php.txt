@@ -1,0 +1,9 @@
+commit e9d3a657bab09c6fbe8e7d4002cdcb5215054bf4
+Author: Tobias Alexander Franke <thefranke@users.noreply.github.com>
+Date:   Thu Aug 15 00:47:39 2024 +0200
+
+    [EASeedBridge] New bridge for the EA Seed blog (#4216)
+    
+    * [EASeedBridge] New bridge for the EA Seed blog
+    
+    * Fix linter issues

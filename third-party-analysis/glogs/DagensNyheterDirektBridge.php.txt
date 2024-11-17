@@ -1,0 +1,33 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit d127bf6e009318914f9b35222fcd97ff137dad57
+Author: Arnav Jain <ajain-93@users.noreply.github.com>
+Date:   Fri Dec 15 23:36:50 2023 +0100
+
+    [DagensNyheterDirektBridge] New bridge (#3834)
+    
+    * [DagensNyheterDirektBridge] New bridge
+    
+    * [DagensNyheterDirektBridge] Lint: Replace all tabs with space
+    
+    * [DagensNyheterDirektBridge] Lint: Lines
+    
+    Add empty lines and move start brace to new line
+    
+    * [DagensNyheterDirektBridge] Lint: short- array syntax
+    
+    * [DagensNyheterDirektBridge] Lint: short array syntax
+    
+    Fix incorrect line ending
+    
+    * [DagensNyheterDirektBridge] Lint: further lint fixes
+    
+    * [DagensNyheterDirektBridge] Lint: final fixes

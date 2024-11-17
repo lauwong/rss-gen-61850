@@ -1,0 +1,106 @@
+commit 6c86e2c1f73897180d56d0a0d10e37e8eb63dbb9
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Nov 8 08:11:18 2024 +0100
+
+    [IdealoBridge] Really fix Logic and enhance Feed Content (#4321)
+    
+    - Fix Feed Title generation (wrong usage of loadCacheValue)
+    - Use a more reliable way to get New and Used Price
+    - If no new Price and no Used Price are present in the page, then don't
+      delete previous New Price and previous Used Price
+    - If there is no New Price and no Used Price, then return no Feed
+      Item
+    - Fix the "now" date format
+    - Make the Feed Item Title more readable
+    - Use the Product Link as the Feed URL
+
+commit bd0fb1da9901d0c91b1a68a8a50046a434440caf
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sun Nov 3 18:28:32 2024 +0100
+
+    [IdealoBridge] Fix (#4316)
+    
+    When a product was available before as used product in the past, and
+    now it's not available used anymore, a price update article was
+    generated on every feed loading, because the old used price was still
+    stored in the cache, and therefore different as "no price".
+    
+    The issue was also present in the cas of a New product price that
+    becomes unavailable.
+    
+    Now, when either there is no New or Used price available, the previous
+    price is delete from the cache.
+
+commit bb1e308057b7e8740d67d0fb0fa9c6298e9b9730
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Thu Jun 13 05:03:20 2024 +0200
+
+    [IdealoBridge] Fix price comparison and some PHP Notice (#4130)
+    
+    * [IdealoBridge] Fix price comparison and some PHP Notice
+    
+    - The prices were compared as String and the comparison was wrong in
+      some case : now the price are converted to float before the
+     comparison, so the logic works really.
+    
+    - Don't show a new or used product price if it does not exist : this
+      prevents a PHP Notice to be thrown
+    
+    * [IdealoBridge] Fix price conversion in case the price is null
+    
+    The conversion as float of the text price won't work if the price is
+    null : we retunr null in this case now.
+
+commit 3ed193eee2e873496ca3635561c61e0e8ba49edd
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Fri Mar 22 09:44:42 2024 +0100
+
+    [IdealoBridge] Update Bridge Meta data & (#4022)
+    
+    The bridge meta data has been updated to reflect that the bridge works
+    for other international version of Idealo.
+    
+    The Price trend is displayed on every price in the the Feed element
+    content. The same function is now used to show the price trend in the
+    Feed element title, to remove some duplicate code..
+
+commit e6cb5fdc89f2ad4137657cccea79fbdc23bb37cb
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Mar 13 23:47:46 2024 +0100
+
+    [IdealoBridge] Fix Feed items & Feed title customisation (#4013)
+    
+    - Feed items with new price tracking had "Max Price Used" instead of
+      "Max Price New"
+    - Feed Title is now customised with the product name and the Price
+      limits
+    - Fixed logic for saving prices in cache
+    - remove undefined variable notices
+
+commit 6408123330a28041344cccf3133981196e62a9a6
+Author: SebLaus <97241865+SebLaus@users.noreply.github.com>
+Date:   Fri Jan 19 03:59:47 2024 +0100
+
+    [IdealoBridge] added Header with user-agent and fixed typo (#3897)
+    
+    * Added header with useragent
+    
+    * copy paste error from local test environment
+    
+    * Fixed missing space in New before
+    
+    * fixed missing space after comma in argument list
+
+commit e76b0601b3312d957b6bf6e46ddeb3df6cd70a01
+Author: SebLaus <97241865+SebLaus@users.noreply.github.com>
+Date:   Fri Nov 10 12:55:56 2023 +0100
+
+    [IdealoBridge] New Bridge to track prices on idealo.de (#3786)
+    
+    * [IdealoBridge] Created
+    
+    Checks the price of a given item on idealo.de. Can create an Alarm Message if a the price is lower than set or an Priceupdate if the price has changed.
+    
+    * Changed Exec and syntax
+    
+    * last fixes for remaining warning

@@ -1,0 +1,43 @@
+commit 73289324bd39a31e225bd8f8048a1081bb771c67
+Author: Dag <me@dvikan.no>
+Date:   Sun Mar 31 21:02:55 2024 +0200
+
+    feat: add vendor http header to cached responses (#4040)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 119f4bdec58d2fe2099fe87505e1fdca6ce129de
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Sun May 10 17:35:21 2020 +0500
+
+    [MediapartBlogsBridge] Lint
+
+commit e0ac9972eeb8ba5886b2f9656bcbc6639a427b41
+Author: somini <somini@users.noreply.github.com>
+Date:   Wed Mar 25 19:02:09 2020 +0000
+
+    [MediapartBlogsBridge]: New Bridge
+    
+    Fix #1468

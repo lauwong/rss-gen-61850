@@ -1,0 +1,16 @@
+commit a865b1073a198b4ac74fcf77c9550ff354f3f10a
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sat Jan 20 10:32:30 2024 +0100
+
+    [Next.Ink] Rewrite bridge (#3863)
+    
+    Adjust to changed feeds and html template.
+    Not backward compatible with existing feeds.
+
+commit d960e0049d1746b64d8f31a57cc157b81dbde119
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sat Jan 20 10:31:32 2024 +0100
+
+    [NextINpact Bridge] Rename into NextInkBridge
+    
+    Site migrated from https://www.nextinpact.com/ to https://next.ink/

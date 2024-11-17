@@ -1,0 +1,162 @@
+commit 313be4c5125158f1413afc1269135d939d976cc0
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Wed Aug 7 15:51:44 2024 +0200
+
+    replace self:: with -> for methodcalls in Nordbayern bridge (#4195)
+
+commit 8dd56bca051c69462fd1464d23336c8b07c2aee4
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Sun Jul 28 22:42:18 2024 +0200
+
+    fix bulletpoints for nordbayern (#4166)
+
+commit 11ea6aedfd06e1da1294883d382c063951ae3c2e
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Thu Aug 10 23:59:37 2023 +0200
+
+    hide dpa articles in Nordbayern News (#3608)
+
+commit 79f6ec57337834558810e02ec9ab6f10580aaf7a
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Sat Oct 8 15:34:26 2022 +0200
+
+    hide Nordbayern+ articles (#3094)
+
+commit 372eccd7b24c7d149225656a4ade1df0010373bb
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Sat Aug 13 19:41:05 2022 +0200
+
+    [Nordbayern] Update regions (#2966)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 2fa24e780b5a3d99dece08a010868455abdfe937
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Sat Jun 4 20:50:16 2022 +0200
+
+    Fix nordbayern (#2730)
+
+commit fb2ed953681f0915c42797dfb610968c335534da
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Sun May 8 16:37:53 2022 +0200
+
+    Fix nordbayern (#2708)
+    
+    * fix newspaper thumbnails are shown again
+    
+    * show article teaser on top of title image for NN
+
+commit adeaede9305d08386855072022965082167eb2e4
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Mon May 2 19:06:30 2022 +0200
+
+    [NordbayernBridge] Fix Bridge (#2675)
+
+commit 5a7d305e07eb12b93348da8b88609be2960f7333
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:40:37 2022 +0200
+
+    [Nordbayern] fix: problem with absolute and relative link (#2637)
+    
+    * [Nordbayern] fix: problem with absolute and relative link
+    
+    Fixes:
+    
+    cURL error: Could not resolve host: www.nordbayern.dehttps
+
+commit 32a63484185d00d6fdeb0cdffd1fa36a5d9ac630
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Thu Mar 24 20:26:57 2022 -0400
+
+    [NordbayernBridge] Fix linting issue (#2531)
+
+commit 3a9e528301fc070c836450212189e16df75618c3
+Author: eggwhalefrog <84346765+eggwhalefrog@users.noreply.github.com>
+Date:   Fri Mar 25 00:28:06 2022 +0100
+
+    [NordbayernBridge] add author & timestamp of article (#2309)
+
+commit fc51c6753d94fc859b8a35e170845dc11f03f63c
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Sat Jan 1 23:51:59 2022 +0100
+
+    [NordbayernBridge] Fix banner images (#2384)
+
+commit 42379071e9cfff44ae2ed771f22299a233eb4872
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Sat Nov 6 19:28:12 2021 +0100
+
+    [NordbayernBridge] Fix banner URL (#2326)
+    
+    * make banner images show for nordbayern again
+    * make author portrait not apear as article banner for nordbayern
+
+commit b86ed70376fd53e52cfc63496bbd872424415976
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sat Oct 30 01:06:04 2021 +0500
+
+    [core] Backported str_starts_with, str_ends_with and str_contains from php 8 (#2318)
+
+commit 8f634eb4a1889ba572fc32faee1a851badb2db54
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Wed Aug 25 15:08:23 2021 +0200
+
+    [NordBayernBridge] Fix election articles (#2253)
+
+commit 036a3ad245abadaebaa6620a6d80251d6c3cbd2e
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Sun Aug 15 15:57:40 2021 +0200
+
+    [NordbayernBridge] Add city of Erlangen (#2248)
+
+commit 398e175fe09c0d761f237de64850e0fd12b180c2
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Thu Jul 1 04:21:58 2021 +0200
+
+    [NordbayernBridge] Follow site updates (#2169)
+
+commit 17f9c44bfc8affc07c9b5c05724215d24d6fab36
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Wed May 19 10:44:17 2021 +0200
+
+    [NordbayernBridge] Fix jpeg regex (#2118)
+
+commit 28aaf590079db1c251037158a6b2545303a12bf9
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Wed May 19 10:43:10 2021 +0200
+
+    [NordbayernBridge] Exclude slideshows when handling articles (#2117)
+
+commit 0521ba5873c2574927c12bc8386198d6bed2fb13
+Author: Monocularity <62791254+Monocularity@users.noreply.github.com>
+Date:   Sun Feb 21 17:43:23 2021 +0100
+
+    [NordbayernBridge] Fixed typo of region "Hilpoltstein" (#1962)
+
+commit 645a8f62c69b5c23a19fa3ac96a2c96078475843
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Oct 15 12:53:19 2020 +0500
+
+    [.travis] Fix several phpcs and phpunit errors (#1799)
+
+commit 2bb99c444817af322594344d667c06e15d528191
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Fri Sep 18 07:13:31 2020 +0200
+
+    [NordbayernBridge] Fix images and newsblock order (#1741)
+
+commit 604d527ac7e4db216028e89a37acf182e58fa410
+Author: Christian Schabesberger <chris.schabesberger@mailbox.org>
+Date:   Tue Mar 31 21:14:16 2020 +0200
+
+    add nordbayern bridge
+    
+    fix intending

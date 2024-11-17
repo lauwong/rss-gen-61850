@@ -1,0 +1,39 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5b93bba1a36c3a1b4e622fe7dbf0b0dfaadb97e6
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Tue Jun 14 09:44:26 2022 -0400
+
+    [ZenodoBridge] Fix bridge (#2815)
+
+commit b6e8350596f642f342f15d856882939e2dd9e658
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:37:30 2022 +0200
+
+    fix: a bunch of small changes in multiple bridges (#2644)
+    
+    Mostly refactors.
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 3f41d0593a740502f7446cf1338b631db198048a
+Author: TheRadialActive <account@d2ns.org>
+Date:   Mon Jul 16 12:02:41 2018 +0200
+
+    Added RSS bridge for zenodo.org (#749)
+    
+    * added RSS bridge for zenodo.org

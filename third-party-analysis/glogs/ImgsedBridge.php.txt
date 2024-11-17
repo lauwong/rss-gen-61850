@@ -1,0 +1,112 @@
+commit 8203196145c30587aa83e0d22c9d1c915356e0c9
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Oct 18 02:33:29 2023 +0200
+
+    [ImgsedBridge] More robust data parsing (#3766)
+    
+    Date Interval with the article "an" or "a" are now handled in a generic
+    way : every "article" is replaced by the number "1" instead of a
+    handling of multiple special case
+
+commit d21f8cebf617aa1f8154b1ec03d5af1b420d489d
+Author: Dag <me@dvikan.no>
+Date:   Wed Oct 11 18:37:01 2023 +0200
+
+    fix(imgsed): parsing of datetime string (#3738)
+    
+    * refactor
+    
+    * fix(imgsed): parsing of date
+    
+    date_interval_create_from_date_string(): Unknown or bad format (an hour) at position 0 (a)
+
+commit 0c92cf32d471cc0722727b7cd40779882f7b923a
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Sun Oct 1 19:00:13 2023 +0200
+
+    [ImgsedBridge] Fix and improvements (#3710)
+    
+    * [ImgsedBridge] Fix and improvements
+    
+    - Display an error if the user doesn't select at least an content type
+      to display
+    - Unsplit the regular expression to make the URL of imgsed.com work too
+    - Remove the "hour part" of the publication date : the website shows
+      only the number of days if the content is older than one day
+    
+    * [ImgsedBridge] Fix and improvements
+    
+    Fix syntax
+    
+    * [ImgsedBridge] Fix and improvements
+    
+    - Fix TEST_DETECT_PARAMETERS
+    - change detectParameters regular expression to match more instagram.com
+      URLs
+    
+    * [ImgsedBridge] Fix and improvements
+    
+    - Fix date parsing for interval 'a day'
+    
+    * lint
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>
+
+commit 2172df9fa2de2752396a55260f49594606466ec1
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 29 19:17:03 2023 +0200
+
+    fix: various notice fixes (#3718)
+
+commit 7329b83cc0fe1a5f707f864b1f3d62efd4be2172
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 21 22:05:55 2023 +0200
+
+    refactor: logger (#3678)
+
+commit 52d3cce59dae1b5b8adb5497450e396473ebf6b2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 22:40:24 2023 +0200
+
+    bridges: add context to detectParameters (#3607)
+    
+    * bridges: add context to detectParameters
+    
+    Some bridges did not return the context parameter but they used it in
+    the parameters
+    
+    * bridges: add context to detectParameters
+    
+    Fix test for InstagramBridge
+
+commit f3896ed543c5e026ee114fa37e243a01c71322a7
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 17:35:35 2023 +0200
+
+    [ImgsedBridge] Add detectParameters feature to the bridge (#3604)
+    
+    The bridge can detect the most common profile variation URL of
+    instagram.com or imgsed.com websites to extract the username.
+
+commit 701fe3cfeda0d14f1f49afe2bd0f89296214459e
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 29 00:14:30 2023 +0200
+
+    fix: various small fixes (#3578)
+
+commit 087e790ec10d287f944e3abeb5ab3bda9a1a045a
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Jul 19 03:28:14 2023 +0200
+
+    [ImgsedBridge] Add new Instagram Bridge Alternative (#3550)
+    
+    * [ImgsedBridge] Add new Instagram Bridge Alternative
+    
+    Imgsed is a Website adverstised on instagram website, that's is not
+    behind Cloudflare Anti Bot feature.
+    You can select to display Posts, Tags, and Stories of a specific
+    username
+    
+    * [ImgsedBridge] Fix empty defaultValue

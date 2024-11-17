@@ -1,0 +1,51 @@
+commit 001dd47439339672b6e84979fd0e1a0118bc27b6
+Author: Dag <me@dvikan.no>
+Date:   Thu Apr 4 19:12:04 2024 +0200
+
+    fix: small tweaks (#4057)
+
+commit b2c8475b2c789de8c70aab5ea7b5b0ae56a2a507
+Author: Dag <me@dvikan.no>
+Date:   Mon Jan 29 21:51:23 2024 +0100
+
+    fix(gates): json decoding (#3937)
+
+commit 0c6ffbf5a44ccbd3948b969063916f518e76c5d8
+Author: Dag <me@dvikan.no>
+Date:   Tue Dec 19 08:46:37 2023 +0100
+
+    fix(gatesnotes): the unfucked their json (#3849)
+
+commit 6a72c56cdd9230fedddc3d5eb23ebe94bfdc3310
+Author: Dag <me@dvikan.no>
+Date:   Thu Oct 12 19:49:04 2023 +0200
+
+    fix: various fixes (#3741)
+
+commit 8f9147458d305debd72810a84681b779d917ef21
+Author: Dag <me@dvikan.no>
+Date:   Thu Jul 6 03:36:01 2023 +0200
+
+    fix(gatesnotes): fix #3493 (#3494)
+
+commit 19fc2dc10019f0ec777a67cf895a4b62538c157d
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Sat Mar 11 23:26:22 2023 +0100
+
+    [GatesNotesBridge] Fix bridge (fix #3294) (#3305)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 8c18c02c65042add22ef783e0f52a0483f3ffcb3
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Fri Apr 8 21:21:13 2022 +0200
+
+    [GatesNotesBridge] Add feedaxpander bridge for Bill Gate's blog (fix issue #2386) (#2611)

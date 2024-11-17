@@ -1,0 +1,538 @@
+commit 658391263ebdbd8614cefeb63eb43e3ea521e5b6
+Author: Teemu Ikonen <tpikonen@gmail.com>
+Date:   Thu Oct 19 18:02:53 2023 +0300
+
+    Add 'itunes:duration' tag for items with duration (#3774)
+    
+    * [{Atom,Mrss}Format] Allow itunes tags on items without enclosure
+    
+    * [Arte7Bridge] Add $item['itunes']['duration'] value
+
+commit a0a0d5235bb6f149886457d28e7b00c439992154
+Author: Loïc Fürhoff <git.noreply@posteo.no>
+Date:   Sun Jul 31 21:42:40 2022 +0200
+
+    Remove MAINTAINER (#2946)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 669e92357ad55b7f08d67daa0d37a18c931850ca
+Author: Loïc Fürhoff <git.noreply@posteo.no>
+Date:   Sat Apr 16 23:08:27 2022 +0200
+
+    [Arte7Bridge] Exclude trailers and sort by v2 (#2664)
+
+commit 73ebdbf67a6c2fe027b70526e77a32b301394e1d
+Author: Dag <me@dvikan.no>
+Date:   Fri Apr 15 22:02:41 2022 +0200
+
+    Revert "[Arte7Bridge] Exclude trailers and sort by (#2660)" (#2662)
+    
+    This reverts commit 924eaf20114e238f90bef074a3daafedaebef497.
+    
+    That commit broke the bridge.
+
+commit 924eaf20114e238f90bef074a3daafedaebef497
+Author: Loïc Fürhoff <git.noreply@posteo.no>
+Date:   Thu Apr 14 23:20:09 2022 +0200
+
+    [Arte7Bridge] Exclude trailers and sort by (#2660)
+
+commit aa0aa727ad7a17970ffce8af748807119ef8b1ae
+Author: Teemu Ikonen <tpikonen@gmail.com>
+Date:   Thu Mar 31 12:17:07 2022 +0300
+
+    [Arte7Bridge] Support all languages (#2543)
+
+commit 4d4ce3f3804557a22e6b35a676bc6818575195eb
+Author: Dag <me@dvikan.no>
+Date:   Sat Mar 26 00:07:34 2022 +0100
+
+    [Arte7Bridge] test: use legal default value for checkbox
+
+commit 2c00ecb92316659717e64fab8a158536b86716e1
+Author: Dag <me@dvikan.no>
+Date:   Sat Mar 26 00:03:38 2022 +0100
+
+    [Arte7Bridge] feat: add duration filter #662
+    
+    The feed item was given a "duration" key but that's not used
+    for anything.
+    
+    refs https://github.com/RSS-Bridge/rss-bridge/issues/662
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 3b7e61fb554713bd0a1ea432ef54a7987a692fa4
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Fri Jan 22 09:52:04 2021 +0500
+
+    [Arte7Bridge] Mitsu is no longer maintainer of the bridge
+    
+    > That said, please also feel free to remove me as "maintainer" since that's simply no longer reality
+    
+    https://github.com/RSS-Bridge/rss-bridge/issues/1906#issuecomment-765015048
+
+commit 3d231a417f3670d3e93fb63e9af9d62a5d17e87d
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Jun 7 20:38:07 2019 +0200
+
+    bridges: Don't kill scripts with die()
+    
+    Bridges should generally utilize the API functions instead of killing
+    the script. Find more information on the Wiki.
+    
+    - returnServerError
+    https://github.com/RSS-Bridge/rss-bridge/wiki/The-returnServerError-function
+    
+    - returnClientError
+    https://github.com/RSS-Bridge/rss-bridge/wiki/The-returnClientError-function
+    
+    - returnError
+    https://github.com/RSS-Bridge/rss-bridge/wiki/The-returnError-function
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 182153485c8af28c98af02c5882b7c72b8ac4554
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Sep 15 16:49:11 2018 +0200
+
+    [Arte7Bridge] Move parameter examples into tool tip for readability
+
+commit 654e502e84ffa3cdb79acc0ad1f736fc78c73a69
+Author: la Bécasse <maxime@buron.coffee>
+Date:   Tue Sep 11 23:09:47 2018 +0200
+
+    Arte7 collection support (#819)
+    
+    * Arte7 collection support
+
+commit 6caca4946bf4593e4c6d254e871d2783286eeb37
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Mar 25 14:01:35 2018 +0200
+
+    bridges: Fix bridges with custom headers and options
+    
+    This commit fixes bridges which called getContents, getSimpleHTMLDOM
+    or getSimpleHTMLDOMCached with custom settings.
+
+commit 6e916ddd35f22d048d71892c93f5248d929ba4e6
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Mar 6 11:26:16 2018 +0000
+
+    Fix Arte7Bridge.
+    Fixes #633
+
+commit cba65d6d087f14b2ca2fda995745ac8f5f79310d
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Oct 12 18:12:31 2017 +0100
+
+    [Arte7Bridge] Fix Arte7 bridge, use the API
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit 72981032e4a6c444dbad2c9972e33ba473a9981c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Nov 5 18:24:04 2016 +0100
+
+    [Arte7] Fix broken feed
+
+commit 8924722b934e9a59f848fda9aedfab1550cf3978
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Nov 5 12:48:58 2016 +0100
+
+    [Arte7] Fix content parsing
+    
+    Elements are now put into separate JSON containers. As such
+    assignment changed from : to = and as only one container
+    is present in each element, the final , is omitted.
+    JSON data is html encoded and requires decoding before decoding
+    via json_decode.
+
+commit 970e216c1fc7a10550cf4288fd2197255557324f
+Merge: 9020b09f a1ef589f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Oct 2 16:05:58 2016 +0200
+
+    Merge branch 'methods2functions' of https://framagit.org/peetah/rss-bridge
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 235c9859012887bda40c0f024c72975223256610
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 17:04:28 2016 +0200
+
+    [BridgeAbstract] replace getCacheDuration method by CACHE_TIMEOUT class constant
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit ff5ac1659f9010ec333a4a8ac851c0a8a0769b83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 11:50:01 2016 +0200
+
+    [Arte7bridge] code simplification
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 1b3c8a8aeba5641f3bec9a6a720939df537bfa83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 01:25:33 2016 +0200
+
+    [core + bridges] add BridgeAbstract::$inputs and BridgeAbstract::getInput()
+    
+    Inputs are not stored in BridgeAbstract::$parameters anymore to separate
+    static data from dynamic data.
+    The getInput method allows for more readable code.
+    
+    Also fix an "undefined index 'global'" notice
+    
+    Probability of breaking bridges: high !
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit fbf17beae897644d6900fc984d3e1a521db5a498
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Wed Aug 24 23:40:47 2016 +0200
+
+    [Arte7Bridge] extract nested function
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 4a1f360d396e08ce914bf5a5f7e90060d60eaf3d
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 23:39:40 2016 +0200
+
+    [bridges] use BridgeAbstract::getContents instead of file_get_contents
+    
+    use of the proxy feature when enabled
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit 42b6c82753127407e7c5ccd5f39ffa4e78040e9e
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 15:50:25 2016 +0200
+
+    bridges: Cleanup occurrences of $item->thumbnailUri
+    
+    This is a subsequent change to f3eefab
+
+commit d885897c4070cc228bff4dbe4727eaccdf1b40b6
+Author: Paul Vayssiere <paul.vayssiere@gmail.com>
+Date:   Wed Dec 23 13:33:50 2015 -0800
+
+    Desactivate auto play for Arte's links
+    
+    No need to use my bandwidth and processor if I just want to look at
+    more description
+
+commit 78c9dcc705682cb3e71912fae19365d71ee7bf22
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Nov 5 15:50:18 2015 +0000
+
+    Last batch of bridges, all implemented !
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 5d2e7ac83ddc8e300336b955b654afab2f078438
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Nov 3 14:36:19 2015 +0000
+
+    Ajout d'options multiples pour les méta-données.
+    Ajout d'un bridge de démonstration, DemoBridge.
+    Ajout d'un début de documentation pour créer un bridge dans CREATE_BRIDGE.md
+
+commit ba161b0b12a901b655d2ea356625196651c219a9
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Sat Oct 31 13:26:56 2015 +0100
+
+    [Arte+7] remove-merge bridges, 2 lists for language selection

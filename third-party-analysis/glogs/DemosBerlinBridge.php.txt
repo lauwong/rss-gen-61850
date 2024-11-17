@@ -1,0 +1,11 @@
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit 4919c53c108a36a7969b027bc6e6653415096353
+Author: knrdl <35548889+knrdl@users.noreply.github.com>
+Date:   Mon Nov 13 00:11:19 2023 +0100
+
+    [DemosBerlinBridge] add bridge (#3800)

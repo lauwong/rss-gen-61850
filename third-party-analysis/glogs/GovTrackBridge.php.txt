@@ -1,0 +1,11 @@
+commit 3dc8b65a0bb0296bdf0609c83841339014b1a663
+Author: July <phantop@tuta.io>
+Date:   Mon Sep 2 15:49:49 2024 -0400
+
+    [GovTrackBridge] Add feed for GovTrack events and blog (#4231)
+    
+    * [GovTrackBridge] Add feed for GovTrack events and blog
+    
+    * [GovTrackBridge] add missing default value
+    
+    * [GovTrackBridge] leaner items array and limit implementation

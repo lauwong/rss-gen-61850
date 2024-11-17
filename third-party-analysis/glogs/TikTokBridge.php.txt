@@ -1,0 +1,135 @@
+commit 0eb4f6b2678ab17255ee87bde2f919a7e6883799
+Author: Dag <me@dvikan.no>
+Date:   Wed Jan 10 20:39:15 2024 +0100
+
+    fix(tiktok): remove duplicate leading slash in url path, fix #3884 (#3885)
+
+commit f67d2eb88adc597cc57fbfc402c28725b671e5a3
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Thu Dec 28 13:53:06 2023 +0100
+
+    [TikTokBridge] Use embed iframe to bypass scraping protection (#3864)
+    
+    The Tiktok Website was totally changed using some "scraping" protection
+    (passing as parameter value generated somewhere in the bunch of
+    javascript to the "API URL" that was before). The iframe embed does not
+    have such protection. It has less information (no date, ...) but it's
+    better than nothing !
+
+commit 7273a05f02a1be053c5c5ecfc10cbea0da06cf18
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 1 18:53:50 2023 +0200
+
+    fix: google play and tiktok (#3722)
+    
+    * fix(googleplay)
+    
+    * fix(tiktok)
+
+commit 7e4807530ec6199ac9754bce54f025a113edfbbe
+Author: Dag <me@dvikan.no>
+Date:   Mon Jul 31 20:43:18 2023 +0200
+
+    fix: various small fixes (#3580)
+
+commit 701fe3cfeda0d14f1f49afe2bd0f89296214459e
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 29 00:14:30 2023 +0200
+
+    fix: various small fixes (#3578)
+
+commit 663729cf19da206e62cb65ddc4fdb151c66b3498
+Author: Predä <46051820+PredaaA@users.noreply.github.com>
+Date:   Thu Jul 20 05:50:45 2023 +0200
+
+    [TikTokBridge] Use another way to get videos infos to include video link (#3557)
+    
+    * [TikTokBridge] Use another way to get videos infos to include video link
+    
+    * [TikTokBridge] Use cover if dynamicCover is empty
+    
+    * [TikTokBridge] Add support for the rest of item params
+
+commit 7881c87bed8ccade2d49c7eab758fb4c80a4a0c5
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 23:21:55 2023 +0200
+
+    fix: various small fixes (#3517)
+    
+    * fix(asrocknews): Trying to get property src of non-object
+    
+    Trying to get property 'src' of non-object at bridges/ASRockNewsBridge.php line 37
+    
+    * refactor(http): tweak max redirs config
+    
+    * fix(tiktok)
+    
+    * fix(gizmodo)
+    
+    * fix(craig)
+    
+    * fix(nationalg)
+    
+    * fix(roadandtrack)
+    
+    * fix(etsy)
+
+commit 61b307a9f93690fca50d9dabe3f83cb0a1513562
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 17:07:20 2023 +0200
+
+    fix(tiktok): feed item link (#3511)
+    
+    * fix(tiktok): feed item link
+    
+    * fix(tiktok): support entire url, for convenience
+
+commit 748fc9fd65fe775f66580e9929c11c3a2d5c4c3a
+Author: Dag <me@dvikan.no>
+Date:   Sun Jul 2 06:40:25 2023 +0200
+
+    fix: various small notice fixes (#3474)
+    
+    * fix(patreon): php notice
+    
+    * fix(pepperbridge): php notice
+    
+    * fix(ebay): php notice
+    
+    * fix(tiktok): php notice
+    
+    * fix(yandex): fix notice
+    
+    * fix(justwatch): notice
+    
+    * lint
+
+commit 0dab51e26f309d9bf92d023e6e5737d5ca83c72e
+Author: Dag <me@dvikan.no>
+Date:   Tue Sep 6 00:14:20 2022 +0200
+
+    fix: php errors (#3013)
+    
+    * fix: php error in tiktok bridge
+    
+    * fix: notice in craigslist
+    
+    * fix: php notice in wordpress bridge
+    
+    * feat: improve ux in telegram bridge
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 192dc4dae2b023acb17218e4ad330d082194489d
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sun Jun 19 01:59:39 2022 +0000
+
+    [TikTokBridge] Add bridge (#2828)

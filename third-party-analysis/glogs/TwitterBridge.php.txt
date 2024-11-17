@@ -1,0 +1,1363 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 7329b83cc0fe1a5f707f864b1f3d62efd4be2172
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 21 22:05:55 2023 +0200
+
+    refactor: logger (#3678)
+
+commit 4b9f6f7e53e0b2e9aae59df2bbffc0bdd6805aea
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 21:50:15 2023 +0200
+
+    fix: rewrite and improve caching (#3594)
+
+commit dbe37cc302bec84f622fbd65aa88690b0d946521
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Wed Sep 6 21:14:11 2023 +0700
+
+    [TwitterBridge] Filter out any promoted tweet (#3652)
+    
+    * Filter out any advertise tweet
+    
+    * Make some filter work, fix bug that may happen with tweet id list.
+    
+    * clear phpcs warning, ignore line length warning
+
+commit 4d05d0beff361ab6724b9411ef2271af37beb7f5
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Tue Aug 29 22:14:34 2023 +0700
+
+    [TwitterBridge] Add support for OAuth authorization. (#3628)
+    
+    * Update TwitterClient.php
+    
+    - Add OAuth authorization header.
+    - Add new endpoint.
+    
+    * Update TwitterBridge.php
+    
+    - Make some changes to support new endpoint.
+    
+    * Update TwitterBridge.php
+    
+    * clean up, fix warning
+    
+    * fix warning
+    
+    * fix warning
+    
+    * remove oauth token
+    
+    * fix wrong twitter id when encounter reply post.
+    
+    * Update TwitterClient.php
+    
+    * fix wrong twitter id cause by previous commit
+    
+    * clear warning
+    
+    * attempt to clear warning
+    
+    * attempt to clear warning
+
+commit 52d3cce59dae1b5b8adb5497450e396473ebf6b2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 22:40:24 2023 +0200
+
+    bridges: add context to detectParameters (#3607)
+    
+    * bridges: add context to detectParameters
+    
+    Some bridges did not return the context parameter but they used it in
+    the parameters
+    
+    * bridges: add context to detectParameters
+    
+    Fix test for InstagramBridge
+
+commit 556bca58cf9ce9c2038c387cbfba9dfa70de6ac6
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Wed Jul 26 03:36:41 2023 +0700
+
+    [TwitterBridge] Fix search, user, list ID (#3566)
+    
+    * Add ability to fetch user, list tweet
+    
+    * Fix user, search, list ID although list still broke
+    
+    * clear whitespace
+    
+    * Revert CACHE_TIMEOUT
+    
+    * clear whitespace, change single quote
+    
+    * Clear PHP warning, add ability to get full-text if truncated
+    
+    * Clear PHP warning
+    
+    * clear warning
+    
+    * clear whitespace
+    
+    * Add check condition for mediaDetails.
+    
+    * Add whitespace
+    
+    * Add try catch exception for get full-text tweet
+    
+    * clear warning
+    
+    * clear warning
+
+commit d08b2616ef1adfa69edc10f42e4e7fcb0c9226cb
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 21 20:26:22 2023 +0200
+
+    feat(twitter): use account icon as feed icon, fix #3348 (#3561)
+
+commit 6254b8593e2f7636db65db23c1228482e38be44f
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 19 05:05:49 2023 +0200
+
+    refactor(cache): extract and encapsulate cache expiration logic (#3547)
+    
+    * refactor(cache): extract and encapsulate cache expiration logic
+    
+    * fix: logic bug in getSimpleHTMLDOMCached
+    
+    * fix: silly me, index should of course be on the key column
+    
+    * silly me again, PRIMARY keys get index by default lol
+    
+    * comment out the delete portion in loadData
+    
+    * remove a few log statements
+    
+    * tweak twitter cache timeout
+
+commit c1c8304fc05ffa2a2966434ec8251975100bf85b
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 17:03:12 2023 +0200
+
+    refactor: dont create multiple instances of the cache (#3504)
+
+commit 5e22459eb69fa97292faa3a384a99ea5279163bf
+Author: Dag <me@dvikan.no>
+Date:   Thu Jul 6 18:52:19 2023 +0200
+
+    fix: remove unnecessary calls to purgeCache (#3502)
+
+commit caac7f572cf335e96ee99f8a3af7395df471baf8
+Author: Dag <me@dvikan.no>
+Date:   Thu Jul 6 15:10:30 2023 +0200
+
+    refacor: improve cache interface (#3492)
+    
+    * fix: proper typehint on setScope
+    
+    * refactor: type hint setKey()
+    
+    * typehint
+
+commit 88f646cf12bd26e8de0f00059c7de52908a5c6b1
+Author: Dag <me@dvikan.no>
+Date:   Wed May 10 21:59:50 2023 +0200
+
+    fix(TwitterBridge): trim screen name before passing it to twitter client (#3389)
+
+commit 49d105fd700275886678f55d8533af2602c81c24
+Author: Dag <me@dvikan.no>
+Date:   Wed May 10 21:55:47 2023 +0200
+
+    fix(TwitterBridge): remove ampersand from screen name, api dont like it (#3388)
+
+commit ff49c9f731f3373cac58b94015c95d0d450b444d
+Author: Dag <me@dvikan.no>
+Date:   Wed May 10 21:45:44 2023 +0200
+
+    fix(TwitterBridge): repair fetching of tweets by username (#3385)
+    
+    * feat: alpha version of new twitter bridge
+    
+    * fix: refetch guest_token if expired
+    
+    * fix: purge cache
+    
+    * fix: safeguards
+    
+    * fix
+    
+    * fix: two notices
+    
+    * fix
+    
+    * fix: use factory to create cache
+    
+    * fix: fail properly instead of die()
+
+commit 94ae098ef5687f6cc128a0fb7bd33443e40e3e55
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 9 20:18:50 2022 +0200
+
+    fix: various fixes (#3023)
+    
+    * improve twitch error message
+    
+    * fix worldcosplay notice
+    
+    * fix: add new video image to telegram
+    
+    * fix: reuters
+    
+    * fix: formula1
+    
+    * twitter
+
+commit ecb486794b622a9ea9f563abdf8a7fa41038d4e9
+Author: Dag <me@dvikan.no>
+Date:   Tue Aug 2 15:03:54 2022 +0200
+
+    refactor: use static values for cache scope
+    
+    This fixes a future problem when code is placed under a namespace because `get_class($bridge)` will then return e.g. `RssBridge\Bridge\TwitterBridge` instead of the the current value `TwitterBridge`.
+    
+    Also a bit refactoring of `Configuration.php`.
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit d107f8ed3030c416ea3056f34b4ca242ff26af30
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Wed Jul 6 12:14:04 2022 +0200
+
+    Improve Factory variable names (#2895)
+
+commit 321ec7c8c16211192ca6ef7515c8880832adbd22
+Author: Dag <me@dvikan.no>
+Date:   Tue Jul 5 13:20:01 2022 +0200
+
+    refactor: move cache logic into the factory (#2884)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit 07927008ebafacebfd97411600e21777ff752518
+Author: Dag <me@dvikan.no>
+Date:   Wed Jun 22 18:29:28 2022 +0200
+
+    refactor: CacheFactory (#2834)
+
+commit 5d77d14f9d9d586c8c06fe3614bdc0599980d524
+Author: Dag <me@dvikan.no>
+Date:   Sun May 8 03:58:57 2022 +0200
+
+    feat: add retry logic to the http client (#2692)
+    
+    * refactor: extract http client
+    
+    * feat: add retry logic to http client
+
+commit 0d305f153061076c19aa2b8c2876b50b43822862
+Author: arnd-s <34441397+arnd-s@users.noreply.github.com>
+Date:   Mon Apr 4 19:50:59 2022 +0200
+
+    [TwitterBridge] Migration to API V1.1 (#2433)
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 73a5dd928a8d3c997c5db7e89dcd07a335828fb1
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Feb 24 00:28:29 2022 +0500
+
+    [TwitterBridge] Don't decode HTML entities for feed content (#2470)
+
+commit 2f10d2345af3323f890dd50c22e28db5f6f5d2e2
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Sun Jan 16 23:42:28 2022 +0500
+
+    [TwitterBridge] Meet the new maintainer: arnd-s
+
+commit 02a8ae4c62d97396ce6aa88915e67ae607ffe72b
+Author: arnd-s <34441397+arnd-s@users.noreply.github.com>
+Date:   Sun Jan 16 03:59:02 2022 +0100
+
+    [TwitterBridge] Use Twitter API V1.1 guest/activate for requesting new guest tokens (#2414)
+    
+    Instead of searching inside base html page for the guest token, this patch instead uses the Twitter API V1.1 to acquire guest tokens
+
+commit 12ff697ab0c3c02b2ecd7e42ef9a534f9f0c2e10
+Author: arnd-s <34441397+arnd-s@users.noreply.github.com>
+Date:   Thu Jan 6 06:59:37 2022 +0100
+
+    [TwitterBridge] Continue using existing guesttoken from cache, when requesting a new one failed (#2396)
+
+commit 35930ee4e413a3b28fa3758f709eec4a14196bc2
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Sat Dec 18 09:54:18 2021 +0000
+
+    [TwitterBridge] Increase guest token expiry time (#2374)
+
+commit 76c38332ee877986f13bd64fc34b4228ee8fccec
+Author: FiveFilters.org <fivefilters@fivefilters.org>
+Date:   Mon Apr 12 20:08:38 2021 +0200
+
+    [TwitterBridge] Improve timeline processing for username mode (#1946)
+
+commit f927781750fc58bcd23c55f7d01483201c4ec88b
+Author: FiveFilters.org <fivefilters@fivefilters.org>
+Date:   Sun Jan 10 09:50:06 2021 +0100
+
+    [TwitterBridge] Add option to hide pinned tweet (#1908)
+
+commit 6b870f0c3e1d13dc4b69fa0d85719b035b22254f
+Author: Derrick Lee <github@dlee.dev>
+Date:   Sun Jan 10 00:19:38 2021 -0800
+
+    [TwitterBridge] Fix username matching to be case insensitive with noretweet option (#1924)
+
+commit b66026e241b814a88f300c399c0ae911a4b0b66b
+Author: Roman Remizov <rremizov@yandex.ru>
+Date:   Tue Nov 10 11:12:02 2020 +0500
+
+    [TwitterBridge] Add support for querying by list ID (#1834)
+
+commit d3455dd18adc22461c728974536bd5f930bb0c05
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Mon Oct 5 08:07:39 2020 +0100
+
+    [TwitterBridge] Optimise regular expression code (#1768)
+    
+    * [TwitterBridge] Optimise regular expression code
+    
+    Optimise regular expression search code so adding new URLs is cleaner
+
+commit 01985b7af738e57d480edfc6d15b2536d0de0434
+Author: sarnd <34441397+sarnd@users.noreply.github.com>
+Date:   Mon Sep 28 07:01:37 2020 +0200
+
+    [TwitterBridge] URL to js file with apikey changed again (#1764)
+
+commit 6c244f4d9b0ca059748012b07f55e7422e5a67ed
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Fri Sep 11 11:44:28 2020 +0500
+
+    [TwitterBridge] Skip advertisment tweets (#1673)
+
+commit 25cff9c07b747fdd0ca58ebd9935fc3e95202e04
+Author: ronansalmon <ronan.s@lmon.io>
+Date:   Fri Aug 21 14:55:11 2020 +0200
+
+    [TwitterBridge] Convert plain text URLs into HTML hyperlinks (#1627)
+
+commit 73287f536be5fd9d7609f55b326edc71f6c671e7
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Thu Aug 20 06:00:27 2020 +0100
+
+    [TwitterBridge] Add retweeter to retweeted tweets (#1679)
+
+commit 268ddf1382948792fe9d179cd7659b3466a41185
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Wed Aug 12 06:32:34 2020 +0100
+
+    [TwitterBridge] URL to js file with apikey changed (#1698)
+    
+    Fixes #1697
+
+commit c71fad4a4a9070f4aed6619abc45886ea691aa9e
+Author: sarnd <34441397+sarnd@users.noreply.github.com>
+Date:   Thu Aug 6 07:22:17 2020 +0200
+
+    [TwitterBridge] URL to js file with apikey changed. (#1686)
+    
+    Twitter has changed URL scheme back again (see PR#1647 / commit 78298385d0016a7db8ed00894d9004429d24e77d)
+    
+    This patch will try both URL schemes now and throw a specific error when neither works
+
+commit 5be251a66e1c8423aecbc460e2fc0bf053610bc9
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Aug 2 19:40:41 2020 +0500
+
+    [TwitterBridge] Fetch latest tweets on hashtag or keyword query (#1674)
+
+commit f5916a2f74e3679124e0433bb0d7e5e3c63e0cbf
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Thu Jul 30 05:54:16 2020 +0100
+
+    [TwitterBridge] apikey fetched every time (#1663)
+    
+    The apikey is fetched every time because $data is not an array. Update the condition to expire the api key at the same time as the guest token.
+
+commit 78facbcb83910a7934138a3f237c6bae90a3cadf
+Author: somini <somini@users.noreply.github.com>
+Date:   Sun Jul 26 07:26:39 2020 +0100
+
+    [TwitterBridge] Fix noretweet for users (#1608)
+    
+    This also removes spurious retweets.
+
+commit 25698d182c3e60fce606adacc9a9d4ba0b9b9a2c
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Thu Jul 2 18:26:39 2020 +0100
+
+    [TwitterBridge] Remove unused variable
+
+commit 78298385d0016a7db8ed00894d9004429d24e77d
+Author: sarnd <34441397+sarnd@users.noreply.github.com>
+Date:   Fri Jul 24 09:52:27 2020 +0200
+
+    [TwitterBridge] guest token is returned via body again. (#1647)
+    
+    * [TwitterBridge] guest token is returned via body again. This change will try to search fot token inside header and fallback to body
+    
+    * Twitter changed the URL scheme for the API
+
+commit e87b868307761c6241fd12669b8c80b1a0c5408b
+Author: sarnd <34441397+sarnd@users.noreply.github.com>
+Date:   Thu Jun 25 12:21:48 2020 +0200
+
+    [TwitterBridge] Fix issue #1621 @<twitter_user> failed with error 429 (#1622)
+    
+    * [TwitterBridge] Fix issue #1621 @<twitter_user> failed with error 429
+
+commit 23c61f5f84febcfe9727014ba814027737f2496f
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Tue Jun 23 14:14:50 2020 +0100
+
+    [TwitterBridge] Expire guest token by time (#1606)
+    
+    * [TwitterBridge] Expire guest token by time
+    
+    In addition to fetching a new guest token after 100 uses, also expire token after 5 minutes (configurable).
+
+commit 22a01f10937f13ebfd710e3509ccb34c20698abc
+Author: somini <somini@users.noreply.github.com>
+Date:   Wed Jun 10 21:39:36 2020 +0100
+
+    [Twitter] Fix Twitter bridge images and add other media types (#1595)
+    
+    * Keep old URI structure
+    
+    Use the username, not the user ID.
+    
+    * Fix Twitter bridge images
+    
+    Credit to @kinoushe
+    
+    See https://github.com/RSS-Bridge/rss-bridge/issues/1562#issuecomment-639393175
+    
+    * Include Videos and "Animated GIF" as twit enclosures
+    
+    Credit to @kinoushe for digging into the API docs.
+    
+    https://github.com/RSS-Bridge/rss-bridge/issues/1562#issuecomment-640320688
+    
+    * Calculate the highest bitrate video
+    
+    Include that on the enclosure.
+    
+    * Appease linter
+    
+    * Appease linter, again
+    
+    * Remove surrounding link from videos
+    
+    Add it on a smaller link besides it.
+    
+    See
+    https://github.com/RSS-Bridge/rss-bridge/pull/1595#issuecomment-640989208
+    
+    * Include video poster on the enclosures.
+
+commit 124631df736eda882c2cebcfab1381122fb8828c
+Author: Lyra <teromene@teromene.fr>
+Date:   Mon Jun 8 11:18:24 2020 +0200
+
+    [TwitterBridge] Fix caching policy, usernames as well as images
+
+commit 06891ae35f0947d8f2a8daa0094b25e2db862226
+Author: Lyra <teromene@teromene.fr>
+Date:   Fri Jun 5 10:17:53 2020 +0200
+
+    [TwitterBridge] Fix the bridge using a brand new API
+
+commit 830f57f6074e351af36b10a79be95871d575097e
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Fri Jan 31 18:36:25 2020 +0500
+
+    [TwitterBridge] Use IE's user-agent (#1442)
+    
+    Twitter will return pages with legacy design and frontend code, which bridge can deal with
+
+commit 50c971d5453983123c0a120a90c0afafaecf7092
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Thu Sep 12 15:14:48 2019 +0100
+
+    [TwitterBridge] Enable cookies with curl (#1245)
+    
+    * [TwitterBridge] Enable cookies with curl
+    
+    Enable cookies in curl, or fall back to `file_get_contents` if in CLI mode with no curl root certificates.
+
+commit 2bb9480555cf1b7d871fcca2f6afddbab5e58904
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Fri Jul 26 09:36:59 2019 +0100
+
+    [TwitterBridge] Get cookies before sending request (#1232)
+    
+    * [TwitterBridge] Get cookies before sending request
+    
+    Twitter now requires cookies to be set before requesting a page. This will fetch the cookies and send them to `getSimpleHTMLDOM()`.
+    
+    * Formatting fixes
+
+commit b27487ace064b6578c0ac4789d3b1ea051666250
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Jun 12 18:25:48 2019 +0200
+
+    [TwitterBridge] Fix detection of retweets on lists
+    
+    References #1161
+
+commit d005acca83b5113ad4fd12c7d1ee39377c72daf8
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jun 11 21:51:10 2019 +0200
+
+    [TwitterBridge] Add extensive description to keyword search query
+    
+    References #1163
+
+commit d34411137f40f5b1c60626fafc7fe217c39d5fa0
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Sun Jun 9 15:24:40 2019 +0000
+
+    [TwitterBridge] Display all images from a tweet (#1160)
+
+commit 6c4098d6558c33a5fcb2a8bc9fb29e915d56fc6c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 2 13:03:26 2019 +0200
+
+    Revert "all: Use ->remove() instead of ->outertext = ''"
+    
+    This reverts commit 052844f5e13c71ceefd743136a71f71226a0eefb.
+    
+    There is a bug in ->remove() that causes the parser to incorrectly
+    identify elements in the DOM tree that shouldn't exist anymore.
+    
+    References #1151
+
+commit 052844f5e13c71ceefd743136a71f71226a0eefb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 1 21:15:30 2019 +0200
+
+    all: Use ->remove() instead of ->outertext = ''
+    
+    simplehtmldom 1.9 introduced new functions to recursively remove
+    nodes from the DOM. This allows removing elements without the need
+    to re-load the document by using $html->load($html->save()), which
+    is very inefficient.
+    
+    Find more information about remove() at
+    https://simplehtmldom.sourceforge.io/docs/1.9/api/simple_html_dom_node/remove/
+
+commit 25593d9c1852b3c7610cc57688258a8f7216f1e1
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Mon Feb 4 13:56:07 2019 +0000
+
+    [TwitterBridge] Append username of retweeter to author (#1016)
+    
+    Append username of retweeter to author. Useful when viewing all unread tweets in an RSS reader which are not sorted within username folders.
+
+commit bb2329fa3a992ad22e5deaa112557f732fe4a627
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 12 16:56:36 2018 +0100
+
+    [TwitterBridge] Add option to disable image scaling in feeds
+    
+    Images in Twitter feeds are currently being scaled by adding ':orig'
+    (original image) and ':thumb' (thumbnail) to image URIs in the feed.
+    
+    This can cause issues with feed readers that don't handle colons in
+    URIs correctly.
+    
+    Image scaling can now be disabled by adding '&noimgscaling=on' to the
+    query. This parameter is optional to stay compatible to existing feeds.
+    
+    References #957
+
+commit 49da67cb33669c07c8a0ab5d4716e22be807a654
+Author: Roliga <roliga.here@gmail.com>
+Date:   Mon Nov 26 18:05:41 2018 +0100
+
+    core: Automatically select a bridge based on a URL (#928)
+    
+    * core: Add bridge parameter auto detection
+    
+    This adds a new 'detect' action which accepts a URL from which an
+    appropriate bridge is selected and relevant parameters are extracted.
+    The user is then automatically redirected to the selected bridge.
+    
+    For example to get a feed from: https://twitter.com/search?q=%23rss-bridge
+    we could send a request to:
+    '/?action=detect&format=Atom&url=twitter.com/search%3Fq%3D%2523rss-bridge'
+    which would redirect to:
+    '/?action=display&q=%23rss-bridge&bridge=Twitter&format=Atom'.
+    
+    This auto detection happens on a per-bridge basis, so a new function
+    'detectParameters' is added to BridgeInterface which bridges may implement.
+    It takes a URL for an argument and returns a list of parameters that were
+    extracted, or null if the URL isn't relevant for the bridge.
+    
+    * [TwitterBridge] Add parameter auto detection
+    
+    * [BridgeAbstract] Add generic parameter detection
+    
+    This adds generic "paramater detection" for bridges that don't have any
+    parameters defined. If the queried URL matches the URI defined in the
+    bridge (ignoring https://, www. and trailing /) an emtpy list of parameters is
+    returned.
+
+commit e5a6baab967c457456679687233cdabd14158a12
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Thu Nov 15 21:00:01 2018 +0000
+
+    [TwitterBridge] Decode HTML entities (#926)
+    
+    Removes duplicate encoding like &amp;quot; (should be &quot;).
+
+commit 51634a72e085b0a86013317365d06ba736422c31
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Mon Nov 12 18:59:46 2018 +0000
+
+    [TwitterBridge] Reorder quoted tweets (#921)
+    
+    Put content before quoted tweet to match the display order on Twitter
+
+commit 90d7ae87768614ccb808676131ede55aabee7c10
+Author: Matt DeMoss <demoss.matt@gmail.com>
+Date:   Fri Jan 12 07:07:40 2018 -0500
+
+    Fix twitter list filter test #613, fix and change getName() for lists. (#614)
+
+commit 4037c3439336d7c09d3ac95221ade742db7c5281
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Sun Sep 24 16:59:45 2017 +0200
+
+    [TwitterBridge] Add category for lists (#545)
+    
+    This adds a new option to generate feeds from Twitter lists using
+    an optional filter (string comparison).
+
+commit c986ff91161f5793563dbc3baca6ff7181a78256
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Thu Aug 3 17:56:39 2017 +0200
+
+    [TwitterBridge] Fix coding style
+
+commit 485b465a2456bc5d10b7526cf94f9ae0439992ab
+Author: Pierre MaziÃ¨re <pierre.maziere@gmx.com>
+Date:   Thu Aug 3 00:26:32 2017 +0200
+
+    [TwitterBridge] ignore promoted tweets
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit d7ff8b9ac77b694bb7212862993de4d7dc25d83c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Jul 5 18:29:11 2017 +0200
+
+    [TwitterBridge] Fix title includes anchors in plaintext format
+    
+    The title attribute includes tags (anchors) instead of raw text.
+    While this works fine in a browser, using a raw format like plain-
+    text or json breaks with expected behavior.
+    
+    This commit changes the order in which functions are applied. By re-
+    moving anchors AFTER fixing the title, the final result does not
+    include tags and the title is still fixed.
+    
+    This bug was introduced by d81b61ccfa19e2c685df7acfb7c4306b7b775846
+    
+    References: #546
+
+commit ab46af97199293767bc5b565365ce2883ec845ca
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Jul 3 19:52:56 2017 +0200
+
+    [TwitterBridge] Avoid empty content caused by new login policy
+    
+    Twitter now requires login to access "Tweets & Replies" which
+    breaks feeds using the default behavior. Using the "Without
+    replies" option still works.
+    
+    This commit makes the "Without replies" option default. That way
+    existing feeds will return contents again. The parameter can still
+    be checked but its status has no effect anymore.
+    
+    Notice: The parameter should not be removed as that would cause
+    any feed using the parameter to stop working because of "Invalid
+    parameter"
+    
+    References #544
+
+commit ae59b20c0cf4c65ab77a4898702ef7927be07015
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Jun 19 00:19:52 2017 +0200
+
+    [TwitterBridge] Fix double slashes in URI
+    
+    This fixes double slashes in the feed URI (https://twitter.com//...
+    instead of https://twitter.com/...)
+    
+    Reported via #538
+
+commit d81b61ccfa19e2c685df7acfb7c4306b7b775846
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 18 23:18:41 2017 +0200
+
+    [TwitterBridge] Fix missing spaces
+    
+    This commit improves readability of tweets by adding spaces before
+    anchors in the text.
+    
+    - Hide "invisible" tags which were not rendered hidden because of
+    missing CSS.
+    - Fix spacing between anchors
+    
+    Reported via #539
+
+commit 5b541e380ae8f5b865ac51cc2b88c31976012317
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue May 2 21:45:22 2017 +0200
+
+    [TwitterBridge] Optimize returned image sizes
+    
+    Twitter provides an easy way to receive various image sizes based
+    on the same image URI:
+    
+    https://dev.twitter.com/overview/api/entities-in-twitter-objects
+    
+    We support different sizes: thumb, small, medium and large. The
+    media_url defaults to medium but you can retrieve the media in
+    different sizes by appending a colon + the size key (for example:
+    https://pbs.twimg.com/media/A7EiDWcCYAAZT1D.jpg:thumb).
+    
+    -- Twitter Developer Documentation
+    
+    TwitterBridge now makes use of this feature in order to provide
+    thumbnail images in the content and original sized images as
+    enclosures.
+    
+    References #526
+
+commit 6eadc6ca6f19ce2b4ee4c434afa91ce6ce76ff7a
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Apr 22 15:36:25 2017 +0200
+
+    [TwitterBridge] Show quotes and pictures
+    
+    This adds new features to show quotes and pictures in feeds.
+    
+    Quotes will show up on top of a tweet and are separated from
+    the quoting feed by a horizontal line.
+    
+    Pictures that are embedded in the tweet will be captured and
+    attached to the feed using enclosures. By default the picture
+    will also be shown in the feed itself. This can be disabled
+    using the option '&noimg=on'
+    
+    Some codes are now split into separate functions so they can be used
+    for tweets and quotes alike.
+
+commit 596b9143a8b8c1e351bfccc648387845c9890b45
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Mar 17 18:41:35 2017 +0100
+
+    [TwitterBridge] Add option to hide retweets
+    
+    Requested via #491
+
+commit 512a4f292b48de827357cbef6874d4c5df6d9e20
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 22:36:33 2017 +0100
+
+    bridges: Return parent::getURI by default
+
+commit c4169f1579701342f7f462f0103f68c5382946ad
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 22:20:55 2017 +0100
+
+    bridges: Return parent::getName by default
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit d4fb02b0d043df45d202c809a258f3b696c8d401
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Dec 17 16:43:47 2016 +0100
+
+    bridges: Set missing MAINTAINER based on blame command
+    
+    Maintainer should be set for all bridges. Using git blame to
+    determine who provided the most code to the files. This is
+    obviously not a good solution, feel free to insert own names
+
+commit 970e216c1fc7a10550cf4288fd2197255557324f
+Merge: 9020b09f a1ef589f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Oct 2 16:05:58 2016 +0200
+
+    Merge branch 'methods2functions' of https://framagit.org/peetah/rss-bridge
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 235c9859012887bda40c0f024c72975223256610
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 17:04:28 2016 +0200
+
+    [BridgeAbstract] replace getCacheDuration method by CACHE_TIMEOUT class constant
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 351e1e9a6ae77b4fba8e2267b85d778fff5922a2
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 29 23:36:49 2016 +0200
+
+    [TwitterBridge] code simplification
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 1b3c8a8aeba5641f3bec9a6a720939df537bfa83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 01:25:33 2016 +0200
+
+    [core + bridges] add BridgeAbstract::$inputs and BridgeAbstract::getInput()
+    
+    Inputs are not stored in BridgeAbstract::$parameters anymore to separate
+    static data from dynamic data.
+    The getInput method allows for more readable code.
+    
+    Also fix an "undefined index 'global'" notice
+    
+    Probability of breaking bridges: high !
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit ea46d532dc766e5643d8fcf74d1942c5f454eb04
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 00:01:42 2016 +0200
+
+    [TwitterBridge] fix getURI() and simplify code
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3bad5ec45c326313b8f8a593f549095da4f57a7f
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 17:07:37 2016 +0200
+
+    [TwitterBridge] fix 'nopic' feature
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit c34fdfa7fbbcf0089b54c462b788ad9d810b37b6
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:49:30 2016 +0200
+
+    [TwitterBridge] fix bridge name and bridge uri
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 6e66c228f87f7ff520a9a77f61d79297fcc8e82e
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 20 12:32:05 2016 +0200
+
+    [TwitterBridge] rename 'pic' parameter to more consistent 'nopic'
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 71d8f4c46570dce44dd363a776443b0341aca6af
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 20 11:18:06 2016 +0200
+
+    [TwitterBridge] add 'Without replies' parameter
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 9cc00cb2123a01808a050c733eab796b54025a31
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Aug 19 17:20:49 2016 +0200
+
+    [TwitterBridge] fix HTML entities decoding in title
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3c0d13c1bb72a87f0d671692e205f45f04d94eba
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 19:06:35 2016 +0200
+
+    bridges: use BridgeAbstract::getSimpleHTMLDOM
+    
+    instead of BridgeAbstract::file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 74f0572d914617b4e47fe0fd2fabfe356710d609
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Aug 17 14:45:08 2016 +0200
+
+    bridges: Replace returnError function with more specific
+    
+    Replacements depend on original error code:
+    400: returnClientError
+    404: returnServerError
+    500: returnServerError
+    501: returnServerError
+
+commit fa59a25229a11d9a8fbb93494713984f7d26fe06
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 15 01:19:16 2016 +0200
+
+    bridges: Update bridges with 'required' attributes
+
+commit 68d1c1f961585e6852cfa1bbd99d4db0dc45f9c0
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Wed Aug 10 11:00:40 2016 +0200
+
+    [TwitterBridgeExtended] -> [TwitterBridge] make this the only one
+
+commit 1ea38d521d8475396a861fffc173080360f7896a
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Wed Aug 10 10:56:06 2016 +0200
+
+    bridges: Remove all Twitter bridges except TwitterBridgeExtended
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit f05bd15393bf0e272b9afc2251aab1a0301343f2
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 16:11:57 2016 +0200
+
+    TwitterBridge*: fix HTML entities in title
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 955eecc299e67a1062a9e75149b6c098fb9d2cbc
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Jun 25 23:17:42 2016 +0200
+
+    use BridgeAbstract::file_get_html in all bridges
+    
+    instead of simple_html_dom function file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 4c241a1319534649d22438e00cf1081cc38b4dc1
+Author: ahiles3005 <ahiles3005@ahiles3005-pc>
+Date:   Sun Feb 21 14:23:58 2016 +0400
+
+    update for issue #192
+
+commit ab2492f292a9790b692ec9a2f69cb8ddef119e65
+Author: ahiles3005 <ahiles3005@ahiles3005-pc>
+Date:   Sun Feb 21 14:17:45 2016 +0400
+
+    update for issue #192
+
+commit 78c9dcc705682cb3e71912fae19365d71ee7bf22
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Nov 5 15:50:18 2015 +0000
+
+    Last batch of bridges, all implemented !
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 7a40584864fa5d833ac981cafa1450d54d6cd55e
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Fri Jun 26 11:55:11 2015 +0200
+
+    [TwitterBridge*] update query URL for live feed
+
+commit 0c7729e783b7a3bb571def19d0c0b81669882d89
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Wed May 28 17:10:49 2014 +0200
+
+    [TwitterBridge] clean links
+
+commit 8d476a06443d2f8897784b9184a773102bc6560b
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Sun May 25 23:27:14 2014 +0200
+
+    add homepage + date to main bridges
+
+commit 7d24be9653bb58110d7343116a6f0fa55295b7d7
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Wed May 21 19:15:52 2014 +0200
+
+    update bridges with maintainer
+
+commit 1e40d6f492486658748dc12b7824d750525b780c
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Wed May 14 14:34:06 2014 +0200
+
+    [pull] Fix Youtube, Twitter
+
+commit f3dd80d73ff4b140e6a34b213613963844572b01
+Author: Sébastien SAUVAGE <sebsauvage@sebsauvage.net>
+Date:   Thu Aug 15 16:19:43 2013 +0200
+
+    Update TwitterBridge.php
+
+commit bea563dab933f82d1b68f8983ae69d846adf222b
+Author: ArthurHoaro <arthur@hoa.ro>
+Date:   Thu Aug 15 13:58:58 2013 +0200
+
+    Bridge titles more accurate (and YoutubeBridge secured)
+
+commit 206653346722bb669789a0e386f21a05a1d394c3
+Author: Sebastien SAUVAGE <sebsauvage@sebsauvage.net>
+Date:   Mon Aug 12 22:54:09 2013 +0200
+
+    Small corrections.
+
+commit 20efc240cc3dd4adf9a425017b05d1c1330c08ae
+Author: Sebastien SAUVAGE <sebsauvage@sebsauvage.net>
+Date:   Sun Aug 11 22:34:14 2013 +0200
+
+    Rewording
+
+commit 927b04dfef6c363674cfd8e727cd1c34d5485d68
+Author: Yves ASTIER <contact@yves-astier.com>
+Date:   Sun Aug 11 13:30:41 2013 +0200
+
+    Refonte du code

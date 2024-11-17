@@ -1,0 +1,81 @@
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit 701fe3cfeda0d14f1f49afe2bd0f89296214459e
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 29 00:14:30 2023 +0200
+
+    fix: various small fixes (#3578)
+
+commit 7881c87bed8ccade2d49c7eab758fb4c80a4a0c5
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 23:21:55 2023 +0200
+
+    fix: various small fixes (#3517)
+    
+    * fix(asrocknews): Trying to get property src of non-object
+    
+    Trying to get property 'src' of non-object at bridges/ASRockNewsBridge.php line 37
+    
+    * refactor(http): tweak max redirs config
+    
+    * fix(tiktok)
+    
+    * fix(gizmodo)
+    
+    * fix(craig)
+    
+    * fix(nationalg)
+    
+    * fix(roadandtrack)
+    
+    * fix(etsy)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit f9801a5c58148879a6b5ebdab3115bc3494e4341
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:37:05 2022 +0200
+
+    [RoadAndTrack] fix: broken css selectors (#2642)
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit a2f38663832063ef0cb477b8408006dec7a7de1c
+Author: Lyra <teromene@teromene.fr>
+Date:   Wed May 8 21:57:59 2019 +0200
+
+    [RoadAndTrackBridge] Major rewrite, due to the depreciation of their API
+
+commit 0aa88585518269791a455fb56944099b51ae6799
+Author: Lyra <teromene@teromene.fr>
+Date:   Thu Apr 4 22:45:41 2019 +0200
+
+    [RoadAndTrackBridge] Generate a signature key for every client instead of hardcoding it
+
+commit 473a62ed44f2141e7505de3582c1d05cf46cb38e
+Author: Lyra <teromene@teromene.fr>
+Date:   Tue Feb 12 15:12:04 2019 +0100
+
+    [RoadAndTrackBridge] Added new bridge

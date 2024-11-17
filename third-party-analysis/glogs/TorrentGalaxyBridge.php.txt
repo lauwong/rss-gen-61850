@@ -1,0 +1,37 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit b6e8350596f642f342f15d856882939e2dd9e658
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:37:30 2022 +0200
+
+    fix: a bunch of small changes in multiple bridges (#2644)
+    
+    Mostly refactors.
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 595b87946d717822f958f8685346aed5fe9b6c09
+Author: Grégory T <GregThib@users.noreply.github.com>
+Date:   Mon Dec 2 20:31:50 2019 +0100
+
+    [TorrentGalaxyBridge] Add new bridge (#1378)

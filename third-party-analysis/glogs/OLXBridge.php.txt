@@ -1,0 +1,67 @@
+commit bd58266b80d9ae26aac64312c41ef5b892ed06e6
+Author: Dag <me@dvikan.no>
+Date:   Tue Jan 23 22:05:03 2024 +0100
+
+    fix(OLX): deprecation notice (#3915)
+
+commit b017f75767766193dee445a760f99ae08b78cacf
+Author: Dawid Wróbel <me@dawidwrobel.com>
+Date:   Thu Nov 17 17:57:05 2022 +0100
+
+    [OLXBridge] new bridge (#2944)
+    
+    * [OLXBridge] new bridge
+    
+    * [OLXBridge] option to limit to shipping offers only
+    
+    * [OLXBridge] set the feed title according to search query
+    
+    * [OLXBridge] Fix PHP notices
+    
+    * [OLXBridge] Remove trailing slash from the URL
+    
+    * [OLXBridge] filter out the imposed additional search categories
+    
+    * [OLXBridge] limit search to 'new' OLX platform variants
+    
+    * [OLXBridge] Parse date, add ID, description
+    
+    Deep-crawl all results. Penalty is low, as we were doing this for almost all of the results, anyway, yet it allows to obtain a unique ID, an uncomplicated Date string and a description.
+    
+    Requires ext-intl for parsing the date according to locale.
+    
+    * [OLXBridge] Parse date, add ID, description
+    
+    Deep-crawl all results. Penalty is low, as we were doing this for almost all of the results, anyway, yet it allows to obtain a unique ID, an uncomplicated Date string and a description.
+    
+    Requires ext-intl for parsing the date according to locale.
+    
+    * [OLXBridge] Images are optional, handle appropriately
+    
+    * [OLXBridge] handle the ID coming from sibling auto-moto portal
+    
+    * [OLXBridge] handle the photos coming from sibling auto-moto portal
+    
+    * [OLXBridge] use meta property to find img URL
+    
+    * [OLXBridge] handle the date coming from sibling auto-moto portal
+    
+    * [OLXBridge] use simplified syntax to retrieve content attribute value
+    
+    * [OLXBridge] handle the description coming from sibling auto-moto portal
+    
+    * [OLXBridge] fix phpcs complaints
+    
+    * [OLXBridge] add categories
+    
+    * [OLXBridge] handle the categories coming from sibling auto-moto portal
+    
+    * [OLXBridge] hint image MIME type
+    
+    OLX images have no obvious extension
+    
+    * [OLXBridge] Fix content formatting
+    
+    * [OLXBridge] URL is pattern-checked, so no need to check again
+    
+    * [OLXBridge] return actual search query as URI

@@ -1,0 +1,111 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 6a90a9d33fa9868cd12db60b1370d22b38061aef
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Fri Jan 31 18:30:31 2020 +0500
+
+    phpcs: fix new sudden violations (#1443)
+
+commit 6c4098d6558c33a5fcb2a8bc9fb29e915d56fc6c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 2 13:03:26 2019 +0200
+
+    Revert "all: Use ->remove() instead of ->outertext = ''"
+    
+    This reverts commit 052844f5e13c71ceefd743136a71f71226a0eefb.
+    
+    There is a bug in ->remove() that causes the parser to incorrectly
+    identify elements in the DOM tree that shouldn't exist anymore.
+    
+    References #1151
+
+commit 052844f5e13c71ceefd743136a71f71226a0eefb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 1 21:15:30 2019 +0200
+
+    all: Use ->remove() instead of ->outertext = ''
+    
+    simplehtmldom 1.9 introduced new functions to recursively remove
+    nodes from the DOM. This allows removing elements without the need
+    to re-load the document by using $html->load($html->save()), which
+    is very inefficient.
+    
+    Find more information about remove() at
+    https://simplehtmldom.sourceforge.io/docs/1.9/api/simple_html_dom_node/remove/
+
+commit e0db349a579b466b9e7e9c7e96274d55af1fd67f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jan 22 18:24:32 2019 +0100
+
+    bridges: Fix bridges that don't pass the unit test
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit c63af2e7ad34c7a900259eddc0c65877ba3cfeb5
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Nov 10 20:03:03 2018 +0100
+
+    core: Add separate Debug class
+    
+    Replaces 'debugMessage' by specialized debug function 'Debug::log'.
+    This function takes the same arguments as the previous 'debugMessage'.
+    
+    A separate Debug class allows for further optimization and separation
+    of concern.
+
+commit 2bc8daa101a6a976452b3a6f4d0c59f4ad191578
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 30 00:19:19 2018 +0200
+
+    [JustETFBridge] Add new bridge
+    
+    Supports latest news and profiling a given ETF in Englisch, German
+    or Italian language. Cover images are attached as enclosures and not
+    as part of the content.
+    
+    News:
+    
+    Optionally loads the full article for each news item. Some articles
+    may include scripts to provide interactive graphs. These scripts are
+    removed as they would be rendered as pure text and a message is shown
+    instead: "[Content removed! Visit site to see full contents!]"
+    
+    Profile:
+    
+    Optionally includes the ETF strategy and description.

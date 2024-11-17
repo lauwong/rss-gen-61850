@@ -1,0 +1,29 @@
+commit 8cc5e44be6afd75bd8e658c2ef43db808112fda3
+Author: Dag <me@dvikan.no>
+Date:   Sat Sep 24 00:02:19 2022 +0200
+
+    fix: use parlers new api (#3061)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit c6ba3e5280bd3c86bd4f0c9f200facef4d5bbdb7
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 17 21:18:29 2022 +0200
+
+    [Parler] fix: use new api endpoint (#2831)
+    
+    They also modified the json structure.
+
+commit 7379e2b3d531de3b595b50671b8079fac480b444
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:39:32 2022 +0200
+
+    [Parler] feat: add new bridge (#2634)

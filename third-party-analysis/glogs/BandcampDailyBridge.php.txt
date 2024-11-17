@@ -1,0 +1,39 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 8365a7a34dea6750fab4c29541ec1801cdbc83e4
+Author: Dag <me@dvikan.no>
+Date:   Sun Jun 19 21:45:33 2022 +0200
+
+    chore: bump required php version to 7.4 (#2838)
+    
+    * chore: require min php 7.4
+    
+    * Revert "feat: backport php 7.3 functions (#2803)"
+    
+    This reverts commit 6df5a4bc14abd9aec4ed1936f2b032ce754af358.
+    
+    * [BandcampDaily] use array_key_first
+    
+    * hard fail on php versions below 7.4
+    
+    * update phpcompat linter
+
+commit 037d5866ca04312166a990ca3f2c5327a971fa79
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Wed Jun 8 19:37:06 2022 -0400
+
+    [BandcampDailyBridge] Fix list duplicates (#2795)
+
+commit 0d20e9a05c5dcb1dd44264327520e0f47687a7c6
+Author: Joseph <joseph@verifiedjoseph.com>
+Date:   Thu Mar 24 20:21:57 2022 +0000
+
+    [BandcampDailyBridge] Add Bridge (#1485)

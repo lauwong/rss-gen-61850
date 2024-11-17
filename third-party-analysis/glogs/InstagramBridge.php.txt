@@ -1,0 +1,898 @@
+commit 5f37c72be0a994257b01a8c43c4e488611f092f2
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 20:48:08 2023 +0200
+
+    fix(binance): plus some other tweaks (#3753)
+
+commit 7329b83cc0fe1a5f707f864b1f3d62efd4be2172
+Author: Dag <me@dvikan.no>
+Date:   Thu Sep 21 22:05:55 2023 +0200
+
+    refactor: logger (#3678)
+
+commit 4b9f6f7e53e0b2e9aae59df2bbffc0bdd6805aea
+Author: Dag <me@dvikan.no>
+Date:   Sun Sep 10 21:50:15 2023 +0200
+
+    fix: rewrite and improve caching (#3594)
+
+commit 52d3cce59dae1b5b8adb5497450e396473ebf6b2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 22:40:24 2023 +0200
+
+    bridges: add context to detectParameters (#3607)
+    
+    * bridges: add context to detectParameters
+    
+    Some bridges did not return the context parameter but they used it in
+    the parameters
+    
+    * bridges: add context to detectParameters
+    
+    Fix test for InstagramBridge
+
+commit c1c8304fc05ffa2a2966434ec8251975100bf85b
+Author: Dag <me@dvikan.no>
+Date:   Sat Jul 8 17:03:12 2023 +0200
+
+    refactor: dont create multiple instances of the cache (#3504)
+
+commit ecb486794b622a9ea9f563abdf8a7fa41038d4e9
+Author: Dag <me@dvikan.no>
+Date:   Tue Aug 2 15:03:54 2022 +0200
+
+    refactor: use static values for cache scope
+    
+    This fixes a future problem when code is placed under a namespace because `get_class($bridge)` will then return e.g. `RssBridge\Bridge\TwitterBridge` instead of the the current value `TwitterBridge`.
+    
+    Also a bit refactoring of `Configuration.php`.
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit ea45717a28c09d6261babba35c23c34de737458b
+Author: Tokariew <korbolinhii@gmail.com>
+Date:   Thu Jul 7 12:08:21 2022 +0200
+
+    [Instagram] fix: add ds_user_id (#2881)
+    
+    Fix #2876
+
+commit d107f8ed3030c416ea3056f34b4ca242ff26af30
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Wed Jul 6 12:14:04 2022 +0200
+
+    Improve Factory variable names (#2895)
+
+commit 321ec7c8c16211192ca6ef7515c8880832adbd22
+Author: Dag <me@dvikan.no>
+Date:   Tue Jul 5 13:20:01 2022 +0200
+
+    refactor: move cache logic into the factory (#2884)
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 07927008ebafacebfd97411600e21777ff752518
+Author: Dag <me@dvikan.no>
+Date:   Wed Jun 22 18:29:28 2022 +0200
+
+    refactor: CacheFactory (#2834)
+
+commit d0bea1627e516470f471b4e7cc0b20508865f24e
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sat Jun 18 06:02:31 2022 +0500
+
+    [InstagramBridge] Fix incorrect cache timeout calculation (#2840)
+    
+    It is expected that getCacheTimeout returns integer. In fact
+    it returned boolean value which lead to situation, where Instagram feeds
+    were not cached.
+
+commit 5c08984714da9bf9b397be79f69a38935c1e3099
+Author: Vít Kabele <vit@kabele.me>
+Date:   Fri Apr 8 23:47:10 2022 +0200
+
+    InstagramBridge.php: Display usernames and hashtags as links. (#1582)
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 26f0380aaa281cc3a50a4b6af253116427a74527
+Author: mw80 <19948946+mw80@users.noreply.github.com>
+Date:   Wed Mar 23 04:09:59 2022 +0100
+
+    [InstagramBridge] Add detectParameters (#1476)
+
+commit fb19142a54d4f9c624f7f8b0f26af4e0c98ca7f0
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Wed Jan 26 00:31:10 2022 +0500
+
+    [InstagramBridge] Add options to reduce 429 errors
+    
+    First option is session_id of existing Instagram account.
+    Second option is customizing cache timeout for InstagramBridge.
+    
+    Those options can be combined.
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 5ed161943cb7e6f17459ba3eb39f50a7ae810b43
+Author: JimDog546 <32178686+JimDog546@users.noreply.github.com>
+Date:   Sun Jan 10 03:14:58 2021 -0500
+
+    [InstagramBridge] Remove redundant data collection for sidecar and video (#1920)
+    
+    getInstagramSidecarData and getInstagramVideoData were unnecessarily calling getSinglePostData to retrieve data already present in collectData's call of getInstagramJSON. getSinglePostData sometimes doesn't retrieve data properly resulting in incomplete post information. Since the information needed is already present, pass it from collectData instead, eliminating the redundant data collection and improving reliability.
+
+commit 56b2c516e49b26b26258fe11787518cae5737b10
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Wed Dec 9 10:47:48 2020 +0500
+
+    [InstagramBridge] pauder is defacto not a maintainer of InstagramBridge
+
+commit 68dd2d745f1bd992d43d9e1cf466af644ab82411
+Author: Bob <RawkBob@users.noreply.github.com>
+Date:   Wed Sep 2 07:02:34 2020 +0100
+
+    [InstagramBridge] Change TAG_QUERY_HASH (#1727)
+
+commit 7b63da522fa728811349081a0921f84bb1fa6f19
+Author: Lyra <teromene@teromene.fr>
+Date:   Wed Feb 26 22:35:44 2020 +0100
+
+    [InstagramBridge] Use lowercase comparison when looking up user pk
+
+commit 3179c1e8843d8585d4ab676e07460b26c84cbc3d
+Author: Lorenzo Stanco <lorenzo.stanco@gmail.com>
+Date:   Wed Feb 26 22:13:40 2020 +0100
+
+    [InstagramBridge] Fixed item thumb on video entries (#1387)
+
+commit 48b016467641b64f5fc3bbcba61464d4a4db081c
+Author: Shuto Yano <shutoreds@gmail.com>
+Date:   Sun Dec 1 19:25:20 2019 +0900
+
+    [InstagramBridge] Fix instagram GraphSidecar output and Video embedding (#1361)
+    
+    * [InstagramBridge] Fix GraphSidecar output
+    
+    Fix following issues which related to output of the GraphSidecar type posts.
+    - The GraphSidecar post's media wasn't outputted except for first picture when searching by hashtag or location
+    - Video didn't embedded
+    NOTE:
+    The function getInstagramStory() which was called when the post type is GraphSidecar didn't seem to work just as one intended.
+    Because the web request called in that function is just to get the media of single post, NOT to get the media of Story.
+    But I don't have any idea to solve #694, so it seems be better to rename these function and member variable properly.
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit a2e47a88c314c62d49c04b548fd78be509a89a12
+Author: Lyra <teromene@teromene.fr>
+Date:   Thu Oct 3 22:14:21 2019 +0200
+
+    [InstagramBridge] Add option to get direct links
+
+commit 7aba7992aad160a84d9035f9906028385cfd65a9
+Author: Lyra <teromene@teromene.fr>
+Date:   Wed Sep 11 19:28:46 2019 +0200
+
+    [InstagramBridge] Remove condition that forces cache ignoring
+
+commit 48ebed7b383853f1268fb9535ae78ebf37de4bca
+Author: Lyra <teromene@teromene.fr>
+Date:   Wed Sep 11 19:08:12 2019 +0200
+
+    [InstagramBridge] Fix Instagram stories and user id finding.
+
+commit ccef6b95ada21c84871356d3647d653d88614abd
+Author: Lyra <teromene@teromene.fr>
+Date:   Tue Sep 10 14:37:50 2019 +0200
+
+    [InstagramBridge] Attempt to fix the queries in order to bypass rate limits
+
+commit 7b8dd93a8e5148d5bdacc6c996ef83a4ee99c535
+Author: Lorenzo Stanco <lorenzo.stanco@gmail.com>
+Date:   Sat Apr 20 22:15:30 2019 +0200
+
+    [InstagramBridge] Fix image link
+
+commit 18229b5c7041d5e097c7e551daaced1878d19fb2
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Sun Jan 6 18:14:23 2019 +0100
+
+    [InstagramBridge] Add author if available in response (#997)
+    
+    Closes #905
+
+commit 288d4de218dec81035ffa06d2326ca15d9598e4e
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Sat Jan 5 12:29:26 2019 +0100
+
+    bridges: Fix bridges to pass unit test (#984)
+    
+    * [DealabsBridge] fixed parameters
+    * [DemonoidBridge] added parameter context names
+    * [DevToBridge] fixed parameters
+    * [ExtremeDownloadBridge] fixed parameters
+    * [GithubIssueBridge] fixed parameters
+    * [InstagramBridge] added parameter context names
+    * [MydealsBridge] fixed parameters
+    * [OnVaSortirBridge] fixed parameters
+    * [ThingyverseBridge] fixed parameters
+    * [HotUKDealsBridge] fixed parameters
+    * [FeedExpanderExample] added proper URI
+    * [GQMagazineBridge] fixed parameters and getDomain()
+    * [MozillaSecurityBridge] fixed filename
+    
+    References #980
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit 6c1d8615292317b0110a56a4c20bafc00b9c7189
+Author: Lorenzo Stanco <lorenzo.stanco@gmail.com>
+Date:   Wed Dec 26 20:32:44 2018 +0100
+
+    [InstagramBridge] Add link on image and video indication in title (#966)
+    
+    In item content, the image is now a clickable link to the post;
+    In item title a ▶ is prepended if the post contains a video; it's impossible to tell from the content image.
+
+commit 758f37b452319b28290fcdd4bbfefb3f8f8703d9
+Author: Lorenzo Stanco <lorenzo.stanco@gmail.com>
+Date:   Wed Dec 12 16:44:37 2018 +0100
+
+    [InstagramBridge] Truncate long titles and use full text as content (#961)
+    
+    - Truncate long titles and use full text as content (using only the first line of text content as title)
+
+commit 19a7f10160108cb78dacacd496ca66964eb1d7f9
+Author: teromene <teromene@teromene.fr>
+Date:   Wed Nov 7 22:17:53 2018 +0100
+
+    [InstagramBridge] Support Instagram Locations. Fixes #705.
+
+commit 392e3ff6c7b62c3080de640f71dcb199b2643cab
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:55:58 2018 +0100
+
+    phpcs: Fix violations
+
+commit 07b4c72d5de4d970b461baa6b31309f484d44097
+Author: hunhejj <hunhejj@gmail.com>
+Date:   Sat Nov 3 12:12:37 2018 +0100
+
+    [InstagramBridge] Don't add duplicated urls when parsing Instagram stories (#715)
+
+commit e3030cbbfd62e4a6a6e0365e4319e06647de1f95
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Oct 24 16:33:49 2018 +0200
+
+    [InstagramBridge] Reduce occurrence of HTTP error 301
+    
+    Instagram returns "HTTP/1.1 301 Moved Permanently" on each request
+    to "https://instagram.com/" because the correct location is
+    "https://www.instagram.com/".
+    
+    Instagram will respond with "HTTP/1.1 301 Moved Permanently" if the
+    URI for the requested user doesn't end with a slash.
+    
+    Notice: This is only a minor enhancement to prevent error 301 from
+    happening. The previous version worked fine as is.
+
+commit 16f0ee71048459b5dd39ffc1b66a2f3786dd87be
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Thu Oct 18 19:45:03 2018 +0500
+
+    [InstagramBridge] added caption existance check in getInstagramStory (#865)
+    
+    * [InstagramBridge] added caption existance check in getInstagramStory
+    
+    * [InstagramBridge] Coding policy fixes
+
+commit 193ca87afae84bf50730ae8d006949efe5c251ea
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Fri Jun 29 23:55:33 2018 +0200
+
+    [phpcs] enforce single quotes (#732)
+    
+    * [phpcs] Add rule to enforce single quoted strings
+
+commit 064ba456e83dcd58b86fb7498aa07ca0497c1dd5
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue May 29 12:32:18 2018 +0200
+
+    [InstagramBridge] Fix broken compatibility for media_type parameter
+    
+    The media_type parameter was recently replaced by media_type_u (for
+    user mode) and media_type_h (for hashtag mode). This was necessary
+    in order to add the media type 'story' only for the user mode.
+    
+    "The reason for that is that RSS-Bridge supports multiple parameters
+    with the same name if and only if they contain the exact same value.
+    Here, hashtags don't have stories, so it would not be possible to
+    pass "story" as a parameter. This is a design mistake that I made
+    when I added support for hashtags."
+    
+    -- https://github.com/RSS-Bridge/rss-bridge/commit/8770c87389ffde62551e4a1a8923ded1c95b077a?diff=split#r28871502
+    
+    However as pointed out this change breaks existing feeds as the
+    parameter name is no longer compatible to previous implementations.
+    
+    This commit changes the implementation to provide the old media_type
+    parameter globally and check for invalid options on each request. If
+    a user uses the 'story' option in history mode the bridge returns a
+    client error.
+    
+    references 8770c87
+    references #694
+    fixes #696
+    fixes #699
+    fixes #701
+
+commit 8770c87389ffde62551e4a1a8923ded1c95b077a
+Author: teromene <teromene@teromene.fr>
+Date:   Sat May 5 13:00:59 2018 +0100
+
+    Added support for stories in InstagramBridge. Closes #665
+    Renamed parameters as stories are only available in user mode.
+    Use a regex instead of HTML parsing to extract the JSON, as it is way faster.
+
+commit 795494cfce1d60814fe4e5b58e35e613379af308
+Author: teromene <teromene@teromene.fr>
+Date:   Mon Apr 16 19:34:21 2018 +0200
+
+    Added enclosures to InstagramBridge.
+
+commit 38c7e0272e53c088699daebe950d2dd2de7b8b38
+Author: teromene <teromene@teromene.fr>
+Date:   Mon Mar 19 12:29:24 2018 +0000
+
+    Add hashtag support to InstagramBridge.
+    Fixes  #629
+
+commit 29c690dbcd8540093c8b0402c537a143f4375681
+Author: teromene <teromene@teromene.fr>
+Date:   Mon Mar 19 12:17:42 2018 +0000
+
+    Fix InstagramBridge, thanks to @pintassilgo comments.
+    Fixes #646
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 7dda088b3ff8fea5ca712d51d2c8fd0ad8f3709a
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jul 25 15:10:06 2017 +0200
+
+    [InstagramBridge] Add option to filter for videos and pictures
+    
+    Adds a new option 'media_type' to select from three choices:
+    
+    - 'all' (Both): Returns pictures and videos (default choice)
+    - 'picture': Returns only pictures
+    - 'video': Returns only videos
+    
+    References #553
+
+commit 2ac0469750ba31ff8b998d17e920f53b26282012
+Author: Corentin Garcia <corenting@gmail.com>
+Date:   Tue Mar 21 21:27:12 2017 +0100
+
+    Updated 4 bridges to use HTTPS (#497)
+    
+    * [NextInpactBridge] Use https
+    
+    * [InstagramBridge] Use https
+    
+    * [GBAtempBridge] Use https
+    
+    * [LeBonCoinBridge] Use https
+
+commit 512a4f292b48de827357cbef6874d4c5df6d9e20
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 22:36:33 2017 +0100
+
+    bridges: Return parent::getURI by default
+
+commit c4169f1579701342f7f462f0103f68c5382946ad
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 22:20:55 2017 +0100
+
+    bridges: Return parent::getName by default
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit c383f8697acd566b6671b3d47c4218147a7d0e68
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Sep 6 08:41:43 2016 +0200
+
+    [InstagramBridge] fix item url
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit b5c432d66c637f72e403cabc3cadde17bff4447b
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 29 01:02:44 2016 +0200
+
+    [InstagramBridge] fix getName() + code simplification
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 1b3c8a8aeba5641f3bec9a6a720939df537bfa83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 01:25:33 2016 +0200
+
+    [core + bridges] add BridgeAbstract::$inputs and BridgeAbstract::getInput()
+    
+    Inputs are not stored in BridgeAbstract::$parameters anymore to separate
+    static data from dynamic data.
+    The getInput method allows for more readable code.
+    
+    Also fix an "undefined index 'global'" notice
+    
+    Probability of breaking bridges: high !
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 614d425da4e3d37abbdc34444ba8de3304979eb8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 14:57:43 2016 +0200
+
+    [InstagramBridge] fix uri, remove useless code
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 760141a7513b24f39a2643694e40c95248cc7a95
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 14:54:10 2016 +0200
+
+    [InstagramBridge] fix parameter 'u' requirement status
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3c0d13c1bb72a87f0d671692e205f45f04d94eba
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 19:06:35 2016 +0200
+
+    bridges: use BridgeAbstract::getSimpleHTMLDOM
+    
+    instead of BridgeAbstract::file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 74f0572d914617b4e47fe0fd2fabfe356710d609
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Aug 17 14:45:08 2016 +0200
+
+    bridges: Replace returnError function with more specific
+    
+    Replacements depend on original error code:
+    400: returnClientError
+    404: returnServerError
+    500: returnServerError
+    501: returnServerError
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit 5ad157d2fddc23e447dfb0792911f40dc28ee8a0
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Sat Aug 6 16:17:58 2016 +0200
+
+    bridges: Remove getCacheDuration if default
+    
+    BridgeAbstract will return 3600 seconds by default, so the function
+    can be removed from any bridge implementing getCacheDuration
+    returning the same value.
+    
+    Documentation updated accordingly.
+
+commit 955eecc299e67a1062a9e75149b6c098fb9d2cbc
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Jun 25 23:17:42 2016 +0200
+
+    use BridgeAbstract::file_get_html in all bridges
+    
+    instead of simple_html_dom function file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 78c9dcc705682cb3e71912fae19365d71ee7bf22
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Nov 5 15:50:18 2015 +0000
+
+    Last batch of bridges, all implemented !
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 9ce826f78e255de14461654748e9fab47fb09755
+Author: Paul de Rosanbo <paul.derosanbo@cantico.fr>
+Date:   Mon Jun 29 11:47:54 2015 +0200
+
+    Fix instagram bridge, json data format has been modified on
+    instagram.com
+
+commit 8d476a06443d2f8897784b9184a773102bc6560b
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Sun May 25 23:27:14 2014 +0200
+
+    add homepage + date to main bridges
+
+commit 2a8e4034e373bac5ba6efaad153a64820d131313
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Wed May 21 19:44:14 2014 +0200
+
+    add original maintainers
+
+commit 7d24be9653bb58110d7343116a6f0fa55295b7d7
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Wed May 21 19:15:52 2014 +0200
+
+    update bridges with maintainer
+
+commit e3d502768162bf0986455a6a1eff34760865e69b
+Author: pauder <paul.derosanbo@cantico.fr>
+Date:   Thu Jan 30 12:02:56 2014 +0100
+
+    cache
+
+commit d6693f43465615e244d055f80e9ed3a1e264eec9
+Author: pauder <paul.derosanbo@cantico.fr>
+Date:   Thu Jan 30 11:55:39 2014 +0100
+
+    Fix bug because of a modification of instagram source page json
+    content
+
+commit 3822e77561e45c63a86027d606b33e3fc2017b94
+Author: pauder <paul.derosanbo@cantico.fr>
+Date:   Tue Oct 29 15:59:22 2013 +0100
+
+    more informations with a json parser
+
+commit 40f6e51b067bbe1f3761906f2a747e8cc8448de2
+Author: pauder <paul.derosanbo@cantico.fr>
+Date:   Tue Oct 29 10:40:31 2013 +0100
+
+    add date
+
+commit c6ec5c45d154c7df16dc6006ce319e68c5d2a86f
+Author: pauder <paul.derosanbo@cantico.fr>
+Date:   Tue Oct 29 09:26:48 2013 +0100
+
+    Add Instagram bridge

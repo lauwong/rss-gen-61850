@@ -1,0 +1,55 @@
+commit b25a779d98e4ed674496e6184b424e0a594f2364
+Author: Pavel Korytov <thexcloud@gmail.com>
+Date:   Thu Aug 8 01:27:33 2024 +0300
+
+    [TldrTechBridge] Fix bridge (#4187)
+    
+    * [TldrTechBridge] Fix bridge
+    
+    * yup
+    
+    ---------
+    
+    Co-authored-by: Dag <me@dvikan.no>
+
+commit f3ca567159386f32ef26c424b14d9b6e2acf126a
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Sat Apr 27 11:35:59 2024 +0300
+
+    [TldrTechBridge] Fix and improve bridge (#4090)
+
+commit b6a9baff9494d4f7820b640848afa02492a6f865
+Author: Dag <me@dvikan.no>
+Date:   Tue Oct 10 21:41:57 2023 +0200
+
+    fix(cvedetails,tldrtech) (#3735)
+
+commit 43ec82179b0c255c5587449d7191307bda9434d4
+Author: adminvulcano <derwolf8@outlook.de>
+Date:   Tue Aug 8 07:00:07 2023 +0200
+
+    [TldrTechBridge] Add Cybersecurity section (#3601)
+
+commit f5f76f111b60b723791be05c1cbc521d1cad3aab
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Wed Jul 26 23:59:49 2023 +0300
+
+    [TldrTechBridge] Add Web Dev and Founders sections (#3576)
+
+commit 4aed05c7b678b5673386d61374bba13637d15487
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Tue Feb 28 19:28:33 2023 +0300
+
+    [TldrTechBridge] Add AI section (#3272)
+
+commit e76ddf9192ab99c6ceb08c0865ecad27ecb1f7ce
+Author: Korytov Pavel <thexcloud@gmail.com>
+Date:   Mon Jan 23 21:22:13 2023 +0300
+
+    [TldrTechBridge] Add bridge (#3222)
+    
+    * [TldrTechBridge] Add bridge
+    
+    * [TldrTechBridge] Fix lint
+    
+    * [TldrTechBridge] Fix lint

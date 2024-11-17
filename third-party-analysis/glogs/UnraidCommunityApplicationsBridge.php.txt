@@ -1,0 +1,53 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 37f1ab726b14f04070d26ebf65e591882ffb165e
+Author: Dag <me@dvikan.no>
+Date:   Sun Oct 16 20:26:33 2022 +0200
+
+    fix: various bug fixes (#3102)
+    
+    * fix: Undefined offset: 4
+    
+    * fix: Trying to access array offset on value of type bool
+    
+    * fix: Undefined variable: photo at bridges/TelegramBridge.php line 287
+    
+    * fix: Trying to get property innertext of non-object at bridges/ZDNetBridge.php line 186
+    
+    * fix: Undefined index: Category at bridges/UnraidCommunityApplicationsBridge.php line 42
+    
+    * fix: Undefined index: fullUrl at bridges/EuronewsBridge.php line 61
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 36fc4822dd3824518911b7e7e6c0d7c6c849ca03
+Author: Paroleen <48787191+Paroleen@users.noreply.github.com>
+Date:   Sun May 17 20:22:04 2020 +0200
+
+    [UnraidCommunityApplicationsBridge] Add new bridge (#1534)
+    
+    * [UnraidCommunityApplicationsBridge] Add new bridge

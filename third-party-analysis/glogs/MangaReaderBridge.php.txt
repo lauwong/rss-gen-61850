@@ -1,0 +1,11 @@
+commit 1c3024fca7b8330b75e93fde673af09b1d797fa5
+Author: Facundo Tuesca <facu@tuesca.com>
+Date:   Wed May 8 00:25:45 2024 +0200
+
+    [MangaReaderBridge] Change feed title to manga name (#4092)
+
+commit b347a9268a7d6bc34442509e2cf7dcd793c39853
+Author: Dag <me@dvikan.no>
+Date:   Fri Nov 10 12:56:11 2023 +0100
+
+    feat: new bridge MangaReader (#3795)

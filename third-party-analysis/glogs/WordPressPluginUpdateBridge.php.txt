@@ -1,0 +1,170 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 7b168a29f05bf06a95314db9b37fdc15973f1085
+Author: dag <me@dvikan.no>
+Date:   Sun Apr 3 09:38:34 2022 +0200
+
+    [WordPressPluginUpdate] fix: broken bridge (#2572)
+    
+    I think they removed the changelog html page. Or maybe it
+    was a redirect. Anyways, this change uses their json api
+    to fetch plugin data.
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 21d3bf3b60bcf0e88165ef79c718b2efb1f5364c
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Mon Apr 29 20:12:43 2019 +0200
+
+    caches: Refactor the API (#1060)
+    
+    - For consistency, functions should always return null on non-existing data.
+    
+    - WordPressPluginUpdateBridge appears to have used its own cache instance in the past. Obviously not used anymore.
+    
+    - Since $key can be anything, the cache implementation must ensure to assign the related data reliably; most commonly by serializing and hashing the key in an appropriate way.
+    
+    - Even though the default path for storage is perfectly fine, some people may want to use a different location. This is an example how a cache implementation is responsible for its requirements.
+
+commit 556a417dd6bf39b1a4892bc2c935f32b0d710f28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Feb 6 18:52:44 2019 +0100
+
+    core: Add support for custom cache types via config.ini.php
+    
+    This commit adds support for a new parameter which specifies the type
+    of cache to use for caching. It is specified in config.ini.php:
+    
+     [cache]
+    
+     type = "..."
+    
+    Currently only one type of cache is supported (see /caches). All uses
+    of 'FileCache' were replaced by this configuration option.
+    
+    Note: Caching currently depends on files and folders (due to FileCache).
+    Experience may vary depending on the selected cache type. For now always
+    check if FileCache is working before testing alternative types.
+    
+    References #1000
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit c63af2e7ad34c7a900259eddc0c65877ba3cfeb5
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Nov 10 20:03:03 2018 +0100
+
+    core: Add separate Debug class
+    
+    Replaces 'debugMessage' by specialized debug function 'Debug::log'.
+    This function takes the same arguments as the previous 'debugMessage'.
+    
+    A separate Debug class allows for further optimization and separation
+    of concern.
+
+commit ecdac1b0893e6e0e5ec35168fdf136482b82cce6
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Nov 10 19:48:05 2018 +0100
+
+    core: Add path separator to PATH_CACHE
+
+commit 2126db84accbc303e0420cac2bda19b199b2d76b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Nov 6 18:35:40 2018 +0100
+
+    core: Replace CACHE_DIR by PATH_CACHE
+    
+    Move CACHE_DIR from index.php to /lib/RssBridge.php and change name
+    to PATH_CACHE.
+    
+    PATH_CACHE is one of the core paths of RSS-Bridge and should therefore
+    be defined in the core file RssBridge.php.
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 5d41a740676988e502886f9f431750bbf6574f92
+Author: Teromene <teromene@teromene.fr>
+Date:   Fri Mar 3 13:27:41 2017 +0000
+
+    Add WordPressPluginUpdateBridge.
+    Fix phpcs check in WebFailBridge.

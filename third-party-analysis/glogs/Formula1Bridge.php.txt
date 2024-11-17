@@ -1,0 +1,43 @@
+commit 94ae098ef5687f6cc128a0fb7bd33443e40e3e55
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 9 20:18:50 2022 +0200
+
+    fix: various fixes (#3023)
+    
+    * improve twitch error message
+    
+    * fix worldcosplay notice
+    
+    * fix: add new video image to telegram
+    
+    * fix: reuters
+    
+    * fix: formula1
+    
+    * twitter
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit d38bc1823293f0c8e2be07be6e7566b4ed650d72
+Author: AxorPL <1163219+AxorPL@users.noreply.github.com>
+Date:   Sun May 30 20:33:15 2021 +0200
+
+    [Formula1Bridge] Minor fixes (#2128)
+    
+    - removed useless returnServerError according to your recommendation
+    - made use of the caption property if present
+    - fixed link URL
+
+commit 378f78d6ebcd223270e56b7e69c5d0fa0296430c
+Author: AxorPL <1163219+AxorPL@users.noreply.github.com>
+Date:   Thu May 6 20:16:22 2021 +0200
+
+    [Formula1Bridge] New bridge (#2085)

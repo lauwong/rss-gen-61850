@@ -1,0 +1,53 @@
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit f0e5ef0fc58f3796bb4c03caa2c5e7ca78de119e
+Author: Bocki <henning@bocklage.com>
+Date:   Mon Mar 6 20:01:51 2023 +0100
+
+    [Various] getKey replacements and docu (#3283)
+    
+    * [Various] getKey replacements and docu
+    
+    * more bridges and fix to the abstract
+    
+    * linting
+    
+    * revert bandcampdaily. doing more than i thought
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5a733b3d821ec857711a65bc451f303a846b5faa
+Author: dag <me@dvikan.no>
+Date:   Sun Apr 10 18:56:24 2022 +0200
+
+    feat: add limit options to the slowest bridges
+
+commit bdf15c3ce006cc2758cc9224b924788108db2064
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Tue Oct 19 10:22:17 2021 +0700
+
+    [UnogsBridge] Add fallback if not found any high-res image (#2301)
+
+commit cb111a3ebd51069e84f0be96281fa0772ccc7475
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Tue Sep 28 16:20:04 2021 +0700
+
+    [UnogsBridge] Better feed title for Country context (#2279)
+
+commit a8d1acfdad8fe77e1879cd3eaaeed49abfd7e94f
+Author: csisoap <33269526+csisoap@users.noreply.github.com>
+Date:   Wed Jul 7 17:25:13 2021 +0700
+
+    [UnogsBridge] New bridge (#2198)

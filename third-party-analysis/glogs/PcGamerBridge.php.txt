@@ -1,0 +1,53 @@
+commit 95c199c2eb9f61355397ea7ad1d93e2084e1ed8c
+Author: Dag <me@dvikan.no>
+Date:   Tue Nov 15 00:30:51 2022 +0100
+
+    fix: various php notices (#3145)
+    
+    * fix: notice
+    
+    * fix: Trying to get property content of non-object at bridges/PcGamerBridge.php line 36
+    
+    * fix: better exception message
+    
+    * fix: strpos(): Non-string needles will be interpreted as strings in the future. Use an explicit chr() call to preserve the current behavior
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5a733b3d821ec857711a65bc451f303a846b5faa
+Author: dag <me@dvikan.no>
+Date:   Sun Apr 10 18:56:24 2022 +0200
+
+    feat: add limit options to the slowest bridges
+
+commit 8f98e07979c7bea6f851f378359c826e1f8ff07f
+Author: Matt DeMoss <demoss.matt@gmail.com>
+Date:   Tue Oct 19 02:53:26 2021 -0400
+
+    [PcGamerBridge] Use meta tags to generate feed contents (#2271)
+
+commit f0363ba03b92cd949760f01492b140f89de12ca7
+Author: Anchit Bajaj <ab@abifog.com>
+Date:   Thu Feb 27 02:40:09 2020 +0530
+
+    [PcGamerBridge] - Add all articles, full content and images (#1420)
+
+commit fbbcd02384eb8b997256b9994172ccbc429322cd
+Author: Matt DeMoss <demoss.matt@gmail.com>
+Date:   Sun Dec 24 16:45:56 2017 -0500
+
+    apply phpcbf for automatic style fixes
+
+commit d34987f9c12804f273a346fa5f4ee3d19cefae66
+Author: Matt DeMoss <demoss.matt@gmail.com>
+Date:   Sat Dec 23 15:57:40 2017 -0500
+
+    PC Gamer bridge initial commit with most read stories

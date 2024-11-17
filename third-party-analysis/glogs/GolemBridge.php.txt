@@ -1,0 +1,193 @@
+commit 4539eb69aa5f2bea3dde61687c08164062cba767
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Thu Jul 4 20:53:49 2024 +0200
+
+    [GolemBridge] fix youtube links (#4144)
+
+commit f736da6faebecf9215c11674c4dce12497136281
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Wed Apr 3 16:23:52 2024 +0200
+
+    [GolemBridge] fix for internal videos (#4051)
+    
+    * [GolemBridge] fix for internal videos
+    
+    with this internal golem-videos can be played directly from feed
+    
+    * Update GolemBridge.php
+
+commit 0c2099a8529faad54d848dd73cfc6bd839abb5ba
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Thu Mar 28 19:41:56 2024 +0100
+
+    [GolemBridge] fixed embedded youtube videos (#4033)
+    
+    * [GolemBridge] fixed embedded youtube videos
+    
+    embedded youtube-videos can be played directly from feed now
+    
+    * Update GolemBridge.php
+    
+    * Update GolemBridge.php
+    
+    * Update GolemBridge.php
+    
+    * Update GolemBridge.php
+
+commit c5f586497f3d23be61a6e8a5fe0f948f98a5b2f6
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sat Dec 16 11:21:19 2023 +0100
+
+    [GolemBridge] Remove multi-page page headers
+    
+    On multi-page articles like [1], all the pages after the first one have
+    a page header that we add in the article content. When we tack the
+    pages together again, we don't need those extra page headers.
+    
+    [1] https://www.golem.de/news/science-fiction-die-zehn-besten-filme-aus-den-spannenden-70ern-2312-179557.html
+
+commit 0116dde27549fcdaf5600bc255173047e1fce4f9
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sat Dec 16 10:43:27 2023 +0100
+
+    [GolemBridge] Add h2 elements from article content
+    
+    Else some headers are just missing.
+    Example article with previously missing movie names:
+    https://www.golem.de/news/science-fiction-die-zehn-besten-filme-aus-den-spannenden-70ern-2312-179557.html
+
+commit d4ae55733b6f7684de0b878d91e53c8a5f917d41
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Fri Dec 15 23:39:27 2023 +0100
+
+    Update GolemBridge.php (#3836)
+    
+    deleted the code which adds the author to the feed, because the author is already in the original feed, so it is not needed.
+
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 410ef85618114ccfec0a10911eb68e324b97121c
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Wed Jun 28 15:51:42 2023 +0200
+
+    [GolemBridge] Strip <script> tags
+    
+    Golem articles referencing their podcast contain a JavaScript reference
+    to Podigee. We don't want JS, so we strip it.
+    
+    Example page: https://www.golem.de/news/podcast-besser-wissen-von-schlangenoel-und-sicherheit-2306-175185.html
+
+commit e7bda080b42ef72bd818413b23c2568bc952272f
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Wed May 10 22:14:34 2023 +0200
+
+    added iframe to $bad (#3380)
+    
+    iframe can't be rendered in feed reader, so we can delete it
+
+commit a1b6bca5818d092eb488ef07b7bc28abdd129b08
+Author: Tone <66808319+Tone866@users.noreply.github.com>
+Date:   Mon May 8 16:21:03 2023 +0200
+
+    added article categories for GolemBridge (#3377)
+    
+    * added article categories for GolemBridge
+    
+    * tabs are bad, spaces good
+    
+    * fixed duplicate categories on multi-page articles
+
+commit 38e832daae62915a5caf0a9807b1f8d8b1574af1
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Wed Feb 8 19:44:01 2023 +0100
+
+    [GolemBridge] Remove link from author (#3248)
+    
+    Fixes #3224.
+
+commit cf7896aeef5dcb8a1f3d0bed15cb4b4a4017b770
+Author: Dag <me@dvikan.no>
+Date:   Tue Oct 25 14:30:01 2022 +0200
+
+    fix: forever loop in golem (#3114)
+
+commit 951092eef374db048b77bac85e75e3547bfac702
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Fri Jul 8 13:00:52 2022 +0200
+
+    Fix coding style missed by phpbcf (#2901)
+    
+    $ composer require --dev friendsofphp/php-cs-fixer
+    
+    $ echo >.php-cs-fixer.dist.php "<?php
+    
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__);
+    
+    $rules = [
+        '@PSR12' => true,
+        // '@PSR12:risky' => true,
+        '@PHP74Migration' => true,
+        // '@PHP74Migration:risky' => true,
+        // buggy, duplicates existing comment sometimes
+        'no_break_comment' => false,
+        'array_syntax' => true,
+        'lowercase_static_reference' => true,
+        'visibility_required' => false,
+        // Too much noise
+        'binary_operator_spaces' => false,
+        'heredoc_indentation' => false,
+        'trailing_comma_in_multiline' => false,
+    ];
+    
+    $config = new PhpCsFixer\Config();
+    
+    return $config
+        ->setRules($rules)
+        // ->setRiskyAllowed(true)
+        ->setFinder($finder);
+    
+    "
+    
+    $ vendor/bin/php-cs-fixer --version
+    PHP CS Fixer 3.8.0 BerSzcz against war! by Fabien Potencier and Dariusz Ruminski.
+    PHP runtime: 8.1.7
+    
+    $ vendor/bin/php-cs-fixer fix
+    $ rm .php-cs-fixer.cache
+    $ vendor/bin/php-cs-fixer fix
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 8865521b3bba76224c804758b2187e73904396b0
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sat Jun 4 22:27:24 2022 +0200
+
+    [GolemBridge] Remove image galleries (#2761)
+    
+    Do not add all images of the image gallery, but only the preselected one.
+    
+    Often, the same gallery is used multiple times with different preselected
+    images. The previous implementation always added all images of the
+    gallery, cluttering the article. This patch only adds the preselected one.
+    
+    The no-js link wrapping around the gallery leads to a 403 Forbidden
+    page, so linking that doesn't work to really support galleries.
+
+commit 56e991122bc1bdb6763d768c943faf0a03582d2b
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sun May 8 04:08:55 2022 +0200
+
+    [GolemBridge] Add golem.de bridge (#2696)

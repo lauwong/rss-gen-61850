@@ -1,0 +1,164 @@
+commit 2acd415475e0d1f4b621003a85ece6e47a3790f7
+Author: Dag <me@dvikan.no>
+Date:   Thu Aug 8 04:31:47 2024 +0200
+
+    refactor: drop usage of Debug::log (#4202)
+    
+    * refactor: drop usage of Debug::log
+    
+    * lint
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 36d11fd06e99ed505cc411c50e6d07e295ac114c
+Author: Mynacol <Mynacol@users.noreply.github.com>
+Date:   Sun May 8 16:25:01 2022 +0200
+
+    [XenForoBridge] Fix error if message is < 70 chars (#2707)
+    
+    At the time of writing, this occurs on the following thread:
+    https://forum.xda-developers.com/t/optimized-lineageos19-1-v4-0-23apr.4426575/
+    
+    Fixes the following error:
+    ValueError: strpos(): Argument #3 ($offset) must be contained in argument #1 ($haystack) in ./rss-bridge/bridges/XenForoBridge.php:272
+    Stack trace:
+    0 ./rss-bridge/bridges/XenForoBridge.php(272): strpos()
+    1 ./rss-bridge/bridges/XenForoBridge.php(146): XenForoBridge->extractThreadPostsV2()
+    2 ./rss-bridge/actions/DisplayAction.php(134): XenForoBridge->collectData()
+    3 ./rss-bridge/index.php(24): DisplayAction->execute()
+    4 {main}
+
+commit a28481aaa890c50dce00b4e789ad3a88ffe851a2
+Author: Dag <me@dvikan.no>
+Date:   Mon Apr 11 00:42:53 2022 +0200
+
+    [XenForo] fix: sort items by date in descending order (#2633)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 3bc8c9468a9fd517c9f769f5fcb141ed5495f3df
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Nov 1 18:06:38 2019 +0100
+
+    phpcs: Always use long array syntax
+    
+    Most of the code in RSS-Bridge uses the long array syntax.
+    This commit adds a check to enforce using this syntax over
+    the short array syntax.
+    
+    All failures have been fixed.
+
+commit 50162f52b6da6d8fbd6785803250a4a975417f8e
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Jul 2 21:39:51 2019 +0200
+
+    [XenForoBridge] Fix minor issues with CSS selectors
+
+commit ade09b2aad02312dd800bff275f80266f6e39a0f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 9 19:21:27 2019 +0200
+
+    [XenForoBridge] Fix broken bridge
+
+commit 6c4098d6558c33a5fcb2a8bc9fb29e915d56fc6c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 2 13:03:26 2019 +0200
+
+    Revert "all: Use ->remove() instead of ->outertext = ''"
+    
+    This reverts commit 052844f5e13c71ceefd743136a71f71226a0eefb.
+    
+    There is a bug in ->remove() that causes the parser to incorrectly
+    identify elements in the DOM tree that shouldn't exist anymore.
+    
+    References #1151
+
+commit 052844f5e13c71ceefd743136a71f71226a0eefb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 1 21:15:30 2019 +0200
+
+    all: Use ->remove() instead of ->outertext = ''
+    
+    simplehtmldom 1.9 introduced new functions to recursively remove
+    nodes from the DOM. This allows removing elements without the need
+    to re-load the document by using $html->load($html->save()), which
+    is very inefficient.
+    
+    Find more information about remove() at
+    https://simplehtmldom.sourceforge.io/docs/1.9/api/simple_html_dom_node/remove/
+
+commit 81ee15a161f9a3a5129097f4a6c6879b2b086f8f
+Author: triatic <42704418+triatic@users.noreply.github.com>
+Date:   Fri Dec 28 15:13:03 2018 +0000
+
+    general: Fix PHP 7.3 deprecation warnings (#982)
+    
+    Fix PHP 7.3 deprecation warnings. FILTER_VALIDATE_URL implies FILTER_FLAG_SCHEME_REQUIRED and FILTER_FLAG_HOST_REQUIRED since PHP 5.2.1
+    
+    https://bugs.php.net/bug.php?id=75442
+
+commit e7d3a006c82f47f1ba3aebfec4ab6333a4367a16
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Dec 26 21:58:07 2018 +0100
+
+    global: Fix code violations
+
+commit c63af2e7ad34c7a900259eddc0c65877ba3cfeb5
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Nov 10 20:03:03 2018 +0100
+
+    core: Add separate Debug class
+    
+    Replaces 'debugMessage' by specialized debug function 'Debug::log'.
+    This function takes the same arguments as the previous 'debugMessage'.
+    
+    A separate Debug class allows for further optimization and separation
+    of concern.
+
+commit b9f6bc81975bc931c824839d9943536f5a4f15b9
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:15:01 2018 +0100
+
+    [XenForoBridge] Fix broken conditions
+    
+    Restore functionality for https://xenforo.com/community/
+
+commit 9c1c0f2974ca59308793a2936fb9cda5fc15050b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 12:05:14 2018 +0100
+
+    [XenForoBridge] Fix broken checks
+
+commit 65da157fff0bbb877b35d0d15259e8353f9146be
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Nov 5 11:35:01 2018 +0100
+
+    [XenForoBridge] Add new bridge
+    
+    Adds a bridge for forums powered by XenForo (see https://xenforo.com).
+    
+    Support between forums may vary due to ever changing versions with no
+    clear distinction. Especially timestamps may not work depending on the
+    supported language (should currently work on en-US and de-DE).
+    
+    Tested on
+    
+    - https://xenforo.com/community/
+    - http://www.ign.com/boards/
+    
+    Notice: XenForo provides RSS feeds for forums (but not specific topics).
+    For example: https://xenforo.com/community/forums/-/index.rss

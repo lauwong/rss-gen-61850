@@ -1,0 +1,21 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 76ade41543bafb8ed6a92b482c1e2eedcc2fe54b
+Author: Yaman Qalieh <ybq987@gmail.com>
+Date:   Thu Mar 24 18:24:55 2022 -0400
+
+    [No Squash] Fix Linting (#2527)
+
+commit 1f2b295bf356dc58c7368c98721f9d5d79dd628f
+Author: Michael Bemmerl <mail@mx-server.de>
+Date:   Thu Mar 24 21:42:15 2022 +0000
+
+    [BundestagParteispendenBridge] Add bridge to get the latest donations (#1613)

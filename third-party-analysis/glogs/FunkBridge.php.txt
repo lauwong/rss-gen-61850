@@ -1,0 +1,42 @@
+commit 891c8979a3ea7678b61d62fbe7f69250d32d1c78
+Author: Dag <me@dvikan.no>
+Date:   Wed Jul 31 17:30:06 2024 +0200
+
+    refactor: return proper response object (#4169)
+
+commit 52d3cce59dae1b5b8adb5497450e396473ebf6b2
+Author: sysadminstory <sysadminstory@users.noreply.github.com>
+Date:   Wed Aug 9 22:40:24 2023 +0200
+
+    bridges: add context to detectParameters (#3607)
+    
+    * bridges: add context to detectParameters
+    
+    Some bridges did not return the context parameter but they used it in
+    the parameters
+    
+    * bridges: add context to detectParameters
+    
+    Fix test for InstagramBridge
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit e01d9d1700b65604c6c7dbad94abc1520e1d628c
+Author: Dag <me@dvikan.no>
+Date:   Tue Mar 22 22:42:15 2022 +0100
+
+    Squashed commit of the following:
+    
+    commit 81d7934ab9bd15a5edb52faa67190f103ae7b644
+    Author: µKöff <muekoeff@muekev.de>
+    Date:   Thu May 28 14:55:00 2020 +0200
+    
+        [FunkBridge] New Bridge

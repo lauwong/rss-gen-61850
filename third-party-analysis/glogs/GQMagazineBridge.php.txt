@@ -1,0 +1,81 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5a733b3d821ec857711a65bc451f303a846b5faa
+Author: dag <me@dvikan.no>
+Date:   Sun Apr 10 18:56:24 2022 +0200
+
+    feat: add limit options to the slowest bridges
+
+commit 9cd8e93bb90f8dfa4185bd7443ac1577e8a17ca9
+Author: Florent Machen <florent.machen@gmail.com>
+Date:   Fri Mar 25 00:26:38 2022 +0100
+
+    [GQMagazineBridge] fix retrieve the content of an article at a given url (#2305)
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 76183dcd443bff42d686b0fba118c919f71cf2e3
+Author: Nicolas Delsaux <nicolas.delsaux@gmx.fr>
+Date:   Thu Oct 3 21:26:41 2019 +0200
+
+    [GQMagazineBridge] Fix article body detection again (Fixes #1280)
+
+commit 0dfc4ea2c5477e9df9283e829186a693311a1153
+Author: Nicolas Delsaux <nicolas.delsaux@gmx.fr>
+Date:   Fri Sep 6 10:51:13 2019 +0200
+
+    [GQMagazineBridge] Adapt to changes, fixes #1280
+
+commit 09113c25944b1aadb23224e72d5905cc3a593f0e
+Author: Nicolas Delsaux <nicolas.delsaux@gmx.fr>
+Date:   Fri Jun 28 19:29:32 2019 +0200
+
+    [GQMagazineBridge] Fix bridge (#1195)
+    
+    * Fix bridge by changing the way the articles are loaded AND their titles are found
+
+commit 288d4de218dec81035ffa06d2326ca15d9598e4e
+Author: fulmeek <36341513+fulmeek@users.noreply.github.com>
+Date:   Sat Jan 5 12:29:26 2019 +0100
+
+    bridges: Fix bridges to pass unit test (#984)
+    
+    * [DealabsBridge] fixed parameters
+    * [DemonoidBridge] added parameter context names
+    * [DevToBridge] fixed parameters
+    * [ExtremeDownloadBridge] fixed parameters
+    * [GithubIssueBridge] fixed parameters
+    * [InstagramBridge] added parameter context names
+    * [MydealsBridge] fixed parameters
+    * [OnVaSortirBridge] fixed parameters
+    * [ThingyverseBridge] fixed parameters
+    * [HotUKDealsBridge] fixed parameters
+    * [FeedExpanderExample] added proper URI
+    * [GQMagazineBridge] fixed parameters and getDomain()
+    * [MozillaSecurityBridge] fixed filename
+    
+    References #980
+
+commit ee158468fa2e258ad9f947b03ab13d5f0e961c6f
+Author: Nicolas Delsaux <nicolas.delsaux@gmx.fr>
+Date:   Mon Oct 15 18:09:20 2018 +0200
+
+    Expanded Sexactu to cover the whole GQ magazine (#861)
+    
+    The bridge has been expanded to better cover the whole GQ magazine.
+    It should support all countries (provided they all use the same absurdly shitty publication system).
+    It is guaranteed to be only tested with sexactu articles (that I now obtain by loading Maïa Mazaurette author page).

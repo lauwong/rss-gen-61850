@@ -1,0 +1,57 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 19ad2584da58b118d51c28b8a73ec373f474d315
+Author: Jan Tojnar <jtojnar@gmail.com>
+Date:   Tue Jun 7 04:59:22 2022 +0200
+
+    [NFLRUSBridge] Remove byte-order-mark (#2777)
+    
+    With UTF-8 byte-order mark in the file, the `ListActionTest::testOutput`
+    would fail after converting tests to PSR-4 namespaces:
+    
+        invalid JSON output: Syntax error
+        Failed asserting that null is not null.
+    
+    This is because ListAction::execute tries to create the bridge objects
+    and, when the files containing the bridge classes are not loaded yet,
+    the autoloader starts including them. Since this happens after output
+    buffering has begun, any text in the PHP file before the `<?php` tag
+    such as the BOM will end up in the buffer to be parsed by `json_decode`.
+    
+    Previously, it worked by chance thanks to some other test including the file
+    before `ListActionTest`. With the restructuring, `Actions\ListActionTest`
+    will run sooner and become responsible for triggering the autoloader.
+    
+    To prevent this in the future, I also disallowed BOM in the coding style.
+
+commit 563c099d80abf86d65260d2e853231f692efedb4
+Author: Dag <me@dvikan.no>
+Date:   Tue Apr 12 23:35:04 2022 +0200
+
+    [NFLRUS] fix: broken css selectors (#2640)
+    
+    This bridge needs more work.
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 1daef22a3db3580291011c8e4df5d5494f42ca0b
+Author: oratosquilla-oratoria <blackiswhite@posteo.cz>
+Date:   Mon Sep 16 19:27:01 2019 +0000
+
+    [NFLRUSBridge] Add new bridge (#1285)
+    
+    * [NFLRUSBridge] Add new bridge

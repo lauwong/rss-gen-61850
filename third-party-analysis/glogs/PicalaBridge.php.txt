@@ -1,0 +1,23 @@
+commit e859497d6aa35487f26dcf2bea7625babbc2ce47
+Author: Shikiryu <Chouchen@users.noreply.github.com>
+Date:   Fri Jun 9 17:30:11 2023 +0200
+
+    [PicalaBridge] Fix article without image (#3429)
+    
+    Co-authored-by: Clement Desmidt <clement@desmidt.fr>
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit ff8ece213fc9110cb1446847ebf7810af8efdade
+Author: Shikiryu <Chouchen@users.noreply.github.com>
+Date:   Wed Apr 13 12:25:32 2022 +0100
+
+    [PicalaBridge] Add new bridge (#2646)

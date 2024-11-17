@@ -1,0 +1,86 @@
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 5076d09de61c5b08fef8293b5452f158df1fa0ba
+Author: Dag <me@dvikan.no>
+Date:   Fri Jun 24 18:29:35 2022 +0200
+
+    refactor: prepare for PSR2 (#2859)
+
+commit 2bd3f22dd521f1cd1c67d2a350e94203467236f1
+Author: Dag <me@dvikan.no>
+Date:   Fri Mar 25 14:49:57 2022 +0100
+
+    [IPBBridge] fix: bug in feed detection logic
+    
+    The previous author forgot to also append ".xml"
+    when actually fetching the detected feed.
+
+commit 37cb4091d4c3326b219d5d91fd413d43b5fc263d
+Author: Eugene Molotov <eugene.molotov@yandex.ru>
+Date:   Sun Jan 2 14:36:09 2022 +0500
+
+    bridges: remove redundant "or returnServerError" after getContents/getSimpleHTMLDom/getSimpleHTMLDomCached (#2398)
+    
+    When fetching website contents, exceptions already raise on fetching error
+
+commit 1cb83ccea3f8429a0f6eef603618add99100771b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Fri Apr 6 22:13:52 2018 +0200
+
+    [IPBBridge] Use limit for the number of items
+    
+    The limit was used to specify the number of pages to return from a given
+    topic which resulted in the number of returned items variing between one
+    and however many entries are listed on one page.
+    
+    This commit changes the implementation for the limit to keep loading more
+    pages until the specified limit is reached. Excessive elements are removed
+    in order to return the exact amount of items specified by the limit.
+    
+    This behavior is closer to how other bridges are implemented and makes it
+    more natural to use without being too confusing. Existing queries must be
+    updated to account for the new limit.
+    
+    References #657
+
+commit 85ac9001d6c700658664c0e5cab9f27f80ee93b8
+Author: LogMANOriginal <LogMANOriginal@users.noreply.github.com>
+Date:   Tue Feb 13 21:46:33 2018 +0100
+
+    [IPBBridge] Add bridge (#564)
+    
+    This bridge returns feeds for any URI that is compatible with the
+    IPB implementation (currently 4.x). Older versions might work, but
+    there is no guarantee.
+    
+    Only forum and topic URIs are supported!
+    
+    The bridge automatically checks if natural feeds are available (by
+    adding '.xml' to the URI). If so the feed is returned. Otherwise
+    the bridge will attempt to identify the content type and build a
+    feed accordingly.
+    
+    Valid URIs are forums and topics. For forums the first page is
+    returned, for topics the last one. Elements are ordered such that
+    the latest entry is returned first (oldest-to-newest)
+    
+    The optional parameter '&limit=' specifies how many pages should
+    be loaded (default: 1). Topics are loaded in reverse order.
+    => Does not work with forums!
+    
+    Images are provided as enclosures and scaled to a max-size of
+    400x400 pixels by default (Except for natural feeds).
+    
+    The content is filtered before being returned:
+    - Unnecessary tags are removed (iframes, etc...)
+    - Styles for blockquotes are restored (grey background)
+    
+    Closes #507

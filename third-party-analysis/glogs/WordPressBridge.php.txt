@@ -1,0 +1,876 @@
+commit 2880524dfc7685985fde8429c1dcb85387f4ba14
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 01:59:05 2023 +0200
+
+    refactor: remove parent calls to parseItem (#3747)
+
+commit 382648fc22c232bc8c66111fc4d3ab6570946437
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 00:25:34 2023 +0200
+
+    refactor: FeedExpander::parseItem() descendants (#3744)
+
+commit d592e2cb152f144a2e323e836d359df7591a6ac0
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sun Nov 20 12:41:59 2022 +0100
+
+    [Core] Add html/convertLazyLoading (+ document stripRecursiveHTMLSection) (#3157)
+    
+    * [core] Add html/convertLazyLoading($dom)
+    
+    Looks for lazy-loading attributes such as 'data-src' and converts
+    them back to regular ones such as 'src', easier for RSS readers.
+    It also converts <picture> elements to plain <img> elements.
+    
+    * [core] Document html/stripRecursiveHTMLSection()
+    
+    Add documentation for that function (no code changes).
+    
+    * [WordPressBridge] Use convertLazyLoading()
+    
+    * [WordPressBridge] Unwrap image figures
+    
+    <img> inside <figure> may not display on RSS readers.
+    This converts them back to <img>, without losing caption if present.
+    
+    * [ZDNet] Convert lazy loading images
+    
+    * [code] html/stripRecursiveHTMLSection: Fix typo
+
+commit 4520ab68352d4d6be737c2e83a0ca0f5fbb9d9ff
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Mon Oct 31 20:59:19 2022 +0100
+
+    [WordPressBridge] Improve content extraction (#3125)
+    
+    * [WordPressBridge] Improve content extraction
+    
+     - Pick up currently unmaintained bridge
+     - Allow Custom item limit and lower default limit from 20 to 10
+     - Allow Custom content selector for blogs with non-standard templates (#2173)
+     - Remove content selector made for one specific blog (#2173 - can be a custom selector now)
+     - Add '.article-content' class in the set of default selectors
+     - Improve lazy-loading conversion
+    
+    * [WordPressBridge] Fix phpcs issues
+
+commit 0dab51e26f309d9bf92d023e6e5737d5ca83c72e
+Author: Dag <me@dvikan.no>
+Date:   Tue Sep 6 00:14:20 2022 +0200
+
+    fix: php errors (#3013)
+    
+    * fix: php error in tiktok bridge
+    
+    * fix: notice in craigslist
+    
+    * fix: php notice in wordpress bridge
+    
+    * feat: improve ux in telegram bridge
+
+commit 2bbce8ebef8cf4f88392431aabe84a15482dc933
+Author: Dag <me@dvikan.no>
+Date:   Sat Aug 6 22:46:28 2022 +0200
+
+    refactor: general code base refactor (#2950)
+    
+    * refactor
+    
+    * fix: bug in previous refactor
+    
+    * chore: exclude phpcompat sniff due to bug in phpcompat
+    
+    * fix: do not leak absolute paths
+    
+    * refactor/fix: batch extensions checking, fix DOS issue
+
+commit 4f75591060d95208a301bc6bf460d875631b29cc
+Author: Dag <me@dvikan.no>
+Date:   Fri Jul 1 15:10:30 2022 +0200
+
+    Reformat codebase v4 (#2872)
+    
+    Reformat code base to PSR12
+    
+    Co-authored-by: rssbridge <noreply@github.com>
+
+commit 90db8c49694a424a93950fd9912ce58dbd9c192e
+Author: dag <me@dvikan.no>
+Date:   Mon Mar 28 00:20:44 2022 +0200
+
+    [WordpressBridge] fix: add css selector for article, #2173 (#2545)
+    
+    * [Wordpress] fix: add css selector for article, #2173
+    
+    * fix: resolve relative links in item content
+
+commit 1a8d0babd1dbb6d6ae4a4aa9744537efae70abce
+Author: Bocki <henning@bocklage.com>
+Date:   Thu Mar 24 11:59:34 2022 +0100
+
+    [Multiple] Fix all exampleValues and required variables (#2296)
+
+commit 4a1e26fd07d9cde4ce4e85f9185b1f2e6d12db9c
+Author: Eugene Molotov <em92@users.noreply.github.com>
+Date:   Tue Jul 6 01:35:16 2021 +0500
+
+    [WordPressBridge] aledeg is not maintainer of this bridge
+
+commit 2714c3d816588192b7cec7b30bf53716543ac96d
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Wed Oct 21 11:59:04 2020 +0200
+
+    [WordPress] Limit feed to 20 items (#1801)
+
+commit 6c4098d6558c33a5fcb2a8bc9fb29e915d56fc6c
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Jun 2 13:03:26 2019 +0200
+
+    Revert "all: Use ->remove() instead of ->outertext = ''"
+    
+    This reverts commit 052844f5e13c71ceefd743136a71f71226a0eefb.
+    
+    There is a bug in ->remove() that causes the parser to incorrectly
+    identify elements in the DOM tree that shouldn't exist anymore.
+    
+    References #1151
+
+commit 052844f5e13c71ceefd743136a71f71226a0eefb
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jun 1 21:15:30 2019 +0200
+
+    all: Use ->remove() instead of ->outertext = ''
+    
+    simplehtmldom 1.9 introduced new functions to recursively remove
+    nodes from the DOM. This allows removing elements without the need
+    to re-load the document by using $html->load($html->save()), which
+    is very inefficient.
+    
+    Find more information about remove() at
+    https://simplehtmldom.sourceforge.io/docs/1.9/api/simple_html_dom_node/remove/
+
+commit c6a7b9ac64021d46271abb05bce181bb60577e97
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Nov 18 16:53:21 2018 +0100
+
+    exception: Remove HttpException class
+    
+    This class served no particular purpose (other than adding a
+    layer on top of Exception).
+
+commit de8cee6a1cc1c79a356d80b17d4318a86aeb9290
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Sun Sep 9 21:20:13 2018 +0200
+
+    Catching up | [Main] Debug mode, parse utils, MIME | [Bridges] Add/Improve 20 bridges (#802)
+    
+    * Debug mode improvements
+    
+     - Improve debug warning message
+     - Restore error reporting in debug mode
+     - Fix 'notice' messages for unset fields
+    
+    * Add parsing utility functions
+    
+    html.php
+     - extractFromDelimiters
+     - stripWithDelimiters
+     - stripRecursiveHTMLSection
+     - markdownToHtml (partial)
+    
+    bridges
+     - remove now-duplicate functions
+     - call functions from html.php instead
+    
+    * [Anidex] New bridge
+    
+    Anime torrent tracker
+    
+    * [Anime-Ultime] Restore thumbnail
+    
+    * [CNET] Recreate bridge
+    
+    Full rewrite as the previous one was broken
+    
+    * [Dilbert] Minor URI fix
+    
+    Use new self::URI property
+    
+    * [EstCeQuonMetEnProd] Fix content extraction
+    
+    Bridge was broken
+    
+    * [Facebook] Fix "SpSonsSoriSsés" label
+    
+    ... which was taking space in item title
+    
+    * [Futura-Sciences] Use HTTPS, More cleanup
+    
+    Use HTTPS as FS now offer HTTPS
+    Clean additional useless HTML elements
+    
+    * [GBATemp] Multiple fixes
+    
+    - Fix categories: missing "break" statements
+    - Restore thumbnail as enclosure
+    - Fix date extraction
+    - Fix user blog post extraction
+    - Use getSimpleHTMLDOMCached
+    
+    * [JapanExpo] Fix bridge, HTTPS, thumbnails
+    
+    - Fix getSimpleHTMLDOMCached call
+    - Upgrade to HTTPS as JE now offers HTTPS
+    - Restore thumbnails as enclosures
+    
+    * [LeMondeInformatique] Fix bridge, HTTPS
+    
+    - Upgrade to HTTPS as LMI now offers HTTPS
+    - Restore thumbnails using small images
+    - Fix content extraction
+    - Fix text encoding issue
+    
+    * [Nextgov] Fix content extraction
+    
+    - Restore thumbnail and use small image
+    - Field extraction fixes
+    
+    * [NextInpact] Add categories and filtering by type
+    
+    - Offer all RSS feeds
+    - Allow filtering by article type
+    - Implement extraction for brief articles
+    - Remove article limit, many brief articles are publied all at once
+    
+    * [NyaaTorrents] New bridge
+    
+    Anime torrent tracker
+    
+    * [Releases3DS] Cache content, restore thumbnail
+    
+    - Use getSimpleHTMLDOMCached
+    - Restore thumbnail as enclosure
+    
+    * [TheHackerNews] Fix bridge
+    
+     - Fix content extraction including article body
+     - Restore thumbnail as enclosure
+    
+    * [WeLiveSecurity] HTTPS, Fix content extraction
+    
+    - Upgrade to HTTPS as WLS now offers HTTPS
+    - Fix content extraction including article body
+    
+    * [WordPress] Reduce timeout, more content selectors
+    
+    - Reduce timeout to use default one (1h)
+    - Add new content selector (articleBody)
+    - Find thumbnail and set as enclosure
+    - Fix <script> cleanup
+    
+    * [YGGTorrent] Increase limit, use cache
+    
+    - Increase item limit as uploads are very frequent
+    - Use getSimpleHTMLDOMCached
+    
+    * [ZDNet] Rewrite with FeedExpander
+    
+    - Upgrade to HTTPS as ZD now offers HTTPS
+    - Use FeedExpander for secondary fields
+    - Fix content extraction for article body
+    
+    * [Main] Handle MIME type for enclosures
+    
+    Many feed readers will ignore enclosures (e.g. thumbnails) with no MIME type. This commit adds automatic MIME type detection based on file extension (which may be inaccurate but is the only way without fetching the content).
+    
+    One can force enclosure type using #.ext anchor (hacky, needs improving)
+    
+    * [FeedExpander] Improve field extraction
+    
+    - Add support for passing enclosures
+    - Improve author and uri extraction
+    - Fix 'notice' PHP error messages
+    
+    * [Pull] Coding style fixes for #802
+    
+    * [Pull] Implementing changes for #802
+    
+     - Fix coding style issues with str append
+     - Remove useless CACHE_TIMEOUT
+     - Use count() instead of $limit
+     - Use defaultLinkTo() + handle strings
+     - Use http_build_query()
+     - Fix missing </em>
+     - Remove error_reporting(0)
+     - warning CSS (@LogMANOriginal)
+     - Fix typo in FeedExpander comment
+    
+    * [Main] More documentation for markdownToHtml
+    
+    See #802 for more details
+
+commit a4b9611e66d3095c943a5c63306965d4e4cbf839
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Jul 29 19:28:00 2017 +0200
+
+    [phpcs] Add missing rules
+    
+    - Do not add spaces after opening or before closing parenthesis
+    
+      // Wrong
+      if( !is_null($var) ) {
+        ...
+      }
+    
+      // Right
+      if(!is_null($var)) {
+        ...
+      }
+    
+    - Add space after closing parenthesis
+    
+      // Wrong
+      if(true){
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    - Add body into new line
+    - Close body in new line
+    
+      // Wrong
+      if(true) { ... }
+    
+      // Right
+      if(true) {
+        ...
+      }
+    
+    Notice: Spaces after keywords are not detected:
+    
+      // Wrong (not detected)
+      // -> space after 'if' and missing space after 'else'
+      if (true) {
+        ...
+      } else{
+        ...
+      }
+    
+      // Right
+      if(true) {
+        ...
+      } else {
+        ...
+      }
+
+commit 512a4f292b48de827357cbef6874d4c5df6d9e20
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Tue Feb 14 22:36:33 2017 +0100
+
+    bridges: Return parent::getURI by default
+
+commit 6f24858124c700a8f83f9c2d8fc8ce354f4b4e28
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Feb 11 16:16:56 2017 +0100
+
+    bridges: Fix coding styles
+    
+    This commit is a squash of all commits that fix coding styles
+    for the new coding style policy.
+    
+    [ABCTabsBridge] Fix coding style
+    [AcrimedBridge] Fix coding style
+    [AllocineFRBridge] Fix coding style
+    [AnimeUltimeBridge] Fix coding style
+    [Arte7Bridge] Fix coding style
+    [AskfmBridge] Fix coding style
+    [BandcampBridge] Fix coding style
+    [BastaBridge] Fix coding style
+    [BlaguesDeMerdeBridge] Fix coding style
+    [BooruprojectBridge] Fix coding style
+    [CADBridge] Fix coding style
+    [CNETBridge] Fix coding style
+    [CastorusBridge] Fix coding style
+    [CollegeDeFranceBridge] Fix coding style
+    [CommonDreamsBridge] Fix coding style
+    [CopieDoubleBridge] Fix coding style
+    [CourrierInternationalBridge] Fix coding style
+    [CpasbienBridge] Fix coding style
+    [CryptomeBridge] Fix coding style
+    [DailymotionBridge] Fix coding style
+    [DanbooruBridge] Fix coding style
+    [DansTonChatBridge] Fix coding style
+    [DauphineLibereBridge] Fix coding style
+    [DeveloppezDotComBridge] Fix coding style
+    [DemoBridge] Fix coding style
+    [DilbertBridge] Fix coding style
+    [DuckDuckGoBridge] Fix coding style
+    [DollbooruBridge] Fix coding style
+    [EliteDangerousGalnetBridge] Fix coding style
+    [ElsevierBridge] Fix coding style
+    [EstCeQuonMetEnProdBridge] Fix coding style
+    [EZTVBridge] Fix coding style
+    [FacebookBridge] Fix coding style
+    [FeedExpanderExampleBridge] Fix coding style
+    [FB2Bridge] Fix coding style
+    [FierPandaBridge] Fix coding style
+    [FlickrBridge] Fix coding style
+    [FootitoBridge] Fix coding style
+    [FourchanBridge] Fix coding style
+    [FuturaSciencesBridge] Fix coding style
+    [GBAtempBridge] Fix coding style
+    [GelbooruBridge] Fix coding style
+    [GiphyBridge] Fix coding style
+    [GithubIssueBridge] Fix coding style
+    [GizmodoBridge] Fix coding style
+    [GoComicsBridge] Fix coding style
+    [GooglePlusPostBridge] Fix coding style
+    [GoogleSearchBridge] Fix coding style
+    [HDWallpapersBridge] Fix coding style
+    [HentaiHavenBridge] Fix coding style
+    [IdenticaBridge] Fix coding style
+    [InstagramBridge] Fix coding style
+    [IsoHuntBridge] Fix coding style
+    [JapanExpoBridge] Fix coding style
+    [KonachanBridge] Fix coding style
+    [KoreusBridge] Fix coding style
+    [KununuBridge] Fix coding style
+    [LeBonCoinBridge] Fix coding style
+    [LegifranceJOBBridge] Fix coding style
+    [LeMondeInformatiqueBridge] Fix coding style
+    [LesJoiesDuCodeBridge] Fix coding style
+    [LichessBridge] Fix coding style
+    [LinkedInCompanyBridge] Fix coding style
+    [LolibooruBridge] Fix coding style
+    [LWNprevBridge] Fix coding style
+    [MangareaderBridge] Fix coding style
+    [MilbooruBridge] Fix coding style
+    [MixCloudBridge] Fix coding style
+    [MoebooruBridge] Fix coding style
+    [MondeDiploBridge] Fix coding style
+    [MsnMondeBridge] Fix coding style
+    [MspabooruBridge] Fix coding style
+    [NasaApodBridge] Fix coding style
+    [NeuviemeArtBridge] Fix coding style
+    [NextgovBridge] Fix coding style
+    [NextInpactBridge] Fix coding style
+    [NiceMatinBridge] Fix coding style
+    [NovelUpdatesBridge] Fix coding style
+    [OpenClassroomsBridge] Fix coding style
+    [ParuVenduImmoBridge] Fix coding style
+    [PickyWallpapersBridge] Fix coding style
+    [PinterestBridge] Fix coding style
+    [PlanetLibreBridge] Fix coding style
+    [ReadComicsBridge] Fix coding style
+    [Releases3DSBridge] Fix coding style
+    [ReporterreBridge] Fix coding style
+    [RTBFBridge] Fix coding style
+    [Rue89Bridge] Fix coding style
+    [Rule34Bridge] Fix coding style
+    [Rule34pahealBridge] Fix coding style
+    [SafebooruBridge] Fix coding style
+    [SakugabooruBridge] Fix coding style
+    [ScmbBridge] Fix coding style
+    [ScoopItBridge] Fix coding style
+    [SensCritiqueBridge] Fix coding style
+    [SexactuBridge] Fix coding style
+    [ShanaprojectBridge] Fix coding style
+    [Shimmie2Bridge] Fix coding style
+    [SoundcloudBridge] Fix coding style
+    [StripeAPIChangeLogBridge] Fix coding style
+    [SuperbWallpapersBridge] Fix coding style
+    [T411Bridge] Fix coding style
+    [TagBoardBridge] Fix coding style
+    [TbibBridge] Fix coding style
+    [TheCodingLoveBridge] Fix coding style
+    [TheHackerNewsBridge] Fix coding style
+    [ThePirateBayBridge] Fix coding style
+    [TheTVDBBridge] Fix coding style
+    [Torrent9Bridge] Fix coding style
+    [TwitterBridge] Fix coding style
+    [UnsplashBridge] Fix coding style
+    [ViadeoCompanyBridge] Fix coding style
+    [VineBridge] Fix coding style
+    [VkBridge] Fix coding style
+    [WallpaperStopBridge] Fix coding style
+    [WebfailBridge] Fix coding style
+    [WeLiveSecurityBridge] Fix coding style
+    [WhydBridge] Fix coding style
+    [WikipediaBridge] Fix coding style
+    [WordPressBridge] Fix coding style
+    [WorldOfTanksBridge] Fix coding style
+    [XbooruBridge] Fix coding style
+    [YandereBridge] Fix coding style
+    [YoutubeBridge] Fix coding style
+    [ZDNetBridge] Fix coding style
+
+commit a1764a9fe2c8eb047366caa84ee81fbdc97e6b72
+Author: Astyan-42 <vareu@hotmail.fr>
+Date:   Tue Feb 7 11:24:18 2017 +0100
+
+    make the bridge compatible with wordpress with no static URL (#469)
+
+commit 970e216c1fc7a10550cf4288fd2197255557324f
+Merge: 9020b09f a1ef589f
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Oct 2 16:05:58 2016 +0200
+
+    Merge branch 'methods2functions' of https://framagit.org/peetah/rss-bridge
+
+commit f1fb95b2575dd57ec2f9d0fbb844762b7cb21cb3
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 23:22:33 2016 +0200
+
+    [core] extract BridgeAbstract methods to make them functions
+    
+    - returnError, returnServerError, returnClientError ,debugMessage are
+      moved to lib/error.php
+    
+    - getContents, getSimpleHTMLDOM, getSimpleHTMLDOMCached are moved to
+      lib/contents.php
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 235c9859012887bda40c0f024c72975223256610
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Sep 25 17:04:28 2016 +0200
+
+    [BridgeAbstract] replace getCacheDuration method by CACHE_TIMEOUT class constant
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 10ac8085804e11d8e6d43d4e75e6466dabf28967
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Sep 15 13:14:24 2016 +0200
+
+    [WordPressBridge] remove useless code and fix description
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 43ac961284fb836319316b55eaea035cbb0eed60
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Sep 15 12:36:24 2016 +0200
+
+    [WordPressBridge] add another case of content extraction
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit b6245a90c8d4724155973eca7852f9e2830c50e7
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Sep 15 12:35:52 2016 +0200
+
+    [WordPressBridge] allow other bridges to use it as a parent class
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 4c3b80fca915267336efd0defc0e6eb761da9924
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Sep 15 11:13:18 2016 +0200
+
+    [WordPressBridge] fix fatal errors
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit b5358d6ceaf2bfb9325164aee0924edb5323589b
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Wed Sep 14 23:01:54 2016 +0200
+
+    [WordPressBridge] make it FeedExpander
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 2eec89ab2718065bdb78560171fb55e280fb9806
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Sep 10 19:11:09 2016 +0200
+
+    [bridges] Change all bridges to use BridgeAbstract with getSimpleHTMLDOMCached
+
+commit 3a949569159ff1dac28e5f7c198f5a4de51f4844
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sat Sep 10 00:19:24 2016 +0200
+
+    [bridges] Remove calls to get_cached and remove_from_cache
+
+commit 9a0da733ef07e2ef2eea9a9776eccdf9719f857a
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Tue Aug 30 11:23:55 2016 +0200
+
+    [bridges] use constants instead of variable members
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 8ed3b028998b52dcce431baea15204c37d442461
+Merge: 7e2129fa 8c7b53b8
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 28 20:33:27 2016 +0200
+
+    Merge branch 'core' of http://framagit.org/peetah/rss-bridge
+
+commit 78f67576227a6b24a2498d2b04896346245206c8
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Sun Aug 28 20:07:56 2016 +0200
+
+    [bridges] Use caching with applicable bridges
+
+commit 1b3c8a8aeba5641f3bec9a6a720939df537bfa83
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 28 01:25:33 2016 +0200
+
+    [core + bridges] add BridgeAbstract::$inputs and BridgeAbstract::getInput()
+    
+    Inputs are not stored in BridgeAbstract::$parameters anymore to separate
+    static data from dynamic data.
+    The getInput method allows for more readable code.
+    
+    Also fix an "undefined index 'global'" notice
+    
+    Probability of breaking bridges: high !
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit de1b39c8e5945d74894d0d42bd7cbc6bcd60f074
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 21:03:26 2016 +0200
+
+    [core + bridges] get rid of loadMetadata
+    
+    if a bridge needs to modify some of the data that were initialized
+    there, ::__construct() should be used instead.
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 2301a12cc62f187f5891c5c82685ac7122be61a6
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Aug 27 20:42:05 2016 +0200
+
+    [WordpPessBridge] implement getURI() and simplify code
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 117031bf0f4c15311a4a687237479eba3421ab97
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Thu Aug 25 01:24:53 2016 +0200
+
+    [core] store parameters values in BridgeAbstract::parameters
+    
+    This way, any BridgeAbstract method can now have access to these values,
+    no only collectData
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bf0a9d754e971aae9e8ab48d3d1bd0ef7839696b
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 22 18:55:59 2016 +0200
+
+    [bridges] Change all occurrences of the Item object to array
+
+commit f0e502ce37a34001875d242531142ad9d69a21b0
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Mon Aug 22 01:25:56 2016 +0200
+
+    [bridges] migrate all bridges to an array based definition of parameters
+    
+    see github issue 356
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit bba216073c25ad8947ad4974b9fe44e85e7a0ec8
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sun Aug 21 00:21:41 2016 +0200
+
+    [bridges] remove useless 'update' property from all bridges
+    
+    That's the source code manager job to keep this information
+    consistent
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 3c0d13c1bb72a87f0d671692e205f45f04d94eba
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Fri Jul 8 19:06:35 2016 +0200
+
+    bridges: use BridgeAbstract::getSimpleHTMLDOM
+    
+    instead of BridgeAbstract::file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 74f0572d914617b4e47fe0fd2fabfe356710d609
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Wed Aug 17 14:45:08 2016 +0200
+
+    bridges: Replace returnError function with more specific
+    
+    Replacements depend on original error code:
+    400: returnClientError
+    404: returnServerError
+    500: returnServerError
+    501: returnServerError
+
+commit fa59a25229a11d9a8fbb93494713984f7d26fe06
+Author: logmanoriginal <logmanoriginal@users.noreply.github.com>
+Date:   Mon Aug 15 01:19:16 2016 +0200
+
+    bridges: Update bridges with 'required' attributes
+
+commit 63bb7ef24ded812d6c4b959ddbe0cafe04c83b39
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Tue Aug 9 20:01:21 2016 +0200
+
+    bridges: Remove unnecessary functions getName() and getURI()
+
+commit 1d53b70272cffa11426a4b00ee5cc1643afcf222
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Sat Aug 6 16:00:56 2016 +0200
+
+    bridges: Remove unused functions and update scopes
+    
+    Many bridges implemented getDescription() which is only applicable for
+    bridges extending RSSExpander.
+    
+    Functions that are not part of the abstract class or interface should
+    be in private scope for better readability.
+
+commit 7afee0e277d82cba2da2eeb4146cce98640665c7
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Thu Aug 4 21:56:11 2016 +0200
+
+    [WordPress] Fix site name on bridge content
+
+commit 870ef6f6fc9216b83629a7cb32defc5db78070be
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Thu Aug 4 21:42:06 2016 +0200
+
+    [WordPress] Remove forms and improve script removal
+    
+    Some sites contain scripts like these, that were not captured by the
+    previous implementation:
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+commit 2c41ed550def91348049815f025f1df0d6781ecc
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Thu Aug 4 21:06:12 2016 +0200
+
+    [WordPress] Fix content loading
+
+commit d944558a3dcc417b6c756a6f2a8919fe1f28c073
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Thu Aug 4 20:45:21 2016 +0200
+
+    [WordPress] Fix indentation and remove empty lines
+
+commit 455b98757cd71d29f76df6474e552f67dde95b47
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Thu Aug 4 20:40:38 2016 +0200
+
+    [WordPress] Don't attempt to load pages with missing .article
+    
+    Some sites use WordPress but don't provide pages with articles.
+    Instead of throwing internal errors we just don't return any
+    content.
+
+commit 21523eb549f0f94d4d5c87dffff793ffce9e3b96
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Thu Aug 4 20:15:28 2016 +0200
+
+    [WordPress] Change all nested functions to member functions
+
+commit 2672b96e11b775b37301cdb37d8b4b401bb8b03d
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Thu Aug 4 20:12:51 2016 +0200
+
+    [WordPress] Initialize item before assigning values
+    
+    This solves warning: "Creating default object from empty value"
+
+commit 0a008c4eb3c9e415fd55cc174ec5319a66265180
+Author: logmanoriginal <log.man@gmx.de>
+Date:   Thu Aug 4 20:06:53 2016 +0200
+
+    [WordPress] Support atom AND rss for feed replies
+    
+    Some sites return RSS feeds instead of ATOM feeds even though ATOM
+    feeds were specifically requested (/feeds/atom)!
+    
+    This bridge will now detect ATOM/RSS feeds and change behavior
+    accordingly.
+
+commit cd5f3e740a55d948d1e664537e7046d3cb8d9b97
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Tue Aug 2 17:48:57 2016 +0200
+
+    [Wordpress] Add a div class commonly used for post content
+
+commit 0f3ca30caa2e0a31c81af3f52ade1b5c5d74b2c3
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Tue Aug 2 15:46:21 2016 +0200
+
+    [WordPress] bridge rewrite
+
+commit 955eecc299e67a1062a9e75149b6c098fb9d2cbc
+Author: Pierre Mazière <pierre.maziere@gmx.com>
+Date:   Sat Jun 25 23:17:42 2016 +0200
+
+    use BridgeAbstract::file_get_html in all bridges
+    
+    instead of simple_html_dom function file_get_html
+    
+    Signed-off-by: Pierre Mazière <pierre.maziere@gmx.com>
+
+commit 78c9dcc705682cb3e71912fae19365d71ee7bf22
+Author: teromene <teromene@teromene.fr>
+Date:   Thu Nov 5 15:50:18 2015 +0000
+
+    Last batch of bridges, all implemented !
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 2d526f4e0a557e9325a06658cac5421486006aaa
+Author: teromene <teromene@teromene.fr>
+Date:   Tue Nov 3 23:05:10 2015 +0000
+
+    Correction de quelques bugs dans les bridges, qui apparaissent à cause du fait qu'ils sont tous instanciés lors du chargement de tout les bridges.
+    Ré-ajout et ré-utilisation de getName et getURI, qui permettent d'avoir des élements dynamiques.
+    Changement en public de certaines valeurs.
+    Changement du nom de certaines constantes, déja utilisés.
+    
+    Signed-off-by: teromene <teromene@teromene.fr>
+
+commit 5b2c8e91d07a02c520b040695df7d644c434af81
+Author: ORelio <oreliogitantispam.l0gin@spamgourmet.com>
+Date:   Sat Sep 5 14:40:31 2015 +0200
+
+    Improve Wordpress Bridge
+    
+    Retrieve post author
+    Retrieve post thumbnail
+    Retrieve title from <h2> if no <h1>
+    Minor code indentation fixes
+
+commit c38c7dd2a1defccc62008e0c3a26d259015749c5
+Author: Paul Vayssiere <paul.vayssiere@gmail.com>
+Date:   Mon Jul 14 12:12:01 2014 -0500
+
+    add a Gizmodo.fr bridge to get the content
+    
+    And link to youtube videos
+
+commit e7c00914ddc19bf6c4171c4f48325e6052608975
+Author: Alexis Degrugillier <github@ainw.org>
+Date:   Tue May 27 21:28:36 2014 -0400
+
+    Fix posts discovery.
+    
+    For PHP before 5.5, the bridge is not working. It returns the following error: "Can't use method return value in write context".
+    See the following message for explanations: http://stackoverflow.com/questions/1075534/cant-use-method-return-value-in-write-context/4328049#4328049
+
+commit c07eacfd6af5646c795e5739e8d39964002fa87f
+Author: Mitsukarenai <mitsu@suumitsu.eu>
+Date:   Mon May 26 19:45:10 2014 +0200
+
+    Add extra bridges, second batch (TPB inside)

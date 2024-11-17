@@ -1,0 +1,69 @@
+commit dc199ebf5c134960c59bceb233afff0379062a77
+Author: Albert Kiskorov <me@albi.io>
+Date:   Sun May 19 19:37:59 2024 +0700
+
+    Fix: Ensure `$time` is set from `innertext` when `datetime` attribute is not found (#4111)
+    
+    This commit addresses a bug where the $time variable is not set from the innertext of the $time_element when the datetime attribute is not found. The previous implementation only checked if $time was null or an empty string, which did not cover all cases where the datetime attribute might be missing. By using the empty() function, we ensure that $time is correctly set from the innertext when the datetime attribute is not present.
+
+commit c7e8ddf4865516a4bddc884cf80c058cb5aad770
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Wed Jan 10 21:47:34 2024 +0100
+
+     CssSelectorComplexBridge: Use cookies everywhere (RSS-Bridge#3827) (#3886)
+    
+    v2 after feedback from #3870
+
+commit 1fecc4cfc13072856d68b7a33233a4e5e54a72db
+Author: Dag <me@dvikan.no>
+Date:   Tue Jan 9 21:28:43 2024 +0100
+
+    Revert "CssSelectorComplexBridge: Use cookies everywhere (#3827) (#3870)" (#3881)
+    
+    This reverts commit 0c08f791efbfc6dd92f89d922984a6a41583de44.
+
+commit 0c08f791efbfc6dd92f89d922984a6a41583de44
+Author: ORelio <ORelio@users.noreply.github.com>
+Date:   Tue Jan 9 20:34:56 2024 +0100
+
+    CssSelectorComplexBridge: Use cookies everywhere (#3827) (#3870)
+
+commit 5f37c72be0a994257b01a8c43c4e488611f092f2
+Author: Dag <me@dvikan.no>
+Date:   Fri Oct 13 20:48:08 2023 +0200
+
+    fix(binance): plus some other tweaks (#3753)
+
+commit 2172df9fa2de2752396a55260f49594606466ec1
+Author: Dag <me@dvikan.no>
+Date:   Fri Sep 29 19:17:03 2023 +0200
+
+    fix: various notice fixes (#3718)
+
+commit eb4ff7099f07859a2a3078c50a7d5366ca722bb1
+Author: Lars Stegman <LarsStegman@users.noreply.github.com>
+Date:   Tue Aug 22 21:28:16 2023 +0200
+
+    CSS Selector Bridge 2 (#3626)
+    
+    * [CssSelector2Bridge] Implement CSS Selector bridge 2
+    
+    * [CssSelector2Bridge] Fix author not being loaded
+    
+    * [CssSelector2Bridge] Remove unneeded time nullcheck
+    
+    * Fix linting
+    
+    * Fix failing test
+    
+    * Implement PR fixes
+    
+    * Update bridges/CssSelector2Bridge.php
+    
+    Co-authored-by: ORelio <ORelio@users.noreply.github.com>
+    
+    * Rename bridge and fix syntax error for php7
+    
+    ---------
+    
+    Co-authored-by: ORelio <ORelio@users.noreply.github.com>
