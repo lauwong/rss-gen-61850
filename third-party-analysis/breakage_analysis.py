@@ -7,7 +7,7 @@ bridges = 0
 f = open("bridge_data.txt", "a")
 
 for child in Path('glogs').glob('*.txt'):
-    name = child.name.split(".php")[0]
+    name = child.name.split(".txt")[0]
 
     text = child.read_text()
     lines = text.split('\n')
